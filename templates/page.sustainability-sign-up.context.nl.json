@@ -1,0 +1,72 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "parent": "page.sustainability-sign-up.json",
+  "context": {
+    "market": "nl"
+  },
+  "sections": {
+    "173142567436d0403a": {
+      "type": "apps",
+      "disabled": false,
+      "settings": {},
+      "blocks": {
+        "klaviyo_email_marketing_sms_form_embed_block_hzQRH": {
+          "type": "shopify:\/\/apps\/klaviyo-email-marketing-sms\/blocks\/form-embed-block\/2632fe16-c075-4321-a88b-50b567f42507",
+          "disabled": true,
+          "settings": {
+            "formId": "SZMvHW"
+          }
+        }
+      },
+      "block_order": [
+        "klaviyo_email_marketing_sms_form_embed_block_hzQRH"
+      ]
+    },
+    "4cced11a-fadf-40df-a901-129978950e0d": {
+      "settings": {},
+      "blocks": {
+        "template--19238830899521__4cced11a-fadf-40df-a901-129978950e0d-1688562394f7fd29d5-0": {
+          "settings": {
+            "col_dk": "12",
+            "col_tb": "12",
+            "align_vertical": false,
+            "content_align": "center",
+            "content_align_tablet": "center",
+            "content_align_mobile": "center"
+          }
+        }
+      },
+      "block_order": [
+        "template--19238830899521__4cced11a-fadf-40df-a901-129978950e0d-1688562394f7fd29d5-0",
+        "template--19238830899521__4cced11a-fadf-40df-a901-129978950e0d-1688562394f7fd29d5-1",
+        "2cad8eca-806d-48b7-a3eb-bff1a5e9615a",
+        "template--19238830899521__4cced11a-fadf-40df-a901-129978950e0d-1688562394f7fd29d5-2",
+        "template--19238830899521__4cced11a-fadf-40df-a901-129978950e0d-1688562394f7fd29d5-4",
+        "html_KCL8PB"
+      ]
+    }
+  },
+  "order": [
+    "heading",
+    "main",
+    "sidebar-page",
+    "09da612c-8af2-479d-8292-f373c19c992c",
+    "a9f43178-b095-4b5e-a27c-328dc74d053f",
+    "0a10ec16-f451-4983-8bdf-6e2c4ff7a603",
+    "86c687d7-071b-4f27-b170-2525f8f55fe4",
+    "7a710aef-8994-4a43-91d5-161c973dfc12",
+    "43b31b96-9304-4914-a6d3-6d7addfaba56",
+    "9b11a585-cb2d-463e-abcc-69a16f3ce602",
+    "43584de7-45d7-462d-bfd7-dceb537df5de",
+    "4cced11a-fadf-40df-a901-129978950e0d",
+    "173142567436d0403a"
+  ]
+}

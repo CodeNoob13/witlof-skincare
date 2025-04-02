@@ -1,0 +1,170 @@
+:root {
+  --font-heading-family: 'Isidora Sans Alt', sans-serif;
+    --font-family-1: 'Isidora Sans Alt', sans-serif;
+    --font-family-2: 'Isidora Sans Alt', sans-serif;
+    --font-family-3: 'Isidora Sans Alt', sans-serif;
+  --font-body-family:'Isidora Sans Alt', sans-serif;
+}
+
+@font-face {
+    font-family: 'Isidora Sans Alt';
+    src: url('https://cdn.shopify.com/s/files/1/0765/8461/6257/files/IsidoraSansAlt-Bold.woff2?v=1686640754') format('woff2'),
+        url('https://cdn.shopify.com/s/files/1/0765/8461/6257/files/IsidoraSansAlt-Bold.woff?v=1686640754') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Isidora Sans Alt';
+    src: url('https://cdn.shopify.com/s/files/1/0765/8461/6257/files/IsidoraSansAlt-Light.woff2?v=1686640754') format('woff2'),
+        url('https://cdn.shopify.com/s/files/1/0765/8461/6257/files/IsidoraSansAlt-Light.woff?v=1686640754') format('woff');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Isidora Sans Alt';
+    src: url('https://cdn.shopify.com/s/files/1/0765/8461/6257/files/IsidoraSansAlt-Medium.woff2?v=1686640754') format('woff2'),
+        url('https://cdn.shopify.com/s/files/1/0765/8461/6257/files/IsidoraSansAlt-Medium.woff?v=1686640754') format('woff');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Isidora Sans Alt';
+    src: url('https://cdn.shopify.com/s/files/1/0765/8461/6257/files/IsidoraSansAlt-Regular.woff2?v=1686640754') format('woff2'),
+        url('https://cdn.shopify.com/s/files/1/0765/8461/6257/files/IsidoraSansAlt-Bold.woff?v=1686640754') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+
+
+
+/*-----------------------------------------------------------------------------/
+/ Custom Theme CSS
+/-----------------------------------------------------------------------------*/
+/*---------------- Global Custom CSS -------------------*/
+{{settings.global_css }}
+
+/*---------------- Custom CSS for only desktop -------------------*/
+@media (min-width: 1025px) {
+  {{settings.desktop_css }}
+}
+
+/*---------------- Custom CSS for tablet, mobile -------------------*/
+@media (max-width: 1024px) {
+  {{settings.tablet_mobile_css }}
+}
+
+/*---------------- Custom CSS for only tablet -------------------*/
+@media (min-width: 768px) and (max-width: 1024px) {
+  {{settings.tablet_css }}
+}
+
+/*---------------- Custom CSS for only mobile -------------------*/
+@media (max-width: 767px){
+  {{settings.mobile_css }}
+}
+
+
+
+a.t4s-btn,
+.t4s-btn {
+  border-radius: 0px !important;
+}
+
+.t4s-search-header__form {
+  border-radius: 40px !important;
+}
+
+@media screen and (min-width: 767px) {
+  #shopify-section-header-categories-menu > div > div.t4s-section-header__bot > .t4s-container > div > div:first-of-type .t4s-sub-menu {
+    pointer-events: auto !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+    top: 0 !important;
+    left: 0 !important;
+  }
+
+  #shopify-section-header-categories-menu #t4s-nav-categories{
+    visibility: hidden !important;
+    pointer-events: none !important;
+    max-height: 0px;
+    max-width: 0px;
+    overflow: hidden;
+  }
+
+  #shopify-section-header-categories-menu .t4s-section-header__bot .t4s-h-cat:hover #t4s-nav-categories{
+    visibility: visible !important;
+    pointer-events: auto !important;
+    max-height: none;
+    max-width: none;
+    overflow: initial;
+  }
+
+  #t4s-nav-categories > li > a {
+    /*   display: none !important; */
+    opacity: 0 !important;
+  }
+
+  #t4s-nav-categories > li > div {
+    left: 0 !important;
+  }
+  .t4s-search-header__form {
+    padding-left: 15px;
+  }
+}
+
+body #t4s-nav-categories a.t4s-heading{
+  color: #333 !important;
+  font-weight: bold;
+  margin-bottom: 7.5px;
+}
+
+body {
+  :root {
+    --font-heading-family: 'Isidora Sans Alt', sans-serif;
+    --font-family-1: 'Isidora Sans Alt', sans-serif;
+    --font-family-2: 'Isidora Sans Alt', sans-serif;
+    --font-family-3: 'Isidora Sans Alt', sans-serif;
+    --font-body-family:'Isidora Sans Alt', sans-serif;
+  }
+}
+
+body, body h1, body h2, body h3, body h4, body h5, body h6, body .t4s_as_title, body .t4s-col-heading, body .t4s-footer-menu body .t4s-footer-title, body .t4s-newsletter-parent body .t4s-footer-title, body .t4s-socials-title, body p, body a {
+  font-family: 'Isidora Sans Alt', sans-serif;
+}
+
+/* .t4s-top-bar__wrap {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.t4s-top-bar__wrap > div {
+    width: auto !important;
+}
+
+#b_top-bar-0{
+  
+} */
+
+.jn-trustpilot{
+      display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    font-size: 14px;
+  line-height: 1;
+/*   min-width: 160px; */
+  white-space: nowrap;
+}
+
+.jn-trustpilot img{
+        max-height: 17px;
+    margin-right: 7px;
+    margin-bottom: -2px;
+  }

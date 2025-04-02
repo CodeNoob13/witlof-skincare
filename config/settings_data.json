@@ -1,0 +1,3346 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "current": {
+    "purchase_code": "b8cd507a-960b-43af-a865-18631d3e8aa1",
+    "general_layout": "full_width",
+    "cus_w_bd": 1420,
+    "shop_author": "Mind for Business",
+    "use_rtl": "0",
+    "platform_email": "1",
+    "header_design": "categories",
+    "logo": "shopify://shop_images/logo-retina.png",
+    "logo_width": 155,
+    "logos": "shopify://shop_images/kalles.png",
+    "logos_width": 155,
+    "logo_mb": "shopify://shop_images/jbn.jpg",
+    "logo_mb_width": 95,
+    "logo_tr": "shopify://shop_images/header-logo-01.png",
+    "logo_tr_width": 95,
+    "only_icon": true,
+    "text_color": "#878787",
+    "accent_color": "#4ab9cb",
+    "secondary_color": "#222",
+    "price_primary": "#ed7377",
+    "link_color": "#2b818f",
+    "link_color_hover": "#4ab9cb",
+    "btn_bg": "#c5e6f0",
+    "cl_lazyload": "#c5e6f0",
+    "font_source": "1",
+    "fnt_fm_sp1": "montserrat_n4",
+    "fnt_fm_sp2": "montserrat_n4",
+    "fnt_fm_sp3": "assistant_n4",
+    "fnt_fm_gg1": "montserrat",
+    "fnt_fm_gg2": "montserrat",
+    "fnt_fm_gg3": "montserrat",
+    "bd_fsize": 14,
+    "bd_lheight": 1.7,
+    "hd_ffamily": "1",
+    "enable_compe": true,
+    "app_review": "7",
+    "badge_shape": "1",
+    "label_sale_style": "2",
+    "use_new_badge": false,
+    "use_preorder_badge": false,
+    "sale_badge_color": "#0292b7",
+    "new_badge_color": "#1ac8db",
+    "custom_badge_color": "#0292b7",
+    "enable_quickview": false,
+    "type_qv": "2",
+    "enable_quickshop": false,
+    "enable_atc": false,
+    "show_qty": false,
+    "pr_border_style": "1",
+    "enable_pr_color": false,
+    "swatch_item_style": "1",
+    "show_color_type": "1",
+    "pr_size_pos": "1",
+    "pr_img_effect": "2",
+    "pr_curent": "3",
+    "use_group_media": true,
+    "use_change_variant_by_img": true,
+    "enable_his": true,
+    "variant_remove": "1",
+    "share_source": "1",
+    "free_ship_pr": "gratis-verzending",
+    "des_shipbar": "0",
+    "des_shipbar_per_1": 25,
+    "des_shipbar_per_2": 50,
+    "des_shipbar_per_3": 75,
+    "gift_wrap_pr": "gift-wrap",
+    "filter_type_search": true,
+    "show_search_suggest": true,
+    "search_prs_suggest": "",
+    "show_search_hotkey": true,
+    "currency_type": "1",
+    "size_currency": "sm",
+    "round_currency": false,
+    "notify_currency": true,
+    "hover_currency": false,
+    "custom_css_t4s": true,
+    "global_css": "h3.t4s-image-text-heading.t4s-fs-md-30.t4-fs-30 {\nfont-size: 23px !important;\n}",
+    "mobile_css": "",
+    "t4s_custom_js": true,
+    "share_facebook": false,
+    "share_twitter": false,
+    "share_pinterest": false,
+    "share_tumblr": false,
+    "share_email": false,
+    "share_telegram": false,
+    "share_whatsapp": false,
+    "social_facebook_link": "https://www.facebook.com/witlofskincareNL/",
+    "social_twitter_link": "",
+    "social_instagram_link": "https://www.instagram.com/witlofskincare/",
+    "social_dribbble_link": "",
+    "social_linkedin_link": "https://www.linkedin.com/company/witlof-skincare/",
+    "social_pinterest_link": "",
+    "social_tumblr_link": "",
+    "social_snapchat_link": "",
+    "social_youtube_link": "",
+    "social_vimeo_link": "",
+    "social_behance_link": "",
+    "social_soundcloud_link": "",
+    "social_tiktok_link": "https://www.tiktok.com/@witlofskincare",
+    "favicon": "shopify://shop_images/Monogram-Witlof-1-pdf.jpg",
+    "only_search_prs": false,
+    "checkout_logo_image": "shopify://shop_images/logo-retina.png",
+    "checkout_logo_size": "medium",
+    "checkout_accent_color": "#4ab9cb",
+    "checkout_button_color": "#4ab9cb",
+    "pr_incoming_mess": true,
+    "use_vimg": true,
+    "sticky_atc": true,
+    "fnt_fm_button": "1",
+    "sections": {
+      "bottom-bar": {
+        "type": "bottom-bar",
+        "blocks": {
+          "2433b4f1-5bdc-49a9-ba42-a51f4eb6d8e3": {
+            "type": "bl_col",
+            "settings": {
+              "col_heading": "",
+              "menu": "",
+              "col_dk": "7",
+              "col_tb": "6",
+              "col_mb": "12",
+              "content_align": "t4s-text-md-start",
+              "padding_inner": "",
+              "col_heading_mobile": "",
+              "content_align_mb": "t4s-text-center",
+              "padding_inner_mb": ""
+            }
+          },
+          "b3c6ceca-2d54-4a14-b482-bb86cbf25f08": {
+            "type": "copyR",
+            "settings": {
+              "text": "Copyright © [year] <span class=\"t4s-cp\">Witlofs Skincare</span> all rights reserved. Powered by <a href=\"https://mindforbusiness.nl\">Mind for Business</a>",
+              "mgb": 0,
+              "mgb_mb": 0
+            }
+          },
+          "47f5eb4c-1063-495d-bfc4-a54c62d219aa": {
+            "type": "bl_col",
+            "settings": {
+              "col_heading": "",
+              "menu": "",
+              "col_dk": "4",
+              "col_tb": "5",
+              "col_mb": "12",
+              "content_align": "t4s-text-md-end",
+              "padding_inner": "",
+              "col_heading_mobile": "",
+              "content_align_mb": "t4s-text-center",
+              "padding_inner_mb": ""
+            }
+          }
+        },
+        "block_order": [
+          "2433b4f1-5bdc-49a9-ba42-a51f4eb6d8e3",
+          "b3c6ceca-2d54-4a14-b482-bb86cbf25f08",
+          "47f5eb4c-1063-495d-bfc4-a54c62d219aa"
+        ],
+        "settings": {
+          "hidden_bottombar": false,
+          "border_top": false,
+          "border_pos": "in",
+          "space_h_item": "30",
+          "space_v_item": "0",
+          "space_h_item_mb": "0",
+          "space_v_item_mb": "0",
+          "heading_fontf": "inherit",
+          "heading_fs": 16,
+          "heading_lh": 22,
+          "heading_fw": 500,
+          "heading_ls": 0,
+          "mgb": 30,
+          "mgb_mb": 20,
+          "text_fs": 14,
+          "text_fw": 400,
+          "heading_cl": "#222222",
+          "text_cl": "#878787",
+          "link_cl": "#878787",
+          "link_hover_cl": "#56cfe1",
+          "border_cl": "#e6e6e6",
+          "layout": "t4s-container-wrap",
+          "cl_bg": "",
+          "cl_bg_gradient": "",
+          "mg": "",
+          "pd": "20px,,5px,",
+          "mg_tb": "",
+          "pd_tb": "",
+          "mg_mb": "",
+          "pd_mb": "20px,,5px,"
+        }
+      },
+      "footer": {
+        "type": "footer",
+        "blocks": {
+          "footer-0": {
+            "type": "bl_col",
+            "settings": {
+              "col_heading": "Contact",
+              "menu": "",
+              "menu_style": "1",
+              "col_border": "none",
+              "col_dk": "3",
+              "col_tb": "6",
+              "col_mb": "12",
+              "content_align": "t4s-text-md-start",
+              "padding_inner": "",
+              "content_align_tb": "t4s-text-md-start",
+              "padding_inner_tb": "",
+              "col_heading_mobile": "Get in touch",
+              "content_align_mb": "t4s-text-start",
+              "padding_inner_mb": ""
+            }
+          },
+          "de84a111-3ed0-40a2-b86a-1e81488e9bff": {
+            "type": "image",
+            "settings": {
+              "link_img": "",
+              "img_width": 95,
+              "img_width_mb": 0,
+              "mgb": 34,
+              "mgb_mb": 24
+            }
+          },
+          "footer-2": {
+            "type": "html",
+            "settings": {
+              "html_content": "<p style=\"display:flex;\"><path fill=\"currentColor\" d=\"M 16.001 1.072 c 5.291 0 9.596 4.305 9.596 9.597 c 0 1.683 -0.446 3.341 -1.29 4.799 l -8.307 14.394 l -8.308 -14.395 c -0.843 -1.456 -1.289 -3.115 -1.289 -4.798 c 0 -5.292 4.305 -9.597 9.597 -9.597 Z M 16.001 14.4 c 2.058 0 3.731 -1.674 3.731 -3.731 s -1.674 -3.731 -3.731 -3.731 c -2.058 0 -3.732 1.674 -3.732 3.731 s 1.674 3.731 3.732 3.731 Z M 16.001 0.006 c -5.889 0 -10.663 4.775 -10.663 10.663 c 0 1.945 0.523 3.762 1.432 5.332 l 9.23 15.994 l 9.23 -15.994 c 0.909 -1.57 1.432 -3.387 1.432 -5.332 c 0 -5.888 -4.774 -10.663 -10.662 -10.663 v 0 Z M 16.001 13.334 c -1.472 0 -2.666 -1.193 -2.666 -2.665 c 0 -1.471 1.194 -2.665 2.666 -2.665 s 2.665 1.194 2.665 2.665 c 0 1.472 -1.193 2.665 -2.665 2.665 v 0 Z\"></path><span></span></p> <p style=\"display:flex;\"><svg style=\"width: 24px;height: 24px;vertical-align: middle;margin-right: 5px;\" viewbox=\"0 0 32 32\" width=\"32\" height=\"32\"><path fill=\"currentColor\" d=\"M 28.244 7.47 h -25.572 v 17.06 h 26.656 v -17.06 h -1.084 Z M 27.177 8.536 l -10.298 10.298 c -0.47 0.47 -1.289 0.47 -1.759 0 l -10.3 -10.298 h 22.356 Z M 3.738 8.961 l 6.923 6.922 l -6.923 6.923 v -13.846 Z M 4.589 23.464 l 6.827 -6.826 l 2.951 2.95 c 0.436 0.436 1.016 0.677 1.633 0.677 s 1.197 -0.241 1.633 -0.677 l 2.951 -2.951 l 6.826 6.826 h -22.822 Z M 28.262 22.807 l -6.923 -6.924 l 6.923 -6.924 v 13.848 Z\"></path></svg><span>hello@witlofskincare.com</span></p> \n<p style=\"display:flex;\"><svg style=\"width: 24px;height: 24px;vertical-align: middle;margin-right: 5px;\" viewbox=\"0 0 32 32\" width=\"32\" height=\"32\"><path fill=\"currentColor\" d=\"M 23.407 30.394 c -2.431 0 -8.341 -3.109 -13.303 -9.783 c -4.641 -6.242 -6.898 -10.751 -6.898 -13.785 c 0 -2.389 1.65 -3.529 2.536 -4.142 l 0.219 -0.153 c 0.979 -0.7 2.502 -0.927 3.086 -0.927 c 1.024 0 1.455 0.599 1.716 1.121 c 0.222 0.442 2.061 4.39 2.247 4.881 c 0.286 0.755 0.192 1.855 -0.692 2.488 l -0.155 0.108 c -0.439 0.304 -1.255 0.869 -1.368 1.557 c -0.055 0.334 0.057 0.684 0.342 1.068 c 1.423 1.918 5.968 7.55 6.787 8.314 c 0.642 0.6 1.455 0.685 2.009 0.218 c 0.573 -0.483 0.828 -0.768 0.83 -0.772 l 0.059 -0.057 c 0.048 -0.041 0.496 -0.396 1.228 -0.396 c 0.528 0 1.065 0.182 1.596 0.541 c 1.378 0.931 4.487 3.011 4.487 3.011 l 0.05 0.038 c 0.398 0.341 0.973 1.323 0.302 2.601 c -0.695 1.327 -2.85 4.066 -5.079 4.066 Z M 9.046 2.672 c -0.505 0 -1.746 0.213 -2.466 0.728 l -0.232 0.162 c -0.827 0.572 -2.076 1.435 -2.076 3.265 c 0 2.797 2.188 7.098 6.687 13.149 c 4.914 6.609 10.532 9.353 12.447 9.353 c 1.629 0 3.497 -2.276 4.135 -3.494 c 0.392 -0.748 0.071 -1.17 -0.04 -1.284 c -0.36 -0.241 -3.164 -2.117 -4.453 -2.988 c -0.351 -0.238 -0.688 -0.358 -0.999 -0.358 c -0.283 0 -0.469 0.1 -0.532 0.14 c -0.104 0.111 -0.39 0.405 -0.899 0.833 c -0.951 0.801 -2.398 0.704 -3.424 -0.254 c -0.923 -0.862 -5.585 -6.666 -6.916 -8.459 c -0.46 -0.62 -0.641 -1.252 -0.538 -1.877 c 0.187 -1.133 1.245 -1.866 1.813 -2.26 l 0.142 -0.099 c 0.508 -0.363 0.4 -1.02 0.316 -1.242 c -0.157 -0.414 -1.973 -4.322 -2.203 -4.781 c -0.188 -0.376 -0.336 -0.533 -0.764 -0.533 Z\"></path></svg><span> NL: +31 620035339<br></span></p>",
+              "hidden_mobile": false
+            }
+          },
+          "d5de0425-1ae7-4804-bb0d-656262ee282d": {
+            "type": "cus_socials",
+            "settings": {
+              "title": "",
+              "social_mode": "1",
+              "social_style": "3",
+              "social_size": "small",
+              "bd_radius": 0,
+              "use_color_set": false,
+              "icon_cl": "#878787",
+              "bg_cl": "#222222",
+              "space_h_item": "5",
+              "space_v_item": "5",
+              "space_h_item_mb": "2",
+              "space_v_item_mb": "2"
+            }
+          },
+          "footer-3": {
+            "type": "cus_socials",
+            "disabled": true,
+            "settings": {
+              "title": "",
+              "social_mode": "1",
+              "social_style": "1",
+              "social_size": "small",
+              "bd_radius": 0,
+              "use_color_set": false,
+              "icon_cl": "#878787",
+              "bg_cl": "#4ab9cb",
+              "space_h_item": "20",
+              "space_v_item": "5",
+              "space_h_item_mb": "20",
+              "space_v_item_mb": "2",
+              "mgb": 0
+            }
+          },
+          "footer-4": {
+            "type": "bl_col",
+            "settings": {
+              "col_heading": "Beleid",
+              "menu": "footer",
+              "menu_style": "1",
+              "col_border": "none",
+              "col_dk": "3",
+              "col_tb": "6",
+              "col_mb": "12",
+              "content_align": "t4s-text-md-start",
+              "padding_inner": "5px,0,0,0",
+              "content_align_tb": "t4s-text-md-start",
+              "padding_inner_tb": "",
+              "col_heading_mobile": "",
+              "content_align_mb": "t4s-text-start",
+              "padding_inner_mb": ""
+            }
+          },
+          "footer-6": {
+            "type": "bl_col",
+            "disabled": true,
+            "settings": {
+              "col_heading": "Infomation",
+              "menu": "",
+              "menu_style": "1",
+              "col_border": "none",
+              "col_dk": "2",
+              "col_tb": "6",
+              "col_mb": "12",
+              "content_align": "t4s-text-md-start",
+              "padding_inner": "5px,0,0,0",
+              "content_align_tb": "t4s-text-md-start",
+              "padding_inner_tb": "",
+              "col_heading_mobile": "",
+              "content_align_mb": "t4s-text-start",
+              "padding_inner_mb": ""
+            }
+          },
+          "footer-8": {
+            "type": "bl_col",
+            "settings": {
+              "col_heading": "Menu",
+              "menu": "footermenu-2",
+              "menu_style": "1",
+              "col_border": "none",
+              "col_dk": "2",
+              "col_tb": "6",
+              "col_mb": "12",
+              "content_align": "t4s-text-md-start",
+              "padding_inner": "5px,0,0,0",
+              "content_align_tb": "t4s-text-md-start",
+              "padding_inner_tb": "",
+              "col_heading_mobile": "",
+              "content_align_mb": "t4s-text-start",
+              "padding_inner_mb": ""
+            }
+          },
+          "footer-10": {
+            "type": "bl_col",
+            "settings": {
+              "col_heading": "Nieuwsbrief",
+              "menu": "",
+              "menu_style": "1",
+              "col_border": "none",
+              "col_dk": "3",
+              "col_tb": "6",
+              "col_mb": "12",
+              "content_align": "t4s-text-md-start",
+              "padding_inner": "5px,0,0,0",
+              "content_align_tb": "t4s-text-md-start",
+              "padding_inner_tb": "",
+              "col_heading_mobile": "",
+              "content_align_mb": "t4s-text-start",
+              "padding_inner_mb": ""
+            }
+          },
+          "footer-11": {
+            "type": "custom_text",
+            "disabled": true,
+            "settings": {
+              "text": "Schrijf je in, blijf op de hoogte en ontvang eenmalig 10% korting.",
+              "remove_br_tag": false,
+              "tag": "p",
+              "fontf": "inherit",
+              "text_cl": "#878787",
+              "text_fs": 14,
+              "text_lh": 24,
+              "text_fw": 400,
+              "text_ls": 0,
+              "font_italic": false,
+              "text_shadow": false,
+              "text_mgb": 18,
+              "hidden_mobile": false,
+              "text_fs_mb": 16,
+              "text_lh_mb": 0,
+              "text_ls_mb": 0,
+              "text_mgb_mobile": 18
+            }
+          },
+          "html_LQLGb7": {
+            "type": "html",
+            "settings": {
+              "html_content": "<div class=\"klaviyo-form-VHYAN2\"></div>\n<div class=\"klaviyo-form-RWfd5a\"></div>",
+              "hidden_mobile": false
+            }
+          },
+          "footer-12": {
+            "type": "newsletter",
+            "disabled": true,
+            "settings": {
+              "form_width": 0,
+              "form_width_mb": 0,
+              "newl_des": "1",
+              "news_align": "start",
+              "newl_size": "small",
+              "btn_icon": false,
+              "input_cl": "#878787",
+              "border_cl": "#000000",
+              "btn_cl": "#ffffff",
+              "btn_bg_cl": "#222222",
+              "btn_hover_cl": "#ffffff",
+              "btn_hover_bg_cl": "#4ab9cb",
+              "hidden_mobile": false,
+              "mgb": 22,
+              "mgb_mb": 20
+            }
+          },
+          "385c1474-1235-4a3d-b73c-9555b5f8dcfb": {
+            "type": "image",
+            "settings": {
+              "link_img": "",
+              "img_width": 0,
+              "img_width_mb": 0,
+              "mgb": 20,
+              "mgb_mb": 20
+            }
+          },
+          "33eb929e-a001-4d96-82a0-5aab1aaabaea": {
+            "type": "payments",
+            "disabled": true,
+            "settings": {
+              "svg": "visa,paypal,maestro,american_express,discover",
+              "height": 30,
+              "hidden_mobile": false,
+              "mgb": 20,
+              "mgb_mb": 10
+            }
+          }
+        },
+        "block_order": [
+          "footer-0",
+          "de84a111-3ed0-40a2-b86a-1e81488e9bff",
+          "footer-2",
+          "d5de0425-1ae7-4804-bb0d-656262ee282d",
+          "footer-3",
+          "footer-4",
+          "footer-6",
+          "footer-8",
+          "footer-10",
+          "footer-11",
+          "html_LQLGb7",
+          "footer-12",
+          "385c1474-1235-4a3d-b73c-9555b5f8dcfb",
+          "33eb929e-a001-4d96-82a0-5aab1aaabaea"
+        ],
+        "settings": {
+          "sticky": false,
+          "collapse": true,
+          "border_top": false,
+          "enable_follow_on_shop": true,
+          "border_pos": "full",
+          "space_h_item": "30",
+          "space_v_item": "30",
+          "space_h_item_tb": "15",
+          "space_v_item_tb": "30",
+          "space_h_item_mb": "0",
+          "space_v_item_mb": "30",
+          "heading_fontf": "inherit",
+          "heading_fs": 16,
+          "heading_lh": 22,
+          "heading_fw": 500,
+          "heading_ls": 0,
+          "mgb": 30,
+          "mgb_mb": 20,
+          "text_fs": 14,
+          "text_fw": 400,
+          "heading_cl": "#222222",
+          "text_cl": "#878787",
+          "link_cl": "#878787",
+          "link_hover_cl": "#4ab9cb",
+          "link_active_cl": "#222222",
+          "border_cl": "#c5e6f0",
+          "layout": "t4s-container-wrap",
+          "cl_bg": "#c5e6f0",
+          "cl_bg_gradient": "",
+          "mg": "",
+          "pd": "75px,,75px,",
+          "mg_tb": "",
+          "pd_tb": "",
+          "mg_mb": "",
+          "pd_mb": "45px,,45px,"
+        }
+      },
+      "announcement-bar": {
+        "type": "announcement-bar",
+        "blocks": {
+          "announcement-bar-1": {
+            "type": "announcement",
+            "disabled": true,
+            "settings": {
+              "link": "shopify://products/nourishing-day-cream-spf30-50ml-nieuwe-formule",
+              "content": "<p>🌞<strong> 1+1 GRATIS</strong> op de Nourishing Day Cream SPF30. Voeg 2 producten aan je mandje toe. Gebruik code '<strong>SNOW</strong>' bij de checkout. Krijg er een gratis!<br/></p>",
+              "adding_border": false,
+              "countdown": "",
+              "txt_day": "dagen",
+              "dayx": 0
+            }
+          },
+          "announcement_mDtcGP": {
+            "type": "announcement",
+            "disabled": true,
+            "settings": {
+              "link": "shopify://collections/starter-kits",
+              "content": "<p><strong>🩷</strong> <strong>1+1 GRATIS </strong>OP<strong> </strong>DE<strong> STARTER KITS. </strong>Voeg 2 STARTER KITS aan je mandje toe. Gebruik code <strong>'HEART' </strong>bij de checkout. Krijg er een gratis!</p>",
+              "adding_border": false,
+              "countdown": "2025/02/17",
+              "txt_day": "days",
+              "dayx": 0
+            }
+          },
+          "announcement-bar-0": {
+            "type": "announcement",
+            "disabled": true,
+            "settings": {
+              "link": "",
+              "content": "<p><strong>Gratis </strong>verzenden vanaf €45 in NL & BE. Voor <strong>22 uur</strong> besteld, dezelfde werkdag verzonden.</p>",
+              "adding_border": false,
+              "countdown": "",
+              "txt_day": "days",
+              "dayx": 0
+            }
+          },
+          "06da85dc-6afd-4d72-ad0c-e4d2d25bc7dd": {
+            "type": "announcement",
+            "settings": {
+              "link": "shopify://pages/store-locator",
+              "content": "<p><strong>Ook verkrijgbaar bij</strong> </p><p>Holland & Barrett, Etos en onafhankelijke verkooppunten en salons.</p>",
+              "adding_border": false,
+              "countdown": "",
+              "txt_day": "",
+              "dayx": 0
+            }
+          },
+          "announcement_P3aB3k": {
+            "type": "announcement",
+            "disabled": true,
+            "settings": {
+              "link": "",
+              "content": "<p><strong>BLUE MONDAY 35% KORTING. [countdown].  </strong></p>",
+              "adding_border": false,
+              "countdown": "2024/12/3",
+              "txt_day": "days",
+              "dayx": 0
+            }
+          },
+          "announcement_ekmQXW": {
+            "type": "announcement",
+            "disabled": true,
+            "settings": {
+              "link": "",
+              "content": "<p>💙 GRATIS RICH FACIAL CREAM t.w.v. €18.65<br/>bij besteding van €75. Wordt automatisch toegevoegd aan je winkelmandje!  </p>",
+              "adding_border": false,
+              "countdown": "2023/12/26",
+              "txt_day": "days",
+              "dayx": 0
+            }
+          },
+          "b8ce6284-b9d9-4abb-bd39-857faf97e68e": {
+            "type": "announcement",
+            "disabled": true,
+            "settings": {
+              "link": "shopify://products/hydrating-calming-lotion",
+              "content": "<p><strong>NIEUW! </strong>De <strong>Hydrating Calming Lotion 💧</strong></p>",
+              "adding_border": false,
+              "countdown": "2023/12/26",
+              "txt_day": "days",
+              "dayx": 0
+            }
+          },
+          "announcement_zKCV3U": {
+            "type": "announcement",
+            "disabled": true,
+            "settings": {
+              "link": "",
+              "content": "<p>Today deal sale off 70%. End in [countdown]. Hurry Up!! [icon_arrow]</p>",
+              "adding_border": false,
+              "countdown": "2023/12/26",
+              "txt_day": "days",
+              "dayx": 0
+            }
+          },
+          "announcement_NckFrd": {
+            "type": "announcement",
+            "disabled": true,
+            "settings": {
+              "link": "",
+              "content": "<p>💙 <strong>Gratis </strong>katoenen toilettasje bij <strong>elke </strong>bestelling. </p>",
+              "adding_border": false,
+              "countdown": "2023/12/26",
+              "txt_day": "days",
+              "dayx": 0
+            }
+          },
+          "announcement-bar-2": {
+            "type": "announcement",
+            "disabled": true,
+            "settings": {
+              "link": "",
+              "content": "<p>Einde<strong> zomersale</strong>, tot <strong>30% korting</strong> op alle producten. <strong>[icon_arrow]</strong> <strong>[countdown] </strong></p>",
+              "adding_border": false,
+              "countdown": "2023/09/13 23:59:30",
+              "txt_day": "days",
+              "dayx": 0
+            }
+          }
+        },
+        "block_order": [
+          "announcement-bar-1",
+          "announcement_mDtcGP",
+          "announcement-bar-0",
+          "06da85dc-6afd-4d72-ad0c-e4d2d25bc7dd",
+          "announcement_P3aB3k",
+          "announcement_ekmQXW",
+          "b8ce6284-b9d9-4abb-bd39-857faf97e68e",
+          "announcement_zKCV3U",
+          "announcement_NckFrd",
+          "announcement-bar-2"
+        ],
+        "settings": {
+          "show_announcement": true,
+          "design": "slider",
+          "effect": "1",
+          "au_time": 5,
+          "speed": 15,
+          "pause_when_hover": false,
+          "direction": "rtl",
+          "height": 47,
+          "fontsize": 14,
+          "cl": "#ffffff",
+          "bg": "#5f8ac7",
+          "bg_op": 89,
+          "close": "0",
+          "cl_btn": "#ffffff",
+          "version": "2",
+          "date": 0
+        }
+      },
+      "top-bar": {
+        "type": "top-bar",
+        "blocks": {
+          "top-bar-2": {
+            "type": "cur",
+            "settings": {
+              "show_currency": true,
+              "show_language": true,
+              "use_location": false,
+              "txt_location": "Location",
+              "url_location": "shopify://blogs/lingeries/5-best-swimsuits-for-big-busts",
+              "open_link": "_self",
+              "hide": true,
+              "text_align": "end",
+              "col": "12"
+            }
+          },
+          "top-bar-1": {
+            "type": "text",
+            "settings": {
+              "text": "<p><strong>✔️Gratis </strong>verzenden vanaf €45 in NL & BE ;;; <strong>✔️</strong>Voor <strong>22 uur</strong> besteld, zelfde werkdag verzonden ;;;<strong>✔️+10.000</strong> tevreden klanten </p>",
+              "adding_border": false,
+              "countdown": "",
+              "txt_day": "",
+              "dayx": 0,
+              "effect": "0",
+              "au_time": 3.5,
+              "fw_bold": 400,
+              "cl_a": "#222222",
+              "cl_bold": "#5c8cd9",
+              "cl_a_tr": "#ffffff",
+              "cl_bold_tr": "rgba(0,0,0,0)",
+              "hide": false,
+              "text_align": "center",
+              "col": "12"
+            }
+          },
+          "top-bar-0": {
+            "type": "html",
+            "disabled": true,
+            "settings": {
+              "html": "<a class=\"jn-trustpilot\" href=\"https://nl.trustpilot.com/review/witlofskincare.com\" target=\"_blank\"><img src=\"https://cdn.shopify.com/s/files/1/0765/8461/6257/files/stars-4.5.svg?v=1686809810\"> <div>Trustpilot: 4,7/5</div></a>",
+              "hide": false,
+              "text_align": "start",
+              "col": "4"
+            }
+          }
+        },
+        "block_order": [
+          "top-bar-2",
+          "top-bar-1",
+          "top-bar-0"
+        ],
+        "settings": {
+          "show_topbar": true,
+          "topbar_transparent": false,
+          "height": 45,
+          "fontsize": 12,
+          "cl": "#878787",
+          "cl_a_hover": "#56cfe1",
+          "bg": "#ffffff",
+          "bg_op": 100,
+          "show_border": false,
+          "bd_cl": "#000000",
+          "cl_tr": "#ffffff",
+          "cl_a_hover_tr": "#56cfe1",
+          "bg_tr": "#000000",
+          "bg_op_tr": 10,
+          "show_border_tr": false,
+          "bd_cl_tr": "#b3b3b3"
+        }
+      },
+      "header-inline": {
+        "type": "header-inline",
+        "blocks": {
+          "9883384a-d19a-4abe-9a94-388d91fce9b6": {
+            "type": "mega",
+            "settings": {
+              "title": "Demo",
+              "url": "https://demo-kalles-4-1.myshopify.com/",
+              "open_link": "_self",
+              "icon": "",
+              "cus_cl": false,
+              "cl": "#ec0101",
+              "lb": "",
+              "lb_cl": "#00badb",
+              "pos_sub": "bottom-start",
+              "wid": "cus",
+              "cus_wid": 1050,
+              "id": 1,
+              "enable_packery": true,
+              "r_s_h_item": "20",
+              "r_s_v_item": "30"
+            }
+          },
+          "e0be43d6-bf02-4962-a06e-4294c6d6bd53": {
+            "type": "mega",
+            "settings": {
+              "title": "Shop",
+              "url": "shopify://collections",
+              "open_link": "_self",
+              "icon": "",
+              "cus_cl": false,
+              "cl": "#ec0101",
+              "lb": "New",
+              "lb_cl": "#00badb",
+              "pos_sub": "bottom",
+              "wid": "cus",
+              "cus_wid": 1000,
+              "id": 2,
+              "enable_packery": true,
+              "r_s_h_item": "20",
+              "r_s_v_item": "30"
+            }
+          },
+          "3944a4f5-3618-4f4b-9d13-238ddb1b72f2": {
+            "type": "mega",
+            "settings": {
+              "title": "Product",
+              "url": "shopify://collections/all",
+              "open_link": "_self",
+              "icon": "",
+              "cus_cl": false,
+              "cl": "#ec0101",
+              "lb": "",
+              "lb_cl": "#00badb",
+              "pos_sub": "bottom",
+              "wid": "cus",
+              "cus_wid": 1100,
+              "id": 3,
+              "enable_packery": true,
+              "r_s_h_item": "20",
+              "r_s_v_item": "30"
+            }
+          },
+          "4a281327-6e12-4cd4-af83-0ce2f502e7b8": {
+            "type": "mega",
+            "settings": {
+              "title": "Sale",
+              "url": "shopify://collections",
+              "open_link": "_self",
+              "icon": "",
+              "cus_cl": false,
+              "cl": "#ec0101",
+              "lb": "Sale",
+              "lb_cl": "#ffa800",
+              "pos_sub": "bottom",
+              "wid": "cus",
+              "cus_wid": 1200,
+              "id": 4,
+              "enable_packery": true,
+              "r_s_h_item": "20",
+              "r_s_v_item": "30"
+            }
+          },
+          "334013b4-82f3-4046-8371-eaf3c3340153": {
+            "type": "drop",
+            "settings": {
+              "title": "Portfolio",
+              "url": "https://demo-kalles-4-1.myshopify.com/blogs/portfolio/?preview_theme_id=128644972750",
+              "open_link": "_self",
+              "menu": "",
+              "icon": "",
+              "cus_cl": false,
+              "cl": "#ec0101",
+              "lb": "",
+              "lb_cl": "",
+              "lazy_mn": true,
+              "pos_sub": "bottom",
+              "pos": "left"
+            }
+          },
+          "556a85dc-041d-4d44-8c22-263ed70a8b48": {
+            "type": "drop",
+            "settings": {
+              "title": "Lookbook",
+              "url": "https://demo-kalles-4-1.myshopify.com",
+              "open_link": "_self",
+              "menu": "",
+              "icon": "",
+              "cus_cl": false,
+              "cl": "#ec0101",
+              "lb": "",
+              "lb_cl": "",
+              "lazy_mn": true,
+              "pos_sub": "bottom",
+              "pos": "left"
+            }
+          },
+          "9a73cf8b-993e-4dbe-9f11-6e990bfb91c0": {
+            "type": "mega",
+            "settings": {
+              "title": "Blog",
+              "url": "https://demo-kalles-4-1.myshopify.com/blogs/fashion?preview_theme_id=",
+              "open_link": "_self",
+              "icon": "",
+              "cus_cl": false,
+              "cl": "#ec0101",
+              "lb": "",
+              "lb_cl": "#00badb",
+              "pos_sub": "bottom",
+              "wid": "cus",
+              "cus_wid": 950,
+              "id": 5,
+              "enable_packery": true,
+              "r_s_h_item": "20",
+              "r_s_v_item": "30"
+            }
+          }
+        },
+        "block_order": [
+          "9883384a-d19a-4abe-9a94-388d91fce9b6",
+          "e0be43d6-bf02-4962-a06e-4294c6d6bd53",
+          "3944a4f5-3618-4f4b-9d13-238ddb1b72f2",
+          "4a281327-6e12-4cd4-af83-0ce2f502e7b8",
+          "334013b4-82f3-4046-8371-eaf3c3340153",
+          "556a85dc-041d-4d44-8c22-263ed70a8b48",
+          "9a73cf8b-993e-4dbe-9f11-6e990bfb91c0"
+        ],
+        "settings": {
+          "layout": "logo_left",
+          "full_header": true,
+          "height": 70,
+          "arrow": false,
+          "align": "center",
+          "hover": "hover_sideup",
+          "enable_active": false,
+          "h_navmb": 60,
+          "bgnav": "#ffffff",
+          "opnav": 100,
+          "clnav": "#222222",
+          "clnav_hover": "#56cfe1",
+          "h_icon": "kalles",
+          "hover_icon": "2",
+          "show_search": true,
+          "show_acc": true,
+          "show_wis": true,
+          "cart_des": "1",
+          "bg_hc": "#000000",
+          "cl_hc": "#ffffff",
+          "sticky_header": true,
+          "scroll_header": true,
+          "bgnavst": "#ffffff",
+          "opnavst": 100,
+          "clnavst": "#222222",
+          "clnavst_hover": "#56cfe1",
+          "transparent_header": false,
+          "space_transparent_header": false,
+          "bgnavtr": "#000000",
+          "opnavtr": 40,
+          "clnavtr": "#ffffff",
+          "clnavtr_hover": "#56cfe1",
+          "fm_nav": "1",
+          "fs_nav": 14,
+          "fw_nav": 400,
+          "ls_nav": 0
+        }
+      },
+      "title_config": {
+        "type": "title_config",
+        "blocks": {
+          "title_config-0": {
+            "type": "title",
+            "settings": {
+              "color": "#222222",
+              "family": "2",
+              "size": 24,
+              "weight": 600,
+              "lh": 34,
+              "ls": 0,
+              "space": 0,
+              "size_mb": 18,
+              "lh_mb": 30,
+              "ls_mb": 0,
+              "space_mb": 0
+            }
+          },
+          "title_config-1": {
+            "type": "subtitle",
+            "settings": {
+              "italic": true,
+              "color": "#878787",
+              "family": "3",
+              "size": 14,
+              "weight": 400,
+              "lh": 0,
+              "ls": 0,
+              "space": 0,
+              "size_mb": 14,
+              "lh_mb": 0,
+              "ls_mb": 0,
+              "space_mb": 0
+            }
+          }
+        },
+        "block_order": [
+          "title_config-0",
+          "title_config-1"
+        ],
+        "settings": {
+          "design_heading": "1",
+          "heading_align": "t4s-text-center",
+          "top_heading": "Accordion",
+          "icon_heading": "las la-gem",
+          "top_subheading": "",
+          "tophead_mb": 30
+        }
+      },
+      "pr_item_config": {
+        "type": "pr_item_config",
+        "blocks": {
+          "pr_item_config-0": {
+            "type": "1",
+            "settings": {
+              "heading": "Product desgin 01",
+              "addtocart_color": "#ffffff",
+              "addtocart_color_hover": "#222222",
+              "quickview_color": "#ffffff",
+              "quickview_color_hover": "#222222",
+              "wishlist_color": "#ffffff",
+              "wishlist_color_hover": "#222222",
+              "wishlist_color_active": "#e81e63",
+              "compare_color": "#ffffff",
+              "compare_color_hover": "#222222",
+              "size_list_color": "#ffffff"
+            }
+          },
+          "pr_item_config-1": {
+            "type": "2",
+            "settings": {
+              "heading": "Product desgin 02",
+              "addtocart_color": "#ffffff",
+              "addtocart_color_hover": "#222222",
+              "quickview_color": "#ffffff",
+              "quickview_color_hover": "#222222",
+              "wishlist_color": "#ffffff",
+              "wishlist_color_hover": "#222222",
+              "wishlist_color_active": "#e81e63",
+              "compare_color": "#ffffff",
+              "compare_color_hover": "#222222",
+              "size_list_color": "#ffffff"
+            }
+          },
+          "977f60cb-440c-4e8e-beaa-b55b503aaa7c": {
+            "type": "3",
+            "settings": {
+              "heading": "Product design 03",
+              "addtocart_color": "#ffffff",
+              "addtocart_color_hover": "#222222",
+              "quickview_color": "#ffffff",
+              "quickview_color_hover": "#222222",
+              "wishlist_color": "#ffffff",
+              "wishlist_color_hover": "#222222",
+              "wishlist_color_active": "#e81e63",
+              "compare_color": "#ffffff",
+              "compare_color_hover": "#222222",
+              "size_list_color": "#ffffff"
+            }
+          },
+          "fca180ab-ad71-42a7-a8a9-ed91fbebd0ac": {
+            "type": "4",
+            "settings": {
+              "heading": "Product design 04",
+              "addtocart_color": "#ffffff",
+              "addtocart_color_hover": "#222222",
+              "quickview_color": "#ffffff",
+              "quickview_color_hover": "#222222",
+              "wishlist_color": "#ffffff",
+              "wishlist_color_hover": "#222222",
+              "wishlist_color_active": "#e81e63",
+              "compare_color": "#ffffff",
+              "compare_color_hover": "#222222",
+              "pr_btn_round": 0,
+              "size_list_color": "#ffffff"
+            }
+          },
+          "6fdc3407-75d0-4c09-92f9-138646c4699e": {
+            "type": "5",
+            "settings": {
+              "heading": "Product design 05",
+              "addtocart_color": "#ffffff",
+              "addtocart_color_hover": "#222222",
+              "quickview_color": "#ffffff",
+              "quickview_color_hover": "#222222",
+              "wishlist_color": "#ffffff",
+              "wishlist_color_hover": "#222222",
+              "wishlist_color_active": "#e81e63",
+              "compare_color": "#ffffff",
+              "compare_color_hover": "#222222",
+              "size_list_color": "#ffffff"
+            }
+          },
+          "16ce1932-676d-4dcd-bdbf-356d813613c5": {
+            "type": "6",
+            "settings": {
+              "heading": "Product design 06",
+              "atc_style": "default",
+              "addtocart_color": "#56cfe1",
+              "addtocart_color_hover": "#00badb",
+              "quickview_color": "#ffffff",
+              "quickview_color_hover": "#222222",
+              "wishlist_color": "#ffffff",
+              "wishlist_color_hover": "#222222",
+              "wishlist_color_active": "#e81e63",
+              "compare_color": "#ffffff",
+              "compare_color_hover": "#222222",
+              "size_list_color": "#ffffff"
+            }
+          },
+          "83670c68-17f0-43a9-8caa-b96cca9a3b05": {
+            "type": "list",
+            "settings": {
+              "heading": "Product list",
+              "content_color": "#878787",
+              "addtocart_color": "#56cfe1",
+              "addtocart_color_hover": "#222222",
+              "quickview_color": "#56cfe1",
+              "quickview_color_hover": "#222222",
+              "wishlist_color": "#ffffff",
+              "wishlist_color_hover": "#222222",
+              "wishlist_color_active": "#e81e63",
+              "compare_color": "#ffffff",
+              "compare_color_hover": "#222222",
+              "size_list_color": "#ffffff"
+            }
+          },
+          "a8021fa1-2248-47ff-a3a7-9433011a17bc": {
+            "type": "packery",
+            "settings": {
+              "heading": "Product packery",
+              "pr_title_color": "#ffffff",
+              "pr_title_color_hover": "#56cfe1",
+              "price_color": "#ffffff",
+              "price_color_second": "#696969",
+              "price_sale_color": "#ec0101",
+              "addtocart_color": "#ffffff",
+              "addtocart_color_hover": "#222222",
+              "quickview_color": "#ffffff",
+              "quickview_color_hover": "#222222",
+              "wishlist_color": "#ffffff",
+              "wishlist_color_hover": "#222222",
+              "wishlist_color_active": "#e81e63",
+              "compare_color": "#ffffff",
+              "compare_color_hover": "#222222",
+              "size_list_color": "#ffffff"
+            }
+          }
+        },
+        "block_order": [
+          "pr_item_config-0",
+          "pr_item_config-1",
+          "977f60cb-440c-4e8e-beaa-b55b503aaa7c",
+          "fca180ab-ad71-42a7-a8a9-ed91fbebd0ac",
+          "6fdc3407-75d0-4c09-92f9-138646c4699e",
+          "16ce1932-676d-4dcd-bdbf-356d813613c5",
+          "83670c68-17f0-43a9-8caa-b96cca9a3b05",
+          "a8021fa1-2248-47ff-a3a7-9433011a17bc"
+        ],
+        "settings": {
+          "txt_tr_pr": "none",
+          "fnt_df_pr": "1",
+          "size_pr": 14,
+          "fw_pr": 500,
+          "lh_pr": 20,
+          "ls_pr": 0,
+          "size_price_pr": 14,
+          "fw_price_pr": 400,
+          "space_img_content": 15,
+          "space_elements": 0,
+          "swatch_color_size": 16,
+          "swatch_color_size_mb": 20,
+          "pr_btn_round": 40,
+          "pr_title_color": "#222222",
+          "pr_title_color_hover": "#56cfe1",
+          "price_color": "#696969",
+          "price_color_second": "#696969",
+          "price_sale_color": "#ec0101",
+          "vendors_color": "#878787",
+          "vendors_color_hover": "#56cfe1",
+          "countdown_color": "#56cfe1",
+          "countdown_overlay": 100,
+          "pr_bg_overlay": "#000000",
+          "pr_overlay": 10
+        }
+      },
+      "btn_config": {
+        "type": "btn_config",
+        "blocks": {
+          "btn_config-0": {
+            "type": "custom1",
+            "settings": {
+              "color_primary": "#ffb100",
+              "color_second": "#ffffff",
+              "color_primary_hover": "#ff4e00",
+              "color_second_hover": "#ffffff"
+            }
+          },
+          "btn_config-1": {
+            "type": "custom2",
+            "settings": {
+              "color_primary": "#f7f7f7",
+              "color_second": "#222222",
+              "color_primary_hover": "#ffffff",
+              "color_second_hover": "#222222"
+            }
+          }
+        },
+        "block_order": [
+          "btn_config-0",
+          "btn_config-1"
+        ],
+        "settings": {
+          "fnt_fm_button": "--font-family-1",
+          "btn_fw": 600,
+          "btn_bdr": 60,
+          "other_radius": 0,
+          "button_effect": "default"
+        }
+      },
+      "toolbar_mobile": {
+        "type": "toolbar_mobile",
+        "blocks": {
+          "toolbar_mobile-0": {
+            "type": "shop",
+            "settings": {
+              "title": "Shop",
+              "link": ""
+            }
+          },
+          "toolbar_mobile-1": {
+            "type": "wish",
+            "settings": {
+              "title": "Wishlist"
+            }
+          },
+          "toolbar_mobile-2": {
+            "type": "cart",
+            "settings": {
+              "title": "Cart"
+            }
+          },
+          "toolbar_mobile-3": {
+            "type": "account",
+            "settings": {
+              "title": "Account"
+            }
+          },
+          "toolbar_mobile-4": {
+            "type": "search",
+            "settings": {
+              "title": "Search"
+            }
+          }
+        },
+        "block_order": [
+          "toolbar_mobile-0",
+          "toolbar_mobile-1",
+          "toolbar_mobile-2",
+          "toolbar_mobile-3",
+          "toolbar_mobile-4"
+        ],
+        "settings": {
+          "enable_toolbar": false,
+          "show_txt": true,
+          "bg_color": "#ffffff",
+          "icon_color": "#222222",
+          "label_color": "#222222",
+          "count_bg_color": "#000000",
+          "count_text_color": "#ffffff"
+        }
+      },
+      "back_top": {
+        "type": "back_top",
+        "settings": {
+          "enable_backtop": true,
+          "enable_hidden_mobile": false,
+          "backtop_des": "1",
+          "enable_progress_bar": false,
+          "border_cl": "#f5f5f5",
+          "border_cl_active": "#000000"
+        }
+      },
+      "mega-menu": {
+        "type": "mega-menu",
+        "blocks": {
+          "583a30c7-369d-4a64-a51d-ca53c1685206": {
+            "type": "mega",
+            "settings": {
+              "id": 1
+            }
+          },
+          "3abb98a1-837d-46af-b195-f5c43e7c88ee": {
+            "type": "link",
+            "settings": {
+              "tt_hd": "HOME PAGES",
+              "url": "",
+              "open_link": "_self",
+              "menu": "",
+              "item_fsize": 13,
+              "sp_bettewn_item": 20,
+              "col": "3"
+            }
+          },
+          "2ceac397-4b2b-4740-a477-707dd2680e02": {
+            "type": "link",
+            "settings": {
+              "tt_hd": "HOME PAGES",
+              "url": "",
+              "open_link": "_self",
+              "menu": "",
+              "item_fsize": 13,
+              "sp_bettewn_item": 20,
+              "col": "3"
+            }
+          },
+          "1f90cea5-04fb-4ef3-822b-5f987845e5c4": {
+            "type": "link",
+            "settings": {
+              "tt_hd": "HEADER LAYOUTS",
+              "url": "",
+              "open_link": "_self",
+              "menu": "",
+              "item_fsize": 13,
+              "sp_bettewn_item": 20,
+              "col": "3"
+            }
+          },
+          "6122e966-0272-4c46-a1a0-051bdc2ae08c": {
+            "type": "link",
+            "settings": {
+              "tt_hd": "FEATURES",
+              "url": "",
+              "open_link": "_self",
+              "menu": "",
+              "item_fsize": 13,
+              "sp_bettewn_item": 20,
+              "col": "3"
+            }
+          },
+          "45fa281e-2be5-4727-bd01-942824713769": {
+            "type": "mega",
+            "settings": {
+              "id": 2
+            }
+          },
+          "02beea21-3cb9-41ce-a1ab-04ae44b7f47e": {
+            "type": "link",
+            "settings": {
+              "tt_hd": "SHOP PAGES",
+              "url": "",
+              "open_link": "_self",
+              "menu": "",
+              "item_fsize": 13,
+              "sp_bettewn_item": 20,
+              "col": "2"
+            }
+          },
+          "ff494243-e58b-40e9-a2ea-e64ccd58a624": {
+            "type": "link",
+            "settings": {
+              "tt_hd": "FEATURES",
+              "url": "",
+              "open_link": "_self",
+              "menu": "",
+              "item_fsize": 13,
+              "sp_bettewn_item": 20,
+              "col": "2"
+            }
+          },
+          "cec6a189-3084-497a-b4a8-b391531b2503": {
+            "type": "cat",
+            "settings": {
+              "collection": "women",
+              "collection_title": "",
+              "collection_subtitle": "",
+              "collection_des": "1",
+              "title_cl": "#ffffff",
+              "title_cl_hover": "#222222",
+              "subtitle_cl": "#878787",
+              "count_cl": "#222222",
+              "border_cl": "#e5e5e5",
+              "open_link": "_self",
+              "space_bottom": 20,
+              "space_bottom_mb": 10,
+              "border": false,
+              "item_pd": 0,
+              "item_rd": 0,
+              "img_effect": "zoom",
+              "b_effect": "none",
+              "image_ratio": "rationt",
+              "image_size": "cover",
+              "image_position": "8",
+              "collection_link": "",
+              "col": "4"
+            }
+          },
+          "95da8d7e-67f2-4ebd-b1ad-e83d518cb37e": {
+            "type": "cat",
+            "settings": {
+              "collection": "frontpage",
+              "collection_title": "",
+              "collection_subtitle": "",
+              "collection_des": "1",
+              "title_cl": "#ffffff",
+              "title_cl_hover": "#222222",
+              "subtitle_cl": "#878787",
+              "count_cl": "#222222",
+              "border_cl": "#e5e5e5",
+              "open_link": "_self",
+              "space_bottom": 20,
+              "space_bottom_mb": 10,
+              "border": false,
+              "item_pd": 0,
+              "item_rd": 0,
+              "img_effect": "none",
+              "b_effect": "none",
+              "image_ratio": "rationt",
+              "image_size": "cover",
+              "image_position": "8",
+              "collection_link": "",
+              "col": "4"
+            }
+          },
+          "5bdb6eec-e820-4415-ac9b-9c6096eb20c1": {
+            "type": "mega",
+            "settings": {
+              "id": 3
+            }
+          },
+          "cc1a7875-8010-421e-b69c-efc19a6043d6": {
+            "type": "link",
+            "settings": {
+              "tt_hd": "PRODUCT LAYOUTS",
+              "url": "",
+              "open_link": "_self",
+              "menu": "",
+              "item_fsize": 13,
+              "sp_bettewn_item": 20,
+              "col": "3"
+            }
+          },
+          "e17e717c-01e0-4704-92bc-92c339ee6148": {
+            "type": "link",
+            "settings": {
+              "tt_hd": "PRODUCT DETAILS",
+              "url": "",
+              "open_link": "_self",
+              "menu": "",
+              "item_fsize": 13,
+              "sp_bettewn_item": 20,
+              "col": "3"
+            }
+          },
+          "27ca598d-2e3f-44fc-a790-64783d37de5e": {
+            "type": "link",
+            "settings": {
+              "tt_hd": "PRODUCT SWATCH",
+              "url": "",
+              "open_link": "_self",
+              "menu": "",
+              "item_fsize": 13,
+              "sp_bettewn_item": 20,
+              "col": "3"
+            }
+          },
+          "bdfaa837-86a3-4159-805a-668060142b0d": {
+            "type": "link",
+            "settings": {
+              "tt_hd": "PRODUCT FEATURES",
+              "url": "",
+              "open_link": "_self",
+              "menu": "",
+              "item_fsize": 13,
+              "sp_bettewn_item": 20,
+              "col": "3"
+            }
+          },
+          "5952e385-42a5-4603-9be9-64b76f15ef48": {
+            "type": "mega",
+            "settings": {
+              "id": 4
+            }
+          },
+          "400a038a-cb32-4aae-a66d-7d4cd404ccd6": {
+            "type": "link2",
+            "settings": {
+              "col": "2",
+              "menu": "",
+              "item_fsize": 13,
+              "sp_bettewn_item": 20
+            }
+          },
+          "41ee689a-9ef7-46ab-a5a6-5fa4776a9af6": {
+            "type": "pr",
+            "settings": {
+              "collection": "sale",
+              "product_des": "1",
+              "show_vendor": false,
+              "use_cdt": false,
+              "image_ratio": "rationt",
+              "image_size": "cover",
+              "image_position": "8",
+              "content_align": "default",
+              "limit": 6,
+              "col_dk": "4",
+              "space_h_item": "30",
+              "space_v_item": "30",
+              "layout_des": "2",
+              "nav_btn": true,
+              "btn_vi": "always",
+              "btn_owl": "outline",
+              "btn_shape": "round",
+              "btn_cl": "dark",
+              "btn_size": "small",
+              "btn_hidden_mobile": true,
+              "col": "10"
+            }
+          },
+          "758ddd07-8ea5-4c0e-80a1-e7eef279fa5f": {
+            "type": "mega",
+            "settings": {
+              "id": 5
+            }
+          },
+          "5665b9cc-d2a6-42e0-b267-e4b36da8a05e": {
+            "type": "link",
+            "settings": {
+              "tt_hd": "BLOG LAYOUT",
+              "url": "https://demo-kalles-4-1.myshopify.com/blogs/fashion?preview_theme_id=",
+              "open_link": "_self",
+              "menu": "",
+              "item_fsize": 13,
+              "sp_bettewn_item": 20,
+              "col": "4"
+            }
+          },
+          "552902be-02b1-40ca-8475-982bbdb75ed7": {
+            "type": "blogs",
+            "settings": {
+              "blog": "fashion",
+              "post_des": "1",
+              "show_cate": false,
+              "show_tags": true,
+              "show_cnt": false,
+              "show_au": true,
+              "show_dt": true,
+              "show_cm": true,
+              "show_rm": false,
+              "show_irm": false,
+              "date": "date",
+              "content_align": "t4s-text-center",
+              "limit": 8,
+              "img_effect": "zoom",
+              "b_effect": "none",
+              "image_ratio": "ratio4_3",
+              "image_size": "cover",
+              "image_position": "8",
+              "col_dk": "2",
+              "space_h_item": "30",
+              "space_v_item": "30",
+              "layout_des": "2",
+              "nav_btn": true,
+              "btn_vi": "always",
+              "btn_owl": "outline",
+              "btn_shape": "round",
+              "btn_cl": "dark",
+              "btn_size": "small",
+              "btn_hidden_mobile": true,
+              "col": "8"
+            }
+          }
+        },
+        "block_order": [
+          "583a30c7-369d-4a64-a51d-ca53c1685206",
+          "3abb98a1-837d-46af-b195-f5c43e7c88ee",
+          "2ceac397-4b2b-4740-a477-707dd2680e02",
+          "1f90cea5-04fb-4ef3-822b-5f987845e5c4",
+          "6122e966-0272-4c46-a1a0-051bdc2ae08c",
+          "45fa281e-2be5-4727-bd01-942824713769",
+          "02beea21-3cb9-41ce-a1ab-04ae44b7f47e",
+          "ff494243-e58b-40e9-a2ea-e64ccd58a624",
+          "cec6a189-3084-497a-b4a8-b391531b2503",
+          "95da8d7e-67f2-4ebd-b1ad-e83d518cb37e",
+          "5bdb6eec-e820-4415-ac9b-9c6096eb20c1",
+          "cc1a7875-8010-421e-b69c-efc19a6043d6",
+          "e17e717c-01e0-4704-92bc-92c339ee6148",
+          "27ca598d-2e3f-44fc-a790-64783d37de5e",
+          "bdfaa837-86a3-4159-805a-668060142b0d",
+          "5952e385-42a5-4603-9be9-64b76f15ef48",
+          "400a038a-cb32-4aae-a66d-7d4cd404ccd6",
+          "41ee689a-9ef7-46ab-a5a6-5fa4776a9af6",
+          "758ddd07-8ea5-4c0e-80a1-e7eef279fa5f",
+          "5665b9cc-d2a6-42e0-b267-e4b36da8a05e",
+          "552902be-02b1-40ca-8475-982bbdb75ed7"
+        ],
+        "settings": {
+          "bg": ""
+        }
+      },
+      "mb_nav": {
+        "type": "mb_nav",
+        "blocks": {
+          "menu_XdCXRy": {
+            "type": "menu",
+            "disabled": true,
+            "settings": {
+              "title": "VALENTIJN",
+              "url": "shopify://collections/starter-kits",
+              "open_link": "_self",
+              "menu": "",
+              "lb": "1+1 GRATIS",
+              "lb_cl": "#ed7377",
+              "icons_op": "2",
+              "icon": ""
+            }
+          },
+          "catpr_8iMEX9": {
+            "type": "catpr",
+            "settings": {
+              "title": "<b><span style=\"color: #ED7377;\">ZONPRODUCTEN</span></b>",
+              "url": "shopify://collections/zonnebescherming",
+              "lb": "",
+              "lb_cl": "",
+              "icons_op": "2",
+              "icon": "las la-sun",
+              "cat1": "",
+              "url1": "",
+              "cat2": "",
+              "url2": "",
+              "cat3": "",
+              "url3": "",
+              "cat4": "",
+              "url4": "",
+              "cat5": "",
+              "url5": "",
+              "cat6": "",
+              "url6": "",
+              "cat7": "",
+              "url7": "",
+              "cat8": "",
+              "url8": "",
+              "cat9": "",
+              "url9": "",
+              "cat10": "",
+              "url10": "",
+              "cat11": "",
+              "url11": "",
+              "cat12": "",
+              "url12": "",
+              "cat13": "",
+              "url13": "",
+              "cat14": "",
+              "url14": "",
+              "cat15": "",
+              "url15": "",
+              "cat16": "",
+              "url16": "",
+              "cat17": "",
+              "url17": "",
+              "cat18": "",
+              "url18": "",
+              "cat19": "",
+              "url19": "",
+              "cat20": "",
+              "url20": "",
+              "cat21": "",
+              "url21": "",
+              "cat22": "",
+              "url22": "",
+              "cat23": "",
+              "url23": "",
+              "cat24": "",
+              "url24": "",
+              "cat25": "",
+              "url25": ""
+            }
+          },
+          "menu_kw6Ygx": {
+            "type": "menu",
+            "settings": {
+              "title": "Shop Starter Kits",
+              "url": "shopify://collections/starter-kits",
+              "open_link": "_self",
+              "menu": "",
+              "lb": "-25%",
+              "lb_cl": "#2b818f",
+              "icons_op": "2",
+              "icon": ""
+            }
+          },
+          "c2ebecad-0bdd-4c7a-806b-755955862f41": {
+            "type": "menu",
+            "settings": {
+              "title": "Shop huidverzorging",
+              "url": "https://witlofskincare.nl/collections/all",
+              "open_link": "_self",
+              "menu": "product-type",
+              "lb": "",
+              "lb_cl": "",
+              "icons_op": "2",
+              "icon": ""
+            }
+          },
+          "5efaec12-d185-4718-b159-37d79cc7fdf4": {
+            "type": "menu",
+            "settings": {
+              "title": "Shop per routine stap",
+              "url": "",
+              "open_link": "_self",
+              "menu": "steps",
+              "lb": "",
+              "lb_cl": "",
+              "icons_op": "2",
+              "icon": ""
+            }
+          },
+          "789d1e04-4c2c-4dda-b425-0b1dc3300eb4": {
+            "type": "menu",
+            "settings": {
+              "title": "Shop per huidtype",
+              "url": "",
+              "open_link": "_self",
+              "menu": "skin-type",
+              "lb": "",
+              "lb_cl": "",
+              "icons_op": "2",
+              "icon": ""
+            }
+          },
+          "menu_cmiMmy": {
+            "type": "menu",
+            "settings": {
+              "title": "Shop per huidaandoening",
+              "url": "",
+              "open_link": "_self",
+              "menu": "skin-concern",
+              "lb": "",
+              "lb_cl": "",
+              "icons_op": "2",
+              "icon": ""
+            }
+          },
+          "menu_DGWpAR": {
+            "type": "menu",
+            "disabled": true,
+            "settings": {
+              "title": "<b>CADEAUS</b>",
+              "url": "https://witlofskincare.nl/collections/cadeaus",
+              "open_link": "_self",
+              "menu": "",
+              "lb": "",
+              "lb_cl": "",
+              "icons_op": "2",
+              "icon": "las la-tree"
+            }
+          },
+          "ef710ec3-5c73-4e9a-badd-f1d526aedf99": {
+            "type": "menu",
+            "disabled": true,
+            "settings": {
+              "title": "Sets",
+              "url": "",
+              "open_link": "_self",
+              "menu": "sets",
+              "lb": "",
+              "lb_cl": "",
+              "icons_op": "2",
+              "icon": ""
+            }
+          },
+          "menu_ah66Bc": {
+            "type": "menu",
+            "settings": {
+              "title": "ARCHIVE SALE",
+              "url": "shopify://collections/archive-sale",
+              "open_link": "_self",
+              "menu": "",
+              "lb": "- 50%",
+              "lb_cl": "#5f8ac7",
+              "icons_op": "2",
+              "icon": ""
+            }
+          },
+          "58800ed8-befe-449a-b8f8-ea86620bef6f": {
+            "type": "menu",
+            "settings": {
+              "title": "Doe de huid test",
+              "url": "https://witlofskincare.com/pages/gb-witlof-skin-quiz-english-1?shpxid=ffed8cc9-fce5-4c98-a6e3-43d83ea5b497",
+              "open_link": "_self",
+              "menu": "",
+              "lb": "GRATIS",
+              "lb_cl": "#77bdab",
+              "icons_op": "2",
+              "icon": ""
+            }
+          },
+          "mb_nav-2": {
+            "type": "menu",
+            "settings": {
+              "title": "Gratis huid advies",
+              "url": "shopify://pages/skin-academy",
+              "open_link": "_self",
+              "menu": "",
+              "lb": "",
+              "lb_cl": "#77bdab",
+              "icons_op": "2",
+              "icon": ""
+            }
+          },
+          "menu_b66dtG": {
+            "type": "menu",
+            "settings": {
+              "title": "Informatie huid detox",
+              "url": "https://witlofskincare.nl/pages/kies-je-huid-detox",
+              "open_link": "_self",
+              "menu": "",
+              "lb": "",
+              "lb_cl": "#2b818f",
+              "icons_op": "2",
+              "icon": ""
+            }
+          },
+          "mb_nav-0": {
+            "type": "menu",
+            "settings": {
+              "title": "Ons Verhaal",
+              "url": "shopify://pages/our-story",
+              "open_link": "_self",
+              "menu": "",
+              "lb": "",
+              "lb_cl": "",
+              "icons_op": "2",
+              "icon": ""
+            }
+          },
+          "mb_nav-1": {
+            "type": "menu",
+            "settings": {
+              "title": "Duurzaamheid",
+              "url": "shopify://pages/sustainability",
+              "open_link": "_self",
+              "menu": "",
+              "lb": "",
+              "lb_cl": "",
+              "icons_op": "2",
+              "icon": ""
+            }
+          },
+          "mb_nav-8": {
+            "type": "lang",
+            "settings": {}
+          },
+          "mb_nav-9": {
+            "type": "cur",
+            "settings": {}
+          },
+          "25fa7ecf-2db0-4747-b093-a1299099917e": {
+            "type": "menu",
+            "disabled": true,
+            "settings": {
+              "title": "Ambassadeur Worden",
+              "url": "shopify://pages/ambassadeur-worden",
+              "open_link": "_self",
+              "menu": "",
+              "lb": "",
+              "lb_cl": "",
+              "icons_op": "2",
+              "icon": ""
+            }
+          },
+          "mb_nav-3": {
+            "type": "menu",
+            "settings": {
+              "title": "Blogs",
+              "url": "shopify://blogs/news",
+              "open_link": "_self",
+              "menu": "",
+              "lb": "",
+              "lb_cl": "",
+              "icons_op": "2",
+              "icon": ""
+            }
+          },
+          "menu_ENQUez": {
+            "type": "menu",
+            "settings": {
+              "title": "Winkel Locaties",
+              "url": "shopify://pages/store-locator",
+              "open_link": "_self",
+              "menu": "",
+              "lb": "",
+              "lb_cl": "",
+              "icons_op": "2",
+              "icon": ""
+            }
+          },
+          "mb_nav-4": {
+            "type": "wis",
+            "settings": {}
+          },
+          "mb_nav-5": {
+            "type": "sea",
+            "settings": {}
+          },
+          "mb_nav-6": {
+            "type": "acc",
+            "settings": {}
+          },
+          "mb_nav-7": {
+            "type": "help",
+            "settings": {
+              "title": "Hulp Nodig?",
+              "text": "<a href=\"tel:%20+31%206200%2035339\">\n<svg xmlns=\"http://www.w3.org/2000/svg\" viewbox=\"0 0 32 32\" fill=\"currentColor\"><path d=\"M 8.65625 3 C 8.132813 3 7.617188 3.1875 7.1875 3.53125 L 7.125 3.5625 L 7.09375 3.59375 L 3.96875 6.8125 L 4 6.84375 C 3.035156 7.734375 2.738281 9.066406 3.15625 10.21875 C 3.160156 10.226563 3.152344 10.242188 3.15625 10.25 C 4.003906 12.675781 6.171875 17.359375 10.40625 21.59375 C 14.65625 25.84375 19.402344 27.925781 21.75 28.84375 L 21.78125 28.84375 C 22.996094 29.25 24.3125 28.960938 25.25 28.15625 L 28.40625 25 C 29.234375 24.171875 29.234375 22.734375 28.40625 21.90625 L 24.34375 17.84375 L 24.3125 17.78125 C 23.484375 16.953125 22.015625 16.953125 21.1875 17.78125 L 19.1875 19.78125 C 18.464844 19.433594 16.742188 18.542969 15.09375 16.96875 C 13.457031 15.40625 12.621094 13.609375 12.3125 12.90625 L 14.3125 10.90625 C 15.152344 10.066406 15.167969 8.667969 14.28125 7.84375 L 14.3125 7.8125 L 14.21875 7.71875 L 10.21875 3.59375 L 10.1875 3.5625 L 10.125 3.53125 C 9.695313 3.1875 9.179688 3 8.65625 3 Z M 8.65625 5 C 8.730469 5 8.804688 5.035156 8.875 5.09375 L 12.875 9.1875 L 12.96875 9.28125 C 12.960938 9.273438 13.027344 9.378906 12.90625 9.5 L 10.40625 12 L 9.9375 12.4375 L 10.15625 13.0625 C 10.15625 13.0625 11.304688 16.136719 13.71875 18.4375 L 13.9375 18.625 C 16.261719 20.746094 19 21.90625 19 21.90625 L 19.625 22.1875 L 22.59375 19.21875 C 22.765625 19.046875 22.734375 19.046875 22.90625 19.21875 L 27 23.3125 C 27.171875 23.484375 27.171875 23.421875 27 23.59375 L 23.9375 26.65625 C 23.476563 27.050781 22.988281 27.132813 22.40625 26.9375 C 20.140625 26.046875 15.738281 24.113281 11.8125 20.1875 C 7.855469 16.230469 5.789063 11.742188 5.03125 9.5625 C 4.878906 9.15625 4.988281 8.554688 5.34375 8.25 L 5.40625 8.1875 L 8.4375 5.09375 C 8.507813 5.035156 8.582031 5 8.65625 5 Z\"></path></svg> +31 6200 35339</a>\n<br>\n<a href=\"mailto:hello@witlofskincare.com\">\n<svg xmlns=\"http://www.w3.org/2000/svg\" viewbox=\"0 0 32 32\" fill=\"currentColor\"><path d=\"M 3 8 L 3 26 L 29 26 L 29 8 Z M 7.3125 10 L 24.6875 10 L 16 15.78125 Z M 5 10.875 L 15.4375 17.84375 L 16 18.1875 L 16.5625 17.84375 L 27 10.875 L 27 24 L 5 24 Z\"></path></svg>\nhello@witlofskincare.com</a>"
+            }
+          },
+          "67e53fbc-5b2e-4080-8bb0-d2116752e14a": {
+            "type": "menu",
+            "disabled": true,
+            "settings": {
+              "title": "Huid aandoening",
+              "url": "",
+              "open_link": "_self",
+              "menu": "skin-concern",
+              "lb": "",
+              "lb_cl": "",
+              "icons_op": "2",
+              "icon": "las la-chair"
+            }
+          }
+        },
+        "block_order": [
+          "menu_XdCXRy",
+          "catpr_8iMEX9",
+          "menu_kw6Ygx",
+          "c2ebecad-0bdd-4c7a-806b-755955862f41",
+          "5efaec12-d185-4718-b159-37d79cc7fdf4",
+          "789d1e04-4c2c-4dda-b425-0b1dc3300eb4",
+          "menu_cmiMmy",
+          "menu_DGWpAR",
+          "ef710ec3-5c73-4e9a-badd-f1d526aedf99",
+          "menu_ah66Bc",
+          "58800ed8-befe-449a-b8f8-ea86620bef6f",
+          "mb_nav-2",
+          "menu_b66dtG",
+          "mb_nav-0",
+          "mb_nav-1",
+          "mb_nav-8",
+          "mb_nav-9",
+          "25fa7ecf-2db0-4747-b093-a1299099917e",
+          "mb_nav-3",
+          "menu_ENQUez",
+          "mb_nav-4",
+          "mb_nav-5",
+          "mb_nav-6",
+          "mb_nav-7",
+          "67e53fbc-5b2e-4080-8bb0-d2116752e14a"
+        ],
+        "settings": {}
+      },
+      "mb_cat": {
+        "type": "mb_cat",
+        "blocks": {
+          "cat_6r3K36": {
+            "type": "cat",
+            "settings": {
+              "cat": "frontpage",
+              "title": "ALLE PRODUCTEN",
+              "url": "",
+              "menu": "",
+              "lb": "",
+              "lb_cl": "#e91e63",
+              "icons_op": "2",
+              "icon": ""
+            }
+          },
+          "a8e444e6-eaae-4fff-a0dd-f13d43abd5f0": {
+            "type": "cat",
+            "disabled": true,
+            "settings": {
+              "cat": "",
+              "title": "Huid Aandoening",
+              "url": "",
+              "menu": "skin-concern",
+              "lb": "",
+              "lb_cl": "#e91e63",
+              "icons_op": "1",
+              "icon": "chair"
+            }
+          },
+          "02afbc74-7e86-47eb-a54c-4b782b9be1ec": {
+            "type": "cat",
+            "settings": {
+              "cat": "",
+              "title": "Huid Type",
+              "url": "",
+              "menu": "skin-type",
+              "lb": "",
+              "lb_cl": "#e91e63",
+              "icons_op": "1",
+              "icon": "chair"
+            }
+          },
+          "6a5bbd18-0cdb-498c-903a-81d47216fae6": {
+            "type": "cat",
+            "disabled": true,
+            "settings": {
+              "cat": "",
+              "title": "Product Type",
+              "url": "",
+              "menu": "product-type",
+              "lb": "",
+              "lb_cl": "#e91e63",
+              "icons_op": "2",
+              "icon": ""
+            }
+          },
+          "37d41873-33b9-495f-b9e9-261690a26f44": {
+            "type": "cat",
+            "disabled": true,
+            "settings": {
+              "cat": "",
+              "title": "Stappen",
+              "url": "",
+              "menu": "steps",
+              "lb": "",
+              "lb_cl": "#e91e63",
+              "icons_op": "1",
+              "icon": "chair"
+            }
+          }
+        },
+        "block_order": [
+          "cat_6r3K36",
+          "a8e444e6-eaae-4fff-a0dd-f13d43abd5f0",
+          "02afbc74-7e86-47eb-a54c-4b782b9be1ec",
+          "6a5bbd18-0cdb-498c-903a-81d47216fae6",
+          "37d41873-33b9-495f-b9e9-261690a26f44"
+        ],
+        "settings": {}
+      },
+      "mini_cart": {
+        "type": "mini_cart",
+        "blocks": {
+          "mini_cart-0": {
+            "type": "price",
+            "settings": {}
+          },
+          "mini_cart-1": {
+            "type": "tax",
+            "disabled": true,
+            "settings": {}
+          },
+          "mini_cart-2": {
+            "type": "agree",
+            "disabled": true,
+            "settings": {}
+          },
+          "mini_cart-3": {
+            "type": "btnc",
+            "settings": {
+              "btn_icon": false,
+              "button_style": "default",
+              "btn_cl": "custom2",
+              "button_effect": "default"
+            }
+          },
+          "mini_cart-4": {
+            "type": "btnck",
+            "settings": {
+              "btn_icon": false,
+              "button_style": "default",
+              "btn_cl": "primary",
+              "button_effect": "default"
+            }
+          },
+          "mini_cart-5": {
+            "type": "img",
+            "settings": {
+              "svg": "",
+              "height": 30
+            }
+          },
+          "mini_cart-6": {
+            "type": "btn",
+            "settings": {
+              "title": "Return To Shop",
+              "url": "",
+              "btn_icon": false,
+              "button_style": "default",
+              "btn_cl": "primary",
+              "button_effect": "fade"
+            }
+          }
+        },
+        "block_order": [
+          "mini_cart-0",
+          "mini_cart-1",
+          "mini_cart-2",
+          "mini_cart-3",
+          "mini_cart-4",
+          "mini_cart-5",
+          "mini_cart-6"
+        ],
+        "custom_css": [],
+        "settings": {
+          "style": "1",
+          "pos": "2",
+          "enable_pr": true,
+          "enable_calc_ship": true,
+          "enable_note": false,
+          "enable_rates": false,
+          "enable_discount": false,
+          "enable_gift_wrap": false,
+          "ship_df_country": "Netherlands"
+        }
+      },
+      "main-qv": {
+        "type": "main-qv",
+        "blocks": {
+          "main-qv-0": {
+            "type": "title",
+            "settings": {
+              "txt_tr_pr": "none",
+              "fnt_df_pr": "1",
+              "size_pr": 16,
+              "fw_pr": 600,
+              "lh_pr": 0,
+              "ls_pr": 0,
+              "pr_title_color": "#222222",
+              "pr_title_color_hover": "#56cfe1"
+            }
+          },
+          "main-qv-1": {
+            "type": "price_review",
+            "settings": {
+              "price": "0",
+              "type_sale": "0",
+              "tax_ship": true,
+              "rating": true,
+              "review_liquid": "",
+              "size_price_pr": 22,
+              "fw_price_pr": 400,
+              "price_color": "#696969",
+              "price_sale_color": "#ec0101"
+            }
+          },
+          "main-qv-2": {
+            "type": "description",
+            "settings": {
+              "des": "2",
+              "text": "<p>Go kalles this summer with this vintage navy and white striped v-neck t-shirt from the Nike. Perfect for pairing with denim and white kicks for a stylish kalles vibe.</p>",
+              "length": 31
+            }
+          },
+          "main-qv-3": {
+            "type": "form",
+            "settings": {
+              "selector_mode": "circle",
+              "color_mode": "color is-sw-cl__round",
+              "enable_fit_ratio_img": false,
+              "color_size": "medium",
+              "show_qty": true,
+              "enable_wishlist": true,
+              "enable_compare": true,
+              "btn_atc_full": false,
+              "pr_btn_round": 40,
+              "ani": "t4s-ani-tada",
+              "time": 6,
+              "btn_txt": "3",
+              "btn_icon": false,
+              "button_style": "default",
+              "button_color": "primary",
+              "button_effect": "sweep-to-bottom",
+              "wishlist_color": "#222222",
+              "wishlist_color_hover": "#56cfe1",
+              "wishlist_color_active": "#e81e1e",
+              "compare_color": "#222222",
+              "compare_color_hover": "#56cfe1",
+              "compare_color_active": "#222222",
+              "show_dynamic_checkout": true,
+              "btn_txt2": "3",
+              "button_color_payment": "dark",
+              "product_list": [],
+              "show_product_current": true,
+              "qty_val": "0",
+              "advance_label": "Choose style",
+              "advance_pr_list": []
+            }
+          },
+          "main-qv-4": {
+            "type": "size_delivery_ask",
+            "settings": {
+              "size_chart": "3",
+              "pos_sizeg": "1",
+              "sc_type": "1",
+              "page": "size-chart",
+              "size_ck": "",
+              "delivery": true,
+              "page_dr": "delivery-return",
+              "ask": true,
+              "phone": true
+            }
+          },
+          "main-qv-5": {
+            "type": "meta",
+            "settings": {
+              "show_options": true,
+              "show_vendor": false,
+              "show_type": false,
+              "show_sku": true,
+              "show_barcode": false,
+              "show_available": true,
+              "show_category": true,
+              "show_tags": true
+            }
+          },
+          "main-qv-6": {
+            "type": "social",
+            "settings": {
+              "socials_align": "start",
+              "social_mode": "2",
+              "social_style": "1",
+              "social_size": "extra_small",
+              "bd_radius": 0,
+              "use_color_set": true,
+              "icon_cl": "#222222",
+              "bg_cl": "#56cfe1",
+              "space_h_item": "20",
+              "space_v_item": "5",
+              "space_h_item_mb": "6",
+              "space_v_item_mb": "2"
+            }
+          }
+        },
+        "block_order": [
+          "main-qv-0",
+          "main-qv-1",
+          "main-qv-2",
+          "main-qv-3",
+          "main-qv-4",
+          "main-qv-5",
+          "main-qv-6"
+        ],
+        "settings": {
+          "image_ratio": "ratioadapt",
+          "image_size": "cover",
+          "image_position": "8",
+          "enable_video_looping": false,
+          "enable_video_muting": true,
+          "enable_video_autoplaying": true,
+          "eff": "fade",
+          "nav_btn": true,
+          "btn_vi": "always",
+          "btn_owl": "outline",
+          "btn_shape": "round",
+          "btn_cl": "dark",
+          "btn_size": "small",
+          "btn_hidden_mobile": false,
+          "nav_dot": false,
+          "dot_owl": "default",
+          "dots_cl": "dark",
+          "dots_round": true,
+          "dots_space": 10,
+          "dots_hidden_mobile": false
+        }
+      },
+      "slider_config": {
+        "type": "slider_config",
+        "blocks": {
+          "ef55a72d-2a3a-4be2-b303-7904b5feef29": {
+            "type": "custom1",
+            "settings": {
+              "btn_color_primary": "#abb1b4",
+              "btn_color_second": "#ffffff",
+              "btn_color_primary_hover": "#56cfe1",
+              "btn_color_second_hover": "#ffffff"
+            }
+          }
+        },
+        "block_order": [
+          "ef55a72d-2a3a-4be2-b303-7904b5feef29"
+        ],
+        "settings": {
+          "btn_vi": "hover",
+          "btn_owl": "default",
+          "btn_shape": "none",
+          "btn_size": "small",
+          "dot_owl": "default",
+          "dots_round": true,
+          "dots_space": 10
+        }
+      },
+      "search-hidden": {
+        "type": "search-hidden",
+        "settings": {}
+      },
+      "login-sidebar": {
+        "type": "login-sidebar",
+        "settings": {
+          "content_align": "start",
+          "btn_width": "full",
+          "button_style": "default",
+          "btns_size": "medium",
+          "btns_cl": "primary",
+          "button_effect": "default"
+        }
+      },
+      "facets": {
+        "type": "facets",
+        "settings": {
+          "style_color_filter": "Color, color, Colour , colour",
+          "style_tag_filter": "ss bb"
+        }
+      },
+      "heading-template": {
+        "type": "heading-template",
+        "blocks": {
+          "heading-template-0": {
+            "type": "1",
+            "settings": {
+              "heading": "",
+              "fontf": "inherit",
+              "text_cl": "#ffffff",
+              "text_fs": 20,
+              "text_lh": 20,
+              "text_fw": 500,
+              "text_ls": 0,
+              "font_italic": false,
+              "font_uppercase": false,
+              "text_shadow": false,
+              "text_mgb": 0,
+              "hidden_mobile": false,
+              "text_fs_mb": 20,
+              "text_lh_mb": 20,
+              "text_ls_mb": 0,
+              "text_mgb_mobile": 0
+            }
+          }
+        },
+        "block_order": [
+          "heading-template-0"
+        ],
+        "settings": {
+          "image": "shopify://shop_images/shopping-cart-head.jpg",
+          "parallax": false,
+          "color": "#000000",
+          "overlay": 54,
+          "padding": 50,
+          "paddingmb": 50,
+          "mg_b": 50,
+          "mg_bmb": 50,
+          "content_align": "t4s-text-center",
+          "bg_pos": "center center",
+          "bg_repeat": "no-repeat",
+          "bg_size": "cover",
+          "use_cus_css": false,
+          "code_cus_css": ".SectionID {\nbackground-color:red\n}"
+        }
+      },
+      "main-wishlist": {
+        "type": "main-wishlist",
+        "blocks": {
+          "main-wishlist-0": {
+            "type": "layout",
+            "settings": {}
+          }
+        },
+        "block_order": [
+          "main-wishlist-0"
+        ],
+        "settings": {
+          "product_des": "1",
+          "show_vendor": false,
+          "image_ratio": "rationt",
+          "image_size": "cover",
+          "image_position": "8",
+          "content_align": "default",
+          "limit": 12,
+          "enable_listing": true,
+          "enable_listing_default": false,
+          "col_dk": "4",
+          "col_tb": "2",
+          "col_mb": "2",
+          "space_h_item": "30",
+          "space_v_item": "30",
+          "space_h_item_mb": "10",
+          "space_v_item_mb": "10",
+          "layout_des": "1",
+          "use_pagination": "default",
+          "enable_bar_lm": true,
+          "btn_icon": false,
+          "button_style": "default",
+          "btns_size": "large",
+          "btns_cl": "dark",
+          "button_effect": "default",
+          "btn_pos": "t4s-text-center",
+          "layout": "t4s-container-wrap",
+          "cl_bg": "",
+          "cl_bg_gradient": "",
+          "mg": ",,50px,",
+          "pd": "",
+          "mg_mb": ",,30px,",
+          "pd_mb": ""
+        }
+      },
+      "main-compare": {
+        "type": "main-compare",
+        "blocks": {
+          "main-compare-0": {
+            "type": "basic",
+            "settings": {}
+          },
+          "main-compare-1": {
+            "type": "availability",
+            "settings": {
+              "title": "Availability"
+            }
+          },
+          "main-compare-2": {
+            "type": "vendor",
+            "settings": {
+              "title": "Vendor"
+            }
+          },
+          "main-compare-3": {
+            "type": "variants",
+            "settings": {
+              "title": "Color"
+            }
+          },
+          "main-compare-4": {
+            "type": "btn",
+            "settings": {
+              "title": "RETURN TO SHOP",
+              "url": "",
+              "open_link": "_self",
+              "btn_icon": false,
+              "button_style": "default",
+              "btns_size": "medium",
+              "btns_cl": "primary",
+              "button_effect": "default"
+            }
+          }
+        },
+        "block_order": [
+          "main-compare-0",
+          "main-compare-1",
+          "main-compare-2",
+          "main-compare-3",
+          "main-compare-4"
+        ],
+        "settings": {
+          "cl_price": "#95bf46",
+          "cl_price_sale": "#ec0101",
+          "cl_in": "#95bf46",
+          "cl_out": "#e1b878",
+          "image_ratio": "rationt",
+          "image_size": "cover",
+          "image_position": "8",
+          "content_align": "center",
+          "layout": "t4s-container-wrap",
+          "cl_bg": "",
+          "cl_bg_gradient": "",
+          "mg": ",,50px,",
+          "pd": "",
+          "mg_mb": ",,30px,",
+          "pd_mb": ""
+        }
+      },
+      "header-vertical": {
+        "type": "header-vertical",
+        "blocks": {
+          "header-vertical-0": {
+            "type": "mega",
+            "settings": {
+              "title": "Home",
+              "url": "",
+              "open_link": "_self",
+              "icon": "",
+              "cus_cl": false,
+              "cl": "#ec0101",
+              "lb": "",
+              "lb_cl": "#00BADB",
+              "wid": "cus",
+              "cus_wid": 1200,
+              "id": 1,
+              "r_s_h_item": "30",
+              "r_s_v_item": "30"
+            }
+          },
+          "header-vertical-1": {
+            "type": "mega",
+            "settings": {
+              "title": "mega",
+              "url": "",
+              "open_link": "_self",
+              "icon": "",
+              "cus_cl": false,
+              "cl": "#ec0101",
+              "lb": "",
+              "lb_cl": "#00BADB",
+              "wid": "cus",
+              "cus_wid": 1200,
+              "id": 1,
+              "r_s_h_item": "30",
+              "r_s_v_item": "30"
+            }
+          },
+          "header-vertical-2": {
+            "type": "base",
+            "settings": {
+              "title": "base",
+              "url": "/",
+              "open_link": "_self",
+              "icon": "",
+              "cus_cl": false,
+              "cl": "#ec0101",
+              "lb": "",
+              "lb_cl": ""
+            }
+          },
+          "0dec03c0-f79c-4d2b-946e-0a9c5d0a0d9a": {
+            "type": "drop",
+            "settings": {
+              "title": "Dropdown",
+              "url": "",
+              "open_link": "_self",
+              "menu": "main-menu",
+              "icon": "",
+              "cus_cl": false,
+              "cl": "#ec0101",
+              "lb": "",
+              "lb_cl": ""
+            }
+          }
+        },
+        "block_order": [
+          "header-vertical-0",
+          "header-vertical-1",
+          "header-vertical-2",
+          "0dec03c0-f79c-4d2b-946e-0a9c5d0a0d9a"
+        ],
+        "settings": {
+          "show_language": true,
+          "show_currency": true,
+          "arrow": true,
+          "bgnav": "#ffffff",
+          "opnav": 100,
+          "clnav": "#222222",
+          "clnav_hover": "#56cfe1",
+          "h_icon": "kalles",
+          "show_search": true,
+          "show_acc": true,
+          "show_wis": true,
+          "cart_des": "1",
+          "bg_hc": "#000000",
+          "cl_hc": "#ffffff",
+          "source": "2",
+          "txt": "<p>Welcome to our store!</p>",
+          "h_navmb": 62,
+          "fm_nav": "1",
+          "fs_nav": 14,
+          "fw_nav": 500,
+          "ls_nav": 0.2
+        }
+      },
+      "popups": {
+        "type": "popups",
+        "settings": {}
+      },
+      "t4s_custom_color": {
+        "type": "t4s_custom_color",
+        "blocks": {
+          "06eaa184-e59c-4525-ac5d-eac6fc91f3e8": {
+            "type": "bg_color",
+            "settings": {
+              "title": "",
+              "color": "",
+              "cl_gradient": "",
+              "color_img": false
+            }
+          }
+        },
+        "block_order": [
+          "06eaa184-e59c-4525-ac5d-eac6fc91f3e8"
+        ],
+        "settings": {}
+      },
+      "main-qs": {
+        "type": "main-qs",
+        "blocks": {
+          "main-qs-0": {
+            "type": "title",
+            "settings": {
+              "txt_tr_pr": "none",
+              "fnt_df_pr": "1",
+              "size_pr": 16,
+              "fw_pr": 600,
+              "lh_pr": 0,
+              "ls_pr": 0,
+              "pr_title_color": "#222222",
+              "pr_title_color_hover": "#56cfe1"
+            }
+          },
+          "main-qs-1": {
+            "type": "price",
+            "settings": {
+              "price": "0",
+              "type_sale": "2",
+              "size_price_pr": 22,
+              "fw_price_pr": 400,
+              "price_color": "#696969",
+              "price_sale_color": "#ec0101"
+            }
+          },
+          "main-qs-2": {
+            "type": "form",
+            "settings": {
+              "selector_mode": "block",
+              "color_mode": "variant_image",
+              "enable_fit_ratio_img": true,
+              "color_size": "large",
+              "show_qty": true,
+              "enable_wishlist": true,
+              "enable_compare": true,
+              "pr_btn_round": 40,
+              "ani": "t4s-ani-shake",
+              "time": 3,
+              "btn_txt": "3",
+              "btn_icon": false,
+              "button_style": "default",
+              "button_color": "primary",
+              "button_effect": "sweep-to-top",
+              "wishlist_color": "#222222",
+              "wishlist_color_hover": "#56cfe1",
+              "wishlist_color_active": "#e81e1e",
+              "compare_color": "#222222",
+              "compare_color_hover": "#56cfe1",
+              "compare_color_active": "#222222",
+              "show_dynamic_checkout": true,
+              "btn_txt2": "3",
+              "button_color_payment": "dark"
+            }
+          }
+        },
+        "block_order": [
+          "main-qs-0",
+          "main-qs-1",
+          "main-qs-2"
+        ],
+        "settings": {
+          "demo_pr": ""
+        }
+      },
+      "facets_tags": {
+        "type": "facets_tags",
+        "blocks": {
+          "14770600-c9ef-4dc1-afbb-0efa120a1bd4": {
+            "type": "color",
+            "disabled": true,
+            "settings": {
+              "hidden_block": false,
+              "title": "By Skin Type",
+              "arra_enter": "Droge huid, Vette huid, Gebalanceerde huid, Gevoelige huid, Gecombineerde huid",
+              "use_auto_filter_tag": false,
+              "key": "Skin Type"
+            }
+          },
+          "636d2d97-4ffd-4ee6-bfa6-7a39f93e94c8": {
+            "type": "other",
+            "settings": {
+              "hidden_block": false,
+              "title": "Steps",
+              "arra_enter": "Reinigen, Balanceren, Verzorgen, Stralen, Zonnebescherming",
+              "use_auto_filter_tag": false,
+              "key": "Steps",
+              "style": "checkbox"
+            }
+          },
+          "80418bc9-56d9-49ff-9da8-76d2299babb1": {
+            "type": "other",
+            "settings": {
+              "hidden_block": false,
+              "title": "Product",
+              "arra_enter": "Cleanser, Peel, Toner, Cream, Eye care, Serum, Sun care, Hand",
+              "use_auto_filter_tag": false,
+              "key": "Product",
+              "style": "checkbox"
+            }
+          },
+          "e46a7c88-d924-4745-9c08-cb6ca27609e8": {
+            "type": "other",
+            "settings": {
+              "hidden_block": false,
+              "title": "Huid Type",
+              "arra_enter": "Droge huid, Vette huid, Normale Huid, Gevoelige huid, Gecombineerde huid",
+              "use_auto_filter_tag": false,
+              "key": "Skin Type",
+              "style": "checkbox"
+            }
+          },
+          "a400d55d-550c-4b5a-b60f-87cbf998c8a3": {
+            "type": "other",
+            "settings": {
+              "hidden_block": false,
+              "title": "Skin Concern",
+              "arra_enter": "Acne, Eczeem, Pigmentatie, Rosacea",
+              "use_auto_filter_tag": false,
+              "key": "Skin Concern",
+              "style": "checkbox"
+            }
+          },
+          "79b59ac1-3724-4e56-974e-8543760896a9": {
+            "type": "other",
+            "settings": {
+              "hidden_block": false,
+              "title": "Type",
+              "arra_enter": "Value Sets, Cadeaus, Sets per skintype, Voor op reis, Detox set, Bestsellers, New In",
+              "use_auto_filter_tag": false,
+              "key": "Type",
+              "style": "checkbox"
+            }
+          }
+        },
+        "block_order": [
+          "14770600-c9ef-4dc1-afbb-0efa120a1bd4",
+          "636d2d97-4ffd-4ee6-bfa6-7a39f93e94c8",
+          "80418bc9-56d9-49ff-9da8-76d2299babb1",
+          "e46a7c88-d924-4745-9c08-cb6ca27609e8",
+          "a400d55d-550c-4b5a-b60f-87cbf998c8a3",
+          "79b59ac1-3724-4e56-974e-8543760896a9"
+        ],
+        "settings": {}
+      },
+      "extras": {
+        "type": "extras",
+        "settings": {}
+      },
+      "header-categories-menu": {
+        "type": "header-categories-menu",
+        "blocks": {
+          "c393f823-40c8-44f7-a359-bd28f021144a": {
+            "type": "drop",
+            "settings": {
+              "title": "OVER ONS",
+              "url": "https://witlofskincare.nl/pages/our-story",
+              "open_link": "_self",
+              "menu": "about",
+              "icon": "",
+              "cus_cl": false,
+              "cl": "#ec0101",
+              "lb": "",
+              "lb_cl": "",
+              "pos_sub": "bottom",
+              "pos": "left"
+            }
+          },
+          "c0c56c51-6af7-4b70-8f40-a8876ad9aa0e": {
+            "type": "drop",
+            "settings": {
+              "title": "HUID ADVIES",
+              "url": "https://witlofskincare.nl/pages/skin-academy",
+              "open_link": "_self",
+              "menu": "huid-advies",
+              "icon": "",
+              "cus_cl": false,
+              "cl": "#ec0101",
+              "lb": "",
+              "lb_cl": "",
+              "pos_sub": "bottom",
+              "pos": "left"
+            }
+          },
+          "76e52326-e21f-4c00-9ee7-5f0b4dec0a70": {
+            "type": "base",
+            "disabled": true,
+            "settings": {
+              "title": "BLOGS",
+              "url": "shopify://blogs/news",
+              "open_link": "_self",
+              "icon": "",
+              "cus_cl": false,
+              "cl": "#4ab9cb",
+              "lb": "",
+              "lb_cl": ""
+            }
+          },
+          "base_abQNgf": {
+            "type": "base",
+            "settings": {
+              "title": "SKINTEST",
+              "url": "https://witlofskincare.com/pages/gb-witlof-skin-quiz-english-1?shpxid=ffed8cc9-fce5-4c98-a6e3-43d83ea5b497",
+              "open_link": "_self",
+              "icon": "",
+              "cus_cl": false,
+              "cl": "#04273a",
+              "lb": "",
+              "lb_cl": "#4ab9cb"
+            }
+          },
+          "base_H7WhEA": {
+            "type": "base",
+            "disabled": true,
+            "settings": {
+              "title": "<b>KERST SALE</b>",
+              "url": "shopify://collections/frontpage",
+              "open_link": "_self",
+              "icon": "",
+              "cus_cl": true,
+              "cl": "#04273a",
+              "lb": "SALE!",
+              "lb_cl": "#b8860b"
+            }
+          },
+          "drop_zXhFrY": {
+            "type": "drop",
+            "disabled": true,
+            "settings": {
+              "title": "HUID DETOX",
+              "url": "https://witlofskincare.com/nl/pages/huid-detox",
+              "open_link": "_self",
+              "menu": "huid-detox",
+              "icon": "",
+              "cus_cl": false,
+              "cl": "#ec0101",
+              "lb": "",
+              "lb_cl": "",
+              "pos_sub": "bottom",
+              "pos": "left"
+            }
+          },
+          "base_ABfxbA": {
+            "type": "base",
+            "settings": {
+              "title": "VOORDEELSETS",
+              "url": "shopify://collections/value-sets",
+              "open_link": "_self",
+              "icon": "",
+              "cus_cl": false,
+              "cl": "#222222",
+              "lb": "",
+              "lb_cl": "#c5e6f0"
+            }
+          },
+          "2c5edbdd-e5f5-4c06-97b7-3466f1dc8869": {
+            "type": "base",
+            "disabled": true,
+            "settings": {
+              "title": "<b><span style=\"color: #ED7377;\">VALENTIJN</span></b>",
+              "url": "https://witlofskincare.com/collections/starter-kits",
+              "open_link": "_self",
+              "icon": "",
+              "cus_cl": false,
+              "cl": "#222222",
+              "lb": "1+1 SALE",
+              "lb_cl": "#c5e6f0"
+            }
+          },
+          "base_VBG3WB": {
+            "type": "base",
+            "disabled": true,
+            "settings": {
+              "title": "<b><span style=\"color: #ED7377;\">ZONNEBRAND</span> </b>",
+              "url": "shopify://products/nourishing-day-cream-spf30-50ml-nieuwe-formule",
+              "open_link": "_self",
+              "icon": "",
+              "cus_cl": false,
+              "cl": "#333333",
+              "lb": "1+1 SALE",
+              "lb_cl": "#c5e6f0"
+            }
+          },
+          "base_BjH7Dq": {
+            "type": "base",
+            "disabled": true,
+            "settings": {
+              "title": "<b><span style=\"color: #5f8ac7;\">ARCHIVE SALE</span> </b>",
+              "url": "shopify://collections/archive-sale",
+              "open_link": "_self",
+              "icon": "",
+              "cus_cl": false,
+              "cl": "#2b818f",
+              "lb": "",
+              "lb_cl": ""
+            }
+          },
+          "base_hKypLz": {
+            "type": "base",
+            "settings": {
+              "title": "<b><span style=\"color: #ED7377;\">ZONPRODUCTEN</span></b>",
+              "url": "shopify://collections/zonnebescherming",
+              "open_link": "_self",
+              "icon": "",
+              "cus_cl": false,
+              "cl": "#ec0101",
+              "lb": "",
+              "lb_cl": ""
+            }
+          },
+          "24385b43-e59d-4dcc-9a67-efc172696b12": {
+            "type": "base",
+            "disabled": true,
+            "settings": {
+              "title": "SUSTAINABILITY",
+              "url": "shopify://pages/sustainability",
+              "open_link": "_self",
+              "icon": "",
+              "cus_cl": false,
+              "cl": "#ec0101",
+              "lb": "",
+              "lb_cl": ""
+            }
+          },
+          "73e34ab8-b0cc-406f-8f0f-5c6ea54503f2": {
+            "type": "base",
+            "disabled": true,
+            "settings": {
+              "title": "AFFILIATES",
+              "url": "https://af.uppromote.com/witlof-skincare/register",
+              "open_link": "_self",
+              "icon": "",
+              "cus_cl": false,
+              "cl": "#ec0101",
+              "lb": "",
+              "lb_cl": ""
+            }
+          },
+          "45b949d7-78eb-4a90-87c7-cdd9157d8427": {
+            "type": "base",
+            "disabled": true,
+            "settings": {
+              "title": "AMBASSADEUR WORDEN",
+              "url": "shopify://pages/ambassadeur-worden",
+              "open_link": "_self",
+              "icon": "",
+              "cus_cl": false,
+              "cl": "#4ab9cb",
+              "lb": "",
+              "lb_cl": ""
+            }
+          },
+          "243308b8-0858-45d7-810d-234ebf8d6e36": {
+            "type": "base",
+            "disabled": true,
+            "settings": {
+              "title": "INGREDIENTEN",
+              "url": "shopify://blogs/ingredienten",
+              "open_link": "_self",
+              "icon": "",
+              "cus_cl": false,
+              "cl": "#ec0101",
+              "lb": "",
+              "lb_cl": ""
+            }
+          },
+          "base_zgJgyJ": {
+            "type": "base",
+            "disabled": true,
+            "settings": {
+              "title": "LOCATIES",
+              "url": "shopify://pages/store-locator",
+              "open_link": "_self",
+              "icon": "",
+              "cus_cl": false,
+              "cl": "#ec0101",
+              "lb": "",
+              "lb_cl": ""
+            }
+          }
+        },
+        "block_order": [
+          "c393f823-40c8-44f7-a359-bd28f021144a",
+          "c0c56c51-6af7-4b70-8f40-a8876ad9aa0e",
+          "76e52326-e21f-4c00-9ee7-5f0b4dec0a70",
+          "base_abQNgf",
+          "base_H7WhEA",
+          "drop_zXhFrY",
+          "base_ABfxbA",
+          "2c5edbdd-e5f5-4c06-97b7-3466f1dc8869",
+          "base_VBG3WB",
+          "base_BjH7Dq",
+          "base_hKypLz",
+          "24385b43-e59d-4dcc-9a67-efc172696b12",
+          "73e34ab8-b0cc-406f-8f0f-5c6ea54503f2",
+          "45b949d7-78eb-4a90-87c7-cdd9157d8427",
+          "243308b8-0858-45d7-810d-234ebf8d6e36",
+          "base_zgJgyJ"
+        ],
+        "settings": {
+          "full_header": true,
+          "height": 90,
+          "frm_sea_mw": 600,
+          "height2": 50,
+          "arrow": true,
+          "border": false,
+          "border_cate": false,
+          "header_design": "2",
+          "align": "start",
+          "hover": "hover_sideup",
+          "enable_active": false,
+          "h_navmb": 62,
+          "bgnav": "#ffffff",
+          "opnav": 100,
+          "clnav": "#222222",
+          "clnav_hover": "#c5e6f0",
+          "bgsea": "#fafafa",
+          "clsea": "#c5e6f0",
+          "bgnav2": "#ffffff",
+          "clnav2": "#222222",
+          "bgcategory": "#ffffff",
+          "h_icon": "kalles",
+          "hover_icon": "2",
+          "show_search": true,
+          "show_acc": true,
+          "show_wis": false,
+          "cart_des": "1",
+          "bg_hc": "#000000",
+          "cl_hc": "#ffffff",
+          "sticky_header": true,
+          "scroll_header": true,
+          "bgnavst": "#ffffff",
+          "opnavst": 100,
+          "clnavst": "#222222",
+          "clnavst_hover": "#56cfe1",
+          "bgseavst": "#fafafa",
+          "clseast": "#56cfe1",
+          "transparent_header": false,
+          "space_transparent_header": false,
+          "bgnavtr": "#000000",
+          "opnavtr": 40,
+          "clnavtr": "#ffffff",
+          "clnavtr_hover": "#ffffff",
+          "bgseatr": "#fafafa",
+          "clseatr": "#56cfe1",
+          "fm_nav": "1",
+          "fs_nav": 14,
+          "fw_nav": 400,
+          "ls_nav": 0,
+          "txt_cat": "Producten",
+          "text": "<i class=\"las la-phone fs__14\"></i> +31 620035339 <i class=\"las la-envelope fs__14 ml__15\"></i> <a class=\"cg\" href=\"mailto:hello@witlofskincare.com\">hello@witlofskincare.com</a>",
+          "shop_cat": true
+        }
+      },
+      "header-categories": {
+        "type": "header-categories",
+        "blocks": {
+          "header-categories-0": {
+            "type": "lv0_mega",
+            "disabled": true,
+            "settings": {
+              "title": "Stappen",
+              "url": "",
+              "open_link": "_self",
+              "icon": "",
+              "cus_cl": false,
+              "cl": "#ec0101",
+              "lb": "",
+              "lb_cl": "#00badb",
+              "pos_sub": "right-start",
+              "wid": "cus",
+              "cus_wid": 1200,
+              "r_s_h_item": "20",
+              "r_s_v_item": "30"
+            }
+          },
+          "header-categories-1": {
+            "type": "lv0_mega",
+            "disabled": true,
+            "settings": {
+              "title": "Producten",
+              "url": "",
+              "open_link": "_self",
+              "icon": "",
+              "cus_cl": false,
+              "cl": "#ec0101",
+              "lb": "",
+              "lb_cl": "#00badb",
+              "pos_sub": "right-start",
+              "wid": "cus",
+              "cus_wid": 1200,
+              "r_s_h_item": "20",
+              "r_s_v_item": "30"
+            }
+          },
+          "6f071df0-575a-4c57-81aa-eee97300c899": {
+            "type": "lv0_mega",
+            "disabled": true,
+            "settings": {
+              "title": "Huidtype",
+              "url": "",
+              "open_link": "_self",
+              "icon": "",
+              "cus_cl": false,
+              "cl": "#ec0101",
+              "lb": "",
+              "lb_cl": "#00badb",
+              "pos_sub": "right-start",
+              "wid": "cus",
+              "cus_wid": 1200,
+              "r_s_h_item": "20",
+              "r_s_v_item": "30"
+            }
+          },
+          "862426d0-6dc8-4b0a-8b54-d97d26df2ee8": {
+            "type": "lv0_mega",
+            "disabled": true,
+            "settings": {
+              "title": "Skinconcern",
+              "url": "",
+              "open_link": "_self",
+              "icon": "",
+              "cus_cl": false,
+              "cl": "#ec0101",
+              "lb": "",
+              "lb_cl": "#00badb",
+              "pos_sub": "right-start",
+              "wid": "cus",
+              "cus_wid": 1200,
+              "r_s_h_item": "20",
+              "r_s_v_item": "30"
+            }
+          },
+          "3591360b-3cc9-4fdc-8c30-b30ee62bba32": {
+            "type": "lv0_mega",
+            "settings": {
+              "title": "mega",
+              "url": "shopify://collections",
+              "open_link": "_self",
+              "icon": "",
+              "cus_cl": false,
+              "cl": "#ec0101",
+              "lb": "",
+              "lb_cl": "#00badb",
+              "pos_sub": "right-start",
+              "wid": "cus",
+              "cus_wid": 1200,
+              "r_s_h_item": "20",
+              "r_s_v_item": "30"
+            }
+          },
+          "header-categories-2": {
+            "type": "lv0_base",
+            "disabled": true,
+            "settings": {
+              "title": "base",
+              "url": "/",
+              "open_link": "_self",
+              "icon": "",
+              "cus_cl": false,
+              "cl": "#ec0101",
+              "lb": "",
+              "lb_cl": ""
+            }
+          },
+          "e44333b1-acba-4551-bd3c-d156d7a83780": {
+            "type": "lv0_drop",
+            "disabled": true,
+            "settings": {
+              "title": "Product Type",
+              "url": "",
+              "open_link": "_self",
+              "menu": "product-type",
+              "item_fsize": 13,
+              "sp_bettewn_item": 20,
+              "icon": "",
+              "cus_cl": false,
+              "cl": "#ec0101",
+              "lb": "",
+              "lb_cl": "",
+              "pos_sub": "right-start"
+            }
+          },
+          "8579af8c-7316-49b7-9597-4db5f09491bf": {
+            "type": "link",
+            "settings": {
+              "tt_hd": "Product type",
+              "url": "shopify://collections/frontpage",
+              "open_link": "_self",
+              "menu": "product-type",
+              "col": "2",
+              "item_fsize": 13,
+              "sp_bettewn_item": 20
+            }
+          },
+          "e9f41589-8d46-4f65-a3f0-2e2456af8815": {
+            "type": "link",
+            "settings": {
+              "tt_hd": "Huid Type",
+              "url": "shopify://collections/huid-type",
+              "open_link": "_self",
+              "menu": "skin-type",
+              "col": "2",
+              "item_fsize": 13,
+              "sp_bettewn_item": 20
+            }
+          },
+          "619d4be1-3d76-42f9-877f-a96eb91fcdce": {
+            "type": "link",
+            "settings": {
+              "tt_hd": "Huid aandoening",
+              "url": "shopify://collections/huid-aandoeningen",
+              "open_link": "_self",
+              "menu": "skin-concern",
+              "col": "2",
+              "item_fsize": 13,
+              "sp_bettewn_item": 20
+            }
+          },
+          "9928d005-30ab-48b6-9788-72f963033a69": {
+            "type": "link",
+            "disabled": true,
+            "settings": {
+              "tt_hd": "Stappen",
+              "url": "",
+              "open_link": "_self",
+              "menu": "steps",
+              "col": "2",
+              "item_fsize": 13,
+              "sp_bettewn_item": 20
+            }
+          },
+          "7340c675-7434-4651-b2c6-d9fa432e937f": {
+            "type": "link",
+            "settings": {
+              "tt_hd": "SETS & MORE",
+              "url": "shopify://collections",
+              "open_link": "_blank",
+              "menu": "sets",
+              "col": "2",
+              "item_fsize": 13,
+              "sp_bettewn_item": 20
+            }
+          }
+        },
+        "block_order": [
+          "header-categories-0",
+          "header-categories-1",
+          "6f071df0-575a-4c57-81aa-eee97300c899",
+          "862426d0-6dc8-4b0a-8b54-d97d26df2ee8",
+          "3591360b-3cc9-4fdc-8c30-b30ee62bba32",
+          "header-categories-2",
+          "e44333b1-acba-4551-bd3c-d156d7a83780",
+          "8579af8c-7316-49b7-9597-4db5f09491bf",
+          "e9f41589-8d46-4f65-a3f0-2e2456af8815",
+          "619d4be1-3d76-42f9-877f-a96eb91fcdce",
+          "9928d005-30ab-48b6-9788-72f963033a69",
+          "7340c675-7434-4651-b2c6-d9fa432e937f"
+        ],
+        "custom_css": [],
+        "settings": {
+          "arrow": true
+        }
+      },
+      "main-password-header": {
+        "type": "main-password-header",
+        "settings": {
+          "logo_max_width": 100
+        }
+      },
+      "main-password": {
+        "type": "main-password",
+        "settings": {
+          "heading": "Coming Soon!",
+          "content": "We are about to go public so be sure to root on us and check back in anytime!<br> Can't wait to have you!",
+          "newsletter_placeholder": "Your email address",
+          "newsletter_button_text": "Notify me",
+          "signup_form_success": "We will send you an email right before we open!",
+          "social": "2"
+        }
+      }
+    },
+    "content_for_index": [],
+    "blocks": {
+      "6174324309569838175": {
+        "type": "shopify://apps/smile-loyalty-rewards/blocks/smile-shopify-app/2fae4e25-1841-4ea2-bc02-bd548478c4f6",
+        "disabled": true,
+        "settings": {}
+      },
+      "9468172321995857178": {
+        "type": "shopify://apps/qikify-upsell-bundle/blocks/app-embed/2e94b962-8172-4839-8ad9-7837eb8b017a",
+        "disabled": false,
+        "settings": {}
+      },
+      "7885500093077574326": {
+        "type": "shopify://apps/videowise-video-platform-ugc/blocks/script_embed/b48d6c0c-3e3f-4791-a9ab-a5ab7ec82f4d",
+        "disabled": false,
+        "settings": {}
+      },
+      "18146506648094396618": {
+        "type": "shopify://apps/langshop/blocks/sdk/84899e01-2b29-42af-99d6-46d16daa2111",
+        "disabled": false,
+        "settings": {}
+      },
+      "18121446316682264196": {
+        "type": "shopify://apps/student-beans-verification/blocks/fab-embed/5c736972-c385-431c-8cbb-05726b7a1739",
+        "disabled": false,
+        "settings": {}
+      },
+      "15549472988515247997": {
+        "type": "shopify://apps/student-beans-verification/blocks/banner/5c736972-c385-431c-8cbb-05726b7a1739",
+        "disabled": false,
+        "settings": {}
+      },
+      "15820462083712392141": {
+        "type": "shopify://apps/student-beans-verification/blocks/discount-redeem/5c736972-c385-431c-8cbb-05726b7a1739",
+        "disabled": false,
+        "settings": {}
+      },
+      "14305174654594977286": {
+        "type": "shopify://apps/student-beans-verification/blocks/discount-hub/5c736972-c385-431c-8cbb-05726b7a1739",
+        "disabled": false,
+        "settings": {
+          "page_title": "Unlock exclusive discounts",
+          "sub_heading_text": "We’ve teamed up with Beans iD to offer exclusive discounts. Click through to verify and receive your discount for free!",
+          "background_color": "#F6F6F7",
+          "text_color": "#202223"
+        }
+      },
+      "11651401770006824842": {
+        "type": "shopify://apps/ymq-product-options-variants/blocks/app-embed/86b91121-1f62-4e27-9812-b70a823eb918",
+        "disabled": false,
+        "settings": {}
+      },
+      "855628211100114053": {
+        "type": "shopify://apps/klaviyo-email-marketing-sms/blocks/klaviyo-onsite-embed/2632fe16-c075-4321-a88b-50b567f42507",
+        "disabled": false,
+        "settings": {}
+      },
+      "21474836472147483647": {
+        "type": "shopify://apps/ecomposer-landing-page-builder/blocks/app-embed/a0fc26e1-7741-4773-8b27-39389b4fb4a0",
+        "disabled": false,
+        "settings": {}
+      },
+      "8218531531362863771": {
+        "type": "shopify://apps/kite-free-gift-discounts/blocks/app-embed/2c7302c4-455d-4078-a829-48563ba26089",
+        "disabled": false,
+        "settings": {}
+      },
+      "17676059084223943535": {
+        "type": "shopify://apps/triplewhale/blocks/triple_pixel_snippet/483d496b-3f1a-4609-aea7-8eee3b6b7a2a",
+        "disabled": false,
+        "settings": {}
+      },
+      "yoast-seo-metatags": {
+        "type": "shopify://apps/yoast-seo-seo-for-everyone/blocks/metatags/7c777011-bc88-4743-a24e-64336e1e5b46",
+        "disabled": false,
+        "settings": {}
+      },
+      "14060646107696862457": {
+        "type": "shopify://apps/judge-me-reviews/blocks/judgeme_core/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
+        "disabled": false,
+        "settings": {}
+      },
+      "5858961087409699889": {
+        "type": "shopify://apps/geolocation-orbe/blocks/app-embed-footer-selector/7cb09287-cd2b-4646-837c-f1f9b6ea703e",
+        "disabled": false,
+        "settings": {
+          "footer_ui_type": "selector",
+          "option_language": true,
+          "style_corners": "square",
+          "style_dropdown": "outlined",
+          "option_classic_flag_style": "square",
+          "option_classic_currency_type": "none",
+          "search_country": true,
+          "block_background": "#fff",
+          "style_colors_background": "#fff",
+          "style_colors_border": "#000",
+          "style_colors_text": "#000",
+          "option_modal_continent": false,
+          "option_flag_style": "square",
+          "option_currency_type": "iso",
+          "option_modal_language": true,
+          "title": "Select Your Region",
+          "language_title": "Preferred Language",
+          "helper_text": "Changing language will not affect your selected region",
+          "block_alignement": "center"
+        }
+      },
+      "15912215999290715800": {
+        "type": "shopify://apps/geolocation-orbe/blocks/app-embed-modal/7cb09287-cd2b-4646-837c-f1f9b6ea703e",
+        "disabled": false,
+        "settings": {
+          "test_mode": false,
+          "modal_closeButton": true,
+          "option_flag_style": "square",
+          "option_currency_type": "none",
+          "option_language": true,
+          "option_search_country": false,
+          "title": "Are you in the right place?",
+          "text": "Please select your shipping country.",
+          "helper_text": "<p>Buy from the country of your choice. Remember that we can only ship your order to addresses located in the chosen country.</p>",
+          "cta_text": "Shop now",
+          "fallback_text": "We don’t ship to {country}",
+          "background_image_desktop": "shopify://shop_images/tQ6yWKwRqrKStG5ikR0w.png",
+          "alignment_image": "right",
+          "background_image_mobile": "shopify://shop_images/tQ6yWKwRqrKStG5ikR0w.png",
+          "style_corners": "square",
+          "style_dropdown": "outlined",
+          "modal_button_align": "right",
+          "title_font_size": 20,
+          "text_font_size": 14,
+          "show_blurred_background": false,
+          "style_colors_background": "#FFF",
+          "style_colors_closeButton": "#5C5F62",
+          "style_colors_cta_text": "#fff",
+          "style_colors_cta_button": "#000",
+          "style_colors_text": "#000"
+        }
+      }
+    }
+  }
+}

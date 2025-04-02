@@ -1,0 +1,721 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "heading": {
+      "type": "heading-template",
+      "disabled": true,
+      "settings": {
+        "use_specify_image": true,
+        "parallax": false,
+        "color": "#000000",
+        "overlay": 54,
+        "padding": 50,
+        "paddingmb": 50,
+        "mg_b": 50,
+        "mg_bmb": 50,
+        "content_align": "t4s-text-center",
+        "bg_pos": "center center",
+        "bg_repeat": "no-repeat",
+        "bg_size": "cover",
+        "use_cus_css": false,
+        "code_cus_css": ".SectionID {\nbackground-color:red\n}"
+      }
+    },
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "layout": "t4s-container-wrap",
+        "cl_bg": "",
+        "cl_bg_gradient": "",
+        "mg": "60px,,60px,",
+        "pd": "",
+        "mg_tb": "",
+        "pd_tb": "",
+        "mg_mb": ",,30px,",
+        "pd_mb": ""
+      }
+    },
+    "sidebar-page": {
+      "type": "sidebar-page",
+      "blocks": {
+        "f69681ed-b75e-42de-be58-fdf73b3b7e08": {
+          "type": "blog_cate",
+          "settings": {
+            "title": "Blog categories",
+            "cat_link_list": "",
+            "count": true
+          }
+        }
+      },
+      "block_order": [
+        "f69681ed-b75e-42de-be58-fdf73b3b7e08"
+      ],
+      "disabled": true,
+      "settings": {
+        "enable_drawer": false,
+        "space": 50,
+        "size": "medium",
+        "br_style": "none",
+        "brcolor": "#222222",
+        "sidebar_bdr": 5,
+        "sidebar_pd": 10
+      }
+    },
+    "78e1dff6-f205-4dae-8898-c70f94e7eef4": {
+      "type": "slideshow",
+      "blocks": {
+        "template--19239610712385__78e1dff6-f205-4dae-8898-c70f94e7eef4-16849993556b07883d-0": {
+          "type": "image_parent",
+          "settings": {
+            "image": "shopify://shop_images/Caroline-website-image-2-e1674737850926.jpg",
+            "image_position": "8",
+            "cl_img": "",
+            "link_img1": "",
+            "open_link": "_blank",
+            "animate_slide": "none",
+            "text_align": "start",
+            "text_align_mb": "center",
+            "content_width": "auto",
+            "cv_pos": 82,
+            "ch_pos": 50,
+            "cv_pos_mb": 80,
+            "ch_pos_mb": 50,
+            "bg_overlay": "#000000",
+            "bg_opacity": 0,
+            "bg_content_cl": "#ffffff",
+            "bg_content_op": 0,
+            "content_radius": 0,
+            "box_square": false,
+            "content_pd_tb": 15,
+            "content_pd_lr": 15,
+            "content_pd_tb_tb": 15,
+            "content_pd_lr_tb": 15,
+            "content_pd_tb_mb": 10,
+            "content_pd_lr_mb": 10,
+            "border_bl": false,
+            "br_color": "#222222",
+            "br_bg": "#ffffff",
+            "br_opacity": 50,
+            "br_style": "solid",
+            "br_pd": 20,
+            "br_pd_mb": 10,
+            "time_animation": 1,
+            "animation_delay": 40
+          }
+        },
+        "template--19239610712385__78e1dff6-f205-4dae-8898-c70f94e7eef4-16849993556b07883d-2": {
+          "type": "custom_text",
+          "settings": {
+            "text": "WEET WAT JE SMEERT",
+            "remove_br_tag": false,
+            "tag": "p",
+            "fontf": "inherit",
+            "text_cl": "#ffffff",
+            "text_fs": 70,
+            "text_lh": 70,
+            "text_fw": 300,
+            "text_ls": 0,
+            "text_mgb": 2,
+            "font_italic": false,
+            "text_shadow": false,
+            "hidden_mobile": false,
+            "text_fs_mb": 16,
+            "text_lh_mb": 0,
+            "text_ls_mb": 0,
+            "text_mgb_mobile": 10,
+            "animation": "none"
+          }
+        },
+        "template--19239610712385__78e1dff6-f205-4dae-8898-c70f94e7eef4-16849993556b07883d-1": {
+          "type": "custom_text",
+          "settings": {
+            "text": "Weet wat je smeert. Leer hier alles.",
+            "remove_br_tag": false,
+            "tag": "p",
+            "fontf": "inherit",
+            "text_cl": "#ffffff",
+            "text_fs": 16,
+            "text_lh": 0,
+            "text_fw": 400,
+            "text_ls": 1,
+            "text_mgb": 0.5,
+            "font_italic": false,
+            "text_shadow": false,
+            "hidden_mobile": false,
+            "text_fs_mb": 16,
+            "text_lh_mb": 0,
+            "text_ls_mb": 0,
+            "text_mgb_mobile": 10,
+            "animation": "none"
+          }
+        },
+        "template--19239610712385__78e1dff6-f205-4dae-8898-c70f94e7eef4-16849993556b07883d-3": {
+          "type": "custom_button",
+          "settings": {
+            "button_text": "Button label",
+            "button_link": "",
+            "target_link": "_self",
+            "fontf": "inherit",
+            "button_icon_w": 0,
+            "button_style": "default",
+            "button_effect": "default",
+            "pri_cl": "#222222",
+            "second_cl": "",
+            "pri_cl_hover": "#56cfe1",
+            "second_cl_hover": "#ffffff",
+            "fsbutton": 14,
+            "fwbutton": 400,
+            "button_ls": 0,
+            "button_mh": 42,
+            "button_bdr": 0,
+            "button_pd_lr": 20,
+            "button_mgb": 0,
+            "hidden_mobile": false,
+            "button_icon_w_mb": 0,
+            "fsbutton_mb": 10,
+            "button_mh_mb": 36,
+            "button_pd_lr_mb": 15,
+            "button_ls_mb": 0,
+            "button_mgb_mb": 0,
+            "animation": "none"
+          }
+        },
+        "template--19239610712385__78e1dff6-f205-4dae-8898-c70f94e7eef4-16849993556b07883d-4": {
+          "type": "image_parent",
+          "disabled": true,
+          "settings": {
+            "image_position": "8",
+            "cl_img": "",
+            "link_img1": "",
+            "open_link": "_blank",
+            "animate_slide": "none",
+            "text_align": "start",
+            "text_align_mb": "center",
+            "content_width": "auto",
+            "cv_pos": 50,
+            "ch_pos": 50,
+            "cv_pos_mb": 50,
+            "ch_pos_mb": 50,
+            "bg_overlay": "#000000",
+            "bg_opacity": 0,
+            "bg_content_cl": "#ffffff",
+            "bg_content_op": 0,
+            "content_radius": 0,
+            "box_square": false,
+            "content_pd_tb": 15,
+            "content_pd_lr": 15,
+            "content_pd_tb_tb": 15,
+            "content_pd_lr_tb": 15,
+            "content_pd_tb_mb": 10,
+            "content_pd_lr_mb": 10,
+            "border_bl": false,
+            "br_color": "#222222",
+            "br_bg": "#ffffff",
+            "br_opacity": 50,
+            "br_style": "solid",
+            "br_pd": 20,
+            "br_pd_mb": 10,
+            "time_animation": 1,
+            "animation_delay": 40
+          }
+        },
+        "template--19239610712385__78e1dff6-f205-4dae-8898-c70f94e7eef4-16849993556b07883d-5": {
+          "type": "custom_text",
+          "disabled": true,
+          "settings": {
+            "text": "Summer sale",
+            "remove_br_tag": false,
+            "tag": "p",
+            "fontf": "inherit",
+            "text_cl": "#ffffff",
+            "text_fs": 16,
+            "text_lh": 0,
+            "text_fw": 400,
+            "text_ls": 1,
+            "text_mgb": 15,
+            "font_italic": false,
+            "text_shadow": false,
+            "hidden_mobile": false,
+            "text_fs_mb": 16,
+            "text_lh_mb": 0,
+            "text_ls_mb": 0,
+            "text_mgb_mobile": 10,
+            "animation": "none"
+          }
+        },
+        "template--19239610712385__78e1dff6-f205-4dae-8898-c70f94e7eef4-16849993556b07883d-6": {
+          "type": "custom_text",
+          "disabled": true,
+          "settings": {
+            "text": "Lookbook Collection",
+            "remove_br_tag": false,
+            "tag": "p",
+            "fontf": "inherit",
+            "text_cl": "#ffffff",
+            "text_fs": 70,
+            "text_lh": 70,
+            "text_fw": 300,
+            "text_ls": 0,
+            "text_mgb": 25,
+            "font_italic": false,
+            "text_shadow": false,
+            "hidden_mobile": false,
+            "text_fs_mb": 16,
+            "text_lh_mb": 0,
+            "text_ls_mb": 0,
+            "text_mgb_mobile": 10,
+            "animation": "none"
+          }
+        },
+        "template--19239610712385__78e1dff6-f205-4dae-8898-c70f94e7eef4-16849993556b07883d-7": {
+          "type": "custom_button",
+          "disabled": true,
+          "settings": {
+            "button_text": "Button label",
+            "button_link": "",
+            "target_link": "_self",
+            "fontf": "inherit",
+            "button_icon_w": 0,
+            "button_style": "default",
+            "button_effect": "default",
+            "pri_cl": "#222222",
+            "second_cl": "",
+            "pri_cl_hover": "#56cfe1",
+            "second_cl_hover": "#ffffff",
+            "fsbutton": 14,
+            "fwbutton": 400,
+            "button_ls": 0,
+            "button_mh": 42,
+            "button_bdr": 0,
+            "button_pd_lr": 20,
+            "button_mgb": 0,
+            "hidden_mobile": false,
+            "button_icon_w_mb": 0,
+            "fsbutton_mb": 10,
+            "button_mh_mb": 36,
+            "button_pd_lr_mb": 15,
+            "button_ls_mb": 0,
+            "button_mgb_mb": 0,
+            "animation": "none"
+          }
+        }
+      },
+      "block_order": [
+        "template--19239610712385__78e1dff6-f205-4dae-8898-c70f94e7eef4-16849993556b07883d-0",
+        "template--19239610712385__78e1dff6-f205-4dae-8898-c70f94e7eef4-16849993556b07883d-2",
+        "template--19239610712385__78e1dff6-f205-4dae-8898-c70f94e7eef4-16849993556b07883d-1",
+        "template--19239610712385__78e1dff6-f205-4dae-8898-c70f94e7eef4-16849993556b07883d-3",
+        "template--19239610712385__78e1dff6-f205-4dae-8898-c70f94e7eef4-16849993556b07883d-4",
+        "template--19239610712385__78e1dff6-f205-4dae-8898-c70f94e7eef4-16849993556b07883d-5",
+        "template--19239610712385__78e1dff6-f205-4dae-8898-c70f94e7eef4-16849993556b07883d-6",
+        "template--19239610712385__78e1dff6-f205-4dae-8898-c70f94e7eef4-16849993556b07883d-7"
+      ],
+      "settings": {
+        "se_height": "t4s_ratio_cuspx",
+        "custom_dk": true,
+        "height_dk": 500,
+        "custom_tb": true,
+        "height_tb": 400,
+        "custom_mb": true,
+        "height_mb": 250,
+        "eff": "slide",
+        "loop": true,
+        "au_time": 0,
+        "au_hover": true,
+        "nav_btn": false,
+        "btn_vi": "hover",
+        "btn_owl": "default",
+        "btn_shape": "none",
+        "btn_cl": "dark",
+        "btn_size": "small",
+        "btn_hidden_mobile": false,
+        "nav_dot": false,
+        "dot_owl": "default",
+        "dots_position": "default",
+        "dots_cl": "dark",
+        "dots_round": false,
+        "dots_space": 10,
+        "dots_hidden_mobile": false,
+        "layout": "t4s-container-fluid",
+        "cl_bg": "",
+        "cl_bg_gradient": "",
+        "mg": ",,,",
+        "pd": "",
+        "mg_tb": "",
+        "pd_tb": "",
+        "mg_mb": ",,30px,",
+        "pd_mb": "",
+        "use_cus_css": false,
+        "code_cus_css": ""
+      }
+    },
+    "c4c96e41-daa0-4c4e-94e5-a6a6f45f7377": {
+      "type": "image_text",
+      "blocks": {
+        "template--19239610712385__c4c96e41-daa0-4c4e-94e5-a6a6f45f7377-1685003610127c105d-0": {
+          "type": "bl_image",
+          "disabled": true,
+          "settings": {
+            "col_dk": "6",
+            "col_tb": "6",
+            "layout_des": "carousel",
+            "post_mobile": "default",
+            "image_ratio": "ratioadapt",
+            "image_size": "cover",
+            "image_position": "8",
+            "loop": true,
+            "au_time": 0,
+            "au_hover": true,
+            "nav_btn": false,
+            "btn_vi": "hover",
+            "btn_owl": "default",
+            "btn_shape": "none",
+            "btn_cl": "dark",
+            "btn_size": "small",
+            "btn_hidden_mobile": true,
+            "nav_dot": false,
+            "dot_owl": "default",
+            "dots_cl": "dark",
+            "dots_round": true,
+            "dots_space": 10,
+            "dots_hidden_mobile": false
+          }
+        },
+        "template--19239610712385__c4c96e41-daa0-4c4e-94e5-a6a6f45f7377-1685003610127c105d-1": {
+          "type": "bl_text",
+          "settings": {
+            "col_dk": "12",
+            "col_tb": "12",
+            "text_size": "40,15",
+            "txt_align": "center",
+            "sub_heading": "",
+            "heading": "",
+            "text": "<p>Skincare kan best ingewikkeld zijn. Daarom zijn wij er om je te helpen. <a href=\"https://calendly.com/witlofskincareconsultations/witlof-skincare-persoonlijk-huidconsult?month=2023-06\" target=\"_blank\" title=\"https://calendly.com/witlofskincareconsultations/witlof-skincare-persoonlijk-huidconsult?month=2023-06\">Boek je gratis huidadvies</a>, doe de skintest, <a href=\"https://cdn.shopify.com/s/files/1/0765/8461/6257/files/WEETWATJESMEERT.pdf?v=1685892856\" title=\"https://cdn.shopify.com/s/files/1/0765/8461/6257/files/WEETWATJESMEERT.pdf?v=1685892856\">check de ingredienten checklist </a>of lees alles in onze <a href=\"/blogs/news\" title=\"News\">blogs </a>over ingrediënten in huidverzorging. Onze missie is om iedereen bewust te maken van wat je op je huid smeert, zodat je een gezonde keuze kan maken, je natuurlijke beauty ondersteund wordt en je huid echt kan stralen!</p>",
+            "subhd_color": "#222222",
+            "hd_color": "#222222",
+            "des_color": "#878787",
+            "use_shadow": false,
+            "button_label": "Button label",
+            "button_link": "",
+            "open_link": "_blank",
+            "btn_icon": false,
+            "button_style": "default",
+            "btn_size": "large",
+            "btn_cl": "dark",
+            "button_effect": "default"
+          }
+        }
+      },
+      "block_order": [
+        "template--19239610712385__c4c96e41-daa0-4c4e-94e5-a6a6f45f7377-1685003610127c105d-0",
+        "template--19239610712385__c4c96e41-daa0-4c4e-94e5-a6a6f45f7377-1685003610127c105d-1"
+      ],
+      "settings": {
+        "design_heading": "1",
+        "heading_align": "t4s-text-center",
+        "top_heading": "",
+        "icon_heading": "las la-gem",
+        "top_subheading": "",
+        "tophead_mb": 30,
+        "space_h_item": "20",
+        "space_v_item": "10",
+        "space_h_item_mb": "20",
+        "space_v_item_mb": "10",
+        "layout": "t4s-container-wrap",
+        "cl_bg": "#fef5f5",
+        "cl_bg_gradient": "",
+        "mg": "",
+        "pd": "50px,,50px,",
+        "mg_tb": "",
+        "pd_tb": "50px,,50px,",
+        "mg_mb": "",
+        "pd_mb": "50px,,50px,",
+        "use_cus_css": false,
+        "code_cus_css": ""
+      }
+    },
+    "c4c7dc2e-a831-4fa8-8ae4-6591c7236bef": {
+      "type": "image_text",
+      "blocks": {
+        "template--19239610712385__c4c7dc2e-a831-4fa8-8ae4-6591c7236bef-16855431138a15c341-0": {
+          "type": "bl_image",
+          "settings": {
+            "image1": "shopify://shop_images/WITLOF_alexander-sporre-photography-70-scaled-e1674738547833_1.jpg",
+            "col_dk": "6",
+            "col_tb": "6",
+            "layout_des": "carousel",
+            "post_mobile": "default",
+            "image_ratio": "ratioadapt",
+            "image_size": "cover",
+            "image_position": "8",
+            "loop": true,
+            "au_time": 0,
+            "au_hover": true,
+            "nav_btn": false,
+            "btn_vi": "hover",
+            "btn_owl": "default",
+            "btn_shape": "none",
+            "btn_cl": "dark",
+            "btn_size": "small",
+            "btn_hidden_mobile": true,
+            "nav_dot": false,
+            "dot_owl": "default",
+            "dots_cl": "dark",
+            "dots_round": true,
+            "dots_space": 10,
+            "dots_hidden_mobile": false
+          }
+        },
+        "template--19239610712385__c4c7dc2e-a831-4fa8-8ae4-6591c7236bef-16855431138a15c341-1": {
+          "type": "bl_text",
+          "settings": {
+            "col_dk": "6",
+            "col_tb": "6",
+            "text_size": "60,18",
+            "txt_align": "center",
+            "sub_heading": "Van onze experts",
+            "heading": "GRATIS HUIDCONSULT",
+            "text": "<p>Heb je de skintest gedaan maar weet je niet zeker of het klopt? Heb je specifieke vragen over je huid of speciale uitdagingen waar je tegenaan loopt?</p><p>Caroline, co-founder van Witlof Skincare, heeft ruim 12 jaar ervaring in natuurlijke huidverzorging en duizenden mensen al van passend advies voorzien. Adviezen die verder gaan dan alleen welk product bij je huid past. Denk bijvoorbeeld aan voeding, maar ook intoleranties of leefstijl zijn van invloed op de conditie van je huid.</p><p>Laat ons je helpen en boek een gratis 15 minuten een-op-een huidconsult.</p>",
+            "subhd_color": "#ec7674",
+            "hd_color": "#ec7674",
+            "des_color": "#878787",
+            "use_shadow": false,
+            "button_label": "Boek Gratis Consult",
+            "button_link": "https://calendly.com/witlofskincareconsultations/witlof-skincare-persoonlijk-huidconsult?month=2023-06",
+            "open_link": "_blank",
+            "btn_icon": false,
+            "button_style": "default",
+            "btn_size": "large",
+            "btn_cl": "primary",
+            "button_effect": "default"
+          }
+        }
+      },
+      "block_order": [
+        "template--19239610712385__c4c7dc2e-a831-4fa8-8ae4-6591c7236bef-16855431138a15c341-0",
+        "template--19239610712385__c4c7dc2e-a831-4fa8-8ae4-6591c7236bef-16855431138a15c341-1"
+      ],
+      "custom_css": [
+        "p {width: 400px; max-width: 90%; display: block; text-align: center; margin: 0 auto;}"
+      ],
+      "settings": {
+        "design_heading": "1",
+        "heading_align": "t4s-text-center",
+        "top_heading": "",
+        "icon_heading": "las la-gem",
+        "top_subheading": "",
+        "tophead_mb": 30,
+        "space_h_item": "0",
+        "space_v_item": "0",
+        "space_h_item_mb": "20",
+        "space_v_item_mb": "10",
+        "layout": "t4s-container-fluid",
+        "cl_bg": "#fef5f5",
+        "cl_bg_gradient": "",
+        "mg": ",,,",
+        "pd": "",
+        "mg_tb": "",
+        "pd_tb": "",
+        "mg_mb": ",,30px,",
+        "pd_mb": "",
+        "use_cus_css": false,
+        "code_cus_css": ""
+      }
+    },
+    "8ceddab5-49f7-4db2-8a86-f1390b690f62": {
+      "type": "image_text",
+      "blocks": {
+        "template--19239610712385__8ceddab5-49f7-4db2-8a86-f1390b690f62-1685003610127c105d-1": {
+          "type": "bl_text",
+          "settings": {
+            "col_dk": "6",
+            "col_tb": "6",
+            "text_size": "60,18",
+            "txt_align": "center",
+            "sub_heading": "Het duurt maar twee minuten!",
+            "heading": "DOE DE SKINTEST",
+            "text": "<p>Heb je geen idee waar je moet beginnen? Weet je niet of je nu een droog, vet of gemengd huidtype hebt? Doe de test en kom er binnen twee minuten achter! Ook geeft de uitslag je natuurlijk een passend huidverzorgingsadvies.</p>",
+            "subhd_color": "#76bcaa",
+            "hd_color": "#76bcaa",
+            "des_color": "#878787",
+            "use_shadow": false,
+            "button_label": "DOE DE SKINTEST",
+            "button_link": "https://witlofskincare.nl/pages/gb-witlof-skin-quiz-english-1?shpxid=36376e82-c95f-428d-8de1-0ed5fd2275fe",
+            "open_link": "_blank",
+            "btn_icon": false,
+            "button_style": "default",
+            "btn_size": "large",
+            "btn_cl": "primary",
+            "button_effect": "default"
+          }
+        },
+        "template--19239610712385__8ceddab5-49f7-4db2-8a86-f1390b690f62-1685003610127c105d-0": {
+          "type": "bl_image",
+          "settings": {
+            "image1": "shopify://shop_images/Untitled_design_-_2023-05-25T115926.759.png",
+            "col_dk": "6",
+            "col_tb": "6",
+            "layout_des": "carousel",
+            "post_mobile": "default",
+            "image_ratio": "ratioadapt",
+            "image_size": "cover",
+            "image_position": "8",
+            "loop": true,
+            "au_time": 0,
+            "au_hover": true,
+            "nav_btn": false,
+            "btn_vi": "hover",
+            "btn_owl": "default",
+            "btn_shape": "none",
+            "btn_cl": "dark",
+            "btn_size": "small",
+            "btn_hidden_mobile": true,
+            "nav_dot": false,
+            "dot_owl": "default",
+            "dots_cl": "dark",
+            "dots_round": true,
+            "dots_space": 10,
+            "dots_hidden_mobile": false
+          }
+        }
+      },
+      "block_order": [
+        "template--19239610712385__8ceddab5-49f7-4db2-8a86-f1390b690f62-1685003610127c105d-1",
+        "template--19239610712385__8ceddab5-49f7-4db2-8a86-f1390b690f62-1685003610127c105d-0"
+      ],
+      "custom_css": [
+        "p {width: 400px; max-width: 90%; display: block; text-align: center; margin: 0 auto;}"
+      ],
+      "settings": {
+        "design_heading": "1",
+        "heading_align": "t4s-text-center",
+        "top_heading": "",
+        "icon_heading": "las la-gem",
+        "top_subheading": "",
+        "tophead_mb": 0,
+        "space_h_item": "0",
+        "space_v_item": "0",
+        "space_h_item_mb": "20",
+        "space_v_item_mb": "10",
+        "layout": "t4s-container-fluid",
+        "cl_bg": "#f1f8f6",
+        "cl_bg_gradient": "",
+        "mg": ",,0px,",
+        "pd": "",
+        "mg_tb": "",
+        "pd_tb": "",
+        "mg_mb": ",,0px,",
+        "pd_mb": "",
+        "use_cus_css": false,
+        "code_cus_css": ""
+      }
+    },
+    "7da6281b-06b4-46ad-a92e-f72d11f0b53a": {
+      "type": "image_text",
+      "blocks": {
+        "a5ce24e9-d801-49eb-af19-6a7d1b386ed9": {
+          "type": "bl_image",
+          "settings": {
+            "image1": "shopify://shop_images/80A204.jpg",
+            "col_dk": "6",
+            "col_tb": "6",
+            "layout_des": "carousel",
+            "post_mobile": "default",
+            "image_ratio": "ratioadapt",
+            "image_size": "cover",
+            "image_position": "8",
+            "loop": true,
+            "au_time": 0,
+            "au_hover": true,
+            "nav_btn": false,
+            "btn_vi": "hover",
+            "btn_owl": "default",
+            "btn_shape": "none",
+            "btn_cl": "dark",
+            "btn_size": "small",
+            "btn_hidden_mobile": true,
+            "nav_dot": false,
+            "dot_owl": "default",
+            "dots_cl": "dark",
+            "dots_round": true,
+            "dots_space": 10,
+            "dots_hidden_mobile": false
+          }
+        },
+        "31d6b4de-5050-4887-808e-f4cacc61fec2": {
+          "type": "bl_text",
+          "settings": {
+            "col_dk": "6",
+            "col_tb": "6",
+            "text_size": "60,18",
+            "txt_align": "center",
+            "sub_heading": "Voor een gebalanceerde & stralende huid",
+            "heading": "DOE DE HUID DETOX",
+            "text": "<p>Ken je het gevoel dat je na het douchen zo snel mogelijk een crème op je gezicht wilt smeren? </p><p>Omdat je huid trekkerig of branderig aanvoelt? Of heb je ook zo’n glimmende T-zone in je gezicht?</p><p>Dan is een huid detox misschien wel iets voor jou. Lees hier verder</p>",
+            "subhd_color": "#ec7674",
+            "hd_color": "#ec7674",
+            "des_color": "#878787",
+            "use_shadow": false,
+            "button_label": "Lees Meer",
+            "button_link": "shopify://pages/huid-detox",
+            "open_link": "_blank",
+            "btn_icon": false,
+            "button_style": "default",
+            "btn_size": "large",
+            "btn_cl": "primary",
+            "button_effect": "default"
+          }
+        }
+      },
+      "block_order": [
+        "a5ce24e9-d801-49eb-af19-6a7d1b386ed9",
+        "31d6b4de-5050-4887-808e-f4cacc61fec2"
+      ],
+      "custom_css": [
+        "p {width: 400px; max-width: 90%; display: block; text-align: center; margin: 0 auto;}"
+      ],
+      "settings": {
+        "design_heading": "1",
+        "heading_align": "t4s-text-center",
+        "top_heading": "",
+        "icon_heading": "las la-gem",
+        "top_subheading": "",
+        "tophead_mb": 0,
+        "space_h_item": "0",
+        "space_v_item": "0",
+        "space_h_item_mb": "20",
+        "space_v_item_mb": "10",
+        "layout": "t4s-container-fluid",
+        "cl_bg": "#fef5f5",
+        "cl_bg_gradient": "",
+        "mg": ",,0px,",
+        "pd": "",
+        "mg_tb": "",
+        "pd_tb": "",
+        "mg_mb": ",,0px,",
+        "pd_mb": "",
+        "use_cus_css": false,
+        "code_cus_css": ""
+      }
+    }
+  },
+  "order": [
+    "heading",
+    "main",
+    "sidebar-page",
+    "78e1dff6-f205-4dae-8898-c70f94e7eef4",
+    "c4c96e41-daa0-4c4e-94e5-a6a6f45f7377",
+    "c4c7dc2e-a831-4fa8-8ae4-6591c7236bef",
+    "8ceddab5-49f7-4db2-8a86-f1390b690f62",
+    "7da6281b-06b4-46ad-a92e-f72d11f0b53a"
+  ]
+}

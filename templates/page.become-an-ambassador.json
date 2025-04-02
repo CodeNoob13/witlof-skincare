@@ -1,0 +1,622 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "heading": {
+      "type": "heading-template",
+      "disabled": true,
+      "settings": {
+        "use_specify_image": true,
+        "parallax": false,
+        "color": "#000000",
+        "overlay": 54,
+        "padding": 50,
+        "paddingmb": 50,
+        "mg_b": 50,
+        "mg_bmb": 50,
+        "content_align": "t4s-text-center",
+        "bg_pos": "center center",
+        "bg_repeat": "no-repeat",
+        "bg_size": "cover",
+        "use_cus_css": false,
+        "code_cus_css": ".SectionID {\nbackground-color:red\n}"
+      }
+    },
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "layout": "t4s-container-wrap",
+        "cl_bg": "",
+        "cl_bg_gradient": "",
+        "mg": "60px,,60px,",
+        "pd": "",
+        "mg_tb": "",
+        "pd_tb": "",
+        "mg_mb": ",,30px,",
+        "pd_mb": ""
+      }
+    },
+    "sidebar-page": {
+      "type": "sidebar-page",
+      "blocks": {
+        "f69681ed-b75e-42de-be58-fdf73b3b7e08": {
+          "type": "blog_cate",
+          "settings": {
+            "title": "Blog categories",
+            "cat_link_list": "",
+            "count": true
+          }
+        }
+      },
+      "block_order": [
+        "f69681ed-b75e-42de-be58-fdf73b3b7e08"
+      ],
+      "disabled": true,
+      "settings": {
+        "enable_drawer": false,
+        "space": 50,
+        "size": "medium",
+        "br_style": "none",
+        "brcolor": "#222222",
+        "sidebar_bdr": 5,
+        "sidebar_pd": 10
+      }
+    },
+    "14d5ab34-382e-4bf6-a76f-87c0e633b26a": {
+      "type": "hero_image",
+      "blocks": {
+        "template--19303428030785__14d5ab34-382e-4bf6-a76f-87c0e633b26a-16854336867b33d997-1": {
+          "type": "custom_text",
+          "settings": {
+            "text": "",
+            "remove_br_tag": false,
+            "tag": "p",
+            "fontf": "inherit",
+            "text_cl": "#ffffff",
+            "text_fs": 70,
+            "text_lh": 70,
+            "text_fw": 300,
+            "text_ls": 0,
+            "text_mgb": 25,
+            "font_italic": false,
+            "text_shadow": false,
+            "hidden_mobile": false,
+            "text_fs_mb": 16,
+            "text_lh_mb": 0,
+            "text_ls_mb": 0,
+            "text_mgb_mobile": 10,
+            "animation": "none"
+          }
+        },
+        "template--19303428030785__14d5ab34-382e-4bf6-a76f-87c0e633b26a-16854336867b33d997-0": {
+          "type": "custom_text",
+          "settings": {
+            "text": "",
+            "remove_br_tag": false,
+            "tag": "p",
+            "fontf": "inherit",
+            "text_cl": "#ffffff",
+            "text_fs": 16,
+            "text_lh": 0,
+            "text_fw": 400,
+            "text_ls": 1,
+            "text_mgb": 15,
+            "font_italic": false,
+            "text_shadow": false,
+            "hidden_mobile": false,
+            "text_fs_mb": 16,
+            "text_lh_mb": 0,
+            "text_ls_mb": 0,
+            "text_mgb_mobile": 10,
+            "animation": "none"
+          }
+        },
+        "template--19303428030785__14d5ab34-382e-4bf6-a76f-87c0e633b26a-16854336867b33d997-2": {
+          "type": "custom_button",
+          "settings": {
+            "button_text": "Button label",
+            "button_link": "",
+            "target_link": "_self",
+            "fontf": "inherit",
+            "button_icon_w": 0,
+            "button_style": "default",
+            "button_effect": "default",
+            "pri_cl": "#222222",
+            "second_cl": "#ffffff",
+            "pri_cl_hover": "#56cfe1",
+            "second_cl_hover": "#ffffff",
+            "fsbutton": 14,
+            "fwbutton": 400,
+            "button_ls": 0,
+            "button_mh": 42,
+            "button_bdr": 0,
+            "button_pd_lr": 20,
+            "button_mgb": 0,
+            "hidden_mobile": false,
+            "button_icon_w_mb": 0,
+            "fsbutton_mb": 10,
+            "button_mh_mb": 36,
+            "button_pd_lr_mb": 15,
+            "button_ls_mb": 0,
+            "button_mgb_mb": 0,
+            "animation": "none"
+          }
+        }
+      },
+      "block_order": [
+        "template--19303428030785__14d5ab34-382e-4bf6-a76f-87c0e633b26a-16854336867b33d997-1",
+        "template--19303428030785__14d5ab34-382e-4bf6-a76f-87c0e633b26a-16854336867b33d997-0",
+        "template--19303428030785__14d5ab34-382e-4bf6-a76f-87c0e633b26a-16854336867b33d997-2"
+      ],
+      "disabled": true,
+      "settings": {
+        "se_height": "t4s_ratio_cuspx",
+        "custom_dk": true,
+        "height_dk": 600,
+        "custom_tb": true,
+        "height_tb": 400,
+        "custom_mb": true,
+        "height_mb": 250,
+        "image": "shopify://shop_images/SORAYA_HEADSHOT_STRAAT_Z9A0177.jpg",
+        "parallax": false,
+        "image_position": "0",
+        "link_img1": "",
+        "open_link": "_blank",
+        "text_align": "center",
+        "text_align_mb": "center",
+        "content_width": "auto",
+        "cv_pos": 50,
+        "ch_pos": 50,
+        "cv_pos_mb": 50,
+        "ch_pos_mb": 50,
+        "bg_overlay": "#000000",
+        "bg_opacity": 0,
+        "bg_content_cl": "#ffffff",
+        "bg_content_op": 0,
+        "content_pd_tb": 15,
+        "content_pd_lr": 15,
+        "content_pd_tb_mb": 10,
+        "content_pd_lr_mb": 10,
+        "border_bl": false,
+        "br_color": "#222222",
+        "br_bg": "#ffffff",
+        "br_opacity": 50,
+        "br_style": "solid",
+        "br_pd": 20,
+        "br_pd_mb": 10,
+        "time_animation": 1,
+        "animation_delay": 40,
+        "layout": "t4s-container-fluid",
+        "cl_bg": "",
+        "cl_bg_gradient": "",
+        "mg": ",,50px,",
+        "pd": "",
+        "mg_tb": "",
+        "pd_tb": "",
+        "mg_mb": ",,30px,",
+        "pd_mb": "",
+        "use_cus_css": false,
+        "code_cus_css": ""
+      }
+    },
+    "1702311955a7b85f67": {
+      "type": "apps",
+      "blocks": {
+        "a1ce05ee-5103-450f-b145-70f589fef71e": {
+          "type": "shopify://apps/videowise-video-commerce/blocks/videowise-page-widgets/b48d6c0c-3e3f-4791-a9ab-a5ab7ec82f4d",
+          "settings": {
+            "videowise_embed": "<div class=\"reeview-app-widget\" id=\"reeview-app-widget_65732ccd80fe850029e7ce77\"></div>"
+          }
+        },
+        "6f4558b7-c6ab-42db-b50c-5e19ddb746f8": {
+          "type": "shopify://apps/videowise-video-commerce/blocks/videowise-page-widgets/b48d6c0c-3e3f-4791-a9ab-a5ab7ec82f4d",
+          "settings": {
+            "videowise_embed": "<div class=\"reeview-app-widget\" id=\"reeview-app-widget_65734fe261439200292cd6c8\"></div>"
+          }
+        }
+      },
+      "block_order": [
+        "a1ce05ee-5103-450f-b145-70f589fef71e",
+        "6f4558b7-c6ab-42db-b50c-5e19ddb746f8"
+      ],
+      "settings": {}
+    },
+    "444a385b-588c-4b91-9f31-5a2c71f4ea27": {
+      "type": "image_text",
+      "blocks": {
+        "template--19303428030785__444a385b-588c-4b91-9f31-5a2c71f4ea27-16854341295177ac57-0": {
+          "type": "bl_image",
+          "settings": {
+            "image1": "shopify://shop_images/374998712_1040894713574551_5512429189671704189_n.jpg",
+            "col_dk": "6",
+            "col_tb": "6",
+            "layout_des": "carousel",
+            "post_mobile": "default",
+            "image_ratio": "ratioadapt",
+            "image_size": "cover",
+            "image_position": "8",
+            "loop": true,
+            "au_time": 0,
+            "au_hover": true,
+            "nav_btn": false,
+            "btn_vi": "hover",
+            "btn_owl": "default",
+            "btn_shape": "none",
+            "btn_cl": "dark",
+            "btn_size": "small",
+            "btn_hidden_mobile": true,
+            "nav_dot": false,
+            "dot_owl": "default",
+            "dots_cl": "dark",
+            "dots_round": true,
+            "dots_space": 10,
+            "dots_hidden_mobile": false
+          }
+        },
+        "template--19303428030785__444a385b-588c-4b91-9f31-5a2c71f4ea27-16854341295177ac57-1": {
+          "type": "bl_text",
+          "settings": {
+            "col_dk": "6",
+            "col_tb": "6",
+            "text_size": "40,15",
+            "txt_align": "center",
+            "sub_heading": "",
+            "heading": "BECOME AN AMBASSADOR",
+            "text": "<p>Ben je een liefhebber van zowel huidverzorging als duurzaamheid? Wil je gratis Witlof Skincare producten en voordelen ontvangen? Meld je vandaag nog aan als een van onze ambassadeurs!<br/><br/>Het enige wat je hoeft te doen is de korte enquete in te vullen. </p><p>Heb je een portfolio of content die je graag wilt delen, e-mail ons op <a href=\"mailto:Hello@witlof\">Hello@witlofskincare.com.</a></p>",
+            "subhd_color": "#222222",
+            "hd_color": "#222222",
+            "des_color": "#878787",
+            "use_shadow": false,
+            "button_label": "Geef je op",
+            "button_link": "https://form.jotform.com/230544548849366",
+            "open_link": "_blank",
+            "btn_icon": false,
+            "button_style": "default",
+            "btn_size": "large",
+            "btn_cl": "primary",
+            "button_effect": "default"
+          }
+        }
+      },
+      "block_order": [
+        "template--19303428030785__444a385b-588c-4b91-9f31-5a2c71f4ea27-16854341295177ac57-0",
+        "template--19303428030785__444a385b-588c-4b91-9f31-5a2c71f4ea27-16854341295177ac57-1"
+      ],
+      "settings": {
+        "design_heading": "1",
+        "heading_align": "t4s-text-center",
+        "top_heading": "",
+        "icon_heading": "las la-gem",
+        "top_subheading": "",
+        "tophead_mb": 30,
+        "space_h_item": "20",
+        "space_v_item": "10",
+        "space_h_item_mb": "20",
+        "space_v_item_mb": "10",
+        "layout": "t4s-container-wrap",
+        "cl_bg": "",
+        "cl_bg_gradient": "",
+        "mg": ",,50px,",
+        "pd": "",
+        "mg_tb": "",
+        "pd_tb": "",
+        "mg_mb": ",,30px,",
+        "pd_mb": "",
+        "use_cus_css": false,
+        "code_cus_css": ""
+      }
+    },
+    "e6ad7645-0258-4784-aae3-6e49b24d53fa": {
+      "type": "image_text",
+      "blocks": {
+        "template--19303428030785__e6ad7645-0258-4784-aae3-6e49b24d53fa-16854341295177ac57-1": {
+          "type": "bl_text",
+          "settings": {
+            "col_dk": "6",
+            "col_tb": "6",
+            "text_size": "40,15",
+            "txt_align": "center",
+            "sub_heading": "",
+            "heading": "AMBASSADEUR REVIEW",
+            "text": "<p><em>‘De beste ingrediënten en betaalbaar, echt heel knap. De cleansing mousse met vitamine c, rozenbottel en gember is bijvoorbeeld echt een favoriet! Ontwikkeld door Cis en Caroline. Na jaren een winkel te hebben in organic skincare (c cosmetics) besloten ze hun eigen lijn op te zetten.’</em></p>",
+            "subhd_color": "#222222",
+            "hd_color": "#222222",
+            "des_color": "#878787",
+            "use_shadow": false,
+            "button_label": "Button label",
+            "button_link": "",
+            "open_link": "_blank",
+            "btn_icon": false,
+            "button_style": "default",
+            "btn_size": "large",
+            "btn_cl": "dark",
+            "button_effect": "default"
+          }
+        },
+        "template--19303428030785__e6ad7645-0258-4784-aae3-6e49b24d53fa-16854341295177ac57-0": {
+          "type": "bl_image",
+          "settings": {
+            "image1": "shopify://shop_images/11_a12dd948-0ad3-43eb-9cba-21a9beb87191.png",
+            "col_dk": "6",
+            "col_tb": "6",
+            "layout_des": "carousel",
+            "post_mobile": "default",
+            "image_ratio": "ratio4_3",
+            "image_size": "cover",
+            "image_position": "7",
+            "loop": true,
+            "au_time": 0,
+            "au_hover": true,
+            "nav_btn": false,
+            "btn_vi": "hover",
+            "btn_owl": "default",
+            "btn_shape": "none",
+            "btn_cl": "dark",
+            "btn_size": "small",
+            "btn_hidden_mobile": true,
+            "nav_dot": false,
+            "dot_owl": "default",
+            "dots_cl": "dark",
+            "dots_round": true,
+            "dots_space": 10,
+            "dots_hidden_mobile": false
+          }
+        }
+      },
+      "block_order": [
+        "template--19303428030785__e6ad7645-0258-4784-aae3-6e49b24d53fa-16854341295177ac57-1",
+        "template--19303428030785__e6ad7645-0258-4784-aae3-6e49b24d53fa-16854341295177ac57-0"
+      ],
+      "settings": {
+        "design_heading": "1",
+        "heading_align": "t4s-text-center",
+        "top_heading": "",
+        "icon_heading": "las la-gem",
+        "top_subheading": "",
+        "tophead_mb": 30,
+        "space_h_item": "20",
+        "space_v_item": "10",
+        "space_h_item_mb": "20",
+        "space_v_item_mb": "10",
+        "layout": "t4s-container-wrap",
+        "cl_bg": "",
+        "cl_bg_gradient": "",
+        "mg": ",,50px,",
+        "pd": "",
+        "mg_tb": "",
+        "pd_tb": "",
+        "mg_mb": ",,30px,",
+        "pd_mb": "",
+        "use_cus_css": false,
+        "code_cus_css": ""
+      }
+    },
+    "30bdde0d-acaa-419f-80c2-50e3bc8d61e1": {
+      "type": "feature_columns",
+      "blocks": {
+        "template--19303428030785__30bdde0d-acaa-419f-80c2-50e3bc8d61e1-1685434714644ea2d6-0": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": true,
+            "image": "shopify://shop_images/IMG_2634.heic",
+            "title": "Abby Keenan",
+            "text": "",
+            "button_label": "",
+            "button_link": "shopify://blogs/news/jennifer-hoffman",
+            "open_link": "_blank",
+            "btn_icon": false,
+            "button_style": "default",
+            "btn_size": "large",
+            "btn_cl": "dark",
+            "button_effect": "fade"
+          }
+        },
+        "template--19303428030785__30bdde0d-acaa-419f-80c2-50e3bc8d61e1-1685434714644ea2d6-1": {
+          "type": "text_block",
+          "disabled": true,
+          "settings": {
+            "enable_image": true,
+            "image": "shopify://shop_images/vivienne-van-den-assem-cropped-3.jpg",
+            "title": "Vivienne van den Assem",
+            "text": "",
+            "button_label": "",
+            "button_link": "shopify://blogs/news/vivienne-van-den-assem-over-witlof-skincare",
+            "open_link": "_blank",
+            "btn_icon": false,
+            "button_style": "default",
+            "btn_size": "large",
+            "btn_cl": "dark",
+            "button_effect": "fade"
+          }
+        },
+        "template--19303428030785__30bdde0d-acaa-419f-80c2-50e3bc8d61e1-1685434714644ea2d6-2": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": true,
+            "image": "shopify://shop_images/Regenerating-Oil-Serum2.png",
+            "title": "Yazzie Rose",
+            "text": "",
+            "button_label": "",
+            "button_link": "shopify://blogs/news/meet-yasmin-karssing",
+            "open_link": "_blank",
+            "btn_icon": false,
+            "button_style": "default",
+            "btn_size": "large",
+            "btn_cl": "dark",
+            "button_effect": "fade"
+          }
+        },
+        "92e47234-a440-4464-a11e-b3aafca1c805": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": true,
+            "image": "shopify://shop_images/WhatsApp-Image-2023-03-13-at-12.04.45-PM_685d95da-4412-410a-b20b-ae7e84c656da.jpg",
+            "title": "Fockeline Ouwerkerk",
+            "text": "",
+            "button_label": "",
+            "button_link": "shopify://blogs/news/meet-fockeline-ouwerkerk",
+            "open_link": "_blank",
+            "btn_icon": false,
+            "button_style": "default",
+            "btn_size": "large",
+            "btn_cl": "dark",
+            "button_effect": "fade"
+          }
+        },
+        "e4082b7d-71ab-472b-8f93-2a089426e69b": {
+          "type": "text_block",
+          "disabled": true,
+          "settings": {
+            "enable_image": true,
+            "image": "shopify://shop_images/Hanna-Verboom.jpg",
+            "title": "Hanna Verboom",
+            "text": "",
+            "button_label": "",
+            "button_link": "",
+            "open_link": "_blank",
+            "btn_icon": false,
+            "button_style": "default",
+            "btn_size": "large",
+            "btn_cl": "dark",
+            "button_effect": "fade"
+          }
+        },
+        "7d5ccb59-2f17-4765-8580-6cbfdba47b66": {
+          "type": "text_block",
+          "disabled": true,
+          "settings": {
+            "enable_image": true,
+            "image": "shopify://shop_images/WhatsApp-Image-2022-05-23-at-1.01.19-PM_a67d4bd4-3237-40a5-a39a-e9c3e64b8088.jpg",
+            "title": "Kim Lammers",
+            "text": "",
+            "button_label": "",
+            "button_link": "shopify://blogs/news/kim-lammers-over-witlof-skincare",
+            "open_link": "_blank",
+            "btn_icon": false,
+            "button_style": "default",
+            "btn_size": "large",
+            "btn_cl": "dark",
+            "button_effect": "fade"
+          }
+        },
+        "38adffe0-f042-47af-b576-4545c38ecfe4": {
+          "type": "text_block",
+          "disabled": true,
+          "settings": {
+            "enable_image": true,
+            "image": "shopify://shop_images/ilse-de-lange-1.jpg",
+            "title": "Ilse de Lange",
+            "text": "",
+            "button_label": "",
+            "button_link": "shopify://blogs/news/ilse-de-lange-over-witlof-skincare",
+            "open_link": "_blank",
+            "btn_icon": false,
+            "button_style": "default",
+            "btn_size": "large",
+            "btn_cl": "dark",
+            "button_effect": "fade"
+          }
+        },
+        "39fb5b87-2f94-43c9-854d-9d27c6a5d9e1": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": true,
+            "image": "shopify://shop_images/KIM-LIAN.jpg",
+            "title": "Kim-Lian",
+            "text": "",
+            "button_label": "",
+            "button_link": "shopify://blogs/news/kim-lian-s-witlof-story",
+            "open_link": "_blank",
+            "btn_icon": false,
+            "button_style": "default",
+            "btn_size": "large",
+            "btn_cl": "dark",
+            "button_effect": "fade"
+          }
+        }
+      },
+      "block_order": [
+        "template--19303428030785__30bdde0d-acaa-419f-80c2-50e3bc8d61e1-1685434714644ea2d6-0",
+        "template--19303428030785__30bdde0d-acaa-419f-80c2-50e3bc8d61e1-1685434714644ea2d6-1",
+        "template--19303428030785__30bdde0d-acaa-419f-80c2-50e3bc8d61e1-1685434714644ea2d6-2",
+        "92e47234-a440-4464-a11e-b3aafca1c805",
+        "e4082b7d-71ab-472b-8f93-2a089426e69b",
+        "7d5ccb59-2f17-4765-8580-6cbfdba47b66",
+        "38adffe0-f042-47af-b576-4545c38ecfe4",
+        "39fb5b87-2f94-43c9-854d-9d27c6a5d9e1"
+      ],
+      "settings": {
+        "design_heading": "1",
+        "heading_align": "t4s-text-center",
+        "top_heading": "Onze Ambassadeurs",
+        "icon_heading": "las la-gem",
+        "top_subheading": "",
+        "tophead_mb": 30,
+        "text_align": "center",
+        "pos_text": "default",
+        "fs_title": 22,
+        "fs_text": 14,
+        "fs_title_mb": 22,
+        "fs_text_mb": 12,
+        "image_ratio": "ratio2_3",
+        "image_size": "cover",
+        "image_position": "8",
+        "img_effect": "none",
+        "b_effect": "none",
+        "layout_des": "1",
+        "space_h_item": "30",
+        "space_v_item": "30",
+        "space_h_item_mb": "10",
+        "space_v_item_mb": "10",
+        "col_dk": "4",
+        "col_tb": "4",
+        "col_mb": "2",
+        "loop": true,
+        "au_time": 0,
+        "au_hover": true,
+        "nav_btn": false,
+        "btn_vi": "hover",
+        "btn_owl": "default",
+        "btn_shape": "none",
+        "btn_cl": "dark",
+        "btn_size": "small",
+        "btn_hidden_mobile": true,
+        "nav_dot": false,
+        "dot_owl": "default",
+        "dots_cl": "dark",
+        "dots_round": true,
+        "dots_space": 10,
+        "dots_hidden_mobile": false,
+        "layout": "t4s-container-wrap",
+        "cl_bg": "",
+        "cl_bg_gradient": "",
+        "mg": ",,50px,",
+        "pd": "",
+        "mg_tb": "",
+        "pd_tb": "",
+        "mg_mb": ",,30px,",
+        "pd_mb": "",
+        "use_cus_css": false,
+        "code_cus_css": ""
+      }
+    }
+  },
+  "order": [
+    "heading",
+    "main",
+    "sidebar-page",
+    "14d5ab34-382e-4bf6-a76f-87c0e633b26a",
+    "1702311955a7b85f67",
+    "444a385b-588c-4b91-9f31-5a2c71f4ea27",
+    "e6ad7645-0258-4784-aae3-6e49b24d53fa",
+    "30bdde0d-acaa-419f-80c2-50e3bc8d61e1"
+  ]
+}

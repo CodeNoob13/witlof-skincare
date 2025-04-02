@@ -1,0 +1,550 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "heading": {
+      "type": "heading-template",
+      "blocks": {
+        "ba0c8e30-c11a-4ab7-97c4-4acc1a053a3e": {
+          "type": "1",
+          "settings": {
+            "heading": "FAQ",
+            "fontf": "inherit",
+            "text_cl": "#ffffff",
+            "text_fs": 20,
+            "text_lh": 20,
+            "text_fw": 500,
+            "text_ls": 0,
+            "font_italic": false,
+            "font_uppercase": false,
+            "text_shadow": false,
+            "text_mgb": 15,
+            "hidden_mobile": false,
+            "text_fs_mb": 20,
+            "text_lh_mb": 20,
+            "text_ls_mb": 0,
+            "text_mgb_mobile": 10
+          }
+        },
+        "ceaf2fff-8462-4040-83d5-7f7019d65b8d": {
+          "type": "3",
+          "settings": {
+            "breadcrumb_color": "#f2f2f2",
+            "brc_mgb": 5
+          }
+        }
+      },
+      "block_order": [
+        "ba0c8e30-c11a-4ab7-97c4-4acc1a053a3e",
+        "ceaf2fff-8462-4040-83d5-7f7019d65b8d"
+      ],
+      "settings": {
+        "use_specify_image": true,
+        "parallax": false,
+        "color": "#000000",
+        "overlay": 54,
+        "padding": 50,
+        "paddingmb": 50,
+        "mg_b": 70,
+        "mg_bmb": 50,
+        "content_align": "t4s-text-center",
+        "bg_pos": "center center",
+        "bg_repeat": "no-repeat",
+        "bg_size": "cover",
+        "use_cus_css": false,
+        "code_cus_css": ".SectionID {\nbackground-color:red\n}"
+      }
+    },
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "layout": "t4s-container-wrap",
+        "cl_bg": "",
+        "cl_bg_gradient": "",
+        "mg": "60px,,60px,",
+        "pd": "",
+        "mg_tb": "",
+        "pd_tb": "",
+        "mg_mb": ",,30px,",
+        "pd_mb": ""
+      }
+    },
+    "sidebar-page": {
+      "type": "sidebar-page",
+      "blocks": {
+        "f69681ed-b75e-42de-be58-fdf73b3b7e08": {
+          "type": "blog_cate",
+          "settings": {
+            "title": "Blog categories",
+            "cat_link_list": "",
+            "count": true
+          }
+        }
+      },
+      "block_order": [
+        "f69681ed-b75e-42de-be58-fdf73b3b7e08"
+      ],
+      "disabled": true,
+      "settings": {
+        "enable_drawer": false,
+        "space": 50,
+        "size": "medium",
+        "br_style": "none",
+        "brcolor": "#222222",
+        "sidebar_bdr": 5,
+        "sidebar_pd": 10
+      }
+    },
+    "165214825814e830e7": {
+      "type": "accordion",
+      "blocks": {
+        "1652148258305a99c1-1": {
+          "type": "accor_item",
+          "settings": {
+            "icon": "none",
+            "title": "WAAROM HETEN JULLIE WITLOF SKINCARE?",
+            "content": "<p>We hebben gekozen voor de naam Witlof omdat het een verse, voedzame groente is, vol vitamines en anti-oxidanten, zoals onze producten ook voeding zijn voor de huid. En natuurlijk omdat het refereert aan ‘With love’ op z’n Engels ;).<\/p>"
+          }
+        },
+        "cb973ab0-b192-4c97-b7ba-6b8acbf93e5f": {
+          "type": "accor_item",
+          "settings": {
+            "icon": "none",
+            "title": "WAAROM ZOU IK OVERSTAPPEN OP HUIDVERZORGING VAN WITLOF SKINCARE?",
+            "content": "<p>We zullen het zo kort mogelijk houden waarom je van een regulier merk over zou kunnen stappen naar Witlof Skincare:<\/p><p>a) Witlof Skincare is samengesteld uit uitsluitend natuurlijke grondstoffen en gedeeltelijk van biologische aard (de plantenoliën bijvoorbeeld). Door je huid te verzorgen met Witlof Skincare zal ze gevoed worden met als resultaat een huid die gezond is en meer in balans. Dan ziet je huid er rustig en stralend uit, met een natuurlijke <em>glow<\/em>.<\/p><p>b) De meeste reguliere merken zijn voor het grootste gedeelte van synthetische ingrediënten gemaakt. Deze zijn niet van natuurlijke oorsprong en dat zie je terug in de prijs. Natuurlijke grondstoffen zijn duurder, maar geven ook die extra kracht en dimensie aan onze producten (vergelijk het anders met voeding: liever verse groenten uit de tuin die je lichaam voeden, of nagemaakt <em>vitamin juice <\/em>met synthetische vitaminen uit de supermarkt?). Overigens worden synthetisch nagemaakte vitaminen minder goed opgenomen door je lichaam en heb je voor hetzelfde effect er dus eigenlijk meer van nodig.<\/p><p>c) De meeste reguliere merken bevatten nog steeds stoffen die je huid kunnen irriteren (meteen of op lange termijn) zoals phenoxyethanol of sulfaten. Of het bevat PEG, dat is een huiduitdrogende stof die in 65% van de geteste gevallen nog steeds reststoffen van dioxane (=kankerverwekkende stof) bevat. Of het bevat minerale oliën of siliconen. Die laatste zijn ook niet fijn voor je huid, zeker niet op dagelijkse basis, want werkt als een soort minerale olie ‘light’. Daarnaast zijn ze ook niet goed voor het milieu.<\/p><p>d) Duurzaamheid is bij Witlof Skincare sterker vertegenwoordigd dan bij reguliere merken. We werken met recyclebare verpakkingen, sommige zijn van bioplastic. We hebben een recycling programma (5% korting op je nieuwe aankoop als je je lege verpakkingen bij het gescheiden afval hebt weggedaan). En dat is nog maar het begin!<\/p><p>e) Voor de kwaliteit van een natuurlijk product hebben wij de prijs zo laag mogelijk gehouden. Dus relatief gezien, voor wat je krijgt, is Witlof Skincare niet duur.<\/p><p>f) Onze producten zijn effectief, maar niet te heftig. Bijvoorbeeld onze peeling, die is mild genoeg om wekelijks te gebruiken.<\/p><p>g) Al onze producten zijn veganistisch.<\/p><p>h) Onze producten zijn in Nederland bedacht, ontwikkeld en geproduceerd, dus zoveel mogelijk local!<\/p>"
+          }
+        },
+        "e8dbacc0-ed5e-4867-992d-523f212c604a": {
+          "type": "accor_item",
+          "settings": {
+            "icon": "none",
+            "title": "WAAR ZIJN WITLOF PRODUCTEN VERKRIJGBAAR, OF WAAR KAN IK DE PRODUCTEN UITPROBEREN?",
+            "content": "<p>De producten van Witlof zijn online verkrijgbaar via de webwinkel van Witlof Skincare en bij een aantal schoonheidssalons, huidtherapeuten en verkooppunten. Kijk voor een verkooppunt bij jou in de buurt op deze pagina Verkooppunten<\/p>"
+          }
+        },
+        "accor_item_gDGyAG": {
+          "type": "accor_item",
+          "settings": {
+            "icon": "none",
+            "title": "ER KOMT GEEN CREME UIT MIJN FLESJE. WAT DOE IK NU?",
+            "content": "<p>Helaas zijn er een aantal flesjes waarvan het pompje niet goed werkt. Het lijkt dan dat het pompje stuk is of het flesje leeg, maar dit is meestal niet het geval. <br\/><br\/>Het flesjes is gemaakt van gerecycled plastic en bevat geen slangetje. We hebben hiervoor gekozen om een zo’n duurzaam mogelijk product te creëren, beter voor het milieu.<br\/><br\/>Echter blijft er soms lucht in flesje zitten. Het systeem pompt dus (zonder buisje) de crème omhoog. Wat er waarschijnlijk aan de hand is is een beetje lucht dat uit het pompje moet, voordat de crème komt. Dit kun je oplossen door het flesje rechtop een aantal keer hard op een (tafel)blad te slaan (ik leg er dan een handdoekje onder, zodat de tafel niet beschadigd en je dit flink kunt doen). Laat het flesje een nachtje op de kop staan.<br\/><br\/>De luchtbel zal er dan uitgepompt kunnen worden en als je dan een keer of 10\/15 pompt zou de crème moeten verschijnen.<br\/><br\/>Ik hoop dat het lukt! Mocht dit nou niet lukken, stuur ons dan gerust nog een mailtje naar hello@witlofskincare.com met een foto van de onderkant van het flesje (zodat we het batchnummer kunnen zien) en dan kan ik natuurlijk kijken naar een andere oplossing.<\/p>"
+          }
+        },
+        "1652148258305a99c1-2": {
+          "type": "accor_item",
+          "settings": {
+            "icon": "none",
+            "title": "HOE DOE IK DE HUIDDETOX?",
+            "content": "<p>Voor het doen van de huiddetox volg je de volgende stappen:<\/p><p>1. Je stopt met het gebruik van alle producten zoals make-up, foundations en zonnebrandproducten waar een van de volgende ingrediënten op de lijst staat: (mineral oil, paraffine\/paraffinum\/paraffinum liquidum, microcrystalline wax\/cera microcristallina, petrolatum, vaseline, ozokerit\/ceresin, dimethicone\/cyclomethicone)<\/p><p>2. Je gaat je huid twee keer per dag goed reinigen met de Witlof Cleansing Mousse en Witlof Balancing Toner om de zuurgraad van je huid weer op het juiste niveau te brengen. Als extra reiniging is het goed om eenmaal per week de Witlof Smoothing Peel te gebruiken.<\/p><p>3. Deze manier van reinigen hou je minimaal twee, liefst vier weken vol, zónder het gebruik van een crème of olie. In gemiddeld 28 dagen hebben alle huidcellen in je gezicht zich vernieuwd en in die periode heeft je huid zich ontdaan van de meeste resten van synthetische stoffen, parfums en minerale olie die zich daarvoor in je huid hebben opgeslagen.<\/p>"
+          }
+        },
+        "0c4e86da-f870-4d3c-abce-b988cae18d6c": {
+          "type": "accor_item",
+          "settings": {
+            "icon": "none",
+            "title": "WAT GEBEURT ER MET MIJN HUID ALS IK DE HUIDDETOX DOE?",
+            "content": "<p>Bij het overstappen van reguliere producten op natuurlijke cosmetica kan de huid soms een reactie geven. Dat komt doordat je huid zich herstelt van het gebruik van minerale oliën en\/of synthetische ingrediënten zoals parfum. Dit is een soort ontgiftingsreactie en kan bestaan uit een drogere huid, schilfertjes, een trekkerig gevoel of pukkeltjes. Maak je geen zorgen, het is tijdelijk en vaak merk je ook niets (behalve dat je huid ervan opknapt). Heb je toch twijfels of vragen, stuur dan even een email voor professioneel advies.<\/p>"
+          }
+        },
+        "9aa601e3-a39f-431e-aaa9-de35ae6945fb": {
+          "type": "accor_item",
+          "settings": {
+            "icon": "none",
+            "title": "ZIJN JULLIE PRODUCTEN OOK GESCHIKT VOOR DE OUDERE OF DROGE HUID?",
+            "content": "<p>Een droge, vochtarme huid wordt bijvoorbeeld nog wel eens verward met een droog huidtype. Beiden hebben een andere verzorging nodig. Om een goede huidanalyse te kunnen maken raden we je aan om de huiddetox te doen (zie ook: <a href=\"\/pages\/huid-detox\" target=\"_blank\" title=\"Huid Detox\">doe de huiddetox<\/a>). Daarna kun je pas zien wat je huid werkelijk nodig heeft. Onze jarenlange ervaring heeft uitgewezen dat de meeste mensen na de huiddetox een veel minder droge huid hebben en minder of geen crème meer hoeven te gebruiken.<\/p><p>We hebben niet specifiek een lijn voor anti aging, maar al onze producten helpen de huidveroudering tegen te gaan door gezonde ingrediënten die de huid ondersteunen. We gebruiken geen ingrediënten die de huid sneller verouderen, wat veel andere merken wel gebruiken, bijvoorbeeld uitdrogende stoffen als PEG of sulfaten.<\/p><p>Bij een droge huid raden we aan om de Smoothing Peel te gebruiken en daarna de Balancing Toner, het Regenerating Oil Serum met daaroverheen de crème. Dat is voor een droog type huid zeer geschikt om te voeden en vocht vast te houden zodat je huid zacht en soepel aanvoelt.<\/p>"
+          }
+        },
+        "15f6d610-63c6-4503-8a7f-4a1774dcf9ed": {
+          "type": "accor_item",
+          "settings": {
+            "icon": "none",
+            "title": "IS HET NORMAAL DAT MIJN HUID ROOD WORDT NA DE SMOOTHING PEEL?",
+            "content": "<p>Het is inderdaad normaal als je iets roder wordt na gebruik van de Smoothing Peel, maar dat moet na 30-45 min weer weggetrokken zijn. Als het langer aanhoudt is het advies om de peeling minder lang te laten inwerken, bijv. 1-2 minuutjes. Ook als je gaat schilferen, wat kan, raden we je aan om het gebruik te minderen, dus hoogstens eens per week of twee weken en dan 1-2 minuten laten inwerken. Als je huid aan het gebruik gewend is kun je het gebruik altijd weer opbouwen naar een of twee keer per week, of een langere inwerktijd aanhouden. We raden aan om het in principe eens per week te gebruiken en dan ongeveer 5 minuten te laten inwerken.<\/p><p>Als je voor Witlof Skincare een regulier huidverzorgingsmerk gebruikte, kan je ook schilfering krijgen omdat je huid zich herstelt van het gebruik van die producten met uitdrogende ingrediënten. Uiteindelijk gaat het in de meeste gevallen over en gaat je huidconditie er enorm op vooruit. Juist minder droog en geen schilfertjes meer. Alleen, uit voorzorg, beperk het gebruik van de peeling als je er sterk op reageert en aarzel vooral niet om ons te mailen via <a href=\"mailto:hello@witlofskincare.com\">hello@witlofskincare.com<\/a> als je vragen hebt of voor persoonlijk advies.<\/p>"
+          }
+        },
+        "9e0d0185-5fa3-4bea-b051-9d184290fc98": {
+          "type": "accor_item",
+          "settings": {
+            "icon": "none",
+            "title": "REINIGT DE CLEANSING MOUSSE OOK MAKE-UP OF ZONNEBRANDCRÈME?",
+            "content": "<p>De Cleansing Mousse (en ook de Cleansing Milk) is heel erg geschikt voor het reinigen van make-up (ook niet-waterproof oogmake-up) en bijvoorbeeld zonnebrandcrème. Wel raden we je aan om dan twee keer te reinigen, een keertje om make-up resten af te halen, een tweede keer om de huid zelf goed te reinigen.<\/p><p>Een <em>double cleanse <\/em>kun je ook doen, in combinatie met de Arganolie. Dan masseer je eerst de Arganolie lekker in om de make-up en crèmeresten los te maken en daarna kun je ze verwijderen met bijvoorbeeld een warme, natte doek. Je reinigt dan meteen je poriën beter mee, die gaan open door de warmte van de doek (zoals ook bij schoonheidsbehandelingen wordt gedaan). Daarna reinig je nog een keer met de Cleansing Mousse en je huid is superschoon! Vergeet niet de Balancing Toner op je gezicht te sprayen om de reiniging af te sluiten. Je huid is dan weer gehydrateerd en beschermd, met de juiste pH-waarde.<\/p>"
+          }
+        },
+        "1652148258305a99c1-0": {
+          "type": "accor_item",
+          "settings": {
+            "icon": "none",
+            "title": "BEVATTEN DE WITLOF PRODUCTEN CONSERVERINGSMIDDELEN?",
+            "content": "<p>We gebruiken <em>benzyl alcohol<\/em>, <em>dehydroacetic acid<\/em>, <em>potassium sorbate <\/em>en <em>citroenzuur<\/em>om onze producten te conserveren. Ook hebben de anti-oxidanten in de producten een conserverend effect.<\/p>"
+          }
+        },
+        "f9fbcebb-a809-4cca-8806-c102d1de1c0b": {
+          "type": "accor_item",
+          "settings": {
+            "icon": "none",
+            "title": "ZIJN DE PRODUCTEN DIERPROEFVRIJ EN VEGAN?",
+            "content": "<p>De producten van Witlof Skincare zijn niet getest op dieren en daarmee dus dierproefvrij. De huidverzorgingsproducten zijn ook<em>vegan<\/em>, ofwel ze zijn vrij van ingrediënten gewonnen uit dode of levende dieren. Wil je precies weten welke stoffen de producten bevatten, en wat ze precies voor je huid doen? Op alle productpagina’s vind je een gedetailleerd overzicht van de gebruikte ingrediënten en hun werking.<\/p>"
+          }
+        },
+        "5efa56c7-550a-487d-a805-9acf8252d388": {
+          "type": "accor_item",
+          "settings": {
+            "icon": "none",
+            "title": "IN HOEVERRE ZIJN JULLIE BIOLOGISCH OF NATUURLIJK?",
+            "content": "<p>Onze producten zijn 100% natuurlijk en een gedeelte van die natuurlijke ingrediënten is ook nog van biologische teelt. Dus onze producten zijn gedeeltelijk biologisch. Op onze verpakkingen en ingrediëntenlijst staat aangegeven welke ingrediënten van biologische teelt zijn.<\/p>"
+          }
+        },
+        "c0ab5f55-d504-49c1-ad9f-7a7ef7f18baf": {
+          "type": "accor_item",
+          "settings": {
+            "icon": "none",
+            "title": "GEBRUIKEN JULLIE PALMOLIE?",
+            "content": "<p>Nee, er is geen palmolie verwerkt in onze producten. De ingrediëntenlijst \/ inci van de producten kun je op onze website nalezen en ook op de verpakkingen staat dit vermeldt.<\/p>"
+          }
+        },
+        "4a4531a7-99a3-4e0f-bb04-47c1eee66400": {
+          "type": "accor_item",
+          "settings": {
+            "icon": "none",
+            "title": "WAAROM GEBRUIKEN JULLIE DOOSJES OM DE VERPAKKING?",
+            "content": "<p>We zijn nog aan het kijken of we wel of niet met doosjes verdergaan, maar voor een beginnend merk in dit segment is er veel voor te zeggen om deze nog wel te behouden. Dit heeft o.a. te maken met verpakken, verzenden en zichtbaarheid in winkels. Tevens geeft een doosje ons de kans om meer uit te leggen over het product, de werking en hoe te gebruiken. Dat wordt door veel consumenten op prijs gesteld. Onze doosjes zijn gemaakt van FSC gecertificeerd papier wat een duurzame papiersoort is.<\/p>"
+          }
+        },
+        "accor_item_3PLxYg": {
+          "type": "accor_item",
+          "settings": {
+            "icon": "none",
+            "title": "Accordion item",
+            "content": ""
+          }
+        },
+        "52ca02ce-39f9-4f05-9fc4-18c4bb8430dd": {
+          "type": "accor_item",
+          "settings": {
+            "icon": "none",
+            "title": "GEBRUIKEN JULLIE ALCOHOL IN JE PRODUCTEN?",
+            "content": "<p>Er zijn verschillende typen alcohol. De alcohol die in Witlof Skincare producten zit is een soort die wordt gebruikt om bepaalde plantenextracten in op te lossen zodat ze in de producten gebruikt kunnen worden (denk bijvoorbeeld ook aan homeopathische druppels). Het zorgt ervoor dat de extracten nog beter opgenomen worden door je huid en in ons geval is dat juist de bedoeling. De vitamines en anti-oxidanten dringen dieper de huid in waar ze hun goede werk kunnen doen.<\/p><p>Verder is het percentage alcohol in de Nourishing Facial Cream bijvoorbeeld slechts 0,17% op de gehele formule. Superweinig dus en nodig om de extracten van gember (voor vitamine A) en rosa canina (voor vitamine C) te kunnen toevoegen. In een crème die wordt opgesmeerd is dit natuurlijke en veilige bestanddeel onschadelijk en heeft het ook geen negatieve effecten op de huid.<\/p><p>Wel moet je harde alcohols, zoals bijvoorbeeld ‘alcohol denat.’ in cosmetica vermijden. Dit staat vermeld op de ingrediëntenlijst van producten en is bijvoorbeeld zeer uitdrogend.<\/p><h5>REINIGT DE CLEANSING MOUSSE OOK MAKE-UP OF ZONNEBRANDCRÈME?<\/h5>"
+          }
+        }
+      },
+      "block_order": [
+        "1652148258305a99c1-1",
+        "cb973ab0-b192-4c97-b7ba-6b8acbf93e5f",
+        "e8dbacc0-ed5e-4867-992d-523f212c604a",
+        "accor_item_gDGyAG",
+        "1652148258305a99c1-2",
+        "0c4e86da-f870-4d3c-abce-b988cae18d6c",
+        "9aa601e3-a39f-431e-aaa9-de35ae6945fb",
+        "15f6d610-63c6-4503-8a7f-4a1774dcf9ed",
+        "9e0d0185-5fa3-4bea-b051-9d184290fc98",
+        "1652148258305a99c1-0",
+        "f9fbcebb-a809-4cca-8806-c102d1de1c0b",
+        "5efa56c7-550a-487d-a805-9acf8252d388",
+        "c0ab5f55-d504-49c1-ad9f-7a7ef7f18baf",
+        "4a4531a7-99a3-4e0f-bb04-47c1eee66400",
+        "accor_item_3PLxYg",
+        "52ca02ce-39f9-4f05-9fc4-18c4bb8430dd"
+      ],
+      "settings": {
+        "design_heading": "1",
+        "heading_align": "t4s-text-center",
+        "top_heading": "OVER WITLOF SKINCARE",
+        "icon_heading": "las la-gem",
+        "top_subheading": "",
+        "tophead_mb": 30,
+        "accor_des": "1",
+        "title_cl": "#222222",
+        "bg_title_cl": "#f6f6f8",
+        "title_active_cl": "#000000",
+        "bg_title_active_cl": "#f6f6f8",
+        "content_cl": "#878787",
+        "bg_content_cl": "#ffffff",
+        "content_align": "t4s-text-start",
+        "auto_active": true,
+        "layout": "t4s-container-wrap",
+        "custom_width": 1000,
+        "cl_bg": "",
+        "cl_bg_gradient": "",
+        "mg": ",,80px,",
+        "pd": "",
+        "mg_tb": "",
+        "pd_tb": "",
+        "mg_mb": ",,30px,",
+        "pd_mb": "",
+        "use_cus_css": false,
+        "code_cus_css": ".SectionID {\nbackground-color:red\n}"
+      }
+    },
+    "9dfe870e-b0df-4356-86eb-7dacefa37a80": {
+      "type": "accordion",
+      "blocks": {
+        "template--19223178576193__9dfe870e-b0df-4356-86eb-7dacefa37a80-16886420055b9443f0-0": {
+          "type": "accor_item",
+          "settings": {
+            "icon": "none",
+            "title": "HOE KAN IK BETALEN?",
+            "content": "<p>In onze webshop is het mogelijk om met iDeal, Mastercard, Visa, Maestro en Paypal te betalen.<\/p>"
+          }
+        },
+        "template--19223178576193__9dfe870e-b0df-4356-86eb-7dacefa37a80-16886420055b9443f0-1": {
+          "type": "accor_item",
+          "settings": {
+            "icon": "none",
+            "title": "WAT ZIJN JULLIE VERZENDKOSTEN?",
+            "content": "<p>Bij een bestelling boven de €45 rekenen we geen verzendkosten als deze binnen de EU of het Verenigd Koninkrijk wordt verzonden. Bij een bestelling onder de €45 zijn de verzendkosten €4,99 voor Nederland en België, voor alle andere EU landen rekenen we €5,99. <\/p><p>Voor het Verenigd Koninkrijk rekenen we geen verzendkosten vanaf £45.00. Onder de £45.00 rekenen we €5,99. LET OP! Vanaf €150,- moet je zelf invoerrechten betalen. Hier krijg je dan apart een email over. <\/p><p>Voor een zending naar de VS betaal je €19.95 verzendkosten, bij een bestelling boven de €250 is ook naar de VS de verzending gratis. <\/p>"
+          }
+        },
+        "accor_item_TAKgiB": {
+          "type": "accor_item",
+          "settings": {
+            "icon": "none",
+            "title": "WAT ZIJN JULLIE LEVERTIJDEN?",
+            "content": "<p>Wanneer je voor 22 uur besteld, wordt je order nog dezelfde dag verwerkt en verstuurd. Vaak worden de producten dan vaak de volgende dag al geleverd. Je ontvangt naast een bevestiging van je bestelling een email met een track & trace link, zodat je kan zien waar je order is. <\/p><p>LET OP: Tijdens November en December, de drukste periode van het jaar, kan het zijn dat je bestelling wat langer onderweg is. Dank voor je begrip.<\/p><p><\/p><p><\/p>"
+          }
+        },
+        "accor_item_4xQnHR": {
+          "type": "accor_item",
+          "settings": {
+            "icon": "none",
+            "title": "WHAT ARE THE DELIVERY COSTS TO THE UK?",
+            "content": "<p>For the United Kingdom we do not charge shipping from £45.00. Under £45.00 we charge €5.99. <\/p><p>You’ll be charged Customs Duty on all goods sent from outside the UK (or the UK and the EU if you’re in Northern Ireland) if they’re either:<\/p><ul><li>excise goods<\/li><li>worth more than £135<\/li><\/ul><p>Please check <a href=\"https:\/\/www.gov.uk\/trade-tariff\" title=\"https:\/\/www.gov.uk\/trade-tariff\">this <\/a>website for more information<\/p><p><\/p><p><\/p>"
+          }
+        },
+        "template--19223178576193__9dfe870e-b0df-4356-86eb-7dacefa37a80-16886420055b9443f0-2": {
+          "type": "accor_item",
+          "disabled": true,
+          "settings": {
+            "icon": "none",
+            "title": "WAT ZIJN JULLIE LEVERTIJDEN?",
+            "content": "<p>Ons doel is om je Witlof producten zo snel mogelijk te leveren. Wanneer je voor 22:00 uur bestelt, wordt je bestelling  dezelfde (werk) dag nog verwerkt en verstuurd (met uitzondering van weekenden en feestdagen). Houd rekening met een levertijd tussen de 1 en 3 dagen. Je ontvangt een track & trace code zodra het pakket het magazijn heeft verlaten.<\/p><p>Mocht je bestelling extra haast hebben, stuur ons dan een mailtje. Dan letten we extra goed op dat het snel verstuurd wordt.<\/p>"
+          }
+        },
+        "accor_item_RHPBj9": {
+          "type": "accor_item",
+          "settings": {
+            "icon": "none",
+            "title": "WILT U EEN ADRESWIJZIGING DOORGEVEN VOOR EEEN BESTELLING DIE JE AL GEPPLAATST HEBT?",
+            "content": "<p>Adreswijzigingen gaan het snelste door in DPD Shipper of DPD Insights het adres zelf aan te passenvia de t&t link die je hebt ontvangen.<\/p><p> Mocht dat onverhoopt niet mogelijk zijn, dan vragen wij u onderstaande stappen te doorlopen:<\/p><p>1.    Stel een email op en gebruik 'Adres' in de onderwerp regel van deze mail<\/p><p>2.    Vermeld in de email altijd alle gegevens van de ontvanger: - het 'volledige adres'- het 'emailadres'  - het 'telefoonnummer'. <\/p><p>3.    Verstuur deze naar<a href=\"mailto:customerservice@dpd.nl\"><span style=\"text-decoration:underline\">customerservice@dpd.nl<\/span><\/a>.               <\/p>"
+          }
+        },
+        "dbd712f8-5124-4baa-badc-cc3220608322": {
+          "type": "accor_item",
+          "settings": {
+            "icon": "none",
+            "title": "WAAROM WERKT MIJN KORTINGSCOUPON NIET?",
+            "content": "<p>Omdat we soms hele hoge kortingen geven op onze producten (bijvoorbeeld bij Green Friday of de dagen daaromheen), kunnen deze prijzen niet gecombineerd worden met andere kortingen, zoals de recycle korting of de welkomstkorting. Daarom zijn alle andere kortingen dan tijdelijk uitgeschakeld. Mocht je deze willen toepassen, dan kan dat weer na de kortingsperiode als de prijzen weer op het normale niveau zijn.<\/p>"
+          }
+        },
+        "57fce680-ded7-4f92-b71b-9bce72a9389c": {
+          "type": "accor_item",
+          "settings": {
+            "icon": "none",
+            "title": "IK BEN NIET HELEMAAL TEVREDEN MET MIJN GEKOCHTE PRODUCT. WAT KAN IK DOEN?",
+            "content": "<p>Je hebt het recht om je product te retourneren ongeopend en onbeschadigd tot 7 dagen na levering.<\/p><p>Mocht je het product al wel open gemaakt en gebruikt, stuur ons dan een mailtje op hello@witlofskincare.com, dan zoeken we naar een gepaste oplossing.<\/p>"
+          }
+        },
+        "734de466-59c1-4a3e-bc09-d714a2af6773": {
+          "type": "accor_item",
+          "settings": {
+            "icon": "none",
+            "title": "HEBBEN JULLIE OOK SAMPLES?",
+            "content": "<p>We hebben een sample service waarbij we een selectie van onze producten kunnen opsturen. De samples zijn 2 euro per stuk. Bestel ze via de website of stuur een mailtje aan <a href=\"mailto:hello@witlofskincare.com\" target=\"_blank\">hello@witlofskincare.com <\/a>en we helpen je graag verder! <\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "template--19223178576193__9dfe870e-b0df-4356-86eb-7dacefa37a80-16886420055b9443f0-0",
+        "template--19223178576193__9dfe870e-b0df-4356-86eb-7dacefa37a80-16886420055b9443f0-1",
+        "accor_item_TAKgiB",
+        "accor_item_4xQnHR",
+        "template--19223178576193__9dfe870e-b0df-4356-86eb-7dacefa37a80-16886420055b9443f0-2",
+        "accor_item_RHPBj9",
+        "dbd712f8-5124-4baa-badc-cc3220608322",
+        "57fce680-ded7-4f92-b71b-9bce72a9389c",
+        "734de466-59c1-4a3e-bc09-d714a2af6773"
+      ],
+      "settings": {
+        "design_heading": "1",
+        "heading_align": "t4s-text-center",
+        "top_heading": "OVER JE BESTELLING",
+        "icon_heading": "las la-gem",
+        "top_subheading": "",
+        "tophead_mb": 30,
+        "accor_des": "1",
+        "title_cl": "#222222",
+        "bg_title_cl": "#f6f6f8",
+        "title_active_cl": "#000000",
+        "bg_title_active_cl": "#f6f6f8",
+        "content_cl": "#878787",
+        "bg_content_cl": "#ffffff",
+        "content_align": "t4s-text-start",
+        "auto_active": true,
+        "layout": "t4s-container-wrap",
+        "custom_width": 1000,
+        "cl_bg": "",
+        "cl_bg_gradient": "",
+        "mg": ",,50px,",
+        "pd": "",
+        "mg_tb": "",
+        "pd_tb": "",
+        "mg_mb": ",,30px,",
+        "pd_mb": "",
+        "use_cus_css": false,
+        "code_cus_css": ""
+      }
+    },
+    "e7c946bd-8bee-4261-b097-096781b37794": {
+      "type": "accordion",
+      "blocks": {
+        "template--19223178576193__e7c946bd-8bee-4261-b097-096781b37794-1688650652d9394f82-0": {
+          "type": "accor_item",
+          "settings": {
+            "icon": "none",
+            "title": "WAT IS MINERALE OLIE?",
+            "content": "<p>Minerale olie is een afgeleide van aardolie en is een vet of was, zoals paraffine, petrolatum of vaseline. Minerale oliën (of soms ‘petroleum derived ingredients’ genoemd) sluiten de huid af en verstoren de natuurlijke vetbalans van de huid. Ook raakt je huid gewend aan producten die minerale olie bevatten en voelt trekkerig en droog aan als je het product niet gebruikt. In dat geval spreekt met ook wel van een ‘paraffineverslaving’ van de huid. Bij lippenbalsem is dit een bekend fenomeen, maar gezichtsverzorgingsproducten met minerale olie hebben hetzelfde effect.<\/p>"
+          }
+        },
+        "template--19223178576193__e7c946bd-8bee-4261-b097-096781b37794-1688650652d9394f82-1": {
+          "type": "accor_item",
+          "settings": {
+            "icon": "none",
+            "title": "WAT IS HET VERSCHIL TUSSEN NATUURLIJKE EN BIOLOGISCHE COSMETICA?",
+            "content": "<p>De kreet “natuurlijk” mogen fabrikanten al op de verpakking zetten als een gering percentage ingrediënten van het product van natuurlijke oorsprong zijn. Wij verkopen alleen producten die 100% natuurlijk zijn en daarvan is alles of een gedeelte biologisch geteeld. De biologische ingrediënten staan op de verpakking vermeld. Als je hierover nog verdere vragen hebt, kun je altijd een mailtje sturen voor meer informatie.<\/p>"
+          }
+        },
+        "template--19223178576193__e7c946bd-8bee-4261-b097-096781b37794-1688650652d9394f82-2": {
+          "type": "accor_item",
+          "disabled": true,
+          "settings": {
+            "icon": "none",
+            "title": "Tab 03",
+            "content": "<p>We love to hear from you on our customer service, merchandise, website or any topics you want to share with us. Your comments and suggestions will be appreciated. Please complete the form below.<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "template--19223178576193__e7c946bd-8bee-4261-b097-096781b37794-1688650652d9394f82-0",
+        "template--19223178576193__e7c946bd-8bee-4261-b097-096781b37794-1688650652d9394f82-1",
+        "template--19223178576193__e7c946bd-8bee-4261-b097-096781b37794-1688650652d9394f82-2"
+      ],
+      "settings": {
+        "design_heading": "1",
+        "heading_align": "t4s-text-center",
+        "top_heading": "OVER NATUURLIJKE HUIDVERZORGING",
+        "icon_heading": "las la-gem",
+        "top_subheading": "",
+        "tophead_mb": 30,
+        "accor_des": "1",
+        "title_cl": "#222222",
+        "bg_title_cl": "#f6f6f8",
+        "title_active_cl": "#000000",
+        "bg_title_active_cl": "#f6f6f8",
+        "content_cl": "#878787",
+        "bg_content_cl": "#ffffff",
+        "content_align": "t4s-text-start",
+        "auto_active": true,
+        "layout": "t4s-container-wrap",
+        "custom_width": 1000,
+        "cl_bg": "",
+        "cl_bg_gradient": "",
+        "mg": ",,50px,",
+        "pd": "",
+        "mg_tb": "",
+        "pd_tb": "",
+        "mg_mb": ",,30px,",
+        "pd_mb": "",
+        "use_cus_css": false,
+        "code_cus_css": ""
+      }
+    },
+    "8e5d0ae7-202b-4529-9c5d-f20607c6c114": {
+      "type": "accordion",
+      "blocks": {
+        "template--19223178576193__8e5d0ae7-202b-4529-9c5d-f20607c6c114-1688650652d9394f82-0": {
+          "type": "accor_item",
+          "settings": {
+            "icon": "none",
+            "title": "WAAROM ZIT ER SPF 30 IN DE PRODUCTEN EN NIET SPF 50?",
+            "content": "<p>SPF 50 geeft je 99,8% dekking, terwijl SPF 30 je 99,3% dekking geeft. Het verschil is slechts minimaal, terwijl het effect van het toevoegen van meer SPF de crème witter maakt. Daarom hebben we ervoor gekozen om het op SPF 30 te houden. Zelfde bescherming, beter product!<\/p>"
+          }
+        },
+        "template--19223178576193__8e5d0ae7-202b-4529-9c5d-f20607c6c114-1688650652d9394f82-1": {
+          "type": "accor_item",
+          "settings": {
+            "icon": "none",
+            "title": "WAAROM HEBBEN JULLIE GEEN PRODUCT VOOR DE DIEPERE HUIDTONEN?",
+            "content": "<p>Met de lancering van de Tinted Day Cream SPF30 zul je gemerkt hebben dat een aantal huidtinten ontbreken. Met de ontwikkeling van dit product zijn we gestart met drie tinten, light to medium, medium to dark en black. Alleen na verschillende testen waren we nog niet tevreden over hoe medium to dark en black producten eruit zagen op met name de diepere huidtonen. Als merk vinden wij het belangrijk dat onze producten voor iedereen van de beste kwaliteit zijn, daarom hebben we besloten om nog langer te werken aan de formules voor de andere tinted varianten, om uiteindelijk iedereen te kunnen laten genieten van onze producten. <\/p><p>Wij staan open voor alle vormen van advies omtrent dit onderwerp en werken graag samen om de beste kwaliteit te bereiken. Wil je ons helpen of heb je tips? <\/p><p>Mail ons dan op <a href=\"mailto:hello@witlofskincare.com\" target=\"_blank\">hello@witlofskincare.com<\/a>.<\/p>"
+          }
+        },
+        "template--19223178576193__8e5d0ae7-202b-4529-9c5d-f20607c6c114-1688650652d9394f82-2": {
+          "type": "accor_item",
+          "settings": {
+            "icon": "none",
+            "title": "WAT IS UVA & UVB?",
+            "content": "<p>UVB-straling is verantwoordelijk voor zonnebrand en roodheid, terwijl UVA-straling dieper de huid penetreert waar het huidveroudering, rimpels en zelfs huidkanker veroorzaakt. Daarom is het belangrijk om te beschermen tegen beide typen straling.<\/p>"
+          }
+        },
+        "88edbb8a-6cc1-4830-ba0b-2314be072eef": {
+          "type": "accor_item",
+          "settings": {
+            "icon": "none",
+            "title": "WAAROM IS NATUURLIJKE SPF BELANGRIJK?",
+            "content": "<p>Waar een standaard zonnebrandcrème met chemische filters vaak uitdrogende minerale oliën bevat, parfums die kunnen reageren met zonlicht en de filters soms zelfs giftig zijn, vormt een natuurlijke zonnebrandcrème met zinkoxide een onschadelijke barrière op de huid. Recente onderzoeken tonen ook aan dat chemische zonnebrandmiddelen jeuk en eczeem op de huid kunnen veroorzaken, waar een natuurlijk filter in een zonnebrandcrème dat niet doet (NCBI – WWW Error Blocked Diagnostic, 2003).<\/p><p>Natuurlijke zonbescherming bevat geen chemische zonnefilters, maar is gemaakt op basis van de minerale filters zinkoxide of titaniumdioxide<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "template--19223178576193__8e5d0ae7-202b-4529-9c5d-f20607c6c114-1688650652d9394f82-0",
+        "template--19223178576193__8e5d0ae7-202b-4529-9c5d-f20607c6c114-1688650652d9394f82-1",
+        "template--19223178576193__8e5d0ae7-202b-4529-9c5d-f20607c6c114-1688650652d9394f82-2",
+        "88edbb8a-6cc1-4830-ba0b-2314be072eef"
+      ],
+      "settings": {
+        "design_heading": "1",
+        "heading_align": "t4s-text-center",
+        "top_heading": "OVER NATURAL SUNCARE",
+        "icon_heading": "las la-gem",
+        "top_subheading": "",
+        "tophead_mb": 30,
+        "accor_des": "1",
+        "title_cl": "#222222",
+        "bg_title_cl": "#f6f6f8",
+        "title_active_cl": "#000000",
+        "bg_title_active_cl": "#f6f6f8",
+        "content_cl": "#878787",
+        "bg_content_cl": "#ffffff",
+        "content_align": "t4s-text-start",
+        "auto_active": true,
+        "layout": "t4s-container-wrap",
+        "custom_width": 1000,
+        "cl_bg": "",
+        "cl_bg_gradient": "",
+        "mg": ",,50px,",
+        "pd": "",
+        "mg_tb": "",
+        "pd_tb": "",
+        "mg_mb": ",,30px,",
+        "pd_mb": "",
+        "use_cus_css": false,
+        "code_cus_css": ""
+      }
+    }
+  },
+  "order": [
+    "heading",
+    "main",
+    "sidebar-page",
+    "165214825814e830e7",
+    "9dfe870e-b0df-4356-86eb-7dacefa37a80",
+    "e7c946bd-8bee-4261-b097-096781b37794",
+    "8e5d0ae7-202b-4529-9c5d-f20607c6c114"
+  ]
+}

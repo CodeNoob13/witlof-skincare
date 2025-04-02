@@ -1,0 +1,948 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "heading": {
+      "type": "heading-template",
+      "settings": {
+        "use_specify_image": true,
+        "parallax": false,
+        "color": "#000000",
+        "overlay": 54,
+        "padding": 50,
+        "paddingmb": 50,
+        "mg_b": 50,
+        "mg_bmb": 50,
+        "content_align": "t4s-text-center",
+        "bg_pos": "center center",
+        "bg_repeat": "no-repeat",
+        "bg_size": "cover",
+        "use_cus_css": false,
+        "code_cus_css": ".SectionID {\nbackground-color:red\n}"
+      }
+    },
+    "main": {
+      "type": "main-page",
+      "settings": {
+        "layout": "t4s-container-wrap",
+        "cl_bg": "",
+        "cl_bg_gradient": "",
+        "mg": "60px,,60px,",
+        "pd": "",
+        "mg_tb": "",
+        "pd_tb": "",
+        "mg_mb": ",,30px,",
+        "pd_mb": ""
+      }
+    },
+    "sidebar-page": {
+      "type": "sidebar-page",
+      "blocks": {
+        "f69681ed-b75e-42de-be58-fdf73b3b7e08": {
+          "type": "blog_cate",
+          "settings": {
+            "title": "Blog categories",
+            "cat_link_list": "",
+            "count": true
+          }
+        }
+      },
+      "block_order": [
+        "f69681ed-b75e-42de-be58-fdf73b3b7e08"
+      ],
+      "disabled": true,
+      "settings": {
+        "enable_drawer": false,
+        "space": 50,
+        "size": "medium",
+        "br_style": "none",
+        "brcolor": "#222222",
+        "sidebar_bdr": 5,
+        "sidebar_pd": 10
+      }
+    },
+    "82193d74-c510-4ad1-afe1-f7bd00fb6b3e": {
+      "type": "custom-section",
+      "blocks": {
+        "template--19376943759681__82193d74-c510-4ad1-afe1-f7bd00fb6b3e-1685886988023b3bd2-0": {
+          "type": "bl_col",
+          "settings": {
+            "col_dk": "12",
+            "col_tb": "12",
+            "col_mb": "12",
+            "align_vertical": false,
+            "content_align": "center",
+            "content_align_tablet": "center",
+            "content_align_mobile": "center",
+            "padding_inner": "30px,,30px",
+            "padding_inner_tb": "",
+            "padding_inner_mb": "",
+            "bg_cl": "#fef5f5"
+          }
+        },
+        "template--19376943759681__82193d74-c510-4ad1-afe1-f7bd00fb6b3e-1685886988023b3bd2-1": {
+          "type": "custom_text",
+          "disabled": true,
+          "settings": {
+            "text": "LOOKBOOK 2023",
+            "remove_br_tag": false,
+            "tag": "p",
+            "fontf": "inherit",
+            "text_cl": "#000000",
+            "text_fs": 24,
+            "text_lh": 0,
+            "text_fw": 500,
+            "text_ls": 0,
+            "font_italic": false,
+            "text_shadow": false,
+            "text_mgb": 5,
+            "hidden_mobile": false,
+            "text_fs_mb": 16,
+            "text_lh_mb": 0,
+            "text_ls_mb": 0,
+            "text_mgb_mobile": 10
+          }
+        },
+        "template--19376943759681__82193d74-c510-4ad1-afe1-f7bd00fb6b3e-1685886988023b3bd2-2": {
+          "type": "custom_text",
+          "settings": {
+            "text": "Hieronder vind je alles wat je moet weten over de Witlof skin detox, inclusief waarom en hoe je het doet, wat je kunt verwachten en informatie over onze detox sets. Heb je vragen of wil je meer weten over je huid, boek dan hier een <b><a href=\"https://calendly.com/witlofskincareconsultations/witlof-skincare-persoonlijk-huidconsult?month=2025-01\"> gratis telefonisch huidconsult. </a></b>",
+            "remove_br_tag": false,
+            "tag": "p",
+            "fontf": "inherit",
+            "text_cl": "#000000",
+            "text_fs": 18,
+            "text_lh": 25,
+            "text_fw": 400,
+            "text_ls": 0,
+            "font_italic": false,
+            "text_shadow": false,
+            "text_mgb": 0,
+            "hidden_mobile": false,
+            "text_fs_mb": 16,
+            "text_lh_mb": 25,
+            "text_ls_mb": 0,
+            "text_mgb_mobile": 10
+          }
+        },
+        "template--19376943759681__82193d74-c510-4ad1-afe1-f7bd00fb6b3e-1685886988023b3bd2-3": {
+          "type": "bl_col",
+          "disabled": true,
+          "settings": {
+            "col_dk": "6",
+            "col_tb": "6",
+            "col_mb": "12",
+            "align_vertical": false,
+            "content_align": "center",
+            "content_align_tablet": "center",
+            "content_align_mobile": "center",
+            "padding_inner": "30px,,30px",
+            "padding_inner_tb": "",
+            "padding_inner_mb": "",
+            "bg_cl": "#d2a2a2"
+          }
+        },
+        "template--19376943759681__82193d74-c510-4ad1-afe1-f7bd00fb6b3e-1685886988023b3bd2-4": {
+          "type": "newsletter",
+          "disabled": true,
+          "settings": {
+            "form_width": 0,
+            "form_width_mb": 0,
+            "newl_des": "1",
+            "news_align": "center",
+            "newl_size": "small",
+            "btn_icon": false,
+            "input_cl": "#878787",
+            "border_cl": "#000000",
+            "btn_cl": "#ffffff",
+            "btn_bg_cl": "#222222",
+            "btn_hover_cl": "#ffffff",
+            "btn_hover_bg_cl": "#56cfe1",
+            "hidden_mobile": false,
+            "mgb": 15,
+            "mgb_mb": 10
+          }
+        },
+        "c2a8a36d-41b9-4d5e-a5af-b80f6e4d64d2": {
+          "type": "space_html",
+          "settings": {
+            "color": "#fef5f5",
+            "width": 40,
+            "height": 2,
+            "mgb": 20,
+            "width_mb": 40,
+            "height_mb": 2,
+            "hidden_mobile": false,
+            "mgb_mb": 20
+          }
+        }
+      },
+      "block_order": [
+        "template--19376943759681__82193d74-c510-4ad1-afe1-f7bd00fb6b3e-1685886988023b3bd2-0",
+        "template--19376943759681__82193d74-c510-4ad1-afe1-f7bd00fb6b3e-1685886988023b3bd2-1",
+        "template--19376943759681__82193d74-c510-4ad1-afe1-f7bd00fb6b3e-1685886988023b3bd2-2",
+        "template--19376943759681__82193d74-c510-4ad1-afe1-f7bd00fb6b3e-1685886988023b3bd2-3",
+        "template--19376943759681__82193d74-c510-4ad1-afe1-f7bd00fb6b3e-1685886988023b3bd2-4",
+        "c2a8a36d-41b9-4d5e-a5af-b80f6e4d64d2"
+      ],
+      "settings": {
+        "space_h_item": "30",
+        "space_v_item": "30",
+        "space_h_item_mb": "10",
+        "space_v_item_mb": "10",
+        "layout": "t4s-container-wrap",
+        "cl_bg": "#fef5f5",
+        "cl_bg_gradient": "",
+        "mg": ",,,",
+        "pd": "",
+        "mg_tb": ",,50px,",
+        "pd_tb": "",
+        "mg_mb": ",,30px,",
+        "pd_mb": "",
+        "use_cus_css": false,
+        "code_cus_css": ""
+      }
+    },
+    "6c8d4248-75d3-4c51-a588-963d184d7cc9": {
+      "type": "image_text",
+      "blocks": {
+        "template--19376943759681__6c8d4248-75d3-4c51-a588-963d184d7cc9-16858873043ab58179-1": {
+          "type": "bl_text",
+          "settings": {
+            "col_dk": "6",
+            "col_tb": "6",
+            "text_size": "40,15",
+            "txt_align": "start",
+            "sub_heading": "",
+            "heading": "WAAROM EEN HUID DETOX?",
+            "text": "<p><strong>Je huid is verslaafd</strong></p><p></p><p>Ken je het gevoel dat je na het douchen zo snel mogelijk een crème op je gezicht wilt smeren omdat je huid trekkerig of branderig aanvoelt? </p><p>Er zijn stoffen in huidverzorgingsproducten waar je huid verslaafd aan raakt. Dat wil zeggen, als je ze even niet gebruikt gaat je huid reageren, bijvoorbeeld met droogte of juist puistjes.</p><p>De meest voorkomende verslavende stof is minerale olie (ook wel paraffine, vaseline of mineral oil genoemd) en wordt in veel crèmes nog gebruikt.  </p><p>Door dit type vet te smeren, krijg je een afsluitende laag op je huid en raakt je talgproductie uit balans. Dit leidt tot uitdroging, snellere huidveroudering of meer verstoppingen. Het trekkerige, droge gevoel maakt dat je het liefst gauw weer wilt smeren.</p><p>Bij gebruikers van lippenbalsem is dit al een bekend fenomeen. Maar net als alle verslavingen is ook deze niet gezond. Door een huid detox te doen kom je ervan af .</p><p>Naast de minerale oliën ruimt je huid ook andere (huidverouderende) stoffen zoals synthetische parfums of bepaalde conserveringsmiddelen op.</p><p>Wil je weer een schone huid die optimaal in balans is? Doe dan de skintest om te weten welke detox het beste bij jouw huidtype past.</p>",
+            "subhd_color": "#878787",
+            "hd_color": "#222222",
+            "des_color": "#878787",
+            "use_shadow": false,
+            "button_label": "Huid consult",
+            "button_link": "https://calendly.com/witlofskincareconsultations/witlof-skincare-persoonlijk-huidconsult?month=2025-01",
+            "open_link": "_blank",
+            "btn_icon": true,
+            "button_style": "default",
+            "btn_size": "large",
+            "btn_cl": "primary",
+            "button_effect": "default"
+          }
+        },
+        "template--19376943759681__6c8d4248-75d3-4c51-a588-963d184d7cc9-16858873043ab58179-0": {
+          "type": "bl_image",
+          "settings": {
+            "image1": "shopify://shop_images/WITLOF_alexander-sporre-photography-103-scaled-e1674739075454.jpg",
+            "col_dk": "6",
+            "col_tb": "6",
+            "layout_des": "carousel",
+            "post_mobile": "default",
+            "image_ratio": "ratioadapt",
+            "image_size": "cover",
+            "image_position": "8",
+            "loop": true,
+            "au_time": 0,
+            "au_hover": true,
+            "nav_btn": false,
+            "btn_vi": "hover",
+            "btn_owl": "default",
+            "btn_shape": "none",
+            "btn_cl": "dark",
+            "btn_size": "small",
+            "btn_hidden_mobile": true,
+            "nav_dot": false,
+            "dot_owl": "default",
+            "dots_cl": "dark",
+            "dots_round": true,
+            "dots_space": 10,
+            "dots_hidden_mobile": false
+          }
+        }
+      },
+      "block_order": [
+        "template--19376943759681__6c8d4248-75d3-4c51-a588-963d184d7cc9-16858873043ab58179-1",
+        "template--19376943759681__6c8d4248-75d3-4c51-a588-963d184d7cc9-16858873043ab58179-0"
+      ],
+      "custom_css": [
+        ".t4s-image-text-content {width: 500px; max-width: 90%; margin: 0 auto; text-align: left;}",
+        "p {margin-bottom: 10px;}",
+        "h4 {text-align: left;}",
+        "h3 {text-align: left;}",
+        ".t4s-btn {display: inline-block; text-align: center; line-height: 50px;}"
+      ],
+      "settings": {
+        "design_heading": "1",
+        "heading_align": "t4s-text-center",
+        "top_heading": "",
+        "icon_heading": "las la-gem",
+        "top_subheading": "",
+        "tophead_mb": 30,
+        "space_h_item": "0",
+        "space_v_item": "0",
+        "space_h_item_mb": "20",
+        "space_v_item_mb": "10",
+        "layout": "t4s-container-fluid",
+        "cl_bg": "",
+        "cl_bg_gradient": "",
+        "mg": "",
+        "pd": "",
+        "mg_tb": "",
+        "pd_tb": "",
+        "mg_mb": ",,30px,",
+        "pd_mb": "",
+        "use_cus_css": false,
+        "code_cus_css": ""
+      }
+    },
+    "9fa5e8e4-0419-4e92-a9f7-fe8de0776542": {
+      "type": "image_text",
+      "blocks": {
+        "3e13ebb5-5a45-49a4-8697-9cfca0c14589": {
+          "type": "bl_image",
+          "settings": {
+            "image1": "shopify://shop_images/thumbnail_2022.10.06_Witlof_-_Product_en_Beauty9108_-_Detox_Set_Normal_Oily_Skin_JPEG_3.jpg",
+            "col_dk": "6",
+            "col_tb": "6",
+            "layout_des": "carousel",
+            "post_mobile": "default",
+            "image_ratio": "ratioadapt",
+            "image_size": "cover",
+            "image_position": "8",
+            "loop": true,
+            "au_time": 0,
+            "au_hover": true,
+            "nav_btn": false,
+            "btn_vi": "hover",
+            "btn_owl": "default",
+            "btn_shape": "none",
+            "btn_cl": "dark",
+            "btn_size": "small",
+            "btn_hidden_mobile": true,
+            "nav_dot": false,
+            "dot_owl": "default",
+            "dots_cl": "dark",
+            "dots_round": true,
+            "dots_space": 10,
+            "dots_hidden_mobile": false
+          }
+        },
+        "9e611968-303f-42b1-9eb9-dcd5b7ae2cb6": {
+          "type": "bl_text",
+          "settings": {
+            "col_dk": "6",
+            "col_tb": "6",
+            "text_size": "40,15",
+            "txt_align": "start",
+            "sub_heading": "",
+            "heading": "HOE DOE JE DE DETOX?",
+            "text": "<p></p><p><strong>1.</strong> <strong>Stop met smeren</strong></p><p>Je stopt gedurende 28 dagen met het gebruik van alle crèmes, vetten en producten (dus ook make-up, foundations en zonnebrand) waar een van de volgende stoffen op de ingrediëntenlijst staat:</p><p>1. Mineral oil, minerale olie, petrolatum, vaseline, paraffine, paraffinum (liquidum)</p><p>2. Dimethicone/cyclomethicone</p><p>3. Methyl-, ethyl-, butyl- of propylparaben</p><p>4. Parfum (synthetisch)</p><p>5. PEG</p><p>   </p><p><strong>2. Dagelijks reinigen, eens per week de Smoothing Peel</strong></p><p>Afhankelijk van het resultaat van jouw skintest reinig je je gezicht twee keer per dag grondig met de <a href=\"/products/cleansing-mousse-150ml\" title=\"CLEANSING MOUSSE\">Cleansing Mousse</a> (normal & oily skin) of de <a href=\"/products/gentle-cleansing-milk-150ml\" title=\"GENTLE CLEANSING MILK\">Gentle Cleansing Milk</a> (dry & sensitive skin). Daarna spray je de <a href=\"/products/balancing-toner-150ml\" title=\"BALANCING TONER\">Balancing Toner</a> op je gezicht om de zuurgraad van je huid direct weer op het juiste niveau te brengen. Als extra reiniging en voor het herstel van de vochtbalans gebruik je een keer per week de <a href=\"/products/smoothing-peel-30ml\" title=\"SMOOTHING PEEL (30ML)\">Smoothing Peel</a>.</p>",
+            "subhd_color": "#222222",
+            "hd_color": "#222222",
+            "des_color": "#878787",
+            "use_shadow": false,
+            "button_label": "Button label",
+            "button_link": "",
+            "open_link": "_blank",
+            "btn_icon": false,
+            "button_style": "default",
+            "btn_size": "large",
+            "btn_cl": "dark",
+            "button_effect": "default"
+          }
+        }
+      },
+      "block_order": [
+        "3e13ebb5-5a45-49a4-8697-9cfca0c14589",
+        "9e611968-303f-42b1-9eb9-dcd5b7ae2cb6"
+      ],
+      "custom_css": [
+        "p {width: 500px; max-width: 90%; display: block; text-align: left; margin: 0 auto; margin-bottom: 10px;}",
+        "h4 {width: 500px; max-width: 90%; display: block; text-align: left; margin: 0 auto;}",
+        "h3 {width: 500px; max-width: 90%; display: block; text-align: left; margin: 0 auto;}"
+      ],
+      "settings": {
+        "design_heading": "1",
+        "heading_align": "t4s-text-center",
+        "top_heading": "",
+        "icon_heading": "las la-gem",
+        "top_subheading": "",
+        "tophead_mb": 30,
+        "space_h_item": "0",
+        "space_v_item": "0",
+        "space_h_item_mb": "20",
+        "space_v_item_mb": "10",
+        "layout": "t4s-container-fluid",
+        "cl_bg": "",
+        "cl_bg_gradient": "",
+        "mg": "",
+        "pd": "",
+        "mg_tb": "",
+        "pd_tb": "",
+        "mg_mb": ",,30px,",
+        "pd_mb": "",
+        "use_cus_css": false,
+        "code_cus_css": ""
+      }
+    },
+    "6db2cd8d-793a-4415-8da8-9483eebf1948": {
+      "type": "image_text",
+      "blocks": {
+        "0882a15e-f938-4e82-8794-8825c92e7f0e": {
+          "type": "bl_text",
+          "settings": {
+            "col_dk": "6",
+            "col_tb": "6",
+            "text_size": "40,15",
+            "txt_align": "start",
+            "sub_heading": "",
+            "heading": "WAT KUN JE VERWACHTEN?",
+            "text": "<h4></h4><p>De eerste paar dagen zal je huid wat droog of trekkering kunnen aanvoelen, of juist pukkeltjes ontstaan. Schrik hier niet van, maar geef je huid de tijd om zelf te herstellen. Na 28 dagen heeft je huid zich compleet vernieuwd en komt vanzelf weer in haar natuurlijke balans.</p><p>The beauty of nature’s miracles!</p>",
+            "subhd_color": "#222222",
+            "hd_color": "#222222",
+            "des_color": "#878787",
+            "use_shadow": false,
+            "button_label": "Button label",
+            "button_link": "",
+            "open_link": "_blank",
+            "btn_icon": false,
+            "button_style": "default",
+            "btn_size": "large",
+            "btn_cl": "dark",
+            "button_effect": "default"
+          }
+        },
+        "d0017857-50bf-4c6d-b407-dd3480d963fe": {
+          "type": "bl_image",
+          "settings": {
+            "image1": "shopify://shop_images/854A11.jpg",
+            "col_dk": "6",
+            "col_tb": "6",
+            "layout_des": "carousel",
+            "post_mobile": "default",
+            "image_ratio": "ratioadapt",
+            "image_size": "cover",
+            "image_position": "8",
+            "loop": true,
+            "au_time": 0,
+            "au_hover": true,
+            "nav_btn": false,
+            "btn_vi": "hover",
+            "btn_owl": "default",
+            "btn_shape": "none",
+            "btn_cl": "dark",
+            "btn_size": "small",
+            "btn_hidden_mobile": true,
+            "nav_dot": false,
+            "dot_owl": "default",
+            "dots_cl": "dark",
+            "dots_round": true,
+            "dots_space": 10,
+            "dots_hidden_mobile": false
+          }
+        }
+      },
+      "block_order": [
+        "0882a15e-f938-4e82-8794-8825c92e7f0e",
+        "d0017857-50bf-4c6d-b407-dd3480d963fe"
+      ],
+      "custom_css": [
+        "p {width: 500px; max-width: 90%; display: block; text-align: left; margin: 0 auto;}",
+        "h4 {width: 500px; max-width: 90%; display: block; text-align: left; margin: 0 auto;}",
+        "h3 {width: 500px; max-width: 90%; display: block; text-align: left; margin: 0 auto;}"
+      ],
+      "settings": {
+        "design_heading": "1",
+        "heading_align": "t4s-text-center",
+        "top_heading": "",
+        "icon_heading": "las la-gem",
+        "top_subheading": "",
+        "tophead_mb": 30,
+        "space_h_item": "0",
+        "space_v_item": "0",
+        "space_h_item_mb": "20",
+        "space_v_item_mb": "10",
+        "layout": "t4s-container-fluid",
+        "cl_bg": "",
+        "cl_bg_gradient": "",
+        "mg": "",
+        "pd": "",
+        "mg_tb": "",
+        "pd_tb": "",
+        "mg_mb": ",,30px,",
+        "pd_mb": "",
+        "use_cus_css": false,
+        "code_cus_css": ""
+      }
+    },
+    "bd19b30a-e976-4c2c-9c25-1d0f537c2c3a": {
+      "type": "image_text",
+      "blocks": {
+        "e10047eb-b826-421e-867e-732add62360e": {
+          "type": "bl_image",
+          "settings": {
+            "image1": "shopify://shop_images/NEW-Edit-of-Oil-Serum-copy_108522eb-d0ec-45bc-a120-177a041db583.png",
+            "col_dk": "6",
+            "col_tb": "6",
+            "layout_des": "carousel",
+            "post_mobile": "default",
+            "image_ratio": "ratioadapt",
+            "image_size": "cover",
+            "image_position": "8",
+            "loop": true,
+            "au_time": 0,
+            "au_hover": true,
+            "nav_btn": false,
+            "btn_vi": "hover",
+            "btn_owl": "default",
+            "btn_shape": "none",
+            "btn_cl": "dark",
+            "btn_size": "small",
+            "btn_hidden_mobile": true,
+            "nav_dot": false,
+            "dot_owl": "default",
+            "dots_cl": "dark",
+            "dots_round": true,
+            "dots_space": 10,
+            "dots_hidden_mobile": false
+          }
+        },
+        "4b23cee7-47bf-4b3e-8539-751939f9eabf": {
+          "type": "bl_text",
+          "settings": {
+            "col_dk": "6",
+            "col_tb": "6",
+            "text_size": "40,15",
+            "txt_align": "start",
+            "sub_heading": "",
+            "heading": "WAT DOE JE NA DE DETOX?",
+            "text": "<p>Een huid detox kan ontzettend veel verbetering brengen in je huidconditie. Je vernieuwde, gezonde huid is stralend en in balans. Je huid zal waarschijnlijk niet meer droog en trekkerig zijn, of je hebt minder verstoppingen en zichtbaar kleinere poriën. Je huid kan weer ademen en voedingsstoffen opnemen, met alle mooie resultaten van dien.</p><p>Als je de 28 dagen hebt volbracht, ga je gewoon door met je reinigingsroutine. Daarnaast raden we je aan om nog een keer de skintest te doen (de uitslag kan heel anders zijn dan voor de detox), of om een <a href=\"https://calendly.com/witlofskincareconsultations/witlof-skincare-persoonlijk-huidconsult?month=2025-01\" title=\"https://calendly.com/witlofskincareconsultations/witlof-skincare-persoonlijk-huidconsult?month=2025-01\">telefonisch huidconsult</a> in te boeken voor een persoonlijk advies van onze huidexpert Caroline. Dan kun je bepalen welke verzorgende producten voor jou nodig zijn om toe te voegen aan je reinigingsroutine.</p>",
+            "subhd_color": "#222222",
+            "hd_color": "#222222",
+            "des_color": "#878787",
+            "use_shadow": false,
+            "button_label": "Button label",
+            "button_link": "",
+            "open_link": "_blank",
+            "btn_icon": false,
+            "button_style": "default",
+            "btn_size": "large",
+            "btn_cl": "dark",
+            "button_effect": "default"
+          }
+        }
+      },
+      "block_order": [
+        "e10047eb-b826-421e-867e-732add62360e",
+        "4b23cee7-47bf-4b3e-8539-751939f9eabf"
+      ],
+      "custom_css": [
+        "p {width: 500px; max-width: 90%; display: block; text-align: left; margin: 0 auto; margin-bottom: 10px;}",
+        "h4 {width: 500px; max-width: 90%; display: block; text-align: left; margin: 0 auto;}",
+        "h3 {width: 500px; max-width: 90%; display: block; text-align: left; margin: 0 auto;}"
+      ],
+      "settings": {
+        "design_heading": "1",
+        "heading_align": "t4s-text-center",
+        "top_heading": "",
+        "icon_heading": "las la-gem",
+        "top_subheading": "",
+        "tophead_mb": 30,
+        "space_h_item": "0",
+        "space_v_item": "0",
+        "space_h_item_mb": "20",
+        "space_v_item_mb": "10",
+        "layout": "t4s-container-fluid",
+        "cl_bg": "",
+        "cl_bg_gradient": "",
+        "mg": "",
+        "pd": "",
+        "mg_tb": "",
+        "pd_tb": "",
+        "mg_mb": ",,30px,",
+        "pd_mb": "",
+        "use_cus_css": false,
+        "code_cus_css": ""
+      }
+    },
+    "8a270f52-84c1-470a-99ba-7ba7dd26282a": {
+      "type": "image_text",
+      "blocks": {
+        "0e419ae2-66db-4eb5-b044-04ab1a92522a": {
+          "type": "bl_text",
+          "settings": {
+            "col_dk": "6",
+            "col_tb": "6",
+            "text_size": "40,15",
+            "txt_align": "start",
+            "sub_heading": "",
+            "heading": "TIPS, TRICKS EN VEELGESTELDE VRAGEN",
+            "text": "<ul><li><strong>Wat als ik echt tien keer per dag moet smeren en de huid detox niet durf, kan of wil doen?</strong></li></ul><p>In dat geval raden we je aan om het alleen een week te doen, of misschien een dag of drie. Dat is een stuk makkelijker vol te houden. Ook is de kans groot dat je na een paar dagen het ergste al achter de rug hebt en je met gemak verder gaat met detoxen.</p><p>Mocht ook dit je niet over de streep trekken, weet dan dat je altijd een beetje (schone, minerale olie- en siliconenvrije) crème mag smeren als je het echt niet uithoudt. Je huid heeft dan wat langer nodig voor de detox (bijvoorbeeld 8 in plaats van 4 weken), maar het voelt minder heftig.</p><ul><li><strong>Wat doe ik om mijn huid te beschermen tegen de zon?</strong></li></ul><p>Blijf ten eerste tijdens de detox uit de zon, of bescherm jezelf met kleding, hoed of pet. Lukt dat niet? Denk dan eens aan schone minerale make-up (iets anders dan minerale olie) als foundation. Dit zijn poeders die meestal beschermingsfactor 20/25 hebben. Tot slot kun je er altijd voor kiezen om een (schone, minerale olie- en siliconenvrije) zonnebrandcrème met natuurlijke filter te smeren.</p><ul><li><strong>Mag ik make-up gebruiken?</strong></li></ul><p>Beter is om helemaal geen make-up te gebruiken. Foundations of primers met minerale olie en siliconen zijn sowieso het vermijden waard tijdens en na de detox. Als je toch je huid wilt egaliseren kun je minerale make-up gebruiken in de vorm van poeders of (schone, minerale olie- en siliconenvrije) vloeibare foundation. Ook is misschien onze <a href=\"https://witlofskincare.nl/products/tinted-day-cream-spf30-50ml?_pos=1&_sid=72d67c472&_ss=r\" title=\"https://witlofskincare.nl/products/tinted-day-cream-spf30-50ml?_pos=1&_sid=72d67c472&_ss=r\">Tinted Day Cream met spf30</a> een oplossing.</p>",
+            "subhd_color": "#222222",
+            "hd_color": "#222222",
+            "des_color": "#878787",
+            "use_shadow": false,
+            "button_label": "Button label",
+            "button_link": "",
+            "open_link": "_blank",
+            "btn_icon": false,
+            "button_style": "default",
+            "btn_size": "large",
+            "btn_cl": "dark",
+            "button_effect": "default"
+          }
+        },
+        "f7527527-626d-41fc-b65f-85a4c87124b6": {
+          "type": "bl_image",
+          "settings": {
+            "image1": "shopify://shop_images/80A191.jpg",
+            "col_dk": "6",
+            "col_tb": "6",
+            "layout_des": "carousel",
+            "post_mobile": "default",
+            "image_ratio": "ratioadapt",
+            "image_size": "cover",
+            "image_position": "8",
+            "loop": true,
+            "au_time": 0,
+            "au_hover": true,
+            "nav_btn": false,
+            "btn_vi": "hover",
+            "btn_owl": "default",
+            "btn_shape": "none",
+            "btn_cl": "dark",
+            "btn_size": "small",
+            "btn_hidden_mobile": true,
+            "nav_dot": false,
+            "dot_owl": "default",
+            "dots_cl": "dark",
+            "dots_round": true,
+            "dots_space": 10,
+            "dots_hidden_mobile": false
+          }
+        }
+      },
+      "block_order": [
+        "0e419ae2-66db-4eb5-b044-04ab1a92522a",
+        "f7527527-626d-41fc-b65f-85a4c87124b6"
+      ],
+      "custom_css": [
+        "p {width: 500px; max-width: 90%; display: block; text-align: left; margin: 0 auto; margin-bottom: 10px;}",
+        "h4 {width: 500px; max-width: 90%; display: block; text-align: left; margin: 0 auto;}",
+        "h3 {width: 500px; max-width: 90%; display: block; text-align: left; margin: 0 auto;}",
+        "ul {width: 500px; max-width: 90%; display: block; text-align: left; margin: 0 auto; margin-bottom: 10px;}"
+      ],
+      "settings": {
+        "design_heading": "1",
+        "heading_align": "t4s-text-center",
+        "top_heading": "",
+        "icon_heading": "las la-gem",
+        "top_subheading": "",
+        "tophead_mb": 30,
+        "space_h_item": "0",
+        "space_v_item": "0",
+        "space_h_item_mb": "20",
+        "space_v_item_mb": "10",
+        "layout": "t4s-container-fluid",
+        "cl_bg": "",
+        "cl_bg_gradient": "",
+        "mg": "",
+        "pd": "",
+        "mg_tb": "",
+        "pd_tb": "",
+        "mg_mb": ",,30px,",
+        "pd_mb": "",
+        "use_cus_css": false,
+        "code_cus_css": ""
+      }
+    },
+    "74825d36-537a-4c4e-8272-781611d514a7": {
+      "type": "image_text",
+      "blocks": {
+        "f75e3e15-95dd-47d7-82b1-279c7a332459": {
+          "type": "bl_image",
+          "settings": {
+            "image1": "shopify://shop_images/Detox-Set-for-Dry-and-Sensitive-Skin.png",
+            "col_dk": "6",
+            "col_tb": "6",
+            "layout_des": "carousel",
+            "post_mobile": "default",
+            "image_ratio": "ratioadapt",
+            "image_size": "cover",
+            "image_position": "8",
+            "loop": true,
+            "au_time": 0,
+            "au_hover": true,
+            "nav_btn": false,
+            "btn_vi": "hover",
+            "btn_owl": "default",
+            "btn_shape": "none",
+            "btn_cl": "dark",
+            "btn_size": "small",
+            "btn_hidden_mobile": true,
+            "nav_dot": false,
+            "dot_owl": "default",
+            "dots_cl": "dark",
+            "dots_round": true,
+            "dots_space": 10,
+            "dots_hidden_mobile": false
+          }
+        },
+        "a3cbb3c4-bfb6-4829-9748-a717111e5aed": {
+          "type": "bl_text",
+          "settings": {
+            "col_dk": "6",
+            "col_tb": "6",
+            "text_size": "40,15",
+            "txt_align": "start",
+            "sub_heading": "",
+            "heading": "DE DETOX SETS",
+            "text": "<p></p><p>Afhankelijk van je huidtype, hebben we een set voor je</p><p><strong>1. </strong><a href=\"https://witlofskincare.com/nl/collections/detox-sets/products/intensieve-huid-detox\" title=\"https://witlofskincare.com/nl/collections/detox-sets/products/intensieve-huid-detox\"><strong>INTENSIEVE HUID DETOX IN 28 DAGEN</strong></a><strong>:</strong></p><p>A. <a href=\"/products/detox-set-for-normal-to-oily-skin\" title=\"DETOX SET VOOR NORMALE TOT VETTE HUID\">Set voor normale tot vette huid</a></p><p>Bevat de<a href=\"/products/cleansing-mousse-150ml\" title=\"CLEANSING MOUSSE\"> Cleansing Mousse</a>, <a href=\"/products/balancing-toner-150ml\" title=\"BALANCING TONER\">Balancing Toner</a> en <a href=\"/products/smoothing-peel-30ml\" title=\"SMOOTHING PEEL\">Smoothing Peel</a></p><p>B. <a href=\"/products/huid-detox-set-dry-to-sensitive-skin\" title=\"DETOX SET VOOR DROGE EN GEVOELIGE HUID\">Set voor droge tot gevoelige huid</a></p><p>Bevat de <a href=\"/products/gentle-cleansing-milk-150ml\" title=\"GENTLE CLEANSING MILK\">Cleansing Milk</a>, <a href=\"/products/balancing-toner-150ml\" title=\"BALANCING TONER\">Balancing Toner</a> en <a href=\"/products/smoothing-peel-30ml\" title=\"SMOOTHING PEEL\">Smoothing Peel</a></p><p><strong>2. </strong><a href=\"https://witlofskincare.com/nl/collections/detox-sets/products/snelle-huiddetox-met-peel\" title=\"https://witlofskincare.com/nl/collections/detox-sets/products/snelle-huiddetox-met-peel\"><strong>SNELLE HUID DETOX MET PEEL IN 21 DAGEN</strong></a></p><p><strong>3. </strong><a href=\"https://witlofskincare.com/nl/products/snelle-huiddetox-met-peel\" title=\"https://witlofskincare.com/nl/products/snelle-huiddetox-met-peel\"><strong>MILDE HUID DETOX IN 21 DAGEN</strong></a></p><p>Wil je meer informatie?  Of weet je niet welk huidtype je hebt? Doe dan de skintest, stuur ons een email of boek een <a href=\"https://calendly.com/witlofskincareconsultations/witlof-skincare-persoonlijk-huidconsult?month=2025-01\" title=\"https://calendly.com/witlofskincareconsultations/witlof-skincare-persoonlijk-huidconsult?month=2025-01\">gratis een persoonlijk (telefonisch) huidconsult</a> in met onze huidexpert Caroline.</p>",
+            "subhd_color": "#333333",
+            "hd_color": "#222222",
+            "des_color": "#878787",
+            "use_shadow": false,
+            "button_label": "",
+            "button_link": "",
+            "open_link": "_blank",
+            "btn_icon": false,
+            "button_style": "default",
+            "btn_size": "extra-medium",
+            "btn_cl": "primary",
+            "button_effect": "default"
+          }
+        }
+      },
+      "block_order": [
+        "f75e3e15-95dd-47d7-82b1-279c7a332459",
+        "a3cbb3c4-bfb6-4829-9748-a717111e5aed"
+      ],
+      "custom_css": [
+        "p {width: 500px; max-width: 90%; display: block; text-align: left; margin: 0 auto; margin-bottom: 10px;}",
+        "h4 {width: 500px; max-width: 90%; display: block; text-align: left; margin: 0 auto; margin-bottom: 10px;}",
+        "h3 {width: 500px; max-width: 90%; display: block; text-align: left; margin: 0 auto; margin-bottom: 20px;}",
+        "ul {width: 500px; max-width: 90%; display: block; text-align: left; margin: 0 auto;}",
+        ".t4s-btn {width: 200px; max-width: 90%; display: inline-block; text-align: center; margin: 0 auto;}"
+      ],
+      "settings": {
+        "design_heading": "1",
+        "heading_align": "t4s-text-center",
+        "top_heading": "",
+        "icon_heading": "las la-gem",
+        "top_subheading": "",
+        "tophead_mb": 30,
+        "space_h_item": "0",
+        "space_v_item": "0",
+        "space_h_item_mb": "20",
+        "space_v_item_mb": "10",
+        "layout": "t4s-container-fluid",
+        "cl_bg": "",
+        "cl_bg_gradient": "",
+        "mg": "",
+        "pd": "",
+        "mg_tb": "",
+        "pd_tb": "",
+        "mg_mb": ",,30px,",
+        "pd_mb": "",
+        "use_cus_css": false,
+        "code_cus_css": ""
+      }
+    },
+    "7d4af8ba-824f-4e1e-8fa2-11bf852f392d": {
+      "type": "collection-products-deal",
+      "blocks": {
+        "e2176591-cda2-40d9-97c0-c648bbf82407": {
+          "type": "product",
+          "settings": {
+            "title": "",
+            "link_product": "shopify://products/detox-set-for-normal-to-oily-skin",
+            "total": 100,
+            "available": 75
+          }
+        },
+        "0c0b76cf-96b5-400c-8fb9-896ecc4752c9": {
+          "type": "product",
+          "settings": {
+            "title": "",
+            "link_product": "shopify://products/huid-detox-set-dry-to-sensitive-skin",
+            "total": 100,
+            "available": 75
+          }
+        }
+      },
+      "block_order": [
+        "e2176591-cda2-40d9-97c0-c648bbf82407",
+        "0c0b76cf-96b5-400c-8fb9-896ecc4752c9"
+      ],
+      "settings": {
+        "heading_align": "t4s-text-center",
+        "top_heading": "Detox Sets",
+        "cd_txt": "End in:",
+        "date": "",
+        "cl_text": "#ffffff",
+        "bg_cdt": "#e4573d",
+        "tophead_mb": 30,
+        "section_layout": "1",
+        "layout_border": true,
+        "box_border_r": 5,
+        "box_border_cl": "#4e97fd",
+        "product_des": "1",
+        "show_vendor": false,
+        "use_cdt": false,
+        "image_ratio": "ratio1_1",
+        "image_size": "cover",
+        "image_position": "8",
+        "content_align": "default",
+        "pr_limit": 8,
+        "col_dk": "2",
+        "col_tb": "2",
+        "col_mb": "2",
+        "space_h_item": "30",
+        "space_v_item": "30",
+        "space_h_item_mb": "10",
+        "space_v_item_mb": "10",
+        "show_stock_bar": false,
+        "txt_sold": "Sold:",
+        "txt_avai": "Available:",
+        "cl_stock_1": "#4e97fd",
+        "cl_stock_2": "#77ccfd",
+        "layout_des": "1",
+        "loop": true,
+        "au_time": 0,
+        "au_hover": true,
+        "nav_btn": false,
+        "btn_vi": "hover",
+        "btn_owl": "default",
+        "btn_shape": "none",
+        "btn_cl": "dark",
+        "btn_size": "small",
+        "btn_hidden_mobile": true,
+        "nav_dot": false,
+        "dot_owl": "default",
+        "dots_cl": "dark",
+        "dots_round": true,
+        "dots_space": 10,
+        "dots_hidden_mobile": false,
+        "layout": "t4s-container-fluid",
+        "cl_bg": "",
+        "cl_bg_gradient": "",
+        "mg": "50px,50px,50px,50px",
+        "pd": "",
+        "mg_tb": "20px,20px,20px,20px",
+        "pd_tb": "",
+        "mg_mb": "20px,20px,20px,20px",
+        "pd_mb": "",
+        "use_cus_css": false,
+        "code_cus_css": ""
+      }
+    },
+    "101e2e52-0b21-4f63-a698-cf4728cf6ea2": {
+      "type": "blog-post-manual",
+      "blocks": {
+        "e9454074-5c42-4b97-959e-74068b09a665": {
+          "type": "article",
+          "settings": {
+            "article": "news/kim-lian-s-witlof-story"
+          }
+        },
+        "4046e1dd-44e6-40c1-bd16-a8d002455897": {
+          "type": "article",
+          "settings": {
+            "article": "news/doe-de-witlof-huid-detox"
+          }
+        },
+        "26252da0-df25-44dc-85bd-c4714808eb2b": {
+          "type": "article",
+          "settings": {
+            "article": "news/waarom-zijn-minerale-olien-slecht-voor-je-huid"
+          }
+        }
+      },
+      "block_order": [
+        "e9454074-5c42-4b97-959e-74068b09a665",
+        "4046e1dd-44e6-40c1-bd16-a8d002455897",
+        "26252da0-df25-44dc-85bd-c4714808eb2b"
+      ],
+      "settings": {
+        "design_heading": "1",
+        "heading_align": "t4s-text-center",
+        "top_heading": "Meer lezen over de huid detox",
+        "icon_heading": "las la-gem",
+        "top_subheading": "",
+        "tophead_mb": 30,
+        "post_des": "1",
+        "show_cate": false,
+        "show_tags": false,
+        "show_cnt": false,
+        "show_au": false,
+        "show_dt": true,
+        "show_cm": false,
+        "show_rm": false,
+        "date": "date",
+        "content_align": "t4s-text-start",
+        "limit": 8,
+        "img_effect": "none",
+        "b_effect": "none",
+        "image_ratio": "ratio1_1",
+        "image_size": "cover",
+        "image_position": "8",
+        "col_dk": "3",
+        "col_tb": "3",
+        "col_mb": "2",
+        "space_h_item": "30",
+        "space_v_item": "30",
+        "space_h_item_mb": "10",
+        "space_v_item_mb": "10",
+        "layout_des": "2",
+        "loop": true,
+        "au_time": 0,
+        "au_hover": true,
+        "nav_btn": false,
+        "btn_vi": "hover",
+        "btn_owl": "default",
+        "btn_shape": "none",
+        "btn_cl": "dark",
+        "btn_size": "small",
+        "btn_hidden_mobile": true,
+        "nav_dot": false,
+        "dot_owl": "default",
+        "dots_cl": "dark",
+        "dots_round": true,
+        "dots_space": 10,
+        "dots_hidden_mobile": false,
+        "layout": "t4s-container-fluid",
+        "cl_bg": "",
+        "cl_bg_gradient": "",
+        "mg": "50px,50px,50px,50px",
+        "pd": "",
+        "mg_tb": "",
+        "pd_tb": "",
+        "mg_mb": "10px,20px,10px,20px",
+        "pd_mb": "",
+        "use_cus_css": false,
+        "code_cus_css": ""
+      }
+    }
+  },
+  "order": [
+    "heading",
+    "main",
+    "sidebar-page",
+    "82193d74-c510-4ad1-afe1-f7bd00fb6b3e",
+    "6c8d4248-75d3-4c51-a588-963d184d7cc9",
+    "9fa5e8e4-0419-4e92-a9f7-fe8de0776542",
+    "6db2cd8d-793a-4415-8da8-9483eebf1948",
+    "bd19b30a-e976-4c2c-9c25-1d0f537c2c3a",
+    "8a270f52-84c1-470a-99ba-7ba7dd26282a",
+    "74825d36-537a-4c4e-8272-781611d514a7",
+    "7d4af8ba-824f-4e1e-8fa2-11bf852f392d",
+    "101e2e52-0b21-4f63-a698-cf4728cf6ea2"
+  ]
+}

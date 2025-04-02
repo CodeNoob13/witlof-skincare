@@ -1,0 +1,1450 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "cbbace19-cb12-472f-a50f-67d33e31ad78": {
+      "type": "image_text",
+      "blocks": {
+        "template--19361708933441__cbbace19-cb12-472f-a50f-67d33e31ad78-bl_text-1": {
+          "type": "bl_text",
+          "settings": {
+            "col_dk": "6",
+            "col_tb": "6",
+            "text_size": "40,15",
+            "txt_align": "center",
+            "sub_heading": "",
+            "heading": "HUIDVERZORGINGSTIPS VOOR EEN DROGE HUID",
+            "text": "<p>Als je last hebt van een huid die schilfert of vervelt op het huidoppervlak, roodheid toont en/of ruwer is, dan heb jij waarschijnlijk een droger huidtype. Hoe verzorg je dit huidtype optimaal? </p>",
+            "subhd_color": "#222222",
+            "hd_color": "#222222",
+            "des_color": "#878787",
+            "use_shadow": false,
+            "button_label": "Button label",
+            "button_link": "",
+            "open_link": "_blank",
+            "btn_icon": false,
+            "button_style": "default",
+            "btn_size": "large",
+            "btn_cl": "dark",
+            "button_effect": "default"
+          }
+        },
+        "396e6b8e-9925-49ff-9995-4d5007b12bba": {
+          "type": "bl_image",
+          "settings": {
+            "image1": "shopify://shop_images/Rich_Facial_Cream2_2.jpg",
+            "col_dk": "6",
+            "col_tb": "6",
+            "layout_des": "carousel",
+            "post_mobile": "default",
+            "image_ratio": "ratioadapt",
+            "image_size": "cover",
+            "image_position": "8",
+            "loop": true,
+            "au_time": 0,
+            "au_hover": true,
+            "nav_btn": false,
+            "btn_vi": "hover",
+            "btn_owl": "default",
+            "btn_shape": "none",
+            "btn_cl": "dark",
+            "btn_size": "small",
+            "btn_hidden_mobile": true,
+            "nav_dot": false,
+            "dot_owl": "default",
+            "dots_cl": "dark",
+            "dots_round": true,
+            "dots_space": 10,
+            "dots_hidden_mobile": false
+          }
+        }
+      },
+      "block_order": [
+        "template--19361708933441__cbbace19-cb12-472f-a50f-67d33e31ad78-bl_text-1",
+        "396e6b8e-9925-49ff-9995-4d5007b12bba"
+      ],
+      "disabled": true,
+      "settings": {
+        "design_heading": "1",
+        "heading_align": "t4s-text-center",
+        "top_heading": "",
+        "icon_heading": "las la-gem",
+        "top_subheading": "",
+        "tophead_mb": 30,
+        "space_h_item": "20",
+        "space_v_item": "10",
+        "space_h_item_mb": "20",
+        "space_v_item_mb": "10",
+        "layout": "t4s-container-wrap",
+        "cl_bg": "#daedf2",
+        "cl_bg_gradient": "",
+        "mg": ",,50px,",
+        "pd": "",
+        "mg_tb": "",
+        "pd_tb": "",
+        "mg_mb": ",,30px,",
+        "pd_mb": "",
+        "use_cus_css": false,
+        "code_cus_css": ""
+      }
+    },
+    "2ba3b44d-ed46-4b8e-8bca-7bddc0f2d3e9": {
+      "type": "custom-section",
+      "blocks": {
+        "template--19361708933441__2ba3b44d-ed46-4b8e-8bca-7bddc0f2d3e9-16857789256105ae93-0": {
+          "type": "bl_col",
+          "disabled": true,
+          "settings": {
+            "col_dk": "6",
+            "col_tb": "6",
+            "col_mb": "12",
+            "align_vertical": false,
+            "content_align": "center",
+            "content_align_tablet": "center",
+            "content_align_mobile": "center",
+            "padding_inner": "30px,,30px",
+            "padding_inner_tb": "",
+            "padding_inner_mb": "",
+            "bg_cl": "#d2a2a2"
+          }
+        },
+        "bbd58d9a-af39-49bc-a18f-50f4864acc5e": {
+          "type": "bl_col",
+          "settings": {
+            "col_dk": "12",
+            "col_tb": "12",
+            "col_mb": "12",
+            "align_vertical": false,
+            "content_align": "center",
+            "content_align_tablet": "center",
+            "content_align_mobile": "center",
+            "padding_inner": "",
+            "padding_inner_tb": "",
+            "padding_inner_mb": "",
+            "bg_cl": "#c5e6f0"
+          }
+        },
+        "b5a18ec3-176e-4fcc-95fa-9bd1c09db545": {
+          "type": "space_html",
+          "settings": {
+            "color": "#c5e6f0",
+            "width": 40,
+            "height": 2,
+            "mgb": 20,
+            "width_mb": 40,
+            "height_mb": 2,
+            "hidden_mobile": false,
+            "mgb_mb": 20
+          }
+        },
+        "6da3e88d-c4db-472f-95c7-6ceeacf81eb6": {
+          "type": "space_html",
+          "settings": {
+            "color": "#c5e6f0",
+            "width": 40,
+            "height": 2,
+            "mgb": 20,
+            "width_mb": 40,
+            "height_mb": 2,
+            "hidden_mobile": false,
+            "mgb_mb": 20
+          }
+        },
+        "template--19361708933441__2ba3b44d-ed46-4b8e-8bca-7bddc0f2d3e9-16857789256105ae93-2": {
+          "type": "custom_text",
+          "settings": {
+            "text": "Wat zou witlof doen?",
+            "remove_br_tag": false,
+            "tag": "p",
+            "fontf": "inherit",
+            "text_cl": "#000000",
+            "text_fs": 20,
+            "text_lh": 24,
+            "text_fw": 500,
+            "text_ls": 0,
+            "font_italic": false,
+            "text_shadow": false,
+            "text_mgb": 0,
+            "hidden_mobile": false,
+            "text_fs_mb": 16,
+            "text_lh_mb": 0,
+            "text_ls_mb": 0,
+            "text_mgb_mobile": 10
+          }
+        },
+        "5125b3f3-ce4f-4f6b-8be7-f3d0e60568a2": {
+          "type": "space_html",
+          "settings": {
+            "color": "#c5e6f0",
+            "width": 40,
+            "height": 2,
+            "mgb": 20,
+            "width_mb": 40,
+            "height_mb": 2,
+            "hidden_mobile": false,
+            "mgb_mb": 20
+          }
+        },
+        "479e8204-e0cb-4bcc-be6d-092a1de6f618": {
+          "type": "custom_text",
+          "settings": {
+            "text": "Om een droge huid te verzorgen, moet u ervoor zorgen dat de huidbarrière gezond en intact is, zodat deze zoveel mogelijk vocht kan vasthouden. Dit zal resulteren in een zachtere en gladdere huidconditie. Ceramiden (of huideigen lipiden) zijn te vinden in onze <b><a href=\"/products/rich-facial-cream-50ml?variant=45281465827649\">Rich Facial Cream</a><a></a></b> en kunnen de functie van de huidbarrière verbeteren, wat resulteert in minder gevoeligheid, betere hydratatie en schadeherstel. <b><a href>Rozenbottelzaadolie</a></b> en aloë vera, die in veel van onze producten voorkomen, zijn beide een geweldige bron van <b><a href=\"/blogs/news/vitamine-c\">vitamine C</a></b> en kunnen de aanmaak van elastine en collageen stimuleren, waardoor de huid er fris en jeugdig uit blijft zien. <b><a href>Rozenbottelzaadolie</a></b> kan ook uitstekend zijn voor het verminderen en gladstrijken van rimpels.",
+            "remove_br_tag": false,
+            "tag": "p",
+            "fontf": "3",
+            "text_cl": "#222222",
+            "text_fs": 18,
+            "text_lh": 25,
+            "text_fw": 400,
+            "text_ls": 0,
+            "font_italic": false,
+            "text_shadow": false,
+            "text_mgb": 15,
+            "hidden_mobile": false,
+            "text_fs_mb": 18,
+            "text_lh_mb": 25,
+            "text_ls_mb": 0,
+            "text_mgb_mobile": 10
+          }
+        }
+      },
+      "block_order": [
+        "template--19361708933441__2ba3b44d-ed46-4b8e-8bca-7bddc0f2d3e9-16857789256105ae93-0",
+        "bbd58d9a-af39-49bc-a18f-50f4864acc5e",
+        "b5a18ec3-176e-4fcc-95fa-9bd1c09db545",
+        "6da3e88d-c4db-472f-95c7-6ceeacf81eb6",
+        "template--19361708933441__2ba3b44d-ed46-4b8e-8bca-7bddc0f2d3e9-16857789256105ae93-2",
+        "5125b3f3-ce4f-4f6b-8be7-f3d0e60568a2",
+        "479e8204-e0cb-4bcc-be6d-092a1de6f618"
+      ],
+      "disabled": true,
+      "settings": {
+        "space_h_item": "30",
+        "space_v_item": "30",
+        "space_h_item_mb": "10",
+        "space_v_item_mb": "10",
+        "layout": "t4s-container-wrap",
+        "cl_bg": "",
+        "cl_bg_gradient": "",
+        "mg": "50px,,50px,",
+        "pd": "",
+        "mg_tb": "50px,,50px,",
+        "pd_tb": "",
+        "mg_mb": ",,30px,",
+        "pd_mb": "",
+        "use_cus_css": false,
+        "code_cus_css": ""
+      }
+    },
+    "a05303ec-d477-4dc8-9151-57a2d6001aa1": {
+      "type": "featured-product",
+      "blocks": {
+        "de220048-6063-42ce-bd54-bdfb10e2205a": {
+          "type": "title",
+          "settings": {
+            "txt_tr_pr": "none",
+            "fnt_df_pr": "1",
+            "size_pr": 16,
+            "fw_pr": 600,
+            "lh_pr": 0,
+            "ls_pr": 0,
+            "pr_title_color": "#222222",
+            "pr_title_color_hover": "#56cfe1"
+          }
+        },
+        "6792f597-733a-4c9d-931b-c039012e274d": {
+          "type": "price_review",
+          "settings": {
+            "price": "0",
+            "type_sale": "2",
+            "tax_ship": false,
+            "rating": true,
+            "review_liquid": "",
+            "size_price_pr": 22,
+            "fw_price_pr": 400,
+            "price_color": "#696969",
+            "price_sale_color": "#ec0101"
+          }
+        },
+        "2c69cea2-3b93-4641-b57e-f686aef1caa5": {
+          "type": "description",
+          "settings": {
+            "des": "2",
+            "text": "<p>{{ section.settings.product.metafields.custom.korte_omschrijving | metafield_tag }}</p>",
+            "length": 31
+          }
+        },
+        "2b4618f6-b1fa-46bc-b46a-a663f67caef0": {
+          "type": "size_delivery_ask",
+          "disabled": true,
+          "settings": {
+            "size_chart": "3",
+            "pos_sizeg": "1",
+            "sc_type": "1",
+            "page": "",
+            "size_ck": "",
+            "delivery": false,
+            "page_dr": "",
+            "ask": false,
+            "phone": true
+          }
+        },
+        "ee7a955b-516f-48c0-af7f-8a02fb289931": {
+          "type": "meta",
+          "disabled": true,
+          "settings": {
+            "show_options": true,
+            "show_vendor": false,
+            "show_type": false,
+            "show_sku": true,
+            "show_barcode": false,
+            "show_available": true,
+            "show_category": true,
+            "show_tags": true
+          }
+        },
+        "052d9402-c128-4b1b-ac0a-5009fd015bc8": {
+          "type": "social",
+          "settings": {
+            "socials_align": "start",
+            "social_mode": "2",
+            "social_style": "3",
+            "social_size": "medium",
+            "bd_radius": 0,
+            "use_color_set": false,
+            "icon_cl": "#878787",
+            "bg_cl": "#222222",
+            "space_h_item": "5",
+            "space_v_item": "5",
+            "space_h_item_mb": "2",
+            "space_v_item_mb": "2"
+          }
+        }
+      },
+      "block_order": [
+        "de220048-6063-42ce-bd54-bdfb10e2205a",
+        "6792f597-733a-4c9d-931b-c039012e274d",
+        "2c69cea2-3b93-4641-b57e-f686aef1caa5",
+        "2b4618f6-b1fa-46bc-b46a-a663f67caef0",
+        "ee7a955b-516f-48c0-af7f-8a02fb289931",
+        "052d9402-c128-4b1b-ac0a-5009fd015bc8"
+      ],
+      "disabled": true,
+      "settings": {
+        "product": "set-for-dry-skin",
+        "enable_sticky_info": false,
+        "media_layout": "thumbnails_bottom",
+        "media_size": "medium",
+        "thumb_lr_size": "large",
+        "image_ratio": "ratioadapt",
+        "image_size": "cover",
+        "image_position": "8",
+        "main_click": "zoom",
+        "zoom_tp": "external",
+        "enable_zoom_icon": true,
+        "enable_zoom_click_mb": true,
+        "enable_video_looping": false,
+        "enable_video_muting": true,
+        "enable_video_autoplaying": true,
+        "eff": "fade",
+        "nav_btn": true,
+        "btn_vi": "always",
+        "btn_owl": "outline",
+        "btn_shape": "round",
+        "btn_cl": "dark",
+        "btn_size": "small",
+        "btn_hidden_mobile": false,
+        "nav_dot": false,
+        "dot_owl": "default",
+        "dots_cl": "dark",
+        "dots_round": true,
+        "dots_space": 10,
+        "dots_hidden_mobile": false,
+        "layout": "t4s-container-wrap",
+        "cl_bg": "#ffffff",
+        "cl_bg_gradient": "",
+        "mg": ",,50px,",
+        "pd": "",
+        "mg_tb": "",
+        "pd_tb": "",
+        "mg_mb": ",,30px,",
+        "pd_mb": ""
+      }
+    },
+    "2e277996-b655-484e-92eb-861aace476fb": {
+      "type": "collection-products-deal",
+      "blocks": {
+        "8bd0033b-787e-4835-a983-86aa5958fd0b": {
+          "type": "product",
+          "settings": {
+            "title": "",
+            "link_product": "shopify://products/gentle-cleansing-milk-150ml",
+            "total": 100,
+            "available": 75
+          }
+        },
+        "27575064-9338-45b5-ba2d-74e86620f578": {
+          "type": "product",
+          "settings": {
+            "title": "",
+            "link_product": "shopify://products/balancing-toner-150ml",
+            "total": 1,
+            "available": 0
+          }
+        },
+        "3834c601-a159-4be2-8205-df14c5d8cf28": {
+          "type": "product",
+          "settings": {
+            "title": "",
+            "link_product": "shopify://products/rich-facial-cream-50ml",
+            "total": 100,
+            "available": 75
+          }
+        },
+        "e9305768-6ac5-4e84-b8d6-2ddd650ee8ab": {
+          "type": "product",
+          "settings": {
+            "title": "",
+            "link_product": "shopify://products/smoothing-peel-30ml",
+            "total": 100,
+            "available": 75
+          }
+        }
+      },
+      "block_order": [
+        "8bd0033b-787e-4835-a983-86aa5958fd0b",
+        "27575064-9338-45b5-ba2d-74e86620f578",
+        "3834c601-a159-4be2-8205-df14c5d8cf28",
+        "e9305768-6ac5-4e84-b8d6-2ddd650ee8ab"
+      ],
+      "disabled": true,
+      "settings": {
+        "heading_align": "t4s-text-center",
+        "top_heading": "AANVULLENDE PRODUCTEN",
+        "cd_txt": "End in:",
+        "date": "",
+        "cl_text": "#ffffff",
+        "bg_cdt": "#e4573d",
+        "tophead_mb": 30,
+        "section_layout": "1",
+        "layout_border": true,
+        "box_border_r": 5,
+        "box_border_cl": "#4e97fd",
+        "product_des": "4",
+        "show_vendor": false,
+        "use_cdt": false,
+        "image_ratio": "ratioadapt",
+        "image_size": "cover",
+        "image_position": "8",
+        "content_align": "default",
+        "pr_limit": 8,
+        "col_dk": "4",
+        "col_tb": "4",
+        "col_mb": "2",
+        "space_h_item": "30",
+        "space_v_item": "30",
+        "space_h_item_mb": "10",
+        "space_v_item_mb": "10",
+        "show_stock_bar": false,
+        "txt_sold": "Sold:",
+        "txt_avai": "Available:",
+        "cl_stock_1": "#4e97fd",
+        "cl_stock_2": "#77ccfd",
+        "layout_des": "1",
+        "loop": true,
+        "au_time": 0,
+        "au_hover": true,
+        "nav_btn": false,
+        "btn_vi": "hover",
+        "btn_owl": "default",
+        "btn_shape": "none",
+        "btn_cl": "dark",
+        "btn_size": "small",
+        "btn_hidden_mobile": true,
+        "nav_dot": false,
+        "dot_owl": "default",
+        "dots_cl": "dark",
+        "dots_round": true,
+        "dots_space": 10,
+        "dots_hidden_mobile": false,
+        "layout": "t4s-container-wrap",
+        "cl_bg": "",
+        "cl_bg_gradient": "",
+        "mg": ",,50px,",
+        "pd": "",
+        "mg_tb": "",
+        "pd_tb": "",
+        "mg_mb": ",,30px,",
+        "pd_mb": "",
+        "use_cus_css": false,
+        "code_cus_css": ""
+      }
+    },
+    "105567be-00f9-4aa1-a51c-5072455f70c7": {
+      "type": "custom-liquid",
+      "settings": {
+        "custom_liquid": "",
+        "layout": "t4s-container-wrap",
+        "cl_bg": "",
+        "cl_bg_gradient": "",
+        "mg": ",,50px,",
+        "pd": "",
+        "mg_tb": "",
+        "pd_tb": "",
+        "mg_mb": ",,30px,",
+        "pd_mb": ""
+      }
+    },
+    "f5a23743-e137-4d9f-b8cb-cca881db2fae": {
+      "type": "custom-liquid",
+      "settings": {
+        "custom_liquid": "",
+        "layout": "t4s-container-wrap",
+        "cl_bg": "#ffffff",
+        "cl_bg_gradient": "",
+        "mg": ",,50px,",
+        "pd": "",
+        "mg_tb": "30",
+        "pd_tb": "30",
+        "mg_mb": "10",
+        "pd_mb": "10"
+      }
+    },
+    "b21077ef-d698-4f69-a006-07edf0d528fd": {
+      "type": "custom-section",
+      "blocks": {
+        "6fe68b5e-0e55-46a4-b728-577bc03de6dc": {
+          "type": "bl_col",
+          "disabled": true,
+          "settings": {
+            "col_dk": "6",
+            "col_tb": "6",
+            "col_mb": "12",
+            "align_vertical": false,
+            "content_align": "center",
+            "content_align_tablet": "center",
+            "content_align_mobile": "center",
+            "padding_inner": "30px,,30px",
+            "padding_inner_tb": "",
+            "padding_inner_mb": "",
+            "bg_cl": "#d2a2a2"
+          }
+        },
+        "822e7ccc-4376-4ea7-bd46-75fd8186da9e": {
+          "type": "bl_col",
+          "settings": {
+            "col_dk": "12",
+            "col_tb": "12",
+            "col_mb": "12",
+            "align_vertical": false,
+            "content_align": "center",
+            "content_align_tablet": "center",
+            "content_align_mobile": "center",
+            "padding_inner": "",
+            "padding_inner_tb": "",
+            "padding_inner_mb": "",
+            "bg_cl": "#c5e6f0"
+          }
+        },
+        "8640d51f-7d6f-4043-bf5b-daea5efab81f": {
+          "type": "space_html",
+          "settings": {
+            "color": "#c5e6f0",
+            "width": 40,
+            "height": 2,
+            "mgb": 20,
+            "width_mb": 40,
+            "height_mb": 2,
+            "hidden_mobile": false,
+            "mgb_mb": 20
+          }
+        },
+        "e09c3058-c73e-424b-8432-458c9df455ec": {
+          "type": "custom_text",
+          "settings": {
+            "text": "HUIDVERZORGINGSTIPS VOOR EEN DROGE HUID",
+            "remove_br_tag": false,
+            "tag": "p",
+            "fontf": "inherit",
+            "text_cl": "#000000",
+            "text_fs": 24,
+            "text_lh": 0,
+            "text_fw": 500,
+            "text_ls": 0,
+            "font_italic": false,
+            "text_shadow": false,
+            "text_mgb": 5,
+            "hidden_mobile": false,
+            "text_fs_mb": 16,
+            "text_lh_mb": 0,
+            "text_ls_mb": 0,
+            "text_mgb_mobile": 10
+          }
+        },
+        "2890fc14-9ecc-42ff-ae9e-19b39fab6ee5": {
+          "type": "space_html",
+          "settings": {
+            "color": "#c5e6f0",
+            "width": 40,
+            "height": 2,
+            "mgb": 20,
+            "width_mb": 40,
+            "height_mb": 2,
+            "hidden_mobile": false,
+            "mgb_mb": 20
+          }
+        },
+        "394f2d64-1438-4109-a80d-609f8ae27762": {
+          "type": "custom_text",
+          "settings": {
+            "text": "Hoe herken je een droge huid?",
+            "remove_br_tag": false,
+            "tag": "p",
+            "fontf": "inherit",
+            "text_cl": "#000000",
+            "text_fs": 20,
+            "text_lh": 24,
+            "text_fw": 500,
+            "text_ls": 0,
+            "font_italic": false,
+            "text_shadow": false,
+            "text_mgb": 0,
+            "hidden_mobile": false,
+            "text_fs_mb": 16,
+            "text_lh_mb": 0,
+            "text_ls_mb": 0,
+            "text_mgb_mobile": 10
+          }
+        },
+        "ef29fc38-ee58-4cb5-8acc-9305a74b0c7a": {
+          "type": "space_html",
+          "settings": {
+            "color": "#c5e6f0",
+            "width": 40,
+            "height": 2,
+            "mgb": 20,
+            "width_mb": 40,
+            "height_mb": 2,
+            "hidden_mobile": false,
+            "mgb_mb": 20
+          }
+        },
+        "a2e3a4b0-7c73-4a78-99dd-562ec8a18ed3": {
+          "type": "custom_text",
+          "settings": {
+            "text": "Als je een droge huid hebt, zie je mogelijk schilfering of vervelling op het huidoppervlak, samen met wat roodheid en een ruwere huid. Ook kan je huid jeuken of trekkerig aanvoelen, vooral als je buiten bent, bij koud weer of na het nemen van een warme douche.",
+            "remove_br_tag": false,
+            "tag": "p",
+            "fontf": "3",
+            "text_cl": "#222222",
+            "text_fs": 18,
+            "text_lh": 25,
+            "text_fw": 400,
+            "text_ls": 0,
+            "font_italic": false,
+            "text_shadow": false,
+            "text_mgb": 15,
+            "hidden_mobile": false,
+            "text_fs_mb": 18,
+            "text_lh_mb": 25,
+            "text_ls_mb": 0,
+            "text_mgb_mobile": 10
+          }
+        }
+      },
+      "block_order": [
+        "6fe68b5e-0e55-46a4-b728-577bc03de6dc",
+        "822e7ccc-4376-4ea7-bd46-75fd8186da9e",
+        "8640d51f-7d6f-4043-bf5b-daea5efab81f",
+        "e09c3058-c73e-424b-8432-458c9df455ec",
+        "2890fc14-9ecc-42ff-ae9e-19b39fab6ee5",
+        "394f2d64-1438-4109-a80d-609f8ae27762",
+        "ef29fc38-ee58-4cb5-8acc-9305a74b0c7a",
+        "a2e3a4b0-7c73-4a78-99dd-562ec8a18ed3"
+      ],
+      "custom_css": [],
+      "settings": {
+        "space_h_item": "30",
+        "space_v_item": "30",
+        "space_h_item_mb": "10",
+        "space_v_item_mb": "10",
+        "layout": "t4s-container-wrap",
+        "cl_bg": "",
+        "cl_bg_gradient": "",
+        "mg": "50px,,50px,",
+        "pd": "",
+        "mg_tb": "50px,,50px,",
+        "pd_tb": "",
+        "mg_mb": ",,30px,",
+        "pd_mb": "",
+        "use_cus_css": false,
+        "code_cus_css": ""
+      }
+    },
+    "53e4557f-78d0-42c8-bed8-e58bba7bf429": {
+      "type": "custom-section",
+      "blocks": {
+        "61e9ee25-4e5a-49ff-8a1f-277962b318f6": {
+          "type": "bl_col",
+          "disabled": true,
+          "settings": {
+            "col_dk": "6",
+            "col_tb": "6",
+            "col_mb": "12",
+            "align_vertical": false,
+            "content_align": "center",
+            "content_align_tablet": "center",
+            "content_align_mobile": "center",
+            "padding_inner": "30px,,30px",
+            "padding_inner_tb": "",
+            "padding_inner_mb": "",
+            "bg_cl": "#d2a2a2"
+          }
+        },
+        "fa2e3ffc-4070-48d4-808e-58677aa41cf9": {
+          "type": "bl_col",
+          "settings": {
+            "col_dk": "12",
+            "col_tb": "12",
+            "col_mb": "12",
+            "align_vertical": false,
+            "content_align": "center",
+            "content_align_tablet": "center",
+            "content_align_mobile": "center",
+            "padding_inner": "",
+            "padding_inner_tb": "",
+            "padding_inner_mb": "",
+            "bg_cl": "#ffffff"
+          }
+        },
+        "7e56b3f1-c765-4cc3-8874-39f1efc2b9e3": {
+          "type": "custom_text",
+          "disabled": true,
+          "settings": {
+            "text": "HUIDVERZORGINGSTIPS VOOR EEN DROGE HUID",
+            "remove_br_tag": false,
+            "tag": "p",
+            "fontf": "inherit",
+            "text_cl": "#000000",
+            "text_fs": 24,
+            "text_lh": 0,
+            "text_fw": 500,
+            "text_ls": 0,
+            "font_italic": false,
+            "text_shadow": false,
+            "text_mgb": 5,
+            "hidden_mobile": false,
+            "text_fs_mb": 16,
+            "text_lh_mb": 0,
+            "text_ls_mb": 0,
+            "text_mgb_mobile": 10
+          }
+        },
+        "custom_text_nhxpRU": {
+          "type": "custom_text",
+          "settings": {
+            "text": "",
+            "remove_br_tag": false,
+            "tag": "h2",
+            "fontf": "1",
+            "text_cl": "#ffffff",
+            "text_fs": 16,
+            "text_lh": 0,
+            "text_fw": 400,
+            "text_ls": 0,
+            "font_italic": false,
+            "text_shadow": false,
+            "text_mgb": 15,
+            "hidden_mobile": false,
+            "text_fs_mb": 16,
+            "text_lh_mb": 0,
+            "text_ls_mb": 0,
+            "text_mgb_mobile": 10
+          }
+        },
+        "2aee18b3-aa1d-4ddc-81a3-b0292c7d8135": {
+          "type": "custom_text",
+          "settings": {
+            "text": "Wat kan Witlof Skincare voor jou doen?",
+            "remove_br_tag": false,
+            "tag": "p",
+            "fontf": "inherit",
+            "text_cl": "#000000",
+            "text_fs": 20,
+            "text_lh": 24,
+            "text_fw": 500,
+            "text_ls": 0,
+            "font_italic": false,
+            "text_shadow": false,
+            "text_mgb": 0,
+            "hidden_mobile": false,
+            "text_fs_mb": 16,
+            "text_lh_mb": 0,
+            "text_ls_mb": 0,
+            "text_mgb_mobile": 10
+          }
+        },
+        "dcd58f2e-1eb1-4367-bfed-fe2d5135af97": {
+          "type": "space_html",
+          "settings": {
+            "color": "#ffffff",
+            "width": 40,
+            "height": 2,
+            "mgb": 20,
+            "width_mb": 40,
+            "height_mb": 2,
+            "hidden_mobile": false,
+            "mgb_mb": 20
+          }
+        },
+        "6dbbedb0-0855-42b1-b777-6d9c11b1e055": {
+          "type": "bl_col",
+          "disabled": true,
+          "settings": {
+            "col_dk": "6",
+            "col_tb": "6",
+            "col_mb": "12",
+            "align_vertical": false,
+            "content_align": "center",
+            "content_align_tablet": "center",
+            "content_align_mobile": "center",
+            "padding_inner": "30px,,30px",
+            "padding_inner_tb": "",
+            "padding_inner_mb": "",
+            "bg_cl": "#d2a2a2"
+          }
+        },
+        "97ffd93a-7e93-4322-bd65-fa86e8d015e4": {
+          "type": "newsletter",
+          "disabled": true,
+          "settings": {
+            "form_width": 0,
+            "form_width_mb": 0,
+            "newl_des": "1",
+            "news_align": "center",
+            "newl_size": "small",
+            "btn_icon": false,
+            "input_cl": "#878787",
+            "border_cl": "#000000",
+            "btn_cl": "#ffffff",
+            "btn_bg_cl": "#222222",
+            "btn_hover_cl": "#ffffff",
+            "btn_hover_bg_cl": "#56cfe1",
+            "hidden_mobile": false,
+            "mgb": 15,
+            "mgb_mb": 10
+          }
+        },
+        "dbdfc46e-95d6-4d6c-aac3-b5dd2d90ded5": {
+          "type": "custom_text",
+          "settings": {
+            "text": "Om een ​​droge huid te verzorgen, moet je er voor zorgen dat de huidbarrière gezond en intact is, zodat deze zoveel mogelijk vocht kan vasthouden. \n<br><br>\nReinigen doe je het beste met de Gentle Cleansing Milk en aansluitend gebruik je de <b><a href=\"/products/balancing-toner-150ml?variant=45281312473409%20\"> Balancing Toner</a></b>. Deze bevat bloemenwaters die zorgen voor intense hydratatie van de huid. Ook herstelt het de pH-waarde en natuurlijke beschermlaag van de huid. <br><br>\n\nDaarna gebruik je idealiter de Hydrating Calming Lotion voor extra hydratatie, kalmering en hylauronzuur. \n<br><br>\n\nCeramiden (of huideigen lipiden) zijn te vinden in onze <b><a href=\"/products/rich-facial-cream-50ml?variant=45281465827649\">Rich Facial Cream</a><a></a></b> en kunnen de functie van de huidbarrière verbeteren, wat resulteert in betere hydratatie. \n<br><br>\n\nNiet inbegrepen in de Set, maar wel het aanbevelen waard om toe te voegen zijn het Regenerating Oil Serum en de Smoothing Peel. <b><a href=\"https://witlofskincare.nl/blogs/news/rozenbottelzaadolie-het-natuurlijke-middel-voor-een-gezonde-betere-huid\">Rozenbottelzaadolie</a></b>, gevonden in onze <b><a href=\"/products/regenerating-oil-serum-30ml?_pos=1&_sid=464a8f9cd&_ss=r\"> Regenerating Oil Serum</a></b> is een geweldige bron van <b><a href=\"https://witlofskincare.nl/blogs/news/vitamine-c\">vitamine C</a></b> en stimuleert de aanmaak van elastine en collageen. Dit olie serum sluist het extra vocht makkelijker in de droge huid. De Smoothing Peel verwijdert de dode huidcellen en zorgt ervoor dat de huid beter vocht kan toelaten. Eens per week deze peeling verzacht de huid en verhoogt de vochtigheidsgraad.",
+            "remove_br_tag": false,
+            "tag": "p",
+            "fontf": "3",
+            "text_cl": "#222222",
+            "text_fs": 18,
+            "text_lh": 25,
+            "text_fw": 400,
+            "text_ls": 0,
+            "font_italic": false,
+            "text_shadow": false,
+            "text_mgb": 15,
+            "hidden_mobile": false,
+            "text_fs_mb": 16,
+            "text_lh_mb": 25,
+            "text_ls_mb": 0,
+            "text_mgb_mobile": 10
+          }
+        }
+      },
+      "block_order": [
+        "61e9ee25-4e5a-49ff-8a1f-277962b318f6",
+        "fa2e3ffc-4070-48d4-808e-58677aa41cf9",
+        "7e56b3f1-c765-4cc3-8874-39f1efc2b9e3",
+        "custom_text_nhxpRU",
+        "2aee18b3-aa1d-4ddc-81a3-b0292c7d8135",
+        "dcd58f2e-1eb1-4367-bfed-fe2d5135af97",
+        "6dbbedb0-0855-42b1-b777-6d9c11b1e055",
+        "97ffd93a-7e93-4322-bd65-fa86e8d015e4",
+        "dbdfc46e-95d6-4d6c-aac3-b5dd2d90ded5"
+      ],
+      "settings": {
+        "space_h_item": "30",
+        "space_v_item": "30",
+        "space_h_item_mb": "10",
+        "space_v_item_mb": "10",
+        "layout": "t4s-se-container",
+        "cl_bg": "",
+        "cl_bg_gradient": "",
+        "mg": "50px,,50px,",
+        "pd": "",
+        "mg_tb": "50px,,50px,",
+        "pd_tb": "",
+        "mg_mb": ",,30px,",
+        "pd_mb": "",
+        "use_cus_css": false,
+        "code_cus_css": ""
+      }
+    },
+    "top": {
+      "type": "top-collections",
+      "blocks": {
+        "69bbe0dd-0a50-42e8-986b-0d5e6c5cfa67": {
+          "type": "cat",
+          "settings": {
+            "collection": "default-3",
+            "icon": ""
+          }
+        },
+        "863873b6-012e-4a34-90e3-eead750fa3ce": {
+          "type": "cat",
+          "settings": {
+            "collection": "bag",
+            "icon": ""
+          }
+        },
+        "fc07bff9-6d08-423c-8802-9a03c34f3a31": {
+          "type": "cat",
+          "settings": {
+            "collection": "decor",
+            "icon": ""
+          }
+        },
+        "a286cc0b-0c90-4b1a-862c-a1136f283aac": {
+          "type": "cat",
+          "settings": {
+            "collection": "default-2",
+            "icon": ""
+          }
+        },
+        "23c84729-8fcb-488c-9541-00e283af6afe": {
+          "type": "cat",
+          "settings": {
+            "collection": "dress",
+            "icon": ""
+          }
+        },
+        "5f1d751a-fdac-43d4-ad9d-55da0c297244": {
+          "type": "cat",
+          "settings": {
+            "collection": "hats",
+            "icon": ""
+          }
+        },
+        "0f0e1f7c-788c-46c0-9fb4-1ec7ce88da01": {
+          "type": "cat",
+          "settings": {
+            "collection": "frontpage",
+            "icon": ""
+          }
+        },
+        "70189b51-5562-4924-b642-a1deba7741ee": {
+          "type": "cat",
+          "settings": {
+            "collection": "sale",
+            "icon": ""
+          }
+        },
+        "560f5822-3eeb-4070-a2cd-b5738881a4c1": {
+          "type": "cat",
+          "settings": {
+            "collection": "shoes",
+            "icon": ""
+          }
+        },
+        "be9b8b8f-6cac-47ab-b809-a2fe640a75a7": {
+          "type": "cat",
+          "settings": {
+            "collection": "women",
+            "icon": ""
+          }
+        }
+      },
+      "block_order": [
+        "69bbe0dd-0a50-42e8-986b-0d5e6c5cfa67",
+        "863873b6-012e-4a34-90e3-eead750fa3ce",
+        "fc07bff9-6d08-423c-8802-9a03c34f3a31",
+        "a286cc0b-0c90-4b1a-862c-a1136f283aac",
+        "23c84729-8fcb-488c-9541-00e283af6afe",
+        "5f1d751a-fdac-43d4-ad9d-55da0c297244",
+        "0f0e1f7c-788c-46c0-9fb4-1ec7ce88da01",
+        "70189b51-5562-4924-b642-a1deba7741ee",
+        "560f5822-3eeb-4070-a2cd-b5738881a4c1",
+        "be9b8b8f-6cac-47ab-b809-a2fe640a75a7"
+      ],
+      "disabled": true,
+      "settings": {
+        "show_top_collections": true,
+        "source": "1",
+        "menu": "main-menu",
+        "sort_collections": "alphabetical_reversed",
+        "box_border": "top",
+        "content_align": "center",
+        "hidden_mobile": false,
+        "space_item": 30,
+        "fontf": "inherit",
+        "text_cl": "#222222",
+        "text_cl_hover": "#56cfe1",
+        "text_fs": 14,
+        "text_lh": 45,
+        "text_fw": 400,
+        "text_ls": 0,
+        "font_italic": false,
+        "nav_btn": true,
+        "layout": "t4s-container-fluid",
+        "cl_bg": "",
+        "cl_bg_gradient": "",
+        "mg": "",
+        "pd": "",
+        "mg_tb": "",
+        "pd_tb": "",
+        "mg_mb": "",
+        "pd_mb": ""
+      }
+    },
+    "heading_template": {
+      "type": "heading-template",
+      "blocks": {
+        "a61b5459-0dd8-4796-a9c8-e3f1ee42dfb9": {
+          "type": "1",
+          "disabled": true,
+          "settings": {
+            "heading": "Page Heading",
+            "fontf": "inherit",
+            "text_cl": "#ffffff",
+            "text_fs": 20,
+            "text_lh": 0,
+            "text_fw": 400,
+            "text_ls": 0,
+            "font_italic": false,
+            "font_uppercase": false,
+            "text_shadow": false,
+            "text_mgb": 20,
+            "hidden_mobile": false,
+            "text_fs_mb": 20,
+            "text_lh_mb": 0,
+            "text_ls_mb": 0,
+            "text_mgb_mobile": 20
+          }
+        },
+        "e9f249a0-0a0f-4baf-9664-73babbd7bbe7": {
+          "type": "4",
+          "disabled": true,
+          "settings": {
+            "design_des": "show_all",
+            "length": 60,
+            "view_more": true,
+            "viewm_txt": "View more",
+            "fontf": "inherit",
+            "text_cl": "#ffffff",
+            "text_fs": 16,
+            "text_lh": 24,
+            "text_fw": 400,
+            "text_ls": 0,
+            "font_italic": false,
+            "font_uppercase": false,
+            "text_shadow": false,
+            "text_mgb": 20,
+            "hidden_mobile": false,
+            "text_fs_mb": 16,
+            "text_lh_mb": 0,
+            "text_ls_mb": 0,
+            "text_mgb_mobile": 10
+          }
+        }
+      },
+      "block_order": [
+        "a61b5459-0dd8-4796-a9c8-e3f1ee42dfb9",
+        "e9f249a0-0a0f-4baf-9664-73babbd7bbe7"
+      ],
+      "settings": {
+        "use_specify_image": false,
+        "parallax": true,
+        "color": "#000000",
+        "overlay": 54,
+        "padding": 100,
+        "paddingmb": 50,
+        "mg_b": 0,
+        "mg_bmb": 0,
+        "content_align": "t4s-text-center",
+        "bg_pos": "left center",
+        "bg_repeat": "inherit",
+        "bg_size": "cover",
+        "use_cus_css": false,
+        "code_cus_css": ".SectionID {\nbackground-color:red\n}"
+      }
+    },
+    "sidebar": {
+      "type": "sidebar-collection",
+      "blocks": {
+        "221aa22f-5c6c-40c9-9403-6d3cd2c23e93": {
+          "type": "filter",
+          "settings": {}
+        },
+        "c7bdf308-8019-4991-b58c-6d3e205a52eb": {
+          "type": "category",
+          "disabled": true,
+          "settings": {
+            "heading": "Product Categories",
+            "cat_source": "1",
+            "cat_link_list": "product-type",
+            "count": true
+          }
+        },
+        "9d37e80a-1eda-4a65-bb08-199e6a933a16": {
+          "type": "collection",
+          "disabled": true,
+          "settings": {
+            "heading": "Sale Products",
+            "collection": "frontpage",
+            "limit_pr": 3,
+            "image_ratio": "t4s_ratioadapt",
+            "image_size": "t4s_cover",
+            "image_position": "t4s_position_8"
+          }
+        },
+        "c090f36e-d6ef-4a2a-ab04-cc78211dadb7": {
+          "type": "image",
+          "settings": {
+            "heading": "",
+            "img_effect": "zoom",
+            "b_link": "",
+            "open_link": "_self",
+            "content_align": "center",
+            "date": "2023/12/26",
+            "cdt_des": "1",
+            "countdown_pos": "2",
+            "cdt_size": "small",
+            "box_bdr": 0,
+            "bd_width": 0,
+            "space_item": 10,
+            "number_cl": "#ffffff",
+            "text_cl": "#222222",
+            "border_cl": "#000000",
+            "bg_cl": "#000000"
+          }
+        },
+        "804b9f58-e89f-4cc5-8ad2-20c0681169c1": {
+          "type": "html",
+          "settings": {
+            "heading": "",
+            "html_content": ""
+          }
+        }
+      },
+      "block_order": [
+        "221aa22f-5c6c-40c9-9403-6d3cd2c23e93",
+        "c7bdf308-8019-4991-b58c-6d3e205a52eb",
+        "9d37e80a-1eda-4a65-bb08-199e6a933a16",
+        "c090f36e-d6ef-4a2a-ab04-cc78211dadb7",
+        "804b9f58-e89f-4cc5-8ad2-20c0681169c1"
+      ],
+      "settings": {
+        "enable_drawer": false,
+        "space": 50,
+        "size": "medium",
+        "br_style": "none",
+        "brcolor": "#222222",
+        "sidebar_bdr": 0,
+        "sidebar_pd": 15
+      }
+    },
+    "3e33116d-b3e3-49a0-a0ec-6874c49691e3": {
+      "type": "featured-product",
+      "blocks": {
+        "template--19361708933441__3e33116d-b3e3-49a0-a0ec-6874c49691e3-16857800230167fc49-0": {
+          "type": "title",
+          "settings": {
+            "txt_tr_pr": "none",
+            "fnt_df_pr": "1",
+            "size_pr": 16,
+            "fw_pr": 600,
+            "lh_pr": 0,
+            "ls_pr": 0,
+            "pr_title_color": "#222222",
+            "pr_title_color_hover": "#56cfe1"
+          }
+        },
+        "template--19361708933441__3e33116d-b3e3-49a0-a0ec-6874c49691e3-16857800230167fc49-1": {
+          "type": "price_review",
+          "settings": {
+            "price": "0",
+            "type_sale": "2",
+            "tax_ship": false,
+            "rating": true,
+            "review_liquid": "",
+            "size_price_pr": 22,
+            "fw_price_pr": 400,
+            "price_color": "#696969",
+            "price_sale_color": "#ec0101"
+          }
+        },
+        "template--19361708933441__3e33116d-b3e3-49a0-a0ec-6874c49691e3-16857800230167fc49-2": {
+          "type": "description",
+          "settings": {
+            "des": "2",
+            "text": "<p>{{ section.settings.product.metafields.custom.korte_omschrijving | metafield_tag }}</p>",
+            "length": 31
+          }
+        },
+        "template--19361708933441__3e33116d-b3e3-49a0-a0ec-6874c49691e3-16857800230167fc49-3": {
+          "type": "form",
+          "settings": {
+            "selector_mode": "block",
+            "color_mode": "color",
+            "enable_fit_ratio_img": false,
+            "color_size": "medium",
+            "show_qty": true,
+            "enable_wishlist": true,
+            "enable_compare": true,
+            "btn_atc_full": false,
+            "pr_btn_round": 40,
+            "ani": "none",
+            "time": 6,
+            "btn_txt": "3",
+            "btn_icon": false,
+            "button_style": "default",
+            "button_color": "dark",
+            "button_effect": "fade",
+            "wishlist_color": "#222222",
+            "wishlist_color_hover": "#56cfe1",
+            "wishlist_color_active": "#e81e1e",
+            "compare_color": "#222222",
+            "compare_color_hover": "#56cfe1",
+            "compare_color_active": "#222222",
+            "show_dynamic_checkout": false,
+            "btn_txt2": "3",
+            "button_color_payment": "dark",
+            "product_list": [],
+            "show_product_current": true,
+            "qty_val": "0",
+            "advance_label": "Choose style",
+            "advance_pr_list": []
+          }
+        },
+        "template--19361708933441__3e33116d-b3e3-49a0-a0ec-6874c49691e3-16857800230167fc49-4": {
+          "type": "size_delivery_ask",
+          "disabled": true,
+          "settings": {
+            "size_chart": "3",
+            "pos_sizeg": "1",
+            "sc_type": "1",
+            "page": "",
+            "size_ck": "",
+            "delivery": false,
+            "page_dr": "",
+            "ask": false,
+            "phone": true
+          }
+        },
+        "template--19361708933441__3e33116d-b3e3-49a0-a0ec-6874c49691e3-16857800230167fc49-5": {
+          "type": "meta",
+          "disabled": true,
+          "settings": {
+            "show_options": true,
+            "show_vendor": false,
+            "show_type": false,
+            "show_sku": true,
+            "show_barcode": false,
+            "show_available": true,
+            "show_category": true,
+            "show_tags": true
+          }
+        },
+        "template--19361708933441__3e33116d-b3e3-49a0-a0ec-6874c49691e3-16857800230167fc49-6": {
+          "type": "social",
+          "settings": {
+            "socials_align": "start",
+            "social_mode": "2",
+            "social_style": "3",
+            "social_size": "medium",
+            "bd_radius": 0,
+            "use_color_set": false,
+            "icon_cl": "#878787",
+            "bg_cl": "#222222",
+            "space_h_item": "5",
+            "space_v_item": "5",
+            "space_h_item_mb": "2",
+            "space_v_item_mb": "2"
+          }
+        }
+      },
+      "block_order": [
+        "template--19361708933441__3e33116d-b3e3-49a0-a0ec-6874c49691e3-16857800230167fc49-0",
+        "template--19361708933441__3e33116d-b3e3-49a0-a0ec-6874c49691e3-16857800230167fc49-1",
+        "template--19361708933441__3e33116d-b3e3-49a0-a0ec-6874c49691e3-16857800230167fc49-2",
+        "template--19361708933441__3e33116d-b3e3-49a0-a0ec-6874c49691e3-16857800230167fc49-3",
+        "template--19361708933441__3e33116d-b3e3-49a0-a0ec-6874c49691e3-16857800230167fc49-4",
+        "template--19361708933441__3e33116d-b3e3-49a0-a0ec-6874c49691e3-16857800230167fc49-5",
+        "template--19361708933441__3e33116d-b3e3-49a0-a0ec-6874c49691e3-16857800230167fc49-6"
+      ],
+      "settings": {
+        "product": "set-for-dry-skin",
+        "enable_sticky_info": false,
+        "media_layout": "thumbnails_bottom",
+        "media_size": "medium",
+        "thumb_lr_size": "medium",
+        "image_ratio": "ratioadapt",
+        "image_size": "cover",
+        "image_position": "8",
+        "main_click": "zoom",
+        "zoom_tp": "external",
+        "enable_zoom_icon": true,
+        "enable_zoom_click_mb": true,
+        "enable_video_looping": false,
+        "enable_video_muting": true,
+        "enable_video_autoplaying": true,
+        "eff": "fade",
+        "nav_btn": true,
+        "btn_vi": "always",
+        "btn_owl": "outline",
+        "btn_shape": "round",
+        "btn_cl": "dark",
+        "btn_size": "small",
+        "btn_hidden_mobile": false,
+        "nav_dot": false,
+        "dot_owl": "default",
+        "dots_cl": "dark",
+        "dots_round": true,
+        "dots_space": 10,
+        "dots_hidden_mobile": false,
+        "layout": "t4s-container-wrap",
+        "cl_bg": "",
+        "cl_bg_gradient": "",
+        "mg": ",,50px,",
+        "pd": "",
+        "mg_tb": "",
+        "pd_tb": "",
+        "mg_mb": ",,30px,",
+        "pd_mb": ""
+      }
+    },
+    "0c83ad8e-339e-49c2-8c94-59a6202e0e04": {
+      "type": "top_heading",
+      "blocks": {
+        "3384ff49-6682-4fc5-a73a-f3253f344a2b": {
+          "type": "bl_heading",
+          "settings": {
+            "top_heading": "BEKIJK HIER ALLE PRODUCTEN VOOR DE DROGE HUID"
+          }
+        },
+        "c6641193-d578-42ae-beb0-54784ffee6fc": {
+          "type": "bl_subheading",
+          "disabled": true,
+          "settings": {
+            "top_subheading": "Best theme shopify"
+          }
+        }
+      },
+      "block_order": [
+        "3384ff49-6682-4fc5-a73a-f3253f344a2b",
+        "c6641193-d578-42ae-beb0-54784ffee6fc"
+      ],
+      "settings": {
+        "design_heading": "1",
+        "heading_align": "t4s-text-center",
+        "layout": "t4s-container-wrap",
+        "cl_bg": "",
+        "cl_bg_gradient": "",
+        "mg": ",,50px,",
+        "pd": "",
+        "mg_tb": "",
+        "pd_tb": "",
+        "mg_mb": ",,30px,",
+        "pd_mb": "",
+        "use_cus_css": false,
+        "code_cus_css": ""
+      }
+    },
+    "main": {
+      "type": "main-collection",
+      "blocks": {
+        "filter_id": {
+          "type": "filter",
+          "disabled": true,
+          "settings": {
+            "style_filters": "sidebar"
+          }
+        },
+        "740319a4-8e19-4c70-b8a9-ada7cf235cbc": {
+          "type": "layout",
+          "disabled": true,
+          "settings": {}
+        },
+        "30594d23-d644-4653-9545-9ff769d2e6ab": {
+          "type": "sortby",
+          "settings": {}
+        }
+      },
+      "block_order": [
+        "filter_id",
+        "740319a4-8e19-4c70-b8a9-ada7cf235cbc",
+        "30594d23-d644-4653-9545-9ff769d2e6ab"
+      ],
+      "settings": {
+        "show_desc": false,
+        "position_desc": "2",
+        "product_des": "1",
+        "show_vendor": false,
+        "use_cdt": false,
+        "image_ratio": "ratio1_1",
+        "image_size": "cover",
+        "image_position": "8",
+        "content_align": "default",
+        "limit": 12,
+        "enable_listing": true,
+        "enable_listing_default": false,
+        "col_dk": "4",
+        "col_tb": "2",
+        "col_mb": "2",
+        "space_h_item": "30",
+        "space_v_item": "30",
+        "space_h_item_mb": "10",
+        "space_v_item_mb": "10",
+        "layout_des": "1",
+        "use_pagination": "default",
+        "enable_bar_lm": true,
+        "btn_icon": false,
+        "button_style": "outline",
+        "btns_size": "large",
+        "btns_cl": "primary",
+        "button_effect": "sweep-to-right",
+        "btn_pos": "t4s-text-center",
+        "type_filters": "facets_tags",
+        "layout": "t4s-container-wrap",
+        "cl_bg": "",
+        "cl_bg_gradient": "",
+        "mg": ",,50px,",
+        "pd": "",
+        "mg_tb": "",
+        "pd_tb": "",
+        "mg_mb": ",,30px,",
+        "pd_mb": ""
+      }
+    }
+  },
+  "order": [
+    "cbbace19-cb12-472f-a50f-67d33e31ad78",
+    "2ba3b44d-ed46-4b8e-8bca-7bddc0f2d3e9",
+    "a05303ec-d477-4dc8-9151-57a2d6001aa1",
+    "2e277996-b655-484e-92eb-861aace476fb",
+    "105567be-00f9-4aa1-a51c-5072455f70c7",
+    "f5a23743-e137-4d9f-b8cb-cca881db2fae",
+    "b21077ef-d698-4f69-a006-07edf0d528fd",
+    "53e4557f-78d0-42c8-bed8-e58bba7bf429",
+    "top",
+    "heading_template",
+    "sidebar",
+    "3e33116d-b3e3-49a0-a0ec-6874c49691e3",
+    "0c83ad8e-339e-49c2-8c94-59a6202e0e04",
+    "main"
+  ]
+}
