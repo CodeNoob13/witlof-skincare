@@ -3,6 +3,7 @@
   t4option0_0 | alt text
 {%- endcomment -%}
 
+
 {%- liquid
   assign isProductAvailable = product.available
   if isProductAvailable and settings.variant_remove == '2'
@@ -484,7 +485,16 @@
                 </div>
               </div>
           {%- endcase -%}
-                <h1>Hello</h1>
+        {{ 'image-logo.css' | asset_url | stylesheet_tag }}
+          
+                <div class="image-logo-container">
+                  <img src="{{ 'cosmopoliton.png' | asset_url }}" alt="cosmopoliton logo" width="120px">
+                  <img src="{{ 'grazia.png' | asset_url }}" alt="Grazia logo" width="120px">
+                  <img src="{{ 'elle.png' | asset_url }}" alt="elle logo" width="120px">
+                  <img src="{{ 'linda.png' | asset_url }}" alt="linda logo" width="120px">
+
+                </div>
+
           
         </div>
         <div data-t4s-zoom-info class="t4s-{{ class_info }} t4s-col-12 t4s-col-item t4s-product__info-wrapper t4s-pr">
