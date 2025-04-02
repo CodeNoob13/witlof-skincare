@@ -2,7 +2,7 @@
   display: flex;
   max-width: 480px;
   margin-left: auto;
-  padding: 20px 0;
+  padding: 20px 5px;
   margin-top: 10px;
   justify-content: space-between;
 }
@@ -27,21 +27,14 @@
     max-width: 480px;
     margin-left: auto;
     padding: 10px 0;
-    margin-top: 5px;
   }
 }
 
 @media screen and (max-width: 1020px) {
-  .image-logo-container img {
-    object-fit: contain;
-    height: 15px;
-    width: 80px;
-    /* gap: 20px; */
-  }
-
   .image-logo-container {
     margin: auto;
-    padding: 5px 0;
-    margin-top: 5px;
+    padding: 5px 5px;
+    margin-top: 15px;
+    max-width: 100%;
   }
 }
