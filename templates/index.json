@@ -55,6 +55,7 @@
         },
         "image_parent_39FYeC": {
           "type": "image_parent",
+          "disabled": true,
           "settings": {
             "image": "shopify://shop_images/80A3070_web_3c8f598e-30cd-4aba-a72e-b8e1562afa56.jpg",
             "image_mb": "shopify://shop_images/80A3070_web_for_mobile.jpg",
@@ -95,6 +96,7 @@
         },
         "custom_text_ejq7QA": {
           "type": "custom_text",
+          "disabled": true,
           "settings": {
             "text": "Tinted Day Cream  <br>  SPF30\n <br>",
             "remove_br_tag": false,
@@ -118,6 +120,7 @@
         },
         "custom_text_ACxWyd": {
           "type": "custom_text",
+          "disabled": true,
           "settings": {
             "text": "🌿Beschermt én verzorgt <br>\n🌿Licht dekkend<br>\n🌿Biedt UVA- en UVB-bescherming <br>",
             "remove_br_tag": false,
@@ -165,6 +168,7 @@
         },
         "custom_button_gLjDnG": {
           "type": "custom_button",
+          "disabled": true,
           "settings": {
             "button_text": "SHOP NU",
             "button_link": "shopify://products/tinted-day-cream-spf30-50ml",
@@ -196,9 +200,9 @@
         },
         "image_parent_zVdxYw": {
           "type": "image_parent",
-          "disabled": true,
           "settings": {
-            "image": "shopify://shop_images/Gift_set_copy.jpg",
+            "image": "shopify://shop_images/80A3712_web.jpg",
+            "image_mb": "shopify://shop_images/80A3712_web.jpg",
             "image_position": "8",
             "cl_img": "",
             "link_img1": "",
@@ -207,10 +211,10 @@
             "text_align": "start",
             "text_align_mb": "start",
             "content_width": "auto",
-            "cv_pos": 49,
+            "cv_pos": 19,
             "ch_pos": 9,
-            "cv_pos_mb": 50,
-            "ch_pos_mb": 19,
+            "cv_pos_mb": 40,
+            "ch_pos_mb": 5,
             "bg_overlay": "#c5e6f0",
             "bg_opacity": 20,
             "bg_content_cl": "#ffffff",
@@ -236,40 +240,61 @@
         },
         "96e31a4a-a759-47be-b9c3-1b62cc7f5a3a": {
           "type": "custom_text",
-          "disabled": true,
           "settings": {
-            "text": "KERST <br>\n SALE <br>",
+            "text": "1 + 1<br>\n GRATIS <br>",
             "remove_br_tag": false,
             "tag": "p",
             "fontf": "inherit",
-            "text_cl": "#ffffff",
-            "text_fs": 85,
+            "text_cl": "#04273a",
+            "text_fs": 77,
             "text_lh": 89,
             "text_fw": 500,
-            "text_ls": 0,
-            "text_mgb": 40,
+            "text_ls": 1,
+            "text_mgb": 20,
             "font_italic": false,
             "text_shadow": false,
             "hidden_mobile": false,
-            "text_fs_mb": 42,
-            "text_lh_mb": 42,
-            "text_ls_mb": 5.4,
+            "text_fs_mb": 35,
+            "text_lh_mb": 30,
+            "text_ls_mb": 3,
             "text_mgb_mobile": 10,
             "animation": "fadeInUp"
           }
         },
+        "custom_text_AjMftb": {
+          "type": "custom_text",
+          "settings": {
+            "text": "Op alle <b><span style=\"color: #ED7377;\">zon</span></b>producten",
+            "remove_br_tag": false,
+            "tag": "p",
+            "fontf": "inherit",
+            "text_cl": "#04273a",
+            "text_fs": 49,
+            "text_lh": 0,
+            "text_fw": 500,
+            "text_ls": 0,
+            "text_mgb": 20,
+            "font_italic": false,
+            "text_shadow": false,
+            "hidden_mobile": false,
+            "text_fs_mb": 16,
+            "text_lh_mb": 0,
+            "text_ls_mb": 0,
+            "text_mgb_mobile": 10,
+            "animation": "none"
+          }
+        },
         "a0353df7-5a4a-4331-b4a9-09ec0b341b4e": {
           "type": "custom_button",
-          "disabled": true,
           "settings": {
-            "button_text": "Lees meer",
-            "button_link": "https://witlofskincare.com/nl/blogs/news/waarom-hyaluronzuur-zo-fantastisch-is",
+            "button_text": "SHOP NU",
+            "button_link": "https://witlofskincare.nl/collections/zonnebescherming?view=ecom-pre-summer-11-sale-zonproduct",
             "target_link": "_self",
             "fontf": "inherit",
             "button_icon_w": 0,
             "button_style": "default",
             "button_effect": "sweep-to-top",
-            "pri_cl": "#c5e6f0",
+            "pri_cl": "#ed7377",
             "second_cl": "#ffffff",
             "pri_cl_hover": "#2b818f",
             "second_cl_hover": "#ffffff",
@@ -277,16 +302,16 @@
             "fwbutton": 600,
             "button_ls": 0,
             "button_mh": 40,
-            "button_bdr": 0,
-            "button_pd_lr": 32,
+            "button_bdr": 60,
+            "button_pd_lr": 33,
             "button_mgb": 0,
             "hidden_mobile": false,
             "button_icon_w_mb": 0,
             "fsbutton_mb": 12,
             "button_mh_mb": 36,
-            "button_pd_lr_mb": 22,
+            "button_pd_lr_mb": 5,
             "button_ls_mb": 0,
-            "button_mgb_mb": 0,
+            "button_mgb_mb": -1,
             "animation": "fadeInRight"
           }
         },
@@ -743,6 +768,7 @@
         },
         "image_parent_pRrbx3": {
           "type": "image_parent",
+          "disabled": true,
           "settings": {
             "image": "shopify://shop_images/try_and_travel_banner_new.jpg",
             "image_mb": "shopify://shop_images/2022.10.06_Witlof_-_Product_en_Beauty9094_small_fdedb95b-f1e8-49cc-bb53-69026bc933f7.jpg",
@@ -783,6 +809,7 @@
         },
         "custom_text_WkegGN": {
           "type": "custom_text",
+          "disabled": true,
           "settings": {
             "text": "STARTER SETS",
             "remove_br_tag": false,
@@ -806,6 +833,7 @@
         },
         "custom_text_b7NB9H": {
           "type": "custom_text",
+          "disabled": true,
           "settings": {
             "text": "De perfecte manier om het Witlof Skincare te beginnen.",
             "remove_br_tag": false,
@@ -829,6 +857,7 @@
         },
         "custom_text_gYb3XY": {
           "type": "custom_text",
+          "disabled": true,
           "settings": {
             "text": "NU MET <br> 25% KORTING",
             "remove_br_tag": false,
@@ -852,6 +881,7 @@
         },
         "custom_button_rT3cEc": {
           "type": "custom_button",
+          "disabled": true,
           "settings": {
             "button_text": "SHOP NU",
             "button_link": "shopify://collections/starter-kits",
@@ -1358,6 +1388,7 @@
         "custom_button_gLjDnG",
         "image_parent_zVdxYw",
         "96e31a4a-a759-47be-b9c3-1b62cc7f5a3a",
+        "custom_text_AjMftb",
         "a0353df7-5a4a-4331-b4a9-09ec0b341b4e",
         "custom_text_UtKeCY",
         "36300f87-bb05-45e8-8c45-a63e4098c000",
@@ -1922,7 +1953,7 @@
             "col_tb": "6",
             "layout_des": "carousel",
             "post_mobile": "default",
-            "image_ratio": "ratio1_1",
+            "image_ratio": "ratioadapt",
             "image_size": "cover",
             "image_position": "8",
             "loop": true,
@@ -1946,8 +1977,8 @@
         "template--19223178084673__511606e8-2128-4bad-a0f7-2fa4dce418fb-1684920522fea79db6-1": {
           "type": "bl_text",
           "settings": {
-            "col_dk": "6",
-            "col_tb": "6",
+            "col_dk": "5",
+            "col_tb": "5",
             "text_size": "30,15",
             "txt_align": "center",
             "sub_heading": "",
@@ -2021,10 +2052,10 @@
         "product_des": "7",
         "show_vendor": false,
         "use_cdt": false,
-        "image_ratio": "ratio1_1",
-        "image_size": "contain",
+        "image_ratio": "rationt",
+        "image_size": "cover",
         "image_position": "8",
-        "content_align": "center",
+        "content_align": "default",
         "limit": 8,
         "col_dk": "4",
         "col_tb": "4",
@@ -4072,7 +4103,7 @@
         "design_heading": "1",
         "heading_align": "t4s-text-center",
         "top_heading": "NATUURLIJKE SCHOONHEID BLOGS",
-        "bt_lb": "Meer blogs",
+        "bt_lb": "Naar alle blogs",
         "icon_heading": "gem",
         "top_subheading": "Over ingrediënten, do’s en dont’s in huidverzorging en essentiële skincare tips",
         "tophead_mb": 30,
@@ -4104,9 +4135,9 @@
         "layout_des": "2",
         "loop": true,
         "au_time": 3,
-        "au_hover": false,
+        "au_hover": true,
         "nav_btn": true,
-        "btn_vi": "always",
+        "btn_vi": "hover",
         "btn_owl": "outline",
         "btn_shape": "round",
         "btn_cl": "dark",

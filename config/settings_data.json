@@ -495,10 +495,9 @@
           },
           "announcement_mDtcGP": {
             "type": "announcement",
-            "disabled": true,
             "settings": {
-              "link": "shopify://collections/starter-kits",
-              "content": "<p><strong>🩷</strong> <strong>1+1 GRATIS </strong>OP<strong> </strong>DE<strong> STARTER KITS. </strong>Voeg 2 STARTER KITS aan je mandje toe. Gebruik code <strong>'HEART' </strong>bij de checkout. Krijg er een gratis!</p>",
+              "link": "https://witlofskincare.nl/collections/zonnebescherming?view=ecom-pre-summer-11-sale-zonproduct",
+              "content": "<p>🌞 <strong>1+1 GRATIS </strong>OP<strong> </strong>DE<strong> ZONPRODUCTEN!  </strong>Voeg 1 product aan je mandje toe en krijg de 2e er <strong>GRATIS </strong>bij! </p>",
               "adding_border": false,
               "countdown": "2025/02/17",
               "txt_day": "days",
@@ -519,6 +518,7 @@
           },
           "06da85dc-6afd-4d72-ad0c-e4d2d25bc7dd": {
             "type": "announcement",
+            "disabled": true,
             "settings": {
               "link": "shopify://pages/store-locator",
               "content": "<p><strong>Ook verkrijgbaar bij</strong> </p><p>Holland & Barrett, Etos en onafhankelijke verkooppunten en salons.</p>",
@@ -624,7 +624,7 @@
           "height": 47,
           "fontsize": 14,
           "cl": "#ffffff",
-          "bg": "#5f8ac7",
+          "bg": "#ed7377",
           "bg_op": 89,
           "close": "0",
           "cl_btn": "#ffffff",
@@ -1551,10 +1551,10 @@
           "catpr_8iMEX9": {
             "type": "catpr",
             "settings": {
-              "title": "<b><span style=\"color: #ED7377;\">ZONPRODUCTEN</span></b>",
-              "url": "shopify://collections/zonnebescherming",
-              "lb": "",
-              "lb_cl": "",
+              "title": "<b><span style=\"color: #ED7377;\">1+ 1 GRATIS op ZONPRODUCTEN</span></b>",
+              "url": "https://witlofskincare.nl/collections/zonnebescherming?view=ecom-pre-summer-11-sale-zonproduct",
+              "lb": "SALE!",
+              "lb_cl": "#ed7377",
               "icons_op": "2",
               "icon": "las la-sun",
               "cat1": "",
@@ -1607,19 +1607,6 @@
               "url24": "",
               "cat25": "",
               "url25": ""
-            }
-          },
-          "menu_kw6Ygx": {
-            "type": "menu",
-            "settings": {
-              "title": "Shop Starter Kits",
-              "url": "shopify://collections/starter-kits",
-              "open_link": "_self",
-              "menu": "",
-              "lb": "-25%",
-              "lb_cl": "#2b818f",
-              "icons_op": "2",
-              "icon": ""
             }
           },
           "c2ebecad-0bdd-4c7a-806b-755955862f41": {
@@ -1698,6 +1685,19 @@
               "menu": "sets",
               "lb": "",
               "lb_cl": "",
+              "icons_op": "2",
+              "icon": ""
+            }
+          },
+          "menu_kw6Ygx": {
+            "type": "menu",
+            "settings": {
+              "title": "Shop Starter Kits",
+              "url": "shopify://collections/starter-kits",
+              "open_link": "_self",
+              "menu": "",
+              "lb": "-25%",
+              "lb_cl": "#2b818f",
               "icons_op": "2",
               "icon": ""
             }
@@ -1865,13 +1865,13 @@
         "block_order": [
           "menu_XdCXRy",
           "catpr_8iMEX9",
-          "menu_kw6Ygx",
           "c2ebecad-0bdd-4c7a-806b-755955862f41",
           "5efaec12-d185-4718-b159-37d79cc7fdf4",
           "789d1e04-4c2c-4dda-b425-0b1dc3300eb4",
           "menu_cmiMmy",
           "menu_DGWpAR",
           "ef710ec3-5c73-4e9a-badd-f1d526aedf99",
+          "menu_kw6Ygx",
           "menu_ah66Bc",
           "58800ed8-befe-449a-b8f8-ea86620bef6f",
           "mb_nav-2",
@@ -1991,6 +1991,7 @@
           },
           "mini_cart-3": {
             "type": "btnc",
+            "disabled": true,
             "settings": {
               "btn_icon": false,
               "button_style": "default",
@@ -2821,8 +2822,8 @@
           "base_hKypLz": {
             "type": "base",
             "settings": {
-              "title": "<b><span style=\"color: #ED7377;\">ZONPRODUCTEN</span></b>",
-              "url": "shopify://collections/zonnebescherming",
+              "title": "<b><span style=\"color: #ED7377;\">1+1 GRATIS op ZONPRODUCTEN</span></b>",
+              "url": "https://witlofskincare.nl/collections/zonnebescherming?view=ecom-pre-summer-11-sale-zonproduct",
               "open_link": "_self",
               "icon": "",
               "cus_cl": false,
@@ -2946,7 +2947,7 @@
           "hover_icon": "2",
           "show_search": true,
           "show_acc": true,
-          "show_wis": false,
+          "show_wis": true,
           "cart_des": "1",
           "bg_hc": "#000000",
           "cl_hc": "#ffffff",
@@ -3275,11 +3276,6 @@
         "disabled": false,
         "settings": {}
       },
-      "yoast-seo-metatags": {
-        "type": "shopify://apps/yoast-seo-seo-for-everyone/blocks/metatags/7c777011-bc88-4743-a24e-64336e1e5b46",
-        "disabled": false,
-        "settings": {}
-      },
       "14060646107696862457": {
         "type": "shopify://apps/judge-me-reviews/blocks/judgeme_core/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
         "disabled": false,
@@ -3340,6 +3336,11 @@
           "style_colors_cta_button": "#000",
           "style_colors_text": "#000"
         }
+      },
+      "yoast-seo-metatags": {
+        "type": "shopify://apps/yoast-seo-seo-for-everyone/blocks/metatags/7c777011-bc88-4743-a24e-64336e1e5b46",
+        "disabled": false,
+        "settings": {}
       }
     }
   }
