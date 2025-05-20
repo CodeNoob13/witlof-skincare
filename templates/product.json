@@ -422,7 +422,7 @@
       ],
       "name": "Witlof Benefits",
       "settings": {
-        "benefits_title": "<h2>Beautiful Witlof Benefits</h2>",
+        "benefits_title": "<h2><em>Wat zijn de</em></h2><h2>VOORDELEN?</h2>",
         "benefits_image": "shopify://shop_images/woman_witlof.jpg"
       }
     },
