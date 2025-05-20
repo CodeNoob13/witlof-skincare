@@ -380,36 +380,43 @@
         "benefit_9wqPCt": {
           "type": "benefit",
           "settings": {
-            "benefit_title": "Suitable for your skin color",
-            "benefit_description": "The Changing Foundation seamlessly adapts to your uniqueskin tone upon application. Designed for fair to medium skintones, it provides perfect, natural coverage that enhancesyour complexion."
+            "benefit_title": "100% natuurlijk is",
+            "benefit_description": "Witlof Skincare gebruikt alleen 100% natuurlijke ingrediënten, zonder synthetische toevoegingen. Zacht voor je huid én goed voor de planeet."
           }
         },
         "benefit_YVmHcN": {
           "type": "benefit",
           "settings": {
-            "benefit_title": "Hides imperfections for a natural look",
-            "benefit_description": "This lightweight foundation effectively conceals redness andimperfections, allowing your natural beauty to shinethrough. Experience a radiant glow like never before."
+            "benefit_title": "100% vegan is",
+            "benefit_description": "Witlof Skincare gebruikt alleen 100% natuurlijke ingrediënten, zonder synthetische toevoegingen. Zacht voor je huid én goed voor de planeet."
           }
         },
         "benefit_MQPPg6": {
           "type": "benefit",
           "settings": {
-            "benefit_title": "Create the best result with a brush",
-            "benefit_description": "For optimal results, apply the foundation with a brush. Thistechnique ensures that the pigments penetrate deeply intothe skin, preventing any white cast for a flawless finish."
+            "benefit_title": "Geen microplastics bevat",
+            "benefit_description": "Vrij van microplastics. Witlof Skincare kiest voor schone formules die je huid én het milieu niet belasten."
           }
         },
         "benefit_3mw9Lt": {
           "type": "benefit",
           "settings": {
-            "benefit_title": "Radiant and even skin all day long",
-            "benefit_description": "The Changing Foundation offers long-lasting wear, stayingin place for up to 16 hours. With its natural, radiant finish,you can start each day looking and feeling your best."
+            "benefit_title": "Boordevol effectieve ingrediënten zit",
+            "benefit_description": "Elk product zit vol actieve, bewezen werkzame ingrediënten uit de natuur die je huid zichtbaar verbeteren en gezond houden."
           }
         },
         "benefit_9rzqwH": {
           "type": "benefit",
           "settings": {
-            "benefit_title": "No clogged pores",
-            "benefit_description": "The Changing Foundation feels light on the skin. Itsmoisturizing and nourishing ingredients help maintain afresh appearance without clogging pores, making it ideal foreveryday wear."
+            "benefit_title": "Heerlijk ruikt",
+            "benefit_description": "Elk product zit vol actieve, bewezen werkzame ingrediënten uit de natuur die je huid zichtbaar verbeteren en gezond houden."
+          }
+        },
+        "benefit_ntVBt3": {
+          "type": "benefit",
+          "settings": {
+            "benefit_title": "Je huidt balanceert, voedt en laat stralen!",
+            "benefit_description": "Onze formules herstellen de balans, voeden intens en geven je huid een natuurlijke glow, elke dag opnieuw."
           }
         }
       },
@@ -418,11 +425,12 @@
         "benefit_YVmHcN",
         "benefit_MQPPg6",
         "benefit_3mw9Lt",
-        "benefit_9rzqwH"
+        "benefit_9rzqwH",
+        "benefit_ntVBt3"
       ],
       "name": "Witlof Benefits",
       "settings": {
-        "benefits_title": "<h2><em>Wat zijn de</em></h2><h2>VOORDELEN?</h2>",
+        "benefits_title": "<h3>Wist je dat Witlof Skincare...<br/></h3>",
         "benefits_image": "shopify://shop_images/woman_witlof.jpg"
       }
     },

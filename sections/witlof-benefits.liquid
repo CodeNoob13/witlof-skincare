@@ -49,7 +49,7 @@
 }
 {% endschema %}
 
-<div class="witlof-benefits">
+<div class="witlof-benefits" data-section-id="{{ section.id }}" data-section-type="witlof-benefits">
     <div class="benefits-container">
 
         <div class="benefits-header">
@@ -58,7 +58,7 @@
         
         <div class="benefits">
             {% for block in section.blocks %}
-                <div class="benefit">
+                <div class="benefit" {{ block.shopify_attributes }}>
                     <h3>{{ block.settings.benefit_title }}</h3>
                     <p>{{ block.settings.benefit_description }}</p>
                 </div>
