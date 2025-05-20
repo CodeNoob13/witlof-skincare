@@ -1,6 +1,3 @@
-{{ 'image-logo.css' | asset_url | stylesheet_tag }}
-
-
 {%- comment -%}
   Color_pink | alt text
   t4option0_0 | alt text
@@ -487,7 +484,7 @@
                 </div>
               </div>
           {%- endcase -%}
-          {% comment %} Social proof logo's {% endcomment %}
+     {{ 'image-logo.css' | asset_url | stylesheet_tag }}
           
                 <div class="image-logo-container">
                   <img src="{{ 'cosmopoliton.png' | asset_url }}" alt="cosmopoliton logo" width="120px">

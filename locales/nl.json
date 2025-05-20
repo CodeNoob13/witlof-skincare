@@ -717,5 +717,12 @@
         "blog_excerpt": "Uw winkel heeft nog geen blogberichten gepubliceerd. Een blog kan worden gebruikt om te praten over nieuwe productlanceringen, tips of ander nieuws dat u wilt delen met uw klanten. U kunt de ecommerce-blog van Shopify bekijken voor inspiratie en advies voor uw eigen winkel en blog.",
         "blog_author": "Auteur naam",
         "no_content": "Dit gedeelte bevat momenteel geen inhoud. Voeg inhoud toe aan dit gedeelte via de zijbalk."
+    },
+    "customer_accounts": {
+        "order_details": {
+            "returns": {
+                "return_and_refund_modal_header": "Retourbeleid"
+            }
+        }
     }
 }

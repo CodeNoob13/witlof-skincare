@@ -11,6 +11,7 @@
   "sections": {
     "breadcrumb": {
       "type": "brc-nav-product",
+      "disabled": true,
       "settings": {
         "back_next_pr": true,
         "cl_bg": "#f6f6f6",
@@ -156,9 +157,9 @@
             "enable_fit_ratio_img": false,
             "color_size": "medium",
             "show_qty": true,
-            "enable_wishlist": true,
+            "enable_wishlist": false,
             "enable_compare": false,
-            "btn_atc_full": false,
+            "btn_atc_full": true,
             "pr_btn_round": 40,
             "ani": "none",
             "time": 6,
@@ -226,11 +227,12 @@
         "95d4f334-8ea7-4cd2-b609-2373b1e848b8": {
           "type": "tab_des",
           "settings": {
-            "title": "Description"
+            "title": "Hoe werkt het?"
           }
         },
         "e36839f5-0847-44e2-97d3-2885597bd1ff": {
           "type": "tab_add",
+          "disabled": true,
           "settings": {
             "title": "Additional Information"
           }
@@ -245,6 +247,7 @@
         },
         "56e67368-7424-4d73-8f14-dacdda4c59be": {
           "type": "tab_rivui",
+          "disabled": true,
           "settings": {
             "title": "Reviews",
             "review_liquid": ""
@@ -369,6 +372,58 @@
         "enable_select": true,
         "ani": "none",
         "time": 6
+      }
+    },
+    "witlof_benefits_MD4Ajh": {
+      "type": "witlof-benefits",
+      "blocks": {
+        "benefit_9wqPCt": {
+          "type": "benefit",
+          "settings": {
+            "benefit_title": "Suitable for your skin color",
+            "benefit_description": "The Changing Foundation seamlessly adapts to your uniqueskin tone upon application. Designed for fair to medium skintones, it provides perfect, natural coverage that enhancesyour complexion."
+          }
+        },
+        "benefit_YVmHcN": {
+          "type": "benefit",
+          "settings": {
+            "benefit_title": "Hides imperfections for a natural look",
+            "benefit_description": "This lightweight foundation effectively conceals redness andimperfections, allowing your natural beauty to shinethrough. Experience a radiant glow like never before."
+          }
+        },
+        "benefit_MQPPg6": {
+          "type": "benefit",
+          "settings": {
+            "benefit_title": "Create the best result with a brush",
+            "benefit_description": "For optimal results, apply the foundation with a brush. Thistechnique ensures that the pigments penetrate deeply intothe skin, preventing any white cast for a flawless finish."
+          }
+        },
+        "benefit_3mw9Lt": {
+          "type": "benefit",
+          "settings": {
+            "benefit_title": "Radiant and even skin all day long",
+            "benefit_description": "The Changing Foundation offers long-lasting wear, stayingin place for up to 16 hours. With its natural, radiant finish,you can start each day looking and feeling your best."
+          }
+        },
+        "benefit_9rzqwH": {
+          "type": "benefit",
+          "settings": {
+            "benefit_title": "No clogged pores",
+            "benefit_description": "The Changing Foundation feels light on the skin. Itsmoisturizing and nourishing ingredients help maintain afresh appearance without clogging pores, making it ideal foreveryday wear."
+          }
+        }
+      },
+      "block_order": [
+        "benefit_9wqPCt",
+        "benefit_YVmHcN",
+        "benefit_MQPPg6",
+        "benefit_3mw9Lt",
+        "benefit_9rzqwH"
+      ],
+      "name": "Witlof Benefits",
+      "settings": {
+        "benefits_title": "<h2>Beautiful Witlof Benefits</h2>",
+        "benefits_image": "shopify://shop_images/woman_witlof.jpg"
       }
     },
     "logo_list_MjJM4b": {
@@ -692,12 +747,14 @@
       "blocks": {
         "judge_me_reviews_review_widget_8VnwmY": {
           "type": "shopify://apps/judge-me-reviews/blocks/review_widget/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
+          "disabled": true,
           "settings": {}
         }
       },
       "block_order": [
         "judge_me_reviews_review_widget_8VnwmY"
       ],
+      "disabled": true,
       "settings": {
         "include_margins": true
       }
@@ -708,6 +765,7 @@
     "custom_html_8XzFiw",
     "countdown_zd6dLT",
     "main",
+    "witlof_benefits_MD4Ajh",
     "logo_list_MjJM4b",
     "sidebar",
     "product-recommendations",

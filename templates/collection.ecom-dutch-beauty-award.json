@@ -10,12 +10,12 @@
 {
   "layout": "theme",
   "sections": {
-    "ecom-pre-summer-11-sale-zonproduct-collection": {
-      "type": "ecom-pre-summer-11-sale-zonproduct-collection",
+    "ecom-dutch-beauty-award-collection": {
+      "type": "ecom-dutch-beauty-award-collection",
       "settings": {}
     }
   },
   "order": [
-    "ecom-pre-summer-11-sale-zonproduct-collection"
+    "ecom-dutch-beauty-award-collection"
   ]
 }

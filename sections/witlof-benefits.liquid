@@ -1,0 +1,121 @@
+{% schema %}
+{
+  "name": "Witlof Benefits",
+  "class": "witlof-benefits",
+  
+  "settings": [
+    {
+      "type": "richtext",
+      "id": "benefits_title",
+      "label": "Benefits Title",
+      "default": "<h2>Beautiful Witlof Benefits</h2>"
+    },
+    {
+    "type": "header",
+    "content": "Benefits Header",
+    },
+    {
+      "type": "image_picker",
+      "id": "benefits_image",
+      "label": "Benefits Image"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "benefit",
+      "name": "Benefit",
+      "settings": [
+        {
+          "type": "text",
+          "id": "benefit_title",
+          "label": "Benefit Title",
+          "default": "<h3>Benefit Title</h3>"
+        },
+        {
+          "type": "text",
+          "id": "benefit_description",
+          "label": "Benefit Description",
+          "default": "Description of the benefit."
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Witlof Benefits",
+      "category": "Custom"
+    }
+  ]
+}
+{% endschema %}
+
+<div class="witlof-benefits">
+    <div class="benefits-container">
+
+        <div class="benefits-header">
+            <h2>{{ section.settings.benefits_title }}</h2>
+        </div>  
+        
+        <div class="benefits">
+            {% for block in section.blocks %}
+                <div class="benefit">
+                    <h3>{{ block.settings.benefit_title }}</h3>
+                    <p>{{ block.settings.benefit_description }}</p>
+                </div>
+            {% endfor %}
+        </div>
+            
+                    <div>
+                {% if section.settings.benefits_image %}
+                    <img class="benefit-img" src="{{ section.settings.benefits_image | img_url: 'medium' }}" alt="Benefits Image" width="450px" height="560px" />
+                {% endif %}
+            </div>
+
+    </div>
+</div>
+
+<style>
+
+    .witlof-benefits {
+        padding: 64px 0;
+        background-color: #C5E6F0;
+    }
+
+    .benefits-container {
+        display: flex;
+        max-width: 1170px;
+        margin: 0 auto;
+        justify-content: space-between;
+    }
+
+    .benefits-header {
+        max-width: 300px;
+    }
+
+    .benefits {
+        display:flex;
+        flex-direction: column;
+        max-width: 400px;
+        min-width: 400px;
+    }
+
+    .benefit{
+    margin-bottom: 20px;
+    }
+
+    .benefit h3 {
+        font-size: 1.75rem;
+        color: #2A2A2A;
+    }
+
+    .benefit p {
+        font-size: 1.6rem;
+        color: #2A2A2A;
+        font-weight: 500;
+    }
+
+    .benefit-img {
+        border-radius: 24px;
+    }
+
+</style>

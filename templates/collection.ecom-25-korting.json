@@ -10,12 +10,12 @@
 {
   "layout": "theme",
   "sections": {
-    "ecom-pre-summer-buy-one-get-one-fr-collection": {
-      "type": "ecom-pre-summer-buy-one-get-one-fr-collection",
+    "ecom-25-korting-collection": {
+      "type": "ecom-25-korting-collection",
       "settings": {}
     }
   },
   "order": [
-    "ecom-pre-summer-buy-one-get-one-fr-collection"
+    "ecom-25-korting-collection"
   ]
 }
