@@ -131,7 +131,7 @@
         "479e8204-e0cb-4bcc-be6d-092a1de6f618": {
           "type": "custom_text",
           "settings": {
-            "text": "Als je <b><a href=\"\/blogs\/news\/heb-je-last-van-eczeem-dit-is-hoe-je-deze-huid-kan-het-beste-verzorgen\"> Eczeem<\/a><\/b> hebt, zul je waarschijnlijk plekken met een gebarsten en droge huid ervaren. Deze kunnen jeuken, ontstoken en pijnlijk zijn. Eczeem kan alleen in het gezicht voorkomen of over het hele lichaam. Het is een inflammatoire huidaandoening die droge, pijnlijke huiduitslag en blaren veroorzaakt. Soms kan het moeilijk zijn om de oorzaak van Eczeem te vinden, aangezien dit van persoon tot persoon verschilt. Echter zijn er verschillende manieren om het te behandelen en onder controle te houden.",
+            "text": "Als je <b><a href=\"/blogs/news/heb-je-last-van-eczeem-dit-is-hoe-je-deze-huid-kan-het-beste-verzorgen\"> Eczeem</a></b> hebt, zul je waarschijnlijk plekken met een gebarsten en droge huid ervaren. Deze kunnen jeuken, ontstoken en pijnlijk zijn. Eczeem kan alleen in het gezicht voorkomen of over het hele lichaam. Het is een inflammatoire huidaandoening die droge, pijnlijke huiduitslag en blaren veroorzaakt. Soms kan het moeilijk zijn om de oorzaak van Eczeem te vinden, aangezien dit van persoon tot persoon verschilt. Echter zijn er verschillende manieren om het te behandelen en onder controle te houden.",
             "remove_br_tag": false,
             "tag": "p",
             "fontf": "3",
@@ -314,7 +314,7 @@
         "dbdfc46e-95d6-4d6c-aac3-b5dd2d90ded5": {
           "type": "custom_text",
           "settings": {
-            "text": "Bij eczeem is het van belang om de huid goed vet te houden, te hydrateren en te zorgen dat de natuurlijke barrière van de huid hersteld wordt. <br><br>\nIn onze <b><a href=\"\/products\/gentle-cleansing-milk-150ml?variant=45281394426177\"> Gentle Cleansing Milk <\/a><\/b> zit sap van aloë vera. Dit werkt verzachtend, hydraterend en helpt een ontstoken of geïrriteerde huid te kalmeren en verkoelen.\n<br><br>\nDe bloemenwaters in de <b><a href=\"\/products\/balancing-toner-150ml?variant=45281312473409\"> Balancing Toner <\/a><\/b> hebben ontstekingsremmende eigenschappen, verzachten de huid en verminderen roodheid. Appelciderazijn heeft antibacteriële en ontstekingsremmende eigenschappen dat huidinfecties helpt bestrijden en irritatie of roodheid kalmeert. \n<br><br>\nSheaboter, baobaolie en avocado-olie, gebruikt in onze <b><a href=\"\/products\/rich-facial-cream-50ml?variant=45281465860417\"> Rich Facial Cream <\/a><\/b>, zijn zeer effectief in het versterken en herstellen van de huidbarrière om deze te beschermen tegen omgevingsstressoren. De crème hydrateert de droge en jeukende huid, terwijl het de huid intensief herstelt dankzij ceramides en het immortelle-extract.",
+            "text": "Bij eczeem is het van belang om de huid goed vet te houden, te hydrateren en te zorgen dat de natuurlijke barrière van de huid hersteld wordt. <br><br>\nIn onze <b><a href=\"/products/gentle-cleansing-milk-150ml?variant=45281394426177\"> Gentle Cleansing Milk </a></b> zit sap van aloë vera. Dit werkt verzachtend, hydraterend en helpt een ontstoken of geïrriteerde huid te kalmeren en verkoelen.\n<br><br>\nDe bloemenwaters in de <b><a href=\"/products/balancing-toner-150ml?variant=45281312473409\"> Balancing Toner </a></b> hebben ontstekingsremmende eigenschappen, verzachten de huid en verminderen roodheid. Appelciderazijn heeft antibacteriële en ontstekingsremmende eigenschappen dat huidinfecties helpt bestrijden en irritatie of roodheid kalmeert. \n<br><br>\nSheaboter, baobaolie en avocado-olie, gebruikt in onze <b><a href=\"/products/rich-facial-cream-50ml?variant=45281465860417\"> Rich Facial Cream </a></b>, zijn zeer effectief in het versterken en herstellen van de huidbarrière om deze te beschermen tegen omgevingsstressoren. De crème hydrateert de droge en jeukende huid, terwijl het de huid intensief herstelt dankzij ceramides en het immortelle-extract.",
             "remove_br_tag": false,
             "tag": "p",
             "fontf": "3",
@@ -587,7 +587,7 @@
             "b_link": "",
             "open_link": "_self",
             "content_align": "center",
-            "date": "2023\/12\/26",
+            "date": "2023/12/26",
             "cdt_des": "1",
             "countdown_pos": "2",
             "cdt_size": "small",
@@ -697,7 +697,7 @@
           "type": "description",
           "settings": {
             "des": "2",
-            "text": "<p>Deze set reinigt, balanceert en kalmeert de huid op milde wijze. Het bevat Gentle Cleansing Milk, Rich Facial Cream en Balancing Toner.<\/p>",
+            "text": "<p>Deze set reinigt, balanceert en kalmeert de huid op milde wijze. Het bevat Gentle Cleansing Milk, Rich Facial Cream en Balancing Toner.</p>",
             "length": 31
           }
         },
@@ -1002,7 +1002,7 @@
       ],
       "disabled": true,
       "settings": {
-        "product": "try-and-travelset-voor-normale-en-vette-huid",
+        "product": "start-and-travelset-voor-normale-en-vette-huid",
         "enable_sticky_info": false,
         "media_layout": "thumbnails_bottom",
         "media_size": "medium",

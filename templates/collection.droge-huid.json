@@ -21,6 +21,7 @@
             "txt_align": "center",
             "sub_heading": "",
             "heading": "HUIDVERZORGINGSTIPS VOOR EEN DROGE HUID",
+            "font_size_heading": 44,
             "text": "<p>Als je last hebt van een huid die schilfert of vervelt op het huidoppervlak, roodheid toont en/of ruwer is, dan heb jij waarschijnlijk een droger huidtype. Hoe verzorg je dit huidtype optimaal? </p>",
             "subhd_color": "#222222",
             "hd_color": "#222222",
@@ -1066,6 +1067,7 @@
         "e9f249a0-0a0f-4baf-9664-73babbd7bbe7"
       ],
       "settings": {
+        "heading_fullwidth": false,
         "use_specify_image": false,
         "parallax": true,
         "color": "#000000",
@@ -1223,6 +1225,7 @@
             "show_dynamic_checkout": false,
             "btn_txt2": "3",
             "button_color_payment": "dark",
+            "show_gift_card_recipient": true,
             "product_list": [],
             "show_product_current": true,
             "qty_val": "0",
@@ -1295,7 +1298,7 @@
         "image_ratio": "ratioadapt",
         "image_size": "cover",
         "image_position": "8",
-        "main_click": "zoom",
+        "main_click": "none",
         "zoom_tp": "external",
         "enable_zoom_icon": true,
         "enable_zoom_click_mb": true,

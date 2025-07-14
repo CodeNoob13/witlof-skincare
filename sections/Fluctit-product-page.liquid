@@ -1356,9 +1356,6 @@
                   <div class="t4s-liquid_{{ bk_id }} t4s-pr__custom-liquid t4s-rte" {{ block.shopify_attributes }}>
                     {{ bk_stts.custom_liquid }}
                   </div>
-                {%- when 'usp_list' -%}
-                  {% comment %} Glenn {% endcomment %}
-                   {%- render 'usp-list', list:product.metafields.custom.usp_list -%}
 
                 {%- when '@app' -%}
                   {%- render block -%}
@@ -3683,12 +3680,6 @@
         }
       ]
     },
-     {
-      "type": "usp_list",
-      "name": "USP list",
-      "limit": 1,
-      "settings": []
-    },
     {
       "type": "complimentary_products",
       "name": "Complimentary Products",
@@ -5107,7 +5098,7 @@
 }
 {%- endschema -%}
 <!-- Start of Judge.me code -->
-{% comment %} <div style="clear:both"></div>
+<div style="clear:both"></div>
 <div
   id="judgeme_product_reviews"
   class="jdgm-widget jdgm-review-widget"
@@ -5116,5 +5107,5 @@
   data-auto-install="false"
 >
   {{ product.metafields.judgeme.widget }}
-</div> {% endcomment %}
+</div>
 <!-- End of Judge.me code -->

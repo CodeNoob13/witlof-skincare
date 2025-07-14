@@ -1,0 +1,33 @@
+{% if list %}
+  <div class="usp-list">
+    <span>
+        {{ list | metafield_tag }}
+    </span>
+  </div>
+{% endif %}
+
+<style>
+.usp-list ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.usp-list li {
+  position: relative;
+  padding-left: 2em;
+  font-weight:medium;
+}
+
+.usp-list li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  
+  width: 2em;
+  height: 2em;
+  background-image: url('{{ "checkmark.svg" | asset_url }}');
+  background-size: contain;
+  background-repeat: no-repeat;
+  display: block;
+}    
+</style>

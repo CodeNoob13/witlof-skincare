@@ -8,9 +8,14 @@
  * ------------------------------------------------------------
  */
 {
-  "parent": "product.json",
-  "context": {
-    "market": "world"
+  "layout": "theme",
+  "sections": {
+    "ecom-witlof-x-oppo-summer-giveaway-page": {
+      "type": "ecom-witlof-x-oppo-summer-giveaway-page",
+      "settings": {}
+    }
   },
-  "sections": {}
+  "order": [
+    "ecom-witlof-x-oppo-summer-giveaway-page"
+  ]
 }

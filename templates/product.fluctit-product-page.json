@@ -111,42 +111,9 @@
             "price_sale_color": "#ed7377"
           }
         },
-        "description": {
-          "type": "description",
-          "settings": {
-            "des": "2",
-            "text": "<h5></h5><p>{{ product.metafields.custom.korte_omschrijving | metafield_tag }}</p><p><strong>📩 Voor 22 uur besteld, zelfde (werk)dag verzonden!</strong></p>",
-            "readm": false,
-            "length": 31,
-            "readm_txt": "Read more",
-            "readl_txt": "Less"
-          }
-        },
-        "43f8adf4-17b1-4bd7-8b5e-80101cb446df": {
-          "type": "countdown",
-          "disabled": true,
-          "settings": {
-            "source": "1",
-            "icon": "2",
-            "icon_name": "las la-stopwatch",
-            "ani": "none",
-            "al": "center",
-            "mess": "Kerst Sale eindigt in",
-            "size": 16,
-            "dayx": 0,
-            "stock_time": "8:00:00,16:00:00,23:59:59",
-            "loop": false,
-            "cdt_des": "3",
-            "cdt_size": "large",
-            "box_bdr": 0,
-            "bd_width": 0,
-            "space_item": 50,
-            "space_item_mb": 15,
-            "number_cl": "#222222",
-            "text_cl": "#222222",
-            "border_cl": "#000000",
-            "bg_cl": "#000000"
-          }
+        "usp_list_qEdrm7": {
+          "type": "usp_list",
+          "settings": {}
         },
         "form": {
           "type": "form",
@@ -156,9 +123,9 @@
             "enable_fit_ratio_img": false,
             "color_size": "medium",
             "show_qty": true,
-            "enable_wishlist": true,
+            "enable_wishlist": false,
             "enable_compare": false,
-            "btn_atc_full": false,
+            "btn_atc_full": true,
             "pr_btn_round": 40,
             "ani": "none",
             "time": 6,
@@ -196,20 +163,6 @@
             "height": 26
           }
         },
-        "size_delivery_ask": {
-          "type": "size_delivery_ask",
-          "settings": {
-            "size_chart": "3",
-            "pos_sizeg": "1",
-            "sc_type": "1",
-            "page": "",
-            "size_ck": "",
-            "delivery": true,
-            "page_dr": "delivery-return",
-            "ask": false,
-            "phone": true
-          }
-        },
         "meta": {
           "type": "meta",
           "settings": {
@@ -221,12 +174,6 @@
             "show_available": false,
             "show_category": false,
             "show_tags": false
-          }
-        },
-        "95d4f334-8ea7-4cd2-b609-2373b1e848b8": {
-          "type": "tab_des",
-          "settings": {
-            "title": "Hoe werkt het?"
           }
         },
         "e36839f5-0847-44e2-97d3-2885597bd1ff": {
@@ -311,13 +258,10 @@
         "title",
         "text_xP4kDy",
         "price_review",
-        "description",
-        "43f8adf4-17b1-4bd7-8b5e-80101cb446df",
+        "usp_list_qEdrm7",
         "form",
         "23551ebc-3be1-40d6-81b2-30f03478cccb",
-        "size_delivery_ask",
         "meta",
-        "95d4f334-8ea7-4cd2-b609-2373b1e848b8",
         "e36839f5-0847-44e2-97d3-2885597bd1ff",
         "754ad4a0-7308-4a3e-b325-e2f2c0b85d4c",
         "56e67368-7424-4d73-8f14-dacdda4c59be",
@@ -761,7 +705,6 @@
       "block_order": [
         "judge_me_reviews_review_widget_8VnwmY"
       ],
-      "disabled": true,
       "settings": {
         "include_margins": true
       }
