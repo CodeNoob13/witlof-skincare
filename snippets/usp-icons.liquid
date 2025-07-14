@@ -1,0 +1,55 @@
+
+<div {{ block.shopify_attributes }} class="usps-container">
+    <div class="fluctit-usp-items">
+        <div>{{ svg_icon1 }}</div>
+        <div>
+            <span class="fluctit-usp-items-title">{{ usp_caption1 }}</span>
+        </div>
+    </div>
+    <div class="fluctit-usp-items">
+        <div>{{ svg_icon2 }}</div>
+        <div>
+            <span class="fluctit-usp-items-title">{{  usp_caption2 }}</span>
+        </div>
+    </div>
+    <div class="fluctit-usp-items">
+    <div>{{ svg_icon3}}</div>
+        <div>
+            <span class="fluctit-usp-items-title">{{ usp_caption3 }}</span>
+        </div>
+    </div>
+  </div>
+
+<style>
+    .usps-container {
+        display: flex;
+        justify-content: space-between;
+        padding-top:4px;
+      }
+      
+      .fluctit-usp-items {
+        display: flex;
+        font-size:14px;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 4px;
+      }
+      
+      .fluctit-usp-items-title {
+        justify-content: center;
+        display: flex;
+        font-weight: 500;
+        items-align:center;
+        max-width:120px;
+      }
+
+      @media screen and (min-width:768px) {
+          .usps-container {
+            max-width:450px;
+      }
+    }
+
+}
+    
+</style>

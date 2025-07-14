@@ -526,6 +526,13 @@
                   </h1>
                   <!-- Start of Judge.me code -->
 
+                  {% comment %} Fluctit subtitle {% endcomment %}
+                  {% if product.metafields.custom.product_subtitle %} 
+                    <div style="margin-bottom:4px;">
+                        <span style="font-size:14px; font-weight:500;margin-bottom:0;">{{ product.metafields.custom.product_subtitle | metafield_tag }}</span>
+                    </div>
+                {% endif %}
+
                   <div
                     style="{{ jm_style }}"
                     class="jdgm-widget jdgm-preview-badge"
@@ -1356,9 +1363,20 @@
                   <div class="t4s-liquid_{{ bk_id }} t4s-pr__custom-liquid t4s-rte" {{ block.shopify_attributes }}>
                     {{ bk_stts.custom_liquid }}
                   </div>
+
                 {%- when 'usp_list' -%}
-                  {% comment %} Glenn {% endcomment %}
+                  {% comment %} Fluctit usp list{% endcomment %}
                    {%- render 'usp-list', list:product.metafields.custom.usp_list -%}
+
+                {%- when 'usp_icons' -%}
+                  {%- render 'usp-icons',
+                    usp_caption1: block.settings.usp_caption1,
+                    usp_caption2: block.settings.usp_caption2,
+                    usp_caption3: block.settings.usp_caption3,
+                    svg_icon1: block.settings.svg_icon1,
+                    svg_icon2: block.settings.svg_icon2,
+                    svg_icon3: block.settings.svg_icon3,
+                    -%}
 
                 {%- when '@app' -%}
                   {%- render block -%}
@@ -3688,6 +3706,43 @@
       "name": "USP list",
       "limit": 1,
       "settings": []
+    },
+     {
+      "type": "usp_icons",
+      "name": "USP Icons",
+      "limit": 1,
+      "settings": [
+            {
+                "type": "text",
+                "id": "usp_caption1",
+                "label": "USP Text1"
+            },
+            {
+                "type": "html",
+                "id": "svg_icon1",
+                "label": "SVG Icon1"
+            },
+            {
+                "type": "text",
+                "id": "usp_caption2",
+                "label": "USP Text2"
+            },
+            {
+                "type": "html",
+                "id": "svg_icon2",
+                "label": "SVG Icon2"
+            },
+            {
+                "type": "text",
+                "id": "usp_caption3",
+                "label": "USP Text3"
+            },
+            {
+                "type": "html",
+                "id": "svg_icon3",
+                "label": "SVG Icon3"
+            }
+      ],
     },
     {
       "type": "complimentary_products",
