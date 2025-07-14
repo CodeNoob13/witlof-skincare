@@ -2,8 +2,8 @@
     {%- for faq in questions.value -%}
     <div x-data="{open: {{ forloop.first | json }}}"
         {% comment %} x-init="open = " {% endcomment %}
-        class="fluctit-faq-item {% if forloop.last %}last{% endif %}"  x-cloak>
-        <div class="fluctit-faq-title-container" @click="open = !open">
+        class="fluctit-faq-item {% if forloop.last %}last{% endif %}" x-cloak @click="open = !open">
+        <div class="fluctit-faq-title-container" >
             <div class="fluctit-faq-title" >{{ faq.question | metafield_tag }}</div>
            <img
             src="{{ "close-icon.svg" | asset_url }}"
@@ -35,7 +35,7 @@
     flex-direction: column;
     font-weight: 500;
     border-top: 1px solid rgba(30, 30, 30, 0.1);
-    padding:14px 0;
+    padding:12px 0;
     cursor:pointer;
 }
 
@@ -57,7 +57,8 @@
 }
 
 .fluctit-faq-answer p {
-    margin: 12px 0;
+    margin:0;
+    padding: 8px 0 4px 0;
     color: #1E1E1E;
 }
 </style>
