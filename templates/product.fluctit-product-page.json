@@ -111,6 +111,10 @@
             "price_sale_color": "#ed7377"
           }
         },
+        "klarna_ppaDFY": {
+          "type": "klarna",
+          "settings": {}
+        },
         "usp_list_qEdrm7": {
           "type": "usp_list",
           "settings": {}
@@ -190,6 +194,7 @@
         "title",
         "text_xP4kDy",
         "price_review",
+        "klarna_ppaDFY",
         "usp_list_qEdrm7",
         "form",
         "usp_icons_gAL8k3",

@@ -1,0 +1,50 @@
+<div x-data="{open: false}" style="position:relative; max-width:fit-content;" @click.away="open = false">
+    <div class="fluctit-klarna-container">
+        <img src="{{ "klarna.svg" | asset_url }}" alt="klarna logo" height="22px" width="50px" />
+        <span>Koop nu betaal later</span>
+        <img src="{{ "question-mark.svg" | asset_url }}" alt="klarna logo" height="16px" width="16px" @click="open = !open "/>
+    </div>
+    <div x-cloak x-show="open" class="fluctit-klarna-modal">
+        <div>
+
+            <strong>Betaal later</strong>
+            <p>Shop vandaag nog en geniet gelijk van je nieuwe aanwinst. Ben je direct tevreden, dan betaal je in de app. Niet direct tevreden? Probeer het wat langer. De aankoop betaal je tot en met 30 dagen later. Geen rente. Geen extra kosten. Wel smoooth.</p>
+            
+            <strong>De bestelling</strong>
+            <p>In de winkelwagen van je favoriete shop vul je eenvoudige persoonsgegevens in die je altijd in je geheugen hebt, zoals adres en naam.</p>
+            
+            <strong>De betaaltermijn</strong>
+            <p>De betaaltermijn van 30 dagen start zodra de aankoop verzonden wordt. Dit betekent dat je de tijd kan nemen om je aankoop uit te proberen. Je betaalt dus alleen voor wat je houdt.</p>
+            
+            <strong>De betaling</strong>
+            <p>Je betaalt gemakkelijk in de app met iDEAL, of, zodra je bankrekening veilig gekoppeld is aan de app, met één klik.</p>
+            
+        </div>
+    </div>
+</div>
+
+<style>
+    .fluctit-klarna-container {
+        display:flex;
+        gap:12px;
+        align-items:center;
+    }
+
+    .fluctit-klarna-container span {
+        line-height:16px;
+    }
+
+    .fluctit-klarna-modal {
+        background: #F5F3F3;
+        padding:12px 8px 8px 8px;
+        max-width:250px;
+        overflow:scroll;
+        max-height:350px;
+        overflow-x:hidden;
+        position: absolute;
+        top:40px;
+        right:0px;
+        z-index:99;
+    }
+</style>
+

@@ -1379,8 +1379,12 @@
                     svg_icon3: block.settings.svg_icon3,
                     -%}
 
+                    <!-- Fluctit FAQ -->
                   {%- when 'FAQ'-%}
                     {%- render 'faq', questions: product.metafields.custom.atf_faq -%}
+
+                  {%- when 'klarna'-%}
+                    {%-render 'klarna'-%}
 
                 {%- when '@app' -%}
                   {%- render block -%}
@@ -3711,9 +3715,15 @@
       "limit": 1,
       "settings": []
     },
-     {
+    {
       "type": "FAQ",
       "name": "faq",
+      "limit": 1,
+      "settings": []
+    },
+    {
+      "type": "klarna",
+      "name": "klarna",
       "limit": 1,
       "settings": []
     },
