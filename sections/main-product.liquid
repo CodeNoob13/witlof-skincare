@@ -1365,9 +1365,10 @@
                   </div>
 
                 {%- when 'usp_list' -%}
-                  {% comment %} Fluctit usp list{% endcomment %}
+                  <!-- Flucutit usp list -->
                    {%- render 'usp-list', list:product.metafields.custom.usp_list -%}
 
+                   <!-- Flucutit usp icons -->
                 {%- when 'usp_icons' -%}
                   {%- render 'usp-icons',
                     usp_caption1: block.settings.usp_caption1,
@@ -1377,6 +1378,9 @@
                     svg_icon2: block.settings.svg_icon2,
                     svg_icon3: block.settings.svg_icon3,
                     -%}
+
+                  {%- when 'FAQ'-%}
+                    {%- render 'faq', questions: product.metafields.custom.atf_faq -%}
 
                 {%- when '@app' -%}
                   {%- render block -%}
@@ -3704,6 +3708,12 @@
      {
       "type": "usp_list",
       "name": "USP list",
+      "limit": 1,
+      "settings": []
+    },
+     {
+      "type": "FAQ",
+      "name": "faq",
       "limit": 1,
       "settings": []
     },

@@ -162,6 +162,16 @@
             "svg_icon3": "<svg width=\"24\" height=\"24\" viewbox=\"0 0 20 20\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n<path d=\"M2.93256 15.0803L9.37613 18.7321C9.60542 18.8632 9.83042 18.9286 10.0515 18.9286C10.2726 18.9286 10.5004 18.8632 10.7351 18.7321L17.1708 15.0803C17.5472 14.8621 17.8326 14.615 18.0261 14.3393C18.2201 14.0639 18.3168 13.6339 18.3168 13.05V6.56534C18.3168 6.13963 18.2365 5.78748 18.0754 5.50927C17.9143 5.2307 17.6618 4.9907 17.3183 4.78855L11.5208 1.49713C11.0301 1.2132 10.5415 1.07141 10.0558 1.07141C9.57006 1.07141 9.07863 1.2132 8.58185 1.49713L2.79328 4.78855C2.44399 4.9907 2.18863 5.2307 2.02756 5.50927C1.86685 5.78748 1.78613 6.13963 1.78613 6.56534V13.05C1.78613 13.6339 1.88435 14.0639 2.08078 14.3393C2.2772 14.615 2.56113 14.8621 2.93256 15.0803ZM3.66935 13.9996C3.42899 13.8632 3.26256 13.72 3.1697 13.5696C3.07685 13.4196 3.03042 13.2328 3.03042 13.0089V6.82713L9.40899 10.4707V17.2664L3.66935 13.9996ZM16.4418 13.9996L10.6943 17.2664V10.4707L17.0718 6.82713V13.0089C17.0718 13.2328 17.0254 13.4196 16.9326 13.5696C16.8397 13.7196 16.6765 13.8632 16.4418 13.9996ZM10.0554 9.32463L3.7347 5.74641L6.2647 4.29748L12.5854 7.89177L10.0554 9.32463ZM13.9033 7.14677L7.55828 3.56034L9.13042 2.66784C9.75256 2.3132 10.3697 2.3132 10.9808 2.66784L16.3765 5.74641L13.9033 7.14677Z\" fill=\"#3C3C3C\"></path>\n</svg>"
           }
         },
+        "84169d4f-f4df-445d-b1a4-09aeb72f80bc": {
+          "type": "shopify://apps/videowise-video-commerce/blocks/videowise-page-widgets/b48d6c0c-3e3f-4791-a9ab-a5ab7ec82f4d",
+          "settings": {
+            "videowise_embed": "<div class=\"reeview-app-widget\" id=\"reeview-app-widget_656e3740e3b1220029ab5616\"></div>"
+          }
+        },
+        "faq_xbFTdU": {
+          "type": "FAQ",
+          "settings": {}
+        },
         "23551ebc-3be1-40d6-81b2-30f03478cccb": {
           "type": "img",
           "settings": {
@@ -173,95 +183,6 @@
             "svg": "american_express,apple_pay,google_pay,klarna-pay-later,maestro,master,paypal,shopify_pay,ideal,visa",
             "height": 26
           }
-        },
-        "meta": {
-          "type": "meta",
-          "settings": {
-            "show_options": false,
-            "show_vendor": false,
-            "show_type": false,
-            "show_sku": false,
-            "show_barcode": false,
-            "show_available": false,
-            "show_category": false,
-            "show_tags": false
-          }
-        },
-        "e36839f5-0847-44e2-97d3-2885597bd1ff": {
-          "type": "tab_add",
-          "disabled": true,
-          "settings": {
-            "title": "Additional Information"
-          }
-        },
-        "754ad4a0-7308-4a3e-b325-e2f2c0b85d4c": {
-          "type": "tab_html",
-          "settings": {
-            "title": "Custom tab",
-            "content": "",
-            "page": "wash-care"
-          }
-        },
-        "56e67368-7424-4d73-8f14-dacdda4c59be": {
-          "type": "tab_rivui",
-          "disabled": true,
-          "settings": {
-            "title": "Reviews",
-            "review_liquid": ""
-          }
-        },
-        "1e8c05dd-a0a8-4e7e-b9b1-6e3572ad24e3": {
-          "type": "store_pickup",
-          "settings": {}
-        },
-        "94011ade-ec25-4d68-b37a-70660ede49dd": {
-          "type": "social",
-          "settings": {
-            "socials_align": "start",
-            "social_mode": "2",
-            "social_style": "1",
-            "social_size": "extra_small",
-            "bd_radius": 0,
-            "use_color_set": true,
-            "icon_cl": "#222222",
-            "bg_cl": "#00badb",
-            "space_h_item": "20",
-            "space_v_item": "5",
-            "space_h_item_mb": "10",
-            "space_v_item_mb": "2"
-          }
-        },
-        "fedf6db7-8a9c-47b3-89f4-9f88ac1414a6": {
-          "type": "order",
-          "disabled": true,
-          "settings": {
-            "hide_pre": true,
-            "icon": "2",
-            "icon_name": "las la-truck",
-            "ani": "flash is--infinite",
-            "txt": "Bestel binnen [hour] om je bestelling vandaag nog te laten verzenden",
-            "ds": 10,
-            "de": 15,
-            "mode": "1",
-            "cut_day": "",
-            "frm_day": "t44, t45 t46",
-            "time": "22:00:00",
-            "hr": "hours",
-            "min": "minutes"
-          }
-        },
-        "84169d4f-f4df-445d-b1a4-09aeb72f80bc": {
-          "type": "shopify://apps/videowise-video-commerce/blocks/videowise-page-widgets/b48d6c0c-3e3f-4791-a9ab-a5ab7ec82f4d",
-          "settings": {
-            "videowise_embed": "<div class=\"reeview-app-widget\" id=\"reeview-app-widget_656e3740e3b1220029ab5616\"></div>"
-          }
-        },
-        "842214ff-f42f-4624-a474-7c14cdbc5010": {
-          "type": "tab_liquid",
-          "settings": {
-            "title": "Ingredienten",
-            "custom_liquid": "<h2 style=\"margin-bottom:15px;\">Ingrediënten</h2>\n{{ product.metafields.custom.ingredienten | metafield_tag }}"
-          }
         }
       },
       "block_order": [
@@ -272,16 +193,9 @@
         "usp_list_qEdrm7",
         "form",
         "usp_icons_gAL8k3",
-        "23551ebc-3be1-40d6-81b2-30f03478cccb",
-        "meta",
-        "e36839f5-0847-44e2-97d3-2885597bd1ff",
-        "754ad4a0-7308-4a3e-b325-e2f2c0b85d4c",
-        "56e67368-7424-4d73-8f14-dacdda4c59be",
-        "1e8c05dd-a0a8-4e7e-b9b1-6e3572ad24e3",
-        "94011ade-ec25-4d68-b37a-70660ede49dd",
-        "fedf6db7-8a9c-47b3-89f4-9f88ac1414a6",
         "84169d4f-f4df-445d-b1a4-09aeb72f80bc",
-        "842214ff-f42f-4624-a474-7c14cdbc5010"
+        "faq_xbFTdU",
+        "23551ebc-3be1-40d6-81b2-30f03478cccb"
       ],
       "settings": {
         "pr_layout": "default",

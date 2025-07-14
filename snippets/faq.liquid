@@ -1,0 +1,63 @@
+<div class="flucit-faq-container">
+    {%- for faq in questions.value -%}
+    <div x-data="{open: {{ forloop.first | json }}}"
+        {% comment %} x-init="open = " {% endcomment %}
+        class="fluctit-faq-item {% if forloop.last %}last{% endif %}"  x-cloak>
+        <div class="fluctit-faq-title-container" @click="open = !open">
+            <div class="fluctit-faq-title" >{{ faq.question | metafield_tag }}</div>
+           <img
+            src="{{ "close-icon.svg" | asset_url }}"
+            :style="open ? 'transform: rotate(45deg); transition: transform 0.3s ease' : 'transform: rotate(0deg); transition: transform 0.3s ease'"
+            alt="close icon"
+            width="auto"
+            height="auto"
+            />
+        </div>
+            <div 
+                :style="open 
+                ? 'transition: opacity 0.3s ease-in-out, max-height 0.3s ease; opacity:100; max-height: ' + $refs.faq.scrollHeight + 'px' 
+                : 'transition: opacity 0.3s ease-in-out, max-height 0.3s ease; max-height: 0; overflow:hidden; opacity:0;'">
+                <div class="fluctit-faq-answer" x-ref="faq">{{ faq.answer | metafield_tag }}</div>
+            </div>
+        </div>
+    {% endfor %}
+</div>
+
+<style>
+@media screen and (min-width:768px) {
+    .flucit-faq-container {
+        width: 85%;
+    }
+}
+
+.fluctit-faq-item {
+    display: flex;
+    flex-direction: column;
+    font-weight: 500;
+    border-top: 1px solid rgba(30, 30, 30, 0.1);
+    padding:14px 0;
+    cursor:pointer;
+}
+
+.fluctit-faq-item.last {
+    border-bottom: 1px solid rgba(30, 30, 30, 0.1);
+    
+}
+
+.fluctit-faq-title {
+    font-size: 14px;
+    color: #1E1E1E;
+    text-transform: uppercase;
+}
+
+.fluctit-faq-title-container{
+    display:flex;
+    justify-content: space-between;
+    align-items:center;
+}
+
+.fluctit-faq-answer p {
+    margin: 12px 0;
+    color: #1E1E1E;
+}
+</style>
