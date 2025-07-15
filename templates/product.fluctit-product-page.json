@@ -248,6 +248,37 @@
         "time": 6
       }
     },
+    "online_consult_zrACqH": {
+      "type": "online_consult",
+      "blocks": {
+        "block_GgV7yC": {
+          "type": "block",
+          "settings": {
+            "background_image": "shopify://shop_images/Picture_isthisrightforme_jpg.jpg",
+            "subtitle": "Wat past het best",
+            "title": "Doe de online huid test",
+            "button_text": "Doe de test",
+            "button_url": "#"
+          }
+        },
+        "block_8p7rYj": {
+          "type": "block",
+          "settings": {
+            "background_image": "shopify://shop_images/Picture_isthisrightforme.jpg-1.jpg",
+            "subtitle": "Bij mijn huid",
+            "title": "Of boek een online huid consult",
+            "button_text": "Boek een consult",
+            "button_url": "#"
+          }
+        }
+      },
+      "block_order": [
+        "block_GgV7yC",
+        "block_8p7rYj"
+      ],
+      "name": "Online consult",
+      "settings": {}
+    },
     "witlof_benefits_C6YQRU": {
       "type": "witlof-benefits",
       "blocks": {
@@ -646,6 +677,7 @@
     "custom_html_8XzFiw",
     "countdown_zd6dLT",
     "main",
+    "online_consult_zrACqH",
     "witlof_benefits_C6YQRU",
     "logo_list_MjJM4b",
     "sidebar",

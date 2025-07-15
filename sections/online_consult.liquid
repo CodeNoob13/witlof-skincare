@@ -1,0 +1,172 @@
+{% schema %}
+{
+  "name": "Online consult",
+  "tag": "section",
+  "limit": 1,
+  "class": "online-consult",
+  "settings": [],
+  "blocks": [
+    {
+      "name": "Block",
+      "type": "block",
+      "settings": [
+        {
+        "type": "header",
+        "content": "Background image"
+        },
+        {
+        "type": "image_picker",
+        "id": "background_image",
+        "label": "Background image"
+        },
+        {
+        "type": "header",
+        "content": "Text settings"
+        },
+        {
+        "type": "text",
+        "id": "subtitle",
+        "label": "Subtitle"
+        },
+        {
+        "type": "text",
+        "id": "title",
+        "label": "Title"
+        },
+        {
+        "type": "header",
+        "content": "Button settings"
+        },
+        {
+        "type": "text",
+        "id": "button_text",
+        "label": "Button text"
+        },
+        {
+        "type": "url",
+        "id": "button_url",
+        "label": "Button link"
+        }
+      ],
+      "limit": 2
+    }
+  ],
+  "presets": [
+    {
+      "name": "Online consult",
+      "blocks": [
+        {
+          "type": "block",
+          "settings": {
+            "subtitle": "Wat past het best",
+            "title": "Doe de online huid test",
+            "button_text": "Doe de test",
+            "button_url": "#"
+          }
+        },
+        {
+          "type": "block",
+          "settings": {
+            "subtitle": "Bij mijn huid",
+            "title": "Of boek een online huid consult",
+            "button_text": "Boek een consult",
+            "button_url": "#"
+          }
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}
+
+
+    <div class="fluctit-online-inner-container">
+        {%- for block in section.blocks -%}
+            {%- case block.type -%}
+                
+            {%- when "block" -%}
+               <div class="fluctit-consult-card {% if forloop.index == 2 %} align-right{% endif %}" style="background-image: url('{{ block.settings.background_image | image_url }}');border-radius:8px; background-size: cover; background-repeat: no-repeat; background-position: center;">
+                    <div class="fluctit-innercard " >
+                        <span>{{block.settings.subtitle}}</span>
+                        <h2>{{block.settings.title}}</h2>
+                        <a href="{{ block.settings.button_url }}">{{ block.settings.button_text }}</a>
+                    </div>
+                </div>
+
+            {%- endcase -%}
+        {%- endfor -%}
+    </div>
+
+
+<style>
+    .fluctit-online-inner-container {
+        max-width: 1300px;
+        gap:20px;
+        display:grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        margin: 80px auto;
+    }
+
+  
+
+    .fluctit-consult-card {
+        padding:24px;
+        min-height:500px;
+        max-width:100%;
+        {% comment %} min-width:650px; {% endcomment %}
+        display:flex;
+        align-items:center;
+    }
+
+    .fluctit-consult-card.align-right .fluctit-innercard {
+        margin-left: auto;
+        text-align: right;
+    }
+
+    .fluctit-consult-card.align-right .fluctit-innercard a {
+        margin-left: auto;
+    }
+
+    .fluctit-innercard {
+        display:flex;
+        flex-direction:column;
+        max-width:325px;
+        margin: auto 0;
+    }
+    
+    .fluctit-innercard h2 {
+        font-size:36px!important;
+        font-weight:600;
+        line-height: 1.5!important;
+        color:#1E1E1E;
+    }
+
+    .fluctit-innercard span {
+        font-size:24px;
+        font-weight:500;
+        color:#1E1E1E;
+        margin-bottom:12px;
+    }
+
+     .fluctit-innercard a {
+        font-size:16px;
+        color:white;
+        text-transform:uppercase;
+        font-weight:600;
+        margin-top:24px;
+        background: #4AB9CB;
+        padding: 8px 24px;
+        border-radius:100px;
+        width: fit-content;
+    }
+
+    @media screen and (max-width: 768px) {
+    .fluctit-online-inner-container {
+        padding: 0 16px;
+        gap:10px;
+        grid-template-columns: repeat(1, minmax(0, 1fr));
+        margin: 40px auto;
+    }    
+    }
+
+</style>
