@@ -246,9 +246,6 @@
       max-width: 96rem;
     }
   }
-  .ml-4 {
-    margin-left: calc(var(--spacing) * 4);
-  }
   .block {
     display: block;
   }
@@ -294,9 +291,6 @@
   .grow {
     flex-grow: 1;
   }
-  .border-collapse {
-    border-collapse: collapse;
-  }
   .transform {
     transform: var(--tw-rotate-x) var(--tw-rotate-y) var(--tw-rotate-z) var(--tw-skew-x) var(--tw-skew-y);
   }
@@ -305,15 +299,6 @@
   }
   .flex-wrap {
     flex-wrap: wrap;
-  }
-  .items-center {
-    align-items: center;
-  }
-  .gap-2 {
-    gap: calc(var(--spacing) * 2);
-  }
-  .gap-100 {
-    gap: calc(var(--spacing) * 100);
   }
   .truncate {
     overflow: hidden;
@@ -330,9 +315,6 @@
   .border-none {
     --tw-border-style: none;
     border-style: none;
-  }
-  .pl-4 {
-    padding-left: calc(var(--spacing) * 4);
   }
   .text-center {
     text-align: center;
@@ -385,17 +367,9 @@
     transition-timing-function: var(--tw-ease, var(--default-transition-timing-function));
     transition-duration: var(--tw-duration, var(--default-transition-duration));
   }
-  .ease-in {
-    --tw-ease: var(--ease-in);
-    transition-timing-function: var(--ease-in);
-  }
   .ease-in-out {
     --tw-ease: var(--ease-in-out);
     transition-timing-function: var(--ease-in-out);
-  }
-  .ease-out {
-    --tw-ease: var(--ease-out);
-    transition-timing-function: var(--ease-out);
   }
   .\[data-drawer-options\]\:visible {
     &:is(data-drawer-options) {

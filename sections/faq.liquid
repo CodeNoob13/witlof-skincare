@@ -1,0 +1,107 @@
+{% schema %}
+{
+  "name": "FAQ - Two Column",
+  "tag": "section",
+  "class": "faq-two-column",
+  "settings": [
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "FAQ Heading",
+      "default": "FAQ"
+    },
+    {
+      "type": "text",
+      "id": "subheading",
+      "label": "FAQ Subheading",
+      "default": "Veelgestelde vragen"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "faq",
+      "name": "FAQ Item",
+      "settings": [
+        {
+          "type": "text",
+          "id": "question",
+          "label": "Question",
+          "default": "Wat is jullie retourbeleid?"
+        },
+        {
+          "type": "textarea",
+          "id": "answer",
+          "label": "Answer",
+          "default": "Je kunt je bestelling binnen 30 dagen retourneren."
+        }
+      ]
+    }
+  ],
+  "max_blocks": 8,
+  "presets": [
+    {
+      "name": "FAQ - Two Column",
+      "blocks": [
+        {
+          "type": "faq"
+        },
+        {
+          "type": "faq"
+        },
+        {
+          "type": "faq"
+        },
+        {
+          "type": "faq"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}
+
+{% comment %} {% if product.metafields.faq.questions.size > 0 %} {% endcomment %}
+  <section class="fluctit-faq-two-column">
+    <div class="fluctit-faq-heading">
+      <h2>{{ 'fluctit.faq.title' | t: default: 'FAQ' }}</h2>
+      <p class="fluctit-subheading">{{ 'fluctit.faq.subtitle' | t: default: 'Veelgestelde vragen' }}</p>
+    </div>
+
+    <div class="fluctit-faq-grid">
+      {% for item in product.metafields.faq.questions %}
+        <div class="fluctit-faq-item">
+          <details>
+            <summary>{{ item.question }}</summary>
+            <div class="fluctit-faq-answer">{{ item.answer }}</div>
+          </details>
+        </div>
+      {% endfor %}
+    </div>
+  </section>
+{% comment %} {% endif %} {% endcomment %}
+
+<style>
+.fluctit-faq-two-column .fluctit-faq-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+}
+
+.fluctit-faq-item details summary {
+  font-weight: 600;
+  cursor: pointer;
+  position: relative;
+  padding-right: 20px;
+}
+
+.fluctit-faq-item details[open] summary::after {
+  transform: rotate(45deg);
+}
+
+.fluctit-faq-item summary::after {
+  content: "+";
+  position: absolute;
+  right: 0;
+  transition: transform 0.2s ease;
+}    
+</style>

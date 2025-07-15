@@ -4,7 +4,12 @@
   "tag": "section",
   "limit": 1,
   "class": "online-consult",
-  "settings": [],
+  "settings": [
+    {
+        "type": "header",
+        "content": "Add blocks"
+    }
+  ],
   "blocks": [
     {
       "name": "Block",
@@ -54,6 +59,7 @@
   "presets": [
     {
       "name": "Online consult",
+      "category": "Custom",
       "blocks": [
         {
           "type": "block",
@@ -75,7 +81,7 @@
         }
       ]
     }
-  ]
+  ],
 }
 {% endschema %}
 
@@ -111,9 +117,9 @@
 
     .fluctit-consult-card {
         padding:24px;
-        min-height:500px;
+        max-height:500px;
+        min-height:475px;
         max-width:100%;
-        {% comment %} min-width:650px; {% endcomment %}
         display:flex;
         align-items:center;
     }
@@ -167,6 +173,27 @@
         grid-template-columns: repeat(1, minmax(0, 1fr));
         margin: 40px auto;
     }    
+
+    .fluctit-innercard {
+        max-width:250px;
+    }
+
+    .fluctit-innercard h2 {
+        font-size:28px!important;
+        line-height: 1.5!important;
+    }
+
+    .fluctit-innercard span {
+        font-size:18px;
+
+    }
+     .fluctit-innercard a {
+        font-size:16px;
+    }
+
+    .fluctit-consult-card {
+        min-height: 275px;
+    }
     }
 
 </style>

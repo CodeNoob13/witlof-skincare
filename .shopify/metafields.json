@@ -181,6 +181,46 @@
         "name": "list.metaobject_reference",
         "category": "REFERENCE"
       }
+    },
+    {
+      "key": "usp_list",
+      "namespace": "custom",
+      "name": "USP list",
+      "description": "Add usp's within a list",
+      "type": {
+        "name": "rich_text_field",
+        "category": "TEXT"
+      }
+    },
+    {
+      "key": "product_subtitle",
+      "namespace": "custom",
+      "name": "Product subtitle",
+      "description": "Product subtitle",
+      "type": {
+        "name": "single_line_text_field",
+        "category": "TEXT"
+      }
+    },
+    {
+      "key": "section_faq",
+      "namespace": "custom",
+      "name": "Section FAQ",
+      "description": "Section frequently asked questions",
+      "type": {
+        "name": "metaobject_reference",
+        "category": "REFERENCE"
+      }
+    },
+    {
+      "key": "atf_faq",
+      "namespace": "custom",
+      "name": "ATF Faq",
+      "description": "Frequently asked questions in the above the fold",
+      "type": {
+        "name": "metaobject_reference",
+        "category": "REFERENCE"
+      }
     }
   ],
   "variant": [
