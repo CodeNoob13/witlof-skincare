@@ -23,14 +23,16 @@
 
 <div>
     {%- for step in steps -%}
-        <div style="{{ step.step_color }}">
-            <div>
-                {{step.step_name}}
-                {{step.step_subtitle}}
-            </div>
-            <div>
-                {{step.step_image}}
-                {{step.step_image_text}}
+        <div class="fluctit-step-container">
+            <div style="background: {{ step.step_color }}" class="fluctit-step-card">
+                <div class="fluctit-step-text-container">
+                    <h2>{{step.step_name}}</h2>
+                    <span>{{step.step_subtitle}}</span>
+                </div>
+                <div class="fluctit-step-image-container">
+                    <img src="{{step.step_image | image_url }}" alt="step image" height="80px" width="80px"/>
+                    {{step.step_image_text}}
+                </div>
             </div>
             
             <div>
@@ -41,3 +43,46 @@
 
     {%- endfor -%}
 </div>
+
+<style>
+    .fluctit-step-container {
+        display:flex;
+        flex-direction:column;
+    }
+
+    .fluctit-step-card {
+        display:flex;
+        align-items:center;
+        height:160px;
+        width:260px;
+        border-radius:8px;
+        color:#fff;
+    }
+
+    .fluctit-step-text-container {
+        display:flex;
+        flex-direction:column;
+        text-align:center;
+        max-width:fit-content;
+    }
+
+    .fluctit-step-text-container h2 {
+        text-transform: uppercase;
+        color:#fff;
+        font-size:20px;
+    }
+
+    .fluctit-step-text-container span {
+        text-transform: uppercase;
+        color:#fff;
+        font-size:20px;
+        font-weight:400;
+    }
+
+    .fluctit-step-image-container {
+        display:flex;
+        flex-direction:column;
+        align-items:center;
+        max-width:fit-content;
+    }
+</style>

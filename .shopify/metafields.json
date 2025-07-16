@@ -221,6 +221,16 @@
         "name": "metaobject_reference",
         "category": "REFERENCE"
       }
+    },
+    {
+      "key": "routine_steps",
+      "namespace": "custom",
+      "name": "Routine steps",
+      "description": "Waar bevind ik mij in mijn routine?",
+      "type": {
+        "name": "list.metaobject_reference",
+        "category": "REFERENCE"
+      }
     }
   ],
   "variant": [
