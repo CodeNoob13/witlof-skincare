@@ -58,7 +58,7 @@
         
         <div class="benefits">
             {% for block in section.blocks %}
-                <div class="benefit" {{ block.shopify_attributes }} data-aos="fade-up" data-aos-delay="{{forloop.index | plus:1 | times:50}}">
+                <div class="benefit" {{ block.shopify_attributes }} data-aos="fade-up" data-aos-delay="{{forloop.index | plus:1 | times:35}}">
                     <h3>{{ block.settings.benefit_title }}</h3>
                     <p>{{ block.settings.benefit_description }}</p>
                 </div>
