@@ -223,6 +223,9 @@ t4sp-theme t4s-wrapper__{{ settings.general_layout }}{% if settings.animations_r
       <!-- Alpine.js-->
     <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
 
+    <!-- AOS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script  src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script> 
     </head>
 
     <body
@@ -285,6 +288,10 @@ t4sp-theme t4s-wrapper__{{ settings.general_layout }}{% if settings.animations_r
         classname[i].addEventListener('click', addToCart, false);
 
         }
+      </script>
+
+      <script>
+        AOS.init();
       </script>
 
       {%- render 'ecom_footer' -%}

@@ -49,23 +49,23 @@
 }
 {% endschema %}
 
-<div class="witlof-benefits" data-section-id="{{ section.id }}" data-section-type="witlof-benefits">
+<div class="witlof-benefits" data-section-id="{{ section.id }}" data-section-type="witlof-benefits" >
     <div class="benefits-container">
 
-        <div class="benefits-header">
+        <div class="benefits-header" data-aos="fade-up" data-aos-delay="100">
             <h2>{{ section.settings.benefits_title }}</h2>
         </div>  
         
         <div class="benefits">
             {% for block in section.blocks %}
-                <div class="benefit" {{ block.shopify_attributes }}>
+                <div class="benefit" {{ block.shopify_attributes }} data-aos="fade-up" data-aos-delay="{{forloop.index | plus:1 | times:50}}">
                     <h3>{{ block.settings.benefit_title }}</h3>
                     <p>{{ block.settings.benefit_description }}</p>
                 </div>
             {% endfor %}
         </div>
             
-                    <div>
+                    <div data-aos="fade-up" data-aos-delay="150">
                 {% if section.settings.benefits_image %}
                     <img class="benefit-img" src="{{ section.settings.benefits_image | image_url }}" alt="{{section.settings.benefits_image.alt}}" width="450px" height="560px" />
                 {% endif %}
