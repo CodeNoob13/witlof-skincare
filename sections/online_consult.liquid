@@ -92,7 +92,7 @@
                 
             {%- when "block" -%}
                <div data-aos="fade-up" data-aos-delay="{{ forloop.index | plus:1 | times:100}}" class="fluctit-consult-card {% if forloop.index == 2 %} align-right{% endif %}" style="background-image: url('{{ block.settings.background_image | image_url }}');border-radius:8px; background-size: cover; background-repeat: no-repeat; background-position: center;">
-                    <div class="fluctit-innercard " >
+                    <div class="fluctit-innercard" >
                         <span>{{block.settings.subtitle}}</span>
                         <h2>{{block.settings.title}}</h2>
                         <a aria-label="{{ block.settings.button_text }}" href="{{ block.settings.button_url }}">{{ block.settings.button_text }}</a>
@@ -164,6 +164,13 @@
         padding: 8px 24px;
         border-radius:100px;
         width: fit-content;
+        align-items:center;
+
+    }
+
+     .fluctit-innercard a:hover {
+        background: #3AA7B9;
+        transition: .1s ease-in ;
     }
 
     @media screen and (max-width: 768px) {

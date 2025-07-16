@@ -248,6 +248,11 @@
         "time": 6
       }
     },
+    "my_routine_hUrTAk": {
+      "type": "my_routine",
+      "name": "My routine",
+      "settings": {}
+    },
     "online_consult_zrACqH": {
       "type": "online_consult",
       "blocks": {
@@ -278,50 +283,6 @@
       ],
       "name": "Online consult",
       "settings": {}
-    },
-    "faq_KBkwtX": {
-      "type": "faq",
-      "blocks": {
-        "faq_nBdanU": {
-          "type": "faq",
-          "settings": {
-            "question": "Wat is jullie retourbeleid?",
-            "answer": "Je kunt je bestelling binnen 30 dagen retourneren."
-          }
-        },
-        "faq_Y66YVU": {
-          "type": "faq",
-          "settings": {
-            "question": "Wat is jullie retourbeleid?",
-            "answer": "Je kunt je bestelling binnen 30 dagen retourneren."
-          }
-        },
-        "faq_aBbWDw": {
-          "type": "faq",
-          "settings": {
-            "question": "Wat is jullie retourbeleid?",
-            "answer": "Je kunt je bestelling binnen 30 dagen retourneren."
-          }
-        },
-        "faq_rQx7jw": {
-          "type": "faq",
-          "settings": {
-            "question": "Wat is jullie retourbeleid?",
-            "answer": "Je kunt je bestelling binnen 30 dagen retourneren."
-          }
-        }
-      },
-      "block_order": [
-        "faq_nBdanU",
-        "faq_Y66YVU",
-        "faq_aBbWDw",
-        "faq_rQx7jw"
-      ],
-      "name": "FAQ - Two Column",
-      "settings": {
-        "heading": "FAQ",
-        "subheading": "Veelgestelde vragen"
-      }
     },
     "witlof_benefits_C6YQRU": {
       "type": "witlof-benefits",
@@ -381,6 +342,50 @@
       "settings": {
         "benefits_title": "<h3>Wist je dat Witlof Skincare...</h3>",
         "benefits_image": "shopify://shop_images/woman_witlof.jpg"
+      }
+    },
+    "faq_KBkwtX": {
+      "type": "faq",
+      "blocks": {
+        "faq_nBdanU": {
+          "type": "faq",
+          "settings": {
+            "question": "Wat is jullie retourbeleid?",
+            "answer": "Je kunt je bestelling binnen 30 dagen retourneren."
+          }
+        },
+        "faq_Y66YVU": {
+          "type": "faq",
+          "settings": {
+            "question": "Wat is jullie retourbeleid?",
+            "answer": "Je kunt je bestelling binnen 30 dagen retourneren."
+          }
+        },
+        "faq_aBbWDw": {
+          "type": "faq",
+          "settings": {
+            "question": "Wat is jullie retourbeleid?",
+            "answer": "Je kunt je bestelling binnen 30 dagen retourneren."
+          }
+        },
+        "faq_rQx7jw": {
+          "type": "faq",
+          "settings": {
+            "question": "Wat is jullie retourbeleid?",
+            "answer": "Je kunt je bestelling binnen 30 dagen retourneren."
+          }
+        }
+      },
+      "block_order": [
+        "faq_nBdanU",
+        "faq_Y66YVU",
+        "faq_aBbWDw",
+        "faq_rQx7jw"
+      ],
+      "name": "FAQ - Two Column",
+      "settings": {
+        "heading": "FAQ",
+        "subheading": "Veelgestelde vragen"
       }
     },
     "logo_list_MjJM4b": {
@@ -721,9 +726,10 @@
     "custom_html_8XzFiw",
     "countdown_zd6dLT",
     "main",
+    "my_routine_hUrTAk",
     "online_consult_zrACqH",
-    "faq_KBkwtX",
     "witlof_benefits_C6YQRU",
+    "faq_KBkwtX",
     "logo_list_MjJM4b",
     "sidebar",
     "product-recommendations",

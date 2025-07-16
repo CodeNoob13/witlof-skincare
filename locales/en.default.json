@@ -719,9 +719,15 @@
     "no_content": "This section doesn’t currently include any content. Add content to this section using the sidebar."
   },
   "fluctit": {
-    "faq": {
-      "title": "Frequently Asked Questions",
-      "subtitle": "Browse our most asked questions"
+    "klarna_info": {
+      "title1": "Pay later",
+      "text1": "Shop today and immediately enjoy your new purchase. If you're instantly satisfied, you can pay via the app. Not quite sure yet? Try it a bit longer. You can pay up to 30 days later. No interest. No extra costs. Just smooth.",
+      "title2": "The order",
+      "text2": "In your favorite shop's cart, fill in simple personal details you always remember, like your name and address.",
+      "title3": "The payment term",
+      "text3": "The 30-day payment term starts once your order has shipped. That gives you time to try it out. You only pay for what you keep.",
+      "title4": "The payment",
+      "text4": "Easily pay in the app with iDEAL or, once your bank account is securely linked, with just one click."
     }
   }
 }

@@ -1,0 +1,43 @@
+{% schema %}
+    {
+        "name": "My routine",
+        "tag": "section",
+        "class": "my-routine-section",
+        "settings": [
+            {
+            "type": "header",
+            "content": "Section title"
+            }
+        ],
+        "presets": [
+            {
+                "name": "My routine",
+                "category": "Custom"
+
+            }
+        ]
+    }
+{% endschema %}
+
+{%- assign steps =  product.metafields.custom.routine_steps.value -%}
+
+<div>
+    {%- for step in steps -%}
+        <div style="{{ step.step_color }}">
+            <div>
+                {{step.step_name}}
+                {{step.step_subtitle}}
+            </div>
+            <div>
+                {{step.step_image}}
+                {{step.step_image_text}}
+            </div>
+            
+            <div>
+                {{step.step_description_title}}
+                {{step.step_description}}
+            </div>
+        </div>
+
+    {%- endfor -%}
+</div>
