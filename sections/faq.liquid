@@ -61,47 +61,149 @@
 {% endschema %}
 
 {% comment %} {% if product.metafields.faq.questions.size > 0 %} {% endcomment %}
-  <section class="fluctit-faq-two-column">
-    <div class="fluctit-faq-heading">
-      <h2>{{ 'fluctit.faq.title' | t: default: 'FAQ' }}</h2>
-      <p class="fluctit-subheading">{{ 'fluctit.faq.subtitle' | t: default: 'Veelgestelde vragen' }}</p>
-    </div>
+{%- assign faq = product.metafields.custom.section_faq.value -%}
 
-    <div class="fluctit-faq-grid">
-      {% for item in product.metafields.faq.questions %}
-        <div class="fluctit-faq-item">
-          <details>
-            <summary>{{ item.question }}</summary>
-            <div class="fluctit-faq-answer">{{ item.answer }}</div>
-          </details>
-        </div>
-      {% endfor %}
+  <section class="fluct-it-faq-section">
+    <div class="fluctit-faq-two-column">
+
+      <div class="fluctit-faq-heading">
+        <h2 class="fluctit-title">{{ faq.display_title }}</h2>
+        <p class="fluctit-subheading">{{ faq.display_subtitle }}</p>
+      </div>
+      
+      {%- assign answers = "answer1,answer2,answer3,answer4,answer5,answer6,answer7,answer8" | split: "," -%}
+      {%- assign questions = "question1,question2,question3,question4,question5,question6,question7,question8" | split: "," -%}
+      
+      <div class="fluctit-faq-grid">
+        {%- for i in (0..8) -%}
+          {%- assign q = questions[i] -%}
+          {%- assign a = answers[i] -%}
+          
+          {%-  if faq[q] and faq[a] -%}
+            <div class="fluctit-faq-section-item"
+            x-data="{ open: false, height: 0 }"
+            x-init="height = $refs.faq.scrollHeight"
+            x-cloak 
+            @click="open = !open"
+            >
+                <div class="fluctit-faq-title-container">
+                  <span class="fluctit-faq-section-title">{{ faq[q] | metafield_tag }}</span>
+                  <img
+                    src="{{ 'close-icon.svg' | asset_url }}"
+                    class="fluctit-faq-toggle-icon"
+                    alt="Toggle FAQ"
+                     :style="open ? 'transform: rotate(45deg); transition: transform 0.3s ease' : 'transform: rotate(0deg); transition: transform 0.3s ease'"
+                    width="auto"
+                    height="auto"
+                  />
+                </div>
+                <div  :style="open 
+            ? 'transition: opacity 0.3s ease-in-out, max-height 0.3s ease; opacity:100; max-height: ' + height + 'px' 
+            : 'transition: opacity 0.3s ease-in-out, max-height 0.3s ease; max-height: 0; overflow:hidden; opacity:0;'">
+                  <div class="fluctit-faq-answer" x-ref="faq">
+                    {{ faq[a] | metafield_tag }}
+                  </div>
+                </div>
+            </div>
+          {%- endif -%}
+        {%- endfor -%}
+      </div>
     </div>
   </section>
 {% comment %} {% endif %} {% endcomment %}
 
 <style>
+.fluct-it-faq-section {
+    background:#F6F6F8;
+  padding-bottom: 128px;
+  padding-top:64px;
+  }
+
+.fluctit-faq-two-column  {
+  max-width:1300px;
+  margin: 0 auto;
+}
+
 .fluctit-faq-two-column .fluctit-faq-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 24px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start; 
+  gap: 0 24px;
+  max-width: 1300px;
+  margin: 0 auto;
 }
 
-.fluctit-faq-item details summary {
-  font-weight: 600;
+.fluctit-faq-section-item {
+  display: flex;
+  flex-direction: column;
+  font-weight: 500;
+  border-bottom: 1px solid rgba(30, 30, 30, 0.1);
+  padding: 24px 0;
   cursor: pointer;
-  position: relative;
-  padding-right: 20px;
+  width: calc(50% - 12px);
 }
 
-.fluctit-faq-item details[open] summary::after {
+@media screen and (max-width: 768px) {
+  .fluctit-faq-two-column  {
+  padding:0 16px;
+}
+
+  .fluctit-faq-two-column .fluctit-faq-grid {
+  gap: 0px;
+  max-width:100%;
+}
+
+  .fluctit-faq-section-item { 
+  width: 100%;
+  max-width:100%;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .fluctit-faq-two-column  {
+  padding:0 16px;
+  }
+
+}
+
+}
+
+.fluctit-faq-title-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.fluctit-title {
+  font-weight:600;
+  font-size:48px;
+  margin-bottom:24px;
+}
+
+.fluctit-subheading {
+  color:#4AB9CB;
+  font-weight:600;
+  font-size:16px;
+  margin-bottom:32px;
+}
+
+.fluctit-faq-section-title {
+  font-size: 16px;
+  font-weight:600;
+  color: #1E1E1E;
+}
+
+.fluctit-faq-answer p {
+  margin: 0;
+  padding: 8px 0 4px 0;
+  color: #1E1E1E;
+}
+
+.fluctit-faq-toggle-icon {
+  transition: transform 0.3s ease;
+}
+
+details[open] .fluctit-faq-toggle-icon {
   transform: rotate(45deg);
 }
-
-.fluctit-faq-item summary::after {
-  content: "+";
-  position: absolute;
-  right: 0;
-  transition: transform 0.2s ease;
-}    
 </style>
