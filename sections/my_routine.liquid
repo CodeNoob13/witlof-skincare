@@ -31,15 +31,14 @@
 
 <div class="fluctit-section-container" 
     x-data="{selected:$store.swiper.slide}"
-
 >
 
 <h2 class="fluctit-section-title" data-aos="fade-up">{{ section.settings.title }}</h2>
 
 <div class="swiper my-swiper" data-aos="fade-up">
 <div class="fluctit-steps-container swiper-wrapper">
-    <template x-for="(step, index) in $store.swiper.steps" :key="index" >
-        <div x-init="$store.swiper.index = index" class="swiper-slide fluctit-step-container" :class="index === $store.swiper.slide ? 'full-opacity' : ''">
+    <template x-for="(step, index) in $store.swiper.steps" :key="index">
+        <div @click="$store.swiper.getImage(index)" class="swiper-slide fluctit-step-container" :class="index === $store.swiper.slide ? 'full-opacity' : ''">
             <div x-bind:aria-label="'step' + index" :style="'background:' + step.step_color" class="fluctit-step-card" @click="$store.swiper.selectStep(index)">
                 <div class="fluctit-step-text-container">
                     <h2 x-text="step.step_name"></h2>
@@ -47,7 +46,7 @@
                 </div>
                 <div class="fluctit-step-image-container">
 
-                   <img :src="step.step_image" alt="step image" height="80px" width="80px">
+                   <img :src="$store.swiper.getImage(index)" alt="step image" height="80px" width="80px">
                     <span x-text="step.step_image_text"></span>
                 </div>
             </div>
@@ -78,6 +77,19 @@
       slide: {{ step_position }},
       on: false,
       stepImage: null,
+
+    getImage(index) {
+        const image = [
+        {% for step in product.metafields.custom.routine_steps.value %}
+           {step_image: "{{ step.step_image | image_url: width: 300 }}"}
+           {% unless forloop.last %}
+             ,
+           {% endunless %}
+        {% endfor %}
+        ];
+
+        return image[index].step_image
+    },
       
     selectStep(index) {
      this.slide = index;
@@ -116,6 +128,7 @@
             slidesPerView: 1.25,
             centeredSlidesBounds: true,
             watchOverflow: true,
+            slideToClickedSlide: true,
             breakpoints: {
                 674: {
                 slidesPerView: 1.45,
