@@ -79,16 +79,16 @@
       stepImage: null,
 
     getImage(index) {
-        const image = [
-        {% for step in product.metafields.custom.routine_steps.value %}
-           {step_image: "{{ step.step_image | image_url: width: 300 }}"}
-           {% unless forloop.last %}
-             ,
-           {% endunless %}
-        {% endfor %}
-        ];
+        const images = [
+            {%- for step in product.metafields.custom.routine_steps.value -%}
+                {step_image: "{{ step.step_image | image_url: width:300 }} "}
+                {% unless forloop.last %}
+                  ,
+                {% endunless %}
+            {% endfor %}
+        ]
 
-        return image[index].step_image
+        return images[index].step_image
     },
       
     selectStep(index) {
@@ -101,6 +101,7 @@
             const text = block.children.map(i => i.value).join('');
             return `<p>${text}</p>`;
             }
+
             if(block.type === 'heading') {
                 if (block.level === 3) {
                     const text = block.children.map(i => i.value);
