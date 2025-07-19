@@ -36,7 +36,7 @@
 
 <h2 class="fluctit-section-title" data-aos="fade-up">{{ section.settings.title }}</h2>
 
-<div class="swiper my-swiper" data-aos="fade-up >
+<div class="swiper my-swiper" data-aos="fade-up">
 <div class="fluctit-steps-container swiper-wrapper">
     <template x-for="(step, index) in $store.swiper.steps" :key="index" >
         <div x-init="$store.swiper.index = index" class="swiper-slide fluctit-step-container" :class="index === $store.swiper.slide ? 'full-opacity' : ''">
