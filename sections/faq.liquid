@@ -68,8 +68,8 @@
     <div class="fluctit-faq-two-column">
 
       <div class="fluctit-faq-heading">
-        <h2 class="fluctit-title">{{ faq.display_title }}</h2>
-        <p class="fluctit-subheading">{{ faq.display_subtitle }}</p>
+        <h2 class="fluctit-title" data-aos="fade-up" data-aos-duration="200">{{ faq.display_title }}</h2>
+        <p class="fluctit-subheading" data-aos="fade-up" data-aos-duration="400">{{ faq.display_subtitle }}</p>
       </div>
       
       {%- assign answers = "answer1,answer2,answer3,answer4,answer5,answer6,answer7,answer8" | split: "," -%}
@@ -82,7 +82,7 @@
           
           {%-  if faq[q] and faq[a] -%}
             <div class="fluctit-faq-section-item"
-            data-aos="fade-up" data-aos-delay="{{ i | times: 25 }}"
+            data-aos="fade-up" data-aos-duration="600"
             x-data="{ open: false, height: 0 }"
             x-init="height = $refs.faq.scrollHeight"
             x-cloak 
@@ -145,10 +145,11 @@
   width: calc(50% - 12px);
 }
 
-@media screen and (max-width: 768px) {
-  .fluctit-faq-two-column  {
-  padding:0 16px;
+.fluctit-faq-two-column  {
+padding:0 16px;
 }
+
+@media screen and (max-width: 768px) {
 
   .fluctit-faq-two-column .fluctit-faq-grid {
   gap: 0px;
@@ -159,13 +160,6 @@
   width: 100%;
   max-width:100%;
   }
-}
-
-@media screen and (min-width: 768px) {
-  .fluctit-faq-two-column  {
-  padding:0 16px;
-  }
-
 }
 
 }

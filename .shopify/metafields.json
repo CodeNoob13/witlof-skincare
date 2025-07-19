@@ -231,6 +231,16 @@
         "name": "list.metaobject_reference",
         "category": "REFERENCE"
       }
+    },
+    {
+      "key": "routine_step",
+      "namespace": "custom",
+      "name": "Routine step",
+      "description": "Choose which routine step this is",
+      "type": {
+        "name": "number_integer",
+        "category": "NUMBER"
+      }
     }
   ],
   "variant": [
