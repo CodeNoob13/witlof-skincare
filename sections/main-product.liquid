@@ -528,8 +528,8 @@
 
                   {% comment %} Fluctit subtitle {% endcomment %}
                   {% if product.metafields.custom.product_subtitle %} 
-                    <div style="margin-bottom:4px;">
-                        <span style="font-size:14px; font-weight:500;margin-bottom:0;">{{ product.metafields.custom.product_subtitle | metafield_tag }}</span>
+                    <div style="margin-bottom:2px;">
+                        <span style="font-size:14px; font-weight:600;margin-bottom:0;">{{ product.metafields.custom.product_subtitle | metafield_tag }}</span>
                     </div>
                 {% endif %}
 
@@ -1365,10 +1365,10 @@
                   </div>
 
                 {%- when 'usp_list' -%}
-                  <!-- Flucutit usp list -->
+                  <!-- Fluctit usp list -->
                    {%- render 'usp-list', list:product.metafields.custom.usp_list -%}
 
-                   <!-- Flucutit usp icons -->
+                   <!-- Fluctit usp icons -->
                 {%- when 'usp_icons' -%}
                   {%- render 'usp-icons',
                     usp_caption1: block.settings.usp_caption1,

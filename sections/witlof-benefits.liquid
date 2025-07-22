@@ -5,6 +5,10 @@
   
   "settings": [
     {
+    "type": "header",
+    "content": "Title",
+    },
+    {
       "type": "richtext",
       "id": "benefits_title",
       "label": "Benefits Title",
@@ -12,12 +16,27 @@
     },
     {
     "type": "header",
-    "content": "Benefits Header",
+    "content": "Image",
     },
     {
       "type": "image_picker",
       "id": "benefits_image",
       "label": "Benefits Image"
+    },
+    {
+        "type": "header",
+        "content": "Video"
+    },
+    {
+    "type": "checkbox",
+    "id": "show_video",
+    "label": "Show Video instead of image",
+    "default": false
+    },
+    {
+      "type": "video",
+      "id": "video_file",
+      "label": "Upload MP4 Video"
     }
   ],
   "blocks": [
@@ -49,6 +68,7 @@
 }
 {% endschema %}
 
+
 <div class="witlof-benefits" data-section-id="{{ section.id }}" data-section-type="witlof-benefits" >
     <div class="benefits-container">
 
@@ -66,7 +86,12 @@
         </div>
             
                     <div data-aos="fade-up" data-aos-delay="150">
-                {% if section.settings.benefits_image %}
+                {% if section.settings.show_video == true %}
+                    <div class="video-wrapper">
+                      {{ section.settings.video_file | video_tag: autoplay: true, loop: true, muted: true, controls: false }}
+                    </div>
+                    
+                {% else %}
                     <img class="benefit-img" src="{{ section.settings.benefits_image | image_url }}" alt="{{section.settings.benefits_image.alt}}" width="450px" height="560px" />
                 {% endif %}
             </div>
@@ -131,6 +156,12 @@
         object-fit: cover;
     }
 
+    .video-wrapper video {
+        max-width: 100%;
+        max-height: 560px;
+        border-radius:24px;
+    }
+
       @media (max-width: 1400px) {
          .witlof-benefits {
         padding: 64px 16px;
@@ -172,6 +203,10 @@
             height: auto;
             margin-bottom:20px;
 
+        }
+        .video-wrapper video {
+            margin-bottom:12px;
+            max-width:100%;
         }
     }
 

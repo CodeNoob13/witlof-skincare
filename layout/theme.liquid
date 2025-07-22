@@ -218,23 +218,17 @@ t4sp-theme t4s-wrapper__{{ settings.general_layout }}{% if settings.animations_r
         async
       ></script>
 
-      <!-- End TrustBox script -->
 
-      <!-- Alpine.js-->
+
+
     <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
-       <link href="{{ 'tailwind.output.css' | asset_url | stylesheet_tag }}" rel="stylesheet">
-    <!-- AOS -->
+       
+    
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <script async src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     
-    <link
-  rel="stylesheet"
-  href="{{ 'swiper-bundle.min.css' | asset_url | stylesheet_tag }}"
-/>
-<link
-  rel="stylesheet"
-  href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
-/>
+    {% comment %} <link rel="stylesheet" href="{{ 'swiper-bundle.min.css' | asset_url | stylesheet_tag }}"/> {% endcomment %}
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     </head>
 
     <body
