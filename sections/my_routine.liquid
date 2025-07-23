@@ -39,7 +39,7 @@
 <div class="fluctit-steps-container swiper-wrapper">
     <template x-for="(step, index) in $store.swiper.steps" :key="index">
         <div @click="$store.swiper.getImage(index)" class="swiper-slide fluctit-step-container" :class="{
-  'full-opacity': index === $store.swiper.slide,
+  {% comment %} 'full-opacity': index === $store.swiper.slide, {% endcomment %}
   'activeStep': $store.swiper.step_position === index
     }">
             <div x-bind:aria-label="'step' + index" :style="'background:' + step.step_color" class="fluctit-step-card" @click="$store.swiper.selectStep(index)">
@@ -237,7 +237,7 @@
     .fluctit-step-container {
         display:flex;
         flex-direction:column;
-        opacity:30%;
+        opacity:50%;
         cursor:pointer;
         box-sizing: border-box;
         -moz-box-sizing: border-box;
@@ -252,10 +252,11 @@
     }
 
     
-    .activeStep {
-        opacity:65%;
-    }
-    
+        .activeStep {
+                opacity:100%;
+        }
+
+
     .full-opacity {
         {% comment %} border:4px dotted #0092B7; {% endcomment %}
         opacity: 100%!important;
