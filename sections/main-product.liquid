@@ -595,6 +595,7 @@
                               data-id="{{ product.id }}"
                               style="pointer-events: none;"
                             >
+
                               {{- product.metafields.judgeme.badge -}}
                             </div>
                             <!-- End of Judge.me code -->
@@ -1367,7 +1368,26 @@
                 {%- when 'usp_list' -%}
                   <!-- Fluctit usp list -->
                    {%- render 'usp-list', list:product.metafields.custom.usp_list -%}
+                
+                  {%- when 'custom_title' -%}
+                  <!-- Fluctit custom title -->
+                  <span class="fluctit-custom-title">{{ block.settings.title }}</span>
 
+                      <style>
+                         .fluctit-custom-title {
+                          font-weight:600!important;
+                          font-size:20px;
+                          color:#000;
+                          margin-bottom:10px;
+                        }
+
+                      @media screen and (max-width: 768px) {
+                        .fluctit-custom-title {
+                          font-size:16px;
+                        }
+                      }
+                      </style>
+                  
                    <!-- Fluctit usp icons -->
                 {%- when 'usp_icons' -%}
                   {%- render 'usp-icons',
@@ -3706,6 +3726,17 @@
           "type": "number",
           "id": "mgb_mb",
           "label": "Margin bottom on mobile (Unit:px)"
+        }
+      ]
+    },
+     {
+      "type": "custom_title",
+      "name": "Custom title",
+      "settings": [
+        {
+          "type": "text",
+          "label": "Title",
+          "id": "title"
         }
       ]
     },

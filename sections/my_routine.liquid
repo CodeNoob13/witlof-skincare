@@ -38,7 +38,10 @@
 <div class="swiper my-swiper" data-aos="fade-up">
 <div class="fluctit-steps-container swiper-wrapper">
     <template x-for="(step, index) in $store.swiper.steps" :key="index">
-        <div @click="$store.swiper.getImage(index)" class="swiper-slide fluctit-step-container" :class="index === $store.swiper.slide ? 'full-opacity' : ''">
+        <div @click="$store.swiper.getImage(index)" class="swiper-slide fluctit-step-container" :class="{
+  'full-opacity': index === $store.swiper.slide,
+  'activeStep': $store.swiper.step_position === index
+    }">
             <div x-bind:aria-label="'step' + index" :style="'background:' + step.step_color" class="fluctit-step-card" @click="$store.swiper.selectStep(index)">
                 <div class="fluctit-step-text-container">
                     <h2 x-text="step.step_name"></h2>
@@ -58,7 +61,7 @@
     <div class="fluctit-step-description-container" data-aos="fade-up">
         <template x-for="(step, index) in $store.swiper.steps" :key="index">
             <template  x-if="index === $store.swiper.slide" >
-            <div class="fluctit-description-box" :class="{ 'active': index === $store.swiper.slide }"
+            <div class="fluctit-description-box" :class="{ 'active': index === $store.swiper.slide}"
                 :style="'border-left: 5px solid ' + step.step_color"
             >
                 <h3 x-text="step.step_description_title"></h3>
@@ -72,6 +75,7 @@
 <script>
   document.addEventListener('alpine:init', () => {
     Alpine.store('swiper', {
+        step_position: {{ step_position }},
       step: {{ step_position }},
       steps: {{ product.metafields.custom.routine_steps.value | json }},
       slide: {{ step_position }},
@@ -230,13 +234,14 @@
     
     }
 
-
-
     .fluctit-step-container {
         display:flex;
         flex-direction:column;
         opacity:30%;
         cursor:pointer;
+        box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        -webkit-box-sizing: border-box;
     }
 
     @media screen and (min-width: 1300px) {
@@ -245,9 +250,15 @@
         grid-template-columns: repeat(5 , 1fr);
     }
     }
+
+    
+    .activeStep {
+        opacity:65%;
+    }
     
     .full-opacity {
-        opacity: 100%;
+        {% comment %} border:4px dotted #0092B7; {% endcomment %}
+        opacity: 100%!important;
     }
 
     .fluctit-step-card {
