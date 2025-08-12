@@ -28,7 +28,7 @@
 {%- assign steps_value =  product.metafields.custom.routine_steps.value -%}
 {%- assign step_titles = "stap een, stap twee, stap drie, stap vier, stap vijf" | split: "," -%}
 {%- assign step_position = product.metafields.custom.routine_step.value  -%}
-
+{% if steps_value %}
 <div class="fluctit-section-container" 
     x-data="{selected:$store.swiper.slide}"
 >
@@ -71,7 +71,7 @@
     </template>
     </div> 
 </div>
-
+{% endif %}
 <script>
   document.addEventListener('alpine:init', () => {
     Alpine.store('swiper', {
