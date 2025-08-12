@@ -729,5 +729,8 @@
       "title4": "The payment",
       "text4": "Easily pay in the app with iDEAL or, once your bank account is securely linked, with just one click."
     }
+  },
+  "line_item": {
+    "return_policy": "60 days free returns"
   }
 }

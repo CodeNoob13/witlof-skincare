@@ -1,315 +1,260 @@
+
 {% schema %}
-    {
-        "name": "My routine",
-        "tag": "section",
-        "class": "my-routine-section",
-        "settings": [
-            {
+{
+    "name": "My routine",
+    "tag": "section",
+    "class": "my-routine-section",
+    "settings": [
+        {
             "type": "header",
             "content": "Section title"
-            },
-            {
+        },
+        {
             "type": "text",
-            "default":"Waar bevind ik mij in mijn routine?",
+            "default": "Waar bevind ik mij in mijn routine?",
             "id": "title",
             "label": "Section title"
-            }
-        ],
-        "presets": [
-            {
-                "name": "My routine",
-                "category": "Custom"
-
-            }
-        ]
-    }
+        }
+    ],
+    "presets": [
+        {
+            "name": "My routine",
+            "category": "Custom"
+        }
+    ]
+}
 {% endschema %}
 
-{%- assign steps_value =  product.metafields.custom.routine_steps.value -%}
+
+{%- assign steps_value = product.metafields.custom.routine_steps.value -%}
 {%- assign step_titles = "stap een, stap twee, stap drie, stap vier, stap vijf" | split: "," -%}
-{%- assign step_position = product.metafields.custom.routine_step.value  -%}
+{%- assign step_position = product.metafields.custom.routine_step.value -%}
 {% if steps_value %}
-<div class="fluctit-section-container" 
-    x-data="{selected:$store.swiper.slide}"
->
-
-<h2 class="fluctit-section-title" data-aos="fade-up">{{ section.settings.title }}</h2>
-
-<div class="swiper my-swiper" data-aos="fade-up">
-<div class="fluctit-steps-container swiper-wrapper">
-    <template x-for="(step, index) in $store.swiper.steps" :key="index">
-        <div @click="$store.swiper.getImage(index)" class="swiper-slide fluctit-step-container" :class="{
-  {% comment %} 'full-opacity': index === $store.swiper.slide, {% endcomment %}
-  'activeStep': $store.swiper.step_position === index
-    }">
-            <div x-bind:aria-label="'step' + index" :style="'background:' + step.step_color" class="fluctit-step-card" @click="$store.swiper.selectStep(index)">
-                <div class="fluctit-step-text-container">
-                    <h2 x-text="step.step_name"></h2>
-                    <span x-text="step.step_subtitle"></span>
-                </div>
-                <div class="fluctit-step-image-container">
-
-                   <img :src="$store.swiper.getImage(index)" alt="step image" height="80px" width="80px">
-                    <span x-text="step.step_image_text"></span>
-                </div>
+    <div class="fluctit-section-container" x-data="{ selected: $store.swiper.slide }">
+        <h2 class="fluctit-section-title" data-aos="fade-up">{{ section.settings.title }}</h2>
+        <div class="swiper my-swiper" data-aos="fade-up">
+            <div class="fluctit-steps-container swiper-wrapper">
+                <template x-for="(step, index) in $store.swiper.steps" :key="index">
+                    <div @click="$store.swiper.getImage(index)" class="swiper-slide fluctit-step-container" :class="{
+                        'activeStep': $store.swiper.step_position === index
+                    }">
+                        <div x-bind:aria-label="'step' + index" :style="'background:' + step.step_color" class="fluctit-step-card" @click="$store.swiper.selectStep(index)">
+                            <div class="fluctit-step-text-container">
+                                <h2 x-text="step.step_name"></h2>
+                                <span x-text="step.step_subtitle"></span>
+                            </div>
+                            <div class="fluctit-step-image-container">
+                                <img :src="$store.swiper.getImage(index)" alt="step image" height="80px" width="80px">
+                                <span x-text="step.step_image_text"></span>
+                            </div>
+                        </div>
+                    </div>
+                </template>
             </div>
         </div>
-    </template>
-</div>
-</div>
 
-    <div class="fluctit-step-description-container" data-aos="fade-up">
-        <template x-for="(step, index) in $store.swiper.steps" :key="index">
-            <template  x-if="index === $store.swiper.slide" >
-            <div class="fluctit-description-box" :class="{ 'active': index === $store.swiper.slide}"
-                :style="'border-left: 5px solid ' + step.step_color"
-            >
-                <h3 x-text="step.step_description_title"></h3>
-                <div class="fluctit-rich-text" x-html="$store.swiper.richToHtml(step.step_description)"></div>
-            </div>
-        </template>
-    </template>
-    </div> 
-</div>
+        <div class="fluctit-step-description-container" data-aos="fade-up">
+            <template x-for="(step, index) in $store.swiper.steps" :key="index">
+                <template x-if="index === $store.swiper.slide">
+                    <div class="fluctit-description-box" :class="{ 'active': index === $store.swiper.slide }" :style="'border-left: 5px solid ' + step.step_color">
+                        <h3 x-text="step.step_description_title"></h3>
+                        <div class="fluctit-rich-text" x-html="$store.swiper.richToHtml(step.step_description)"></div>
+                    </div>
+                </template>
+            </template>
+        </div>
+    </div>
 {% endif %}
 <script>
-  document.addEventListener('alpine:init', () => {
-    Alpine.store('swiper', {
-        step_position: {{ step_position }},
-      step: {{ step_position }},
-      steps: {{ product.metafields.custom.routine_steps.value | json }},
-      slide: {{ step_position }},
-      on: false,
-      stepImage: null,
+    document.addEventListener('alpine:init', () => {
+        Alpine.store('swiper', {
+            step_position: {{ step_position }},
+            step: {{ step_position }},
+            steps: {{ product.metafields.custom.routine_steps.value | json }},
+            slide: {{ step_position }},
+            on: false,
+            stepImage: null,
 
-    getImage(index) {
-        const images = [
-            {%- for step in product.metafields.custom.routine_steps.value -%}
-                {step_image: "{{ step.step_image | image_url: width:300 }} "}
-                {% unless forloop.last %}
-                  ,
-                {% endunless %}
-            {% endfor %}
-        ]
+            getImage(index) {
+                const images = [
+                    {%- for step in product.metafields.custom.routine_steps.value -%}
+                        { step_image: "{{ step.step_image | image_url: width:300 }} " }
+                        {% unless forloop.last %},{% endunless %}
+                    {% endfor %}
+                ];
+                return images[index].step_image;
+            },
 
-        return images[index].step_image
-    },
-      
-    selectStep(index) {
-     this.slide = index;
-    },
+            selectStep(index) {
+                this.slide = index;
+            },
 
-     richToHtml(data) {
-        const description = data.children.map(block => {
-            if (block.type === 'paragraph') {
-            const text = block.children.map(i => i.value).join('');
-            return `<p>${text}</p>`;
+            richToHtml(data) {
+                const description = data.children.map(block => {
+                    if (block.type === 'paragraph') {
+                        const text = block.children.map(i => i.value).join('');
+                        return `<p>${text}</p>`;
+                    }
+                    if (block.type === 'heading') {
+                        if (block.level === 3) {
+                            const text = block.children.map(i => i.value);
+                            return `<h3>${text}</h3>`;
+                        }
+                    }
+                    return '';
+                }).join('');
+                return description;
             }
+        });
 
-            if(block.type === 'heading') {
-                if (block.level === 3) {
-                    const text = block.children.map(i => i.value);
-                    return `<h3>${text}</h3>`
+
+        document.addEventListener('DOMContentLoaded', function () {
+            let swiper;
+            function initSwiper() {
+                if (swiper != null) {
+                    swiper.destroy(true, true);
+                }
+                if (window.innerWidth <= 1300) {
+                    swiper = new Swiper('.my-swiper', {
+                        initialSlide: Alpine.store('swiper').slide,
+                        slidesPerView: 1.25,
+                        centeredSlidesBounds: true,
+                        watchOverflow: true,
+                        slideToClickedSlide: true,
+                        breakpoints: {
+                            674: {
+                                slidesPerView: 1.45,
+                            },
+                        },
+                        spaceBetween: 8,
+                        pagination: {
+                            el: '.swiper-pagination',
+                            clickable: true,
+                        },
+                        on: {
+                            slideChange() {
+                                Alpine.store('swiper').slide = this.realIndex;
+                            }
+                        }
+                    });
                 }
             }
-            return '';
-        }).join('');
-  
-  return description;
-}
+            initSwiper();
+            window.addEventListener('resize', initSwiper);
+        });
     });
-
-    document.addEventListener('DOMContentLoaded', function () {
-      let swiper;
-
-      function initSwiper() {
-       if (swiper != null) {
-            swiper.destroy(true,true)
-        }
-
-        if (window.innerWidth <= 1300) {
-          swiper = new Swiper(".my-swiper", {
-            initialSlide: Alpine.store('swiper').slide,
-            slidesPerView: 1.25,
-            centeredSlidesBounds: true,
-            watchOverflow: true,
-            slideToClickedSlide: true,
-            breakpoints: {
-                674: {
-                slidesPerView: 1.45,
-                },
-            },
-            spaceBetween: 8,
-            pagination: {
-              el: ".swiper-pagination",
-              clickable: true,
-            },
-            on: {
-              slideChange() {
-                Alpine.store('swiper').slide = this.realIndex;
-              }
-            }
-          });
-        }
-      }
-      initSwiper()
-      {% comment %} initSwiper(); {% endcomment %}
-      window.addEventListener('resize', initSwiper);
-    });
-  });
 </script>
+
 
 <style>
     .fluctit-description-box {
         opacity: 0;
         transition: opacity 2s ease;
+        padding-left: 16px;
     }
-
     .active {
         opacity: 1;
         transition: opacity 2s ease;
     }
-
-    @media screen and (max-width:768px) {
-        .swiper {
-            overflow:visible;
-            }
-    }
-
-    .fluctit-section-container {
-        max-width:1300px;
-        margin:80px auto;
-        padding: 0 16px;
-    }
-
     @media screen and (max-width: 768px) {
-         .fluctit-section-container {
-        margin:64px auto;
+        .swiper {
+            overflow: visible;
+        }
+        .fluctit-section-container {
+            margin: 64px auto;
+            padding: 0 16px;
+        }
+        .fluctit-section-title {
+            font-size: 28px;
+        }
+    }
+    .fluctit-section-container {
+        max-width: 1300px;
+        margin: 80px auto;
         padding: 0 16px;
     }
-    }
-
     .fluctit-section-title {
-        margin-bottom:32px;
-        font-size:34px;
+        margin-bottom: 32px;
+        font-size: 34px;
     }
-
-    @media screen and (max-width:768px) {
-        .fluctit-section-title {
-
-        font-size:28px;
-    }
-    }
-
-    .fluctit-description-box {
-        padding-left:16px;
-    }
-
     .fluctit-description-box h3 {
-        font-size:18px;
+        font-size: 18px;
     }
-
     .fluctit-rich-text {
-        margin-top:12px;
+        margin-top: 12px;
     }
-
     .fluctit-rich-text p {
         margin-bottom: 2px;
         white-space: pre-line;
     }
-
     .fluctit-step-description-container {
-        margin-top:20px;
+        margin-top: 20px;
     }
-
     .fluctit-steps-container {
-        display:flex;
+        display: flex;
     }
-
-    @media screen and (min-width:1300px) {
+    @media screen and (min-width: 1300px) {
         .fluctit-steps-container {
-        gap:12px;
+            gap: 12px;
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+        }
     }
-
-    
-    }
-
     .fluctit-step-container {
-        display:flex;
-        flex-direction:column;
-        opacity:50%;
-        cursor:pointer;
+        display: flex;
+        flex-direction: column;
+        opacity: 50%;
+        cursor: pointer;
         box-sizing: border-box;
         -moz-box-sizing: border-box;
         -webkit-box-sizing: border-box;
     }
-
-    @media screen and (min-width: 1300px) {
-   .fluctit-steps-container {
-        display:grid;
-        grid-template-columns: repeat(5 , 1fr);
+    .activeStep {
+        opacity: 100%;
     }
-    }
-
-    
-        .activeStep {
-                opacity:100%;
-        }
-
-
     .full-opacity {
-        {% comment %} border:4px dotted #0092B7; {% endcomment %}
         opacity: 100%!important;
     }
-
     .fluctit-step-card {
-        display:flex;
-        align-items:center;
-        height:160px;
-        min-width:240px;
-        border-radius:8px;
-        color:#fff;
-        justify-content:space-between;
-        padding-left:12px;
-        padding-right:12px;
+        display: flex;
+        align-items: center;
+        height: 160px;
+        min-width: 240px;
+        border-radius: 8px;
+        color: #fff;
+        justify-content: space-between;
+        padding-left: 12px;
+        padding-right: 12px;
     }
-
     @media screen and (max-width: 1300px) {
         .fluctit-step-card {
-        padding-left:32px;
-        padding-right:32px;
+            padding-left: 32px;
+            padding-right: 32px;
+        }
     }
-    }
-
     .fluctit-step-text-container {
-        display:flex;
-        flex-direction:column;
-        text-align:center;
-        max-width:fit-content;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        max-width: fit-content;
     }
-
     .fluctit-step-text-container h2 {
         text-transform: uppercase;
-        color:#fff;
-        font-size:18px;
+        color: #fff;
+        font-size: 18px;
     }
-
     .fluctit-step-text-container span {
         text-transform: uppercase;
-        color:#fff;
-        font-size:18px;
-        font-weight:400;
+        color: #fff;
+        font-size: 18px;
+        font-weight: 400;
     }
-
     .fluctit-step-image-container {
-        display:flex;
-        flex-direction:column;
-        align-items:center;
-        max-width:fit-content;
-    }
-
-    .fluctit-step-image-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        max-width: fit-content;
         max-width: 80px;
-        text-align:center;
+        text-align: center;
     }
 </style>

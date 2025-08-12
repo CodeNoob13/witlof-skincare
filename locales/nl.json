@@ -736,5 +736,8 @@
       "title4": "De betaling",
       "text4": "Je betaalt gemakkelijk in de app met iDEAL, of, zodra je bankrekening veilig gekoppeld is aan de app, met één klik."
     }
+  },
+  "line_item": {
+    "return_policy": "60 dagen gratis retourneren"
   }
 }
