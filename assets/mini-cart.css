@@ -181,7 +181,7 @@ input[type="checkbox"][data-agree-checkbox]:checked ~ svg {
 
 .t4s-mini_cart__item {
   padding: 20px;
-  border-bottom: 1px solid rgba(var(--border-color-rgb), 0.8);
+  border-bottom: 1px solid rgba(var(--border-color-rgb), 0.6);
   transition: background-color 0.3s;
   font-weight: var(--product-title-weight);
   display: flex;
@@ -212,6 +212,10 @@ input[type="checkbox"][data-agree-checkbox]:checked ~ svg {
   color: var(--secondary-color);
   display: block;
   font-family: var(--font-heading-family);
+  white-space: normal;
+  overflow: visible;
+  text-overflow: unset;
+  word-break: break-word;
 }
 .t4s-mini_cart__meta {
   font-size: 14px;
