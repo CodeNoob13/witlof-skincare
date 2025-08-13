@@ -1,0 +1,29 @@
+document.addEventListener("alpine:init", () => {
+  Alpine.data("ajCart", () => ({
+    cartPrice: 0,
+    cartDiscount: 0,
+    init() {
+      this.fetchCart();
+      document.addEventListener("cart:refresh", () => {
+        this.fetchCart();
+      });
+      document.addEventListener("cart:updated", () => {
+        this.fetchCart();
+      });
+      document.addEventListener("cart:change", () => {
+        this.fetchCart();
+      });
+      document.addEventListener("cart:requestComplete", () => {
+        this.fetchCart();
+      });
+    },
+    fetchCart() {
+      fetch("/cart.js")
+        .then((res) => res.json())
+        .then((cart) => {
+          this.cartPrice = cart.total_price / 100;
+          this.cartDiscount = cart.total_discount / 100;
+        });
+    },
+  }));
+});

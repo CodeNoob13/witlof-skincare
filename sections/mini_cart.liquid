@@ -52,8 +52,9 @@
 </symbol>
 </svg>
 
-{%- capture html_btn -%}
-    {%- if se_style == '1' -%}
+{%- case se_style -%}
+  {%- when '1' -%}
+    {%- capture html_btn -%}
       <div data-cart-tools class="t4s-when-cart-emty t4s-mini_cart__tool t4s-mini_cart__tool_icon t4s-text-center">
         {%- if se_stts.enable_note -%}
          <div data-tooltip="top" title="{{ 'cart.tool.note' | t }}" data-cart-tool_action data-id="note" class="mini_cart_tool_btn is--note is--addNote {{ style_add }}">
@@ -67,7 +68,9 @@
         {%- if se_stts.enable_rates -%}<div data-tooltip="top" title="{{ 'cart.shipping_estimator.estimate' | t | escape }}" data-cart-tool_action data-id="rates" class="mini_cart_tool_btn is--rates"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><path d="M 1 4 L 1 25 L 4.15625 25 C 4.601563 26.71875 6.148438 28 8 28 C 9.851563 28 11.398438 26.71875 11.84375 25 L 20.15625 25 C 20.601563 26.71875 22.148438 28 24 28 C 25.851563 28 27.398438 26.71875 27.84375 25 L 31 25 L 31 14.59375 L 30.71875 14.28125 L 24.71875 8.28125 L 24.40625 8 L 19 8 L 19 4 Z M 3 6 L 17 6 L 17 23 L 11.84375 23 C 11.398438 21.28125 9.851563 20 8 20 C 6.148438 20 4.601563 21.28125 4.15625 23 L 3 23 Z M 19 10 L 23.5625 10 L 29 15.4375 L 29 23 L 27.84375 23 C 27.398438 21.28125 25.851563 20 24 20 C 22.148438 20 20.601563 21.28125 20.15625 23 L 19 23 Z M 8 22 C 9.117188 22 10 22.882813 10 24 C 10 25.117188 9.117188 26 8 26 C 6.882813 26 6 25.117188 6 24 C 6 22.882813 6.882813 22 8 22 Z M 24 22 C 25.117188 22 26 22.882813 26 24 C 26 25.117188 25.117188 26 24 26 C 22.882813 26 22 25.117188 22 24 C 22 22.882813 22.882813 22 24 22 Z"/></svg></div>{%- endif -%}
         {%- if se_stts.enable_discount -%}<div data-tooltip="top" title="{{ 'cart.tool.add_coupon' | t }}" data-cart-tool_action data-id="discount" class="mini_cart_tool_btn is--discount"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><path d="M 16 5 L 15.6875 5.28125 L 4.28125 16.8125 L 3.59375 17.5 L 4.28125 18.21875 L 13.78125 27.71875 L 14.5 28.40625 L 15.1875 27.71875 L 26.71875 16.3125 L 27 16 L 27 5 Z M 16.84375 7 L 25 7 L 25 15.15625 L 14.5 25.59375 L 6.40625 17.5 Z M 22 9 C 21.449219 9 21 9.449219 21 10 C 21 10.550781 21.449219 11 22 11 C 22.550781 11 23 10.550781 23 10 C 23 9.449219 22.550781 9 22 9 Z"/></svg></div>{%- endif -%}
       </div>
-    {%- else -%}
+    {%- endcapture -%}
+  {%- when '2' -%}
+    {%- capture html_btn -%}
       <div data-cart-tools class="t4s-when-cart-emty t4s-mini_cart__tool t4s-mini_cart__tool_button">
         {%- if se_stts.enable_note -%}
         <div data-cart-tool_action data-id="note" class="mini_cart_tool_btn is--note is--addNote t4s-pr t4s-truncate {{ style_add }}">{{ 'cart.tool.note' | t }}</div>
@@ -77,15 +80,16 @@
         {%- if se_stts.enable_rates -%}<div data-cart-tool_action data-id="rates" class="mini_cart_tool_btn is--rates t4s-pr t4s-truncate">{{ 'cart.shipping_estimator.estimate' | t }}</div>{%- endif -%}
         {%- if se_stts.enable_discount -%}<div data-cart-tool_action data-id="discount" class="mini_cart_tool_btn is--discount t4s-pr t4s-truncate">{{ 'cart.tool.add_coupon' | t }}</div>{%- endif -%}
       </div>
-   {%- endif -%}
-{%- endcapture -%}
+    {%- endcapture -%}
+{%- endcase -%}
 
 {%- if request.design_mode -%}
 <link rel="stylesheet" href="{{ 'mini-cart.css' | asset_url }}" media="print" onload="this.media='all'">
 <div data-cart-wrapper id="t4s-mini_cart" data-ccount="{{ ccount }}" class="t4s-drawer t4s-drawer__right t4s-dn" aria-hidden="true">
 {%- endif -%}
 
-   <div class="t4s-drawer__header"><span>{{ 'cart.mini_cart.title' | t }}</span><button class="t4s-drawer__close" data-drawer-close aria-label="{{ 'cart.mini_cart.close_cart' | t }}"><svg class="t4s-iconsvg-close" role="presentation" viewBox="0 0 16 14"><path d="M15 0L1 14m14 0L1 0" stroke="currentColor" fill="none" fill-rule="evenodd"></path></svg></button></div>
+  {% render 'mini-cart-header' %}
+  {% render 'mini-cart-shipping-threshold' %}
    {%- if se_stts.enable_calc_ship and shipping_amount > -1 -%}
       {%- liquid
       assign shipping_money = shipping_amount | money 
@@ -258,107 +262,61 @@
 
                {%- when 'agree' -%}
                   {%- capture terms_and_conditions -%}{%- assign page_url = settings.link_conditions -%}
-                   {%- if page_url != blank -%}
-                     {{ 'cart.general.terms_and_conditions_html' | t: link: page_url }}
-                   {%- else -%}
-                     {{ 'cart.general.terms_and_conditions' | t }}
-                   {%- endif -%}
-                  {%- endcapture -%}
-                  <p class="t4s-pr t4s-d-block t4s-cart__agree" {{ block.shopify_attributes }}><input type="checkbox" id="cart_agree" data-agree-checkbox name="{{ ck_lumise }}"><label for="cart_agree">{{ terms_and_conditions }}</label><svg class="t4s-dn t4s-icon_checked"><use href="#icon-cart-selected"/></svg></p>
-
-               {%- when 'btnc' -%}    
-                  <a {{ block.shopify_attributes }} href="{{ cart_url }}" data-loading-bar class="t4s-btn__cart t4s-btn t4s-btn-base t4s-btn-style-{{ button_style }} t4s-btn-color-{{ bk_stts.btn_cl }} {% if button_style == 'default' or button_style == 'outline' %}t4s-btn-effect-{{ bk_stts.button_effect }}{% endif %} t4s-w-100 t4s-justify-content-center t4s-truncate">{{ 'cart.mini_cart.view' | t }} {%- if bk_stts.btn_icon -%}<svg class="t4s-btn-icon" width="14"><use xlink:href="#t4s-icon-btn"></use></svg>{%- endif -%}</a>
-
-               {%- when 'btnck' -%}
-                  {%- if settings.currency_type == '2' and settings.notify_currency and settings.mess_currency != blank %}{% assign cart_iso_code = cart.currency.iso_code %}{% assign text1 = '{{ currency }}' -%}
-                  <p class="t4s-db" data-currency-jsnotify>{{ settings.mess_currency | replace: text1, cart_iso_code | replace: '[currency]', cart_iso_code | replace: '[original_currency]', cart_iso_code | replace: '[current_currency]', '<span class="selected-currency"></span>' }}</p>
+                  {%- if se_stts.enable_calc_ship and shipping_amount > -1 -%}
+                    {% render 'mini-cart-shipping-threshold' %}
                   {%- endif -%}
-                  <button {{ block.shopify_attributes }} type="submit" data-loading-bar data-confirm="{{ ck_lumise }}" name="checkout" class="t4s-btn__checkout t4s-btn t4s-btn-base t4s-btn-style-{{ button_style }} t4s-btn-color-{{ bk_stts.btn_cl }} {% if button_style == 'default' or button_style == 'outline' %}t4s-btn-effect-{{ bk_stts.button_effect }}{% endif %} t4s-w-100 t4s-justify-content-center t4s-truncate">{{ 'cart.mini_cart.checkout' | t }} {%- if bk_stts.btn_icon -%}<svg class="t4s-btn-icon" width="14"><use xlink:href="#t4s-icon-btn"></use></svg>{%- endif -%}</button>
-
-               {%- when 'btnmr' -%}
-                  {%- if additional_checkout_buttons and unadmin_sp  -%}{{ arr_agree[0] }}<div {{ block.shopify_attributes }} data-add-ckt4 class="additional_checkout_buttons additional-checkout-buttons--vertical mt__10 mb__10{{ cl_agree }}">{{ content_for_additional_checkout_buttons }}</div>{{ arr_agree[1] }}{%- endif -%}
-               
-               {%- when 'img' -%}
-                  {% if bk_stts.image != blank %}
-                  {%- assign image = bk_stts.image -%}
-                  <div class="t4s-cat__imgtrust t4s_ratioadapt" {{ block.shopify_attributes }}>
-                     <div class="t4s_ratio t4s-pr t4s-oh" style="--aspect-ratioapt:{{ image.aspect_ratio | default: 1 }};">
-                       <img class="t4s-w-100 lazyloadt4s" data-src="{{ image | image_url: width: 1 }}" data-widths="[100,200,400,600]" data-optimumx="2" data-sizes="auto" src="{% render 'img_svg', w: image.width, h: image.height %}" width="{{ image.width }}" height="{{ image.height }}" alt="{{ image.alt | escape }}">
-                       <span class="lazyloadt4s-loader is-bg-img" style="background: url({{ image | image_url: width: 1 }});"></span>
-                     </div>
-                   </div>
-                  {% elsif bk_stts.svg != blank %}
-                    {%- assign arr = bk_stts.svg | remove: ' ' | split: "," -%}
-                    <div class="t4s-cat__imgtrust" {{ block.shopify_attributes }} style="display: flex;flex-wrap: wrap;gap: 10px;justify-content: center;">
-                    {%- for img in arr -%}
-                      {%- if img contains 'cust4__' -%}
-                        {%- assign get_img = img | remove_first: "cust4__" -%}
-                        {%- assign image = images[get_img] -%}
-                        {%- if image == blank %}{% continue %}{% endif -%}
-                        <img src="{{ image | image_url }}" alt="{{ image.alt | escape }}" height="{{ bk_stts.height }}" width="" loading="lazy" style="height:{{bk_stts.height}}px">
-                      {%- else -%}
-                        <img src="{{ img | payment_type_img_url }}" alt="{{ img | replace: '_', ' ' }}" height="{{ bk_stts.height }}"  width="" loading="lazy" style="height:{{bk_stts.height}}px">
-                      {%- endif -%}
-                    {%- endfor -%}
-                    </div>
-                  {% endif -%}
-               
-               {%- else -%}{% continue -%}
-            {%- endcase -%}
+                  {%- endcapture -%}
+                  <div class="t4s-field" id="ShippingProvinceContainer_{{ idShip }}" style="display:none">
+                    <label for="ShippingProvince_{{ idShip }}" id="address_province_label">{{ 'cart.shipping_estimator.province' | t }}</label>
+                    <select id="ShippingProvince_{{ idShip }}" name="province" data-default="{% if customer %}{{ customer.default_address.province }}{% endif %}"></select>
+                  </div>  
+                  <div class="t4s-field">
+                    <label for="ShippingZip_{{ idShip }}">{{ 'cart.shipping_estimator.zip_code' | t }}</label>
+                    <input type="text" data-opend-focus id="ShippingZip_{{ idShip }}" name="zip" value="{% if customer %}{{ customer.default_address.zip }}{% endif %}"/>
+                  </div>
+                  <div class="t4s-field">
+                    <button data-action="estimate-shipping" type="button" class="t4s-get__rates t4s-mini_cart-tool__primary t4s-btn-loading__svg"> 
+                         <span class="t4s-btn-atc_text">{{ 'cart.shipping_estimator.estimate' | t }}</span>
+                         <div class="t4s-loading__spinner t4s-dn">
+                             <svg  width="16" height="16" aria-hidden="true" focusable="false" role="presentation" class="t4s-svg__spinner" viewBox="0 0 66 66" xmlns="http://www.w3.org/2000/svg"><circle class="t4s-path" fill="none" stroke-width="6" cx="33" cy="33" r="30"></circle></svg>
+                         </div>  
+                    </button>
+                  </div>
+                  <div class="t4s-field">
+                    <button type="button" data-cart-tool_close class="t4s-mini_cart-tool__back">{{ 'cart.tool.cancel' | t }}</button>
+                  </div>
+                  <div data-response-rates class="t4s-response__rates"></div>
+                  <template data-lang-rates class="t4s-d-none">
+                   {
+                     "multiple_rates": {{ 'cart.shipping_estimator.multiple_rates' | t | json }},
+                     "one_rate": {{ 'cart.shipping_estimator.one_rate' | t | json }},
+                     "no_rates": {{ 'cart.shipping_estimator.no_rates' | t | json }},
+                     "rate_value": {{ 'cart.shipping_estimator.rate_value' | t | json }},
+                     "errors": {{ 'cart.shipping_estimator.errors' | t | json }}
+                   }
+                  </template> 
+               {%- endcase -%}
          {%- endfor -%}
-      </div>
-   </form>
 
-   {%- if se_stts.enable_note -%}
-   <div class="t4s-mini_cart-tool__content is--note t4s-pe-none">             
-      <label for="CartSpecialInstructions" class="t4s-d-block"><span class="t4s-txt_add_note {{ style_add }}">{{ 'cart.tool.note' | t }}</span><span class="t4s-txt_edit_note {{ style_edit }}">{{ 'cart.tool.edit_note' | t }}</span></label>
-      <textarea name="note" data-opend-focus id="CartSpecialInstructions" placeholder="{{ 'cart.tool.placeholder_note' | t }}">{{ cart.note }}</textarea>
-      <p><button type="button" data-cart-tool_close class="t4s-mini_cart-tool__primary">{{ 'cart.tool.save' | t }}</button></p>
-      <p><button type="button" data-cart-tool_close class="t4s-mini_cart-tool__back">{{ 'cart.tool.cancel' | t }}</button></p>
-   </div>
-   {%- endif -%}
-
-   {%- if se_stts.enable_rates %}{% assign idShip = 'mini_cart' -%}
-   <div class="t4s-mini_cart-tool__content is--rates t4s-pe-none">
-      <div class="t4s-mini_cart-tool__wrap" data-estimate-shipping-wrap data-id="{{ idShip }}">
-        <span class="t4s-mini_cart-tool__text">{{ 'cart.shipping_estimator.title' | t }}</span>
-          <div class="t4s-field">
-            <label for="ShippingCountry_{{ idShip }}">{{ 'cart.shipping_estimator.country' | t }}</label>
-            <select id="ShippingCountry_{{ idShip }}" name="country" data-default="{% if customer %}{{ customer.default_address.country }}{% elsif se_stts.ship_df_country != '' %}{{ se_stts.ship_df_country | escape }}{% endif %}">{{- country_option_tags -}}</select>
-          </div>
-          <div class="t4s-field" id="ShippingProvinceContainer_{{ idShip }}" style="display:none">
-            <label for="ShippingProvince_{{ idShip }}" id="address_province_label">{{ 'cart.shipping_estimator.province' | t }}</label>
-            <select id="ShippingProvince_{{ idShip }}" name="province" data-default="{% if customer %}{{ customer.default_address.province }}{% endif %}"></select>
-          </div>  
-          <div class="t4s-field">
-            <label for="ShippingZip_{{ idShip }}">{{ 'cart.shipping_estimator.zip_code' | t }}</label>
-            <input type="text" data-opend-focus id="ShippingZip_{{ idShip }}" name="zip" value="{% if customer %}{{ customer.default_address.zip }}{% endif %}"/>
-          </div>
-          <div class="t4s-field">
-            <button data-action="estimate-shipping" type="button" class="t4s-get__rates t4s-mini_cart-tool__primary t4s-btn-loading__svg"> 
-                 <span class="t4s-btn-atc_text">{{ 'cart.shipping_estimator.estimate' | t }}</span>
-                 <div class="t4s-loading__spinner t4s-dn">
-                     <svg  width="16" height="16" aria-hidden="true" focusable="false" role="presentation" class="t4s-svg__spinner" viewBox="0 0 66 66" xmlns="http://www.w3.org/2000/svg"><circle class="t4s-path" fill="none" stroke-width="6" cx="33" cy="33" r="30"></circle></svg>
-                 </div>  
-            </button>
-          </div>
-          <div class="t4s-field">
-            <button type="button" data-cart-tool_close class="t4s-mini_cart-tool__back">{{ 'cart.tool.cancel' | t }}</button>
-          </div>
-          <div data-response-rates class="t4s-response__rates"></div>
-          <template data-lang-rates class="t4s-d-none">
-           {
-             "multiple_rates": {{ 'cart.shipping_estimator.multiple_rates' | t | json }},
-             "one_rate": {{ 'cart.shipping_estimator.one_rate' | t | json }},
-             "no_rates": {{ 'cart.shipping_estimator.no_rates' | t | json }},
-             "rate_value": {{ 'cart.shipping_estimator.rate_value' | t | json }},
-             "errors": {{ 'cart.shipping_estimator.errors' | t | json }}
-           }
-          </template> 
-      </div>
-   </div>
-   {%- endif -%}
-
+         {%- for block in section_blocks -%}
+           {%- if block.type == 'btnc' or block.type == 'btnck' -%}
+             {%- assign bk_stts = block.settings -%}
+             {%- assign button_style = bk_stts.button_style -%}
+             <div class="t4s-cart__footer-btn t4s-mt-20">
+               {%- if block.type == 'btnc' -%}
+                 <a href="{{ routes.cart_url }}" class="t4s-btn t4s-btn-base t4s-btn-style-{{ button_style }} t4s-btn-color-{{ bk_stts.btn_cl }} {% if button_style == 'default' or button_style == 'outline' %}t4s-btn-effect-{{ bk_stts.button_effect }}{% endif %} t4s-justify-content-center t4s-truncate">
+                   {{ 'cart.general.view_cart' | t }}
+                   {%- if bk_stts.btn_icon -%}<svg class="t4s-btn-icon" width="14"><use xlink:href="#t4s-icon-btn"></use></svg>{%- endif -%}
+                 </a>
+               {%- elsif block.type == 'btnck' -%}
+                 <a href="{{ routes.checkout_url }}" class="t4s-btn t4s-btn-base t4s-btn-style-{{ button_style }} t4s-btn-color-{{ bk_stts.btn_cl }} {% if button_style == 'default' or button_style == 'outline' %}t4s-btn-effect-{{ bk_stts.button_effect }}{% endif %} t4s-justify-content-center t4s-truncate">
+                   {{ 'cart.general.checkout' | t }}
+                   {%- if bk_stts.btn_icon -%}<svg class="t4s-btn-icon" width="14"><use xlink:href="#t4s-icon-btn"></use></svg>{%- endif -%}
+                 </a>
+               {%- endif -%}
+             </div>
+           {%- endif -%}
+         {%- endfor -%}
    {%- if se_stts.enable_gift_wrap and gift_pr.available == true -%}
      <div class="t4s-mini_cart-tool__content is--gift t4s-pe-none">
          <div class="t4s-mini_cart-tool__wrap t4s-text-center">
@@ -401,6 +359,10 @@
    {%- endif -%}
 
 {%- if request.design_mode %}</div>{% endif -%}
+  </div>
+</form>
+
+<!-- Ensure all opened divs are closed before schema -->
 
 {%- schema -%}
 {
