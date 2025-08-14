@@ -6,7 +6,9 @@
     class="fluct-it__gift-box active"
     :style="{
         '--border-width': cartPrice >= {{ settings.free_ship_threshold }} ? '100%' : '50%',
-        '--border-right': cartPrice >= {{ settings.free_ship_threshold }} ? '#4AB9CB' : 'transparent'
+        '--border-right': cartPrice >= {{ settings.free_ship_threshold }} ? '#4AB9CB' : 'transparent',
+        '--border-radius': cartPrice >= {{ settings.free_ship_threshold }} ? '8px' : '8px 0 0 8px',
+        '--connector-background': cartPrice >= {{ settings.free_ship_threshold }} ? '#4AB9CB' : 'rgba(0,0,0,0.1)'
     }"
     >
             <picture>
@@ -20,8 +22,10 @@
         <div class="fluct-it__gift-box"
     :style="{
         '--border-width': cartPrice >= {{ settings.free_sample_threshold }} ? '100%' : '50%',
-        '--border-right': cartPrice >= {{ settings.free_sample_threshold }} ? '#4AB9CB' : 'transparent'
-    }" :class="{'active': cartPrice >= {{ settings.free_ship_threshold }} }">
+        '--border-right': cartPrice >= {{ settings.free_sample_threshold }} ? '#4AB9CB' : 'transparent',
+        '--border-radius': cartPrice >= {{ settings.free_sample_threshold }} ? '8px' : '8px 0 0 8px',
+        '--connector-background': cartPrice >= {{ settings.free_sample_threshold }} ? '#4AB9CB' : 'rgba(0,0,0,0.1)'
+    }" :class="{'active': cartPrice >= {{ settings.free_sample_threshold }} }">
             <picture>
                 {% render 'shipping-threshold-2' %}
             </picture>
@@ -33,7 +37,9 @@
         <div class="fluct-it__gift-box"
     :style="{
         '--border-width': cartPrice >= {{ settings.free_sample_product_threshold }} ? '100%' : '50%',
-        '--border-right': cartPrice >= {{ settings.free_sample_product_threshold }} ? '#4AB9CB' : 'transparent'
+        '--border-right': cartPrice >= {{ settings.free_sample_product_threshold }} ? '#4AB9CB' : 'transparent',
+        '--border-radius': cartPrice >= {{ settings.free_sample_product_threshold }} ? '8px' : '8px 0 0 8px'
+
     }" :class="{'active': cartPrice >= {{ settings.free_sample_threshold }} }">
             <picture>
                 {%- if settings.shipping_threshold_3_image != blank -%}
@@ -49,14 +55,20 @@
         </div>
     </div>
 
+    <div>
+        <p>Hello there</p>
+    </div>
+
+
 </div>
     <style>
     .fluct-it__gift-list {
         display: flex;
         justify-content: space-between;
         padding: 0 20px;
-        gap: 12px;
-        margin-bottom:12px;
+        gap: 18px;
+        margin-bottom:6px;
+        box-sizing: border-box;
     }
 
     .fluct-it__gift-box {
@@ -72,30 +84,46 @@
         box-sizing: border-box;
         --border-width: 0%;
         --border-right: transparent;
+        --border-radius: 0px;
+        z-index:10;
+        --connector-background: rgba(0,0,0,0.1);
     }
 
 .fluct-it__gift-box.active::before {
     content: "";
     position: absolute;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0;
-    width: calc(var(--border-width) + 1px);
-    height: calc(100% + 4px);
+    top: -2px;
+    left: -2px;
+    bottom: -2px;
+    right: -2px;
+    width: calc(var(--border-width) + 4px);
+    height: calc(100% + 4px);   
     border: 3px solid #4AB9CB;
     border-right-color: var(--border-right);
-    border-radius: 8px;
+    border-radius: var(--border-radius);
     pointer-events: none;
     box-sizing: border-box;
+    z-index:999;
+}
+
+.fluct-it__gift-box.active:not(:last-child):after {
+    content: "";
+    position: absolute;
+    width:30px;
+    right: -30px;
+    top:50%;
+    transform: translateY(-50%);
+    height:1px;
+    background: var(--connector-background);
+    z-index:-1;
 }
 
 
 
     .fluct-it__gift-box picture {
         margin-bottom: 12px;
-        width: 32px;
-        height: 32px;
+        width: 40px;
+        height: 40px;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -106,13 +134,14 @@
         flex-direction: column;
         align-items: center;
         gap: 2px;
-        margin-top: auto;
+        {% comment %} margin-top: auto; {% endcomment %}
     }
 
     .fluct-it__gift-text {
         font-weight: 500;
         font-size: 12px;
         text-align:center;
+        line-height: 1.2;
     }
 
     .fluct-it__gift-price {

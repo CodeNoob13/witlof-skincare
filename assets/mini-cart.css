@@ -166,14 +166,16 @@ input[type="checkbox"][data-agree-checkbox]:checked ~ svg {
 /* ------------------------Custom CSS----------------------------- */
 
 #t4s-mini_cart .t4s-drawer__header {
-  padding: 10px 0;
+  padding: 16px 0;
 }
 #t4s-mini_cart .t4s-drawer__header span {
   font-weight: 500;
-  display: flex;
-  justify-content: center;
+  /* display: flex;
+  justify-content: center; */
+  text-align: center;
   font-size: 24px;
   font-weight: 500;
+  padding-left: 12px;
 }
 #t4s-mini_cart .t4s-drawer__close {
   transition: 0.3s;
