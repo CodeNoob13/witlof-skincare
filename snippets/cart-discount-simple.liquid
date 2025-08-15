@@ -1,0 +1,159 @@
+{%- comment -%}
+  Simple Cart Discount Input
+  Uses theme's built-in discount functionality
+{%- endcomment -%}
+
+<div class="cart-discount-simple" style="margin: 20px 0; padding: 15px; border: 1px solid #e0e0e0; border-radius: 8px; background: #f9f9f9;">
+  <h4 style="margin: 0 0 12px 0; font-size: 16px; font-weight: 600;">{{ 'cart.mini_cart.discount.title' | t | default: 'Discount Code' }}</h4>
+  
+  <div style="display: flex; gap: 8px; align-items: stretch;">
+    <input 
+      type="text" 
+      name="discount_code" 
+      placeholder="{{ 'cart.mini_cart.discount.placeholder' | t | default: 'Enter discount code' }}"
+      style="flex: 1; padding: 12px; border: 1px solid #ccc; border-radius: 4px; font-size: 14px;"
+      id="simple-discount-input"
+    >
+    <button 
+      type="button" 
+      onclick="applySimpleDiscount()"
+      style="padding: 12px 20px; background: #333; color: white; border: none; border-radius: 4px; cursor: pointer; font-size: 14px; font-weight: 500;"
+      id="simple-discount-btn"
+    >
+      {{ 'cart.mini_cart.discount.apply' | t | default: 'Apply' }}
+    </button>
+  </div>
+  
+  <div id="simple-discount-message" style="margin-top: 8px; font-size: 13px; display: none;"></div>
+  
+  {%- comment -%} Show applied discounts {%- endcomment -%}
+  {%- if cart.cart_level_discount_applications.size > 0 -%}
+    <div style="margin-top: 12px;">
+      {%- for discount in cart.cart_level_discount_applications -%}
+        <div style="display: flex; justify-content: space-between; align-items: center; background: #e8f5e8; padding: 8px 12px; border-radius: 4px; margin-top: 4px;">
+          <span style="color: #2d5a2d; font-weight: 500;">{{ discount.title }}</span>
+          <button 
+            type="button" 
+            onclick="removeSimpleDiscount()"
+            style="background: none; border: none; color: #666; cursor: pointer; font-size: 16px; padding: 0 4px;"
+            title="Remove discount"
+          >×</button>
+        </div>
+      {%- endfor -%}
+    </div>
+  {%- endif -%}
+</div>
+
+<script>
+function applySimpleDiscount() {
+  const input = document.getElementById('simple-discount-input');
+  const button = document.getElementById('simple-discount-btn');
+  const message = document.getElementById('simple-discount-message');
+  
+  const code = input.value.trim();
+  
+  if (!code) {
+    showSimpleMessage('Please enter a discount code', 'error');
+    return;
+  }
+  
+  // Show loading
+  button.textContent = 'Applying...';
+  button.disabled = true;
+  
+  // Use the theme's built-in discount functionality
+  // First, store the discount code
+  if (localStorage) {
+    localStorage.setItem('CartDiscountcode', code);
+  }
+  
+  // Apply discount using the theme's method
+  fetch(window.Shopify.routes.root + 'discount/' + encodeURIComponent(code))
+    .then(response => {
+      // Reset button
+      button.textContent = {{ 'cart.mini_cart.discount.apply' | t | json }};
+      button.disabled = false;
+      
+      if (response.redirected || response.url.includes('discount')) {
+        // Success - discount was applied
+        showSimpleMessage('Discount applied successfully!', 'success');
+        input.value = '';
+        
+        // Trigger cart refresh
+        document.dispatchEvent(new CustomEvent('cart:refresh'));
+        
+        // Reload the page to show updated cart
+        setTimeout(() => {
+          window.location.reload();
+        }, 1000);
+      } else {
+        showSimpleMessage('Invalid discount code', 'error');
+      }
+    })
+    .catch(error => {
+      console.error('Discount error:', error);
+      showSimpleMessage('Error applying discount', 'error');
+      
+      // Reset button
+      button.textContent = {{ 'cart.mini_cart.discount.apply' | t | json }};
+      button.disabled = false;
+    });
+}
+
+function removeSimpleDiscount() {
+  // Clear from localStorage
+  if (localStorage) {
+    localStorage.removeItem('CartDiscountcode');
+  }
+  
+  // Remove discount by updating cart with empty discount
+  const formData = new FormData();
+  formData.append('discount', '');
+  
+  fetch('/cart/update.js', {
+    method: 'POST',
+    body: formData,
+    headers: {
+      'Accept': 'application/json',
+      'X-Requested-With': 'XMLHttpRequest'
+    }
+  })
+  .then(response => response.json())
+  .then(cart => {
+    showSimpleMessage('Discount removed', 'success');
+    
+    // Reload to show updated cart
+    setTimeout(() => {
+      window.location.reload();
+    }, 1000);
+  })
+  .catch(error => {
+    console.error('Remove discount error:', error);
+    showSimpleMessage('Error removing discount', 'error');
+  });
+}
+
+function showSimpleMessage(text, type) {
+  const message = document.getElementById('simple-discount-message');
+  message.textContent = text;
+  message.style.display = 'block';
+  message.style.color = type === 'error' ? '#d32f2f' : '#2e7d32';
+  
+  // Hide message after 3 seconds
+  setTimeout(() => {
+    message.style.display = 'none';
+  }, 3000);
+}
+</script>
+
+<style>
+.cart-discount-simple button:hover {
+  background: #555 !important;
+}
+
+.cart-discount-simple input:focus {
+  outline: none;
+  border-color: #333;
+  box-shadow: 0 0 0 2px rgba(51, 51, 51, 0.1);
+}
+</style>

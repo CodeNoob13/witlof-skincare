@@ -40,6 +40,8 @@
   </div>
 </div>
 
+<!-- Cart footer discount must be modified-->
+
 <script>
 // Define locale strings for JavaScript use
 const discountLocale = {
@@ -79,54 +81,60 @@ function applyDiscount() {
   button.querySelector('.btn-loading').style.display = 'inline';
   button.disabled = true;
   
-  // Apply discount using AJAX to avoid page reload
-  fetch('/discount/' + encodeURIComponent(code), {
+  // Apply discount by submitting to discount endpoint and then refreshing cart
+  fetch(`/discount/${encodeURIComponent(code)}`, {
     method: 'GET',
-    headers: {
-      'Accept': 'application/json',
-    }
+    credentials: 'same-origin'
   })
   .then(response => {
-    console.log('Discount response status:', response.status);
+    console.log('Discount response:', response);
     
-    // Reset button state
+    // Reset button state first
     button.querySelector('.btn-text').style.display = 'inline';
     button.querySelector('.btn-loading').style.display = 'none';
     button.disabled = false;
     
-    if (response.status === 302 || response.redirected) {
-      // Discount was accepted - now verify by checking cart
-      return fetch('/cart.js')
-        .then(cartResponse => cartResponse.json())
-        .then(cart => {
-          console.log('Cart after discount:', cart);
-          
-          // Check if discount was actually applied to cart
-          const hasDiscount = cart.cart_level_discount_applications && 
-                             cart.cart_level_discount_applications.length > 0;
-          
-          if (hasDiscount) {
-            showDiscountMessage(discountLocale.successApplied, 'success');
-            input.value = '';
-            
-            // Update cart without page reload
-            if (window.ajCart && window.ajCart.fetchCart) {
-              window.ajCart.fetchCart();
-            }
-            
-            // Trigger cart update events
-            document.dispatchEvent(new CustomEvent('cart:updated'));
-            
-            // Show only the current applied discount (Shopify only allows one at a time)
-            showAppliedDiscount(cart.cart_level_discount_applications[0]);
-          } else {
-            showDiscountMessage(discountLocale.errorExpired, 'error');
+    // Check cart to see if discount was applied
+    return fetch('/cart.js', {
+      credentials: 'same-origin'
+    });
+  })
+  .then(response => response.json())
+  .then(cart => {
+    console.log('Cart after discount attempt:', cart);
+    
+    // Check if discount was actually applied
+    const hasDiscount = cart.cart_level_discount_applications && 
+                       cart.cart_level_discount_applications.length > 0;
+    
+    if (hasDiscount) {
+      showDiscountMessage(discountLocale.successApplied, 'success');
+      input.value = '';
+      
+      // Update cart prices in footer
+      if (window.updateCartPrices) {
+        window.updateCartPrices(cart);
+      }
+      
+      // Refresh the cart using Alpine.js store
+      if (window.Alpine && Alpine.store && Alpine.store('ajCart')) {
+        Alpine.store('ajCart').fetchCart();
+      }
+      
+      // Trigger cart update events for Alpine.js components
+      document.dispatchEvent(new CustomEvent('cart:updated', { detail: cart }));
+      document.dispatchEvent(new CustomEvent('cart:refresh'));
+      
+      // Additional Alpine.js specific updates
+      setTimeout(() => {
+        // Force Alpine.js components to re-render
+        document.querySelectorAll('[x-data*="ajCart"]').forEach(el => {
+          if (el._x_dataStack && el._x_dataStack[0] && el._x_dataStack[0].fetchCart) {
+            el._x_dataStack[0].fetchCart();
           }
         });
-    } else if (response.status === 404) {
-      showDiscountMessage(discountLocale.errorNotFound, 'error');
-    } else if (response.status === 422) {
-      showDiscountMessage(discountLocale.errorExpired, 'error');
+      }, 100);
+      
     } else {
       showDiscountMessage(discountLocale.errorInvalid, 'error');
     }
@@ -170,6 +178,11 @@ function removeDiscount(title) {
                        cart.cart_level_discount_applications.length > 0;
     
     if (!hasDiscount) {
+      
+      // Update cart prices in footer
+      if (window.updateCartPrices) {
+        window.updateCartPrices(cart);
+      }
     
       // Hide the applied discount display
       const container = document.getElementById('applied-discounts');
@@ -248,6 +261,11 @@ function tryDiscountClear() {
         
         if (!hasDiscount) {
           showDiscountMessage(discountLocale.successRemoved, 'success');
+          
+          // Update cart prices in footer
+          if (window.updateCartPrices) {
+            window.updateCartPrices(cart);
+          }
           
           // Hide the applied discount display
           const container = document.getElementById('applied-discounts');
