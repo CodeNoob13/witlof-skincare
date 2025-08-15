@@ -1,0 +1,479 @@
+<div class="cart-discount-block">
+  <div class="discount-form-container">
+    <div class="discount-input-group">
+      <input 
+        type="text" 
+        name="discount_code" 
+        placeholder="{{ 'cart.mini_cart.discount.placeholder' | t }}"
+        class="discount-input"
+        id="discount-input"
+      >
+      <button type="button" class="discount-apply-btn" id="discount-apply" onclick="applyDiscount()">
+        <span class="btn-text">{{ 'cart.mini_cart.discount.apply' | t }}</span>
+        <span class="btn-loading" style="display: none;">{{ 'cart.mini_cart.discount.loading' | t }}</span>
+      </button>
+    </div>
+    
+    <div class="discount-message" id="discount-message" style="display: none;"></div>
+    
+    <!-- Container for applied discount codes -->
+    <div class="applied-discounts" id="applied-discounts" style="display: none;"></div>
+    
+    {%- if cart.cart_level_discount_applications.size > 0 -%}
+      <div class="active-discounts">
+        {%- for discount in cart.cart_level_discount_applications -%}
+          <div class="discount-item">
+            <span class="discount-name">{{ discount.title }}</span>
+            {% comment %} <span class="discount-amount">
+              {%- if discount.value_type == 'percentage' -%}
+                {%- assign percentage_value = discount.value | round -%}
+                {{ percentage_value }}%
+              {%- else -%}
+                {{ discount.total_allocated_amount | money }}
+              {%- endif -%}
+            </span> {% endcomment %}
+            <span class="discount-remove" onclick="removeDiscount('{{ discount.title }}')">×</span>
+          </div>
+        {%- endfor -%}
+      </div>
+    {%- endif -%}
+  </div>
+</div>
+
+<script>
+// Define locale strings for JavaScript use
+const discountLocale = {
+  successApplied: {{ 'cart.mini_cart.discount.success_applied' | t | json }},
+  successRemoved: {{ 'cart.mini_cart.discount.success_removed' | t | json }},
+  errorEmpty: {{ 'cart.mini_cart.discount.error_empty' | t | json }},
+  errorInvalid: {{ 'cart.mini_cart.discount.error_invalid' | t | json }},
+  errorNotFound: {{ 'cart.mini_cart.discount.error_not_found' | t | json }},
+  errorExpired: {{ 'cart.mini_cart.discount.error_expired' | t | json }},
+  errorRemove: {{ 'cart.mini_cart.discount.error_remove' | t | json }},
+  errorCouldNotRemove: {{ 'cart.mini_cart.discount.error_could_not_remove' | t | json }}
+};
+
+// Test function to verify script is loading
+console.log('Discount script loaded');
+
+// Simple approach without complex event listeners
+function applyDiscount() {
+  console.log('Apply discount clicked');
+  
+  const input = document.getElementById('discount-input');
+  const button = document.getElementById('discount-apply');
+  const message = document.getElementById('discount-message');
+  
+  console.log('Elements found:', input, button, message);
+  
+  const code = input.value.trim();
+  console.log('Discount code:', code);
+  
+  if (!code) {
+    showDiscountMessage(discountLocale.errorEmpty, 'error');
+    return;
+  }
+  
+  // Show loading
+  button.querySelector('.btn-text').style.display = 'none';
+  button.querySelector('.btn-loading').style.display = 'inline';
+  button.disabled = true;
+  
+  // Apply discount using AJAX to avoid page reload
+  fetch('/discount/' + encodeURIComponent(code), {
+    method: 'GET',
+    headers: {
+      'Accept': 'application/json',
+    }
+  })
+  .then(response => {
+    console.log('Discount response status:', response.status);
+    
+    // Reset button state
+    button.querySelector('.btn-text').style.display = 'inline';
+    button.querySelector('.btn-loading').style.display = 'none';
+    button.disabled = false;
+    
+    if (response.status === 302 || response.redirected) {
+      // Discount was accepted - now verify by checking cart
+      return fetch('/cart.js')
+        .then(cartResponse => cartResponse.json())
+        .then(cart => {
+          console.log('Cart after discount:', cart);
+          
+          // Check if discount was actually applied to cart
+          const hasDiscount = cart.cart_level_discount_applications && 
+                             cart.cart_level_discount_applications.length > 0;
+          
+          if (hasDiscount) {
+            showDiscountMessage(discountLocale.successApplied, 'success');
+            input.value = '';
+            
+            // Update cart without page reload
+            if (window.ajCart && window.ajCart.fetchCart) {
+              window.ajCart.fetchCart();
+            }
+            
+            // Trigger cart update events
+            document.dispatchEvent(new CustomEvent('cart:updated'));
+            
+            // Show only the current applied discount (Shopify only allows one at a time)
+            showAppliedDiscount(cart.cart_level_discount_applications[0]);
+          } else {
+            showDiscountMessage(discountLocale.errorExpired, 'error');
+          }
+        });
+    } else if (response.status === 404) {
+      showDiscountMessage(discountLocale.errorNotFound, 'error');
+    } else if (response.status === 422) {
+      showDiscountMessage(discountLocale.errorExpired, 'error');
+    } else {
+      showDiscountMessage(discountLocale.errorInvalid, 'error');
+    }
+  })
+  .catch(error => {
+    console.error('Discount error:', error);
+    showDiscountMessage(discountLocale.errorInvalid, 'error');
+    
+    // Reset button state
+    button.querySelector('.btn-text').style.display = 'inline';
+    button.querySelector('.btn-loading').style.display = 'none';
+    button.disabled = false;
+  });
+}
+
+function removeDiscount(title) {
+  console.log('Remove discount clicked');
+  
+  // Prevent default behavior
+  if (event) event.preventDefault();
+  
+  // Method 1: Try to update cart with empty discount code
+  const formData = new FormData();
+  formData.append('discount', '');
+  formData.append('note', '');
+  
+  fetch('/cart/update.js', {
+    method: 'POST',
+    headers: {
+      'Accept': 'application/json',
+      'X-Requested-With': 'XMLHttpRequest'
+    },
+    body: formData
+  })
+  .then(response => response.json())
+  .then(cart => {
+    console.log('Cart updated after discount removal:', cart);
+    
+    // Check if discount was actually removed
+    const hasDiscount = cart.cart_level_discount_applications && 
+                       cart.cart_level_discount_applications.length > 0;
+    
+    if (!hasDiscount) {
+    
+      // Hide the applied discount display
+      const container = document.getElementById('applied-discounts');
+      if (container) {
+        container.style.display = 'none';
+        container.innerHTML = '';
+      }
+      
+      // Force multiple cart update methods
+      // Method 1: Update ajCart if available
+      if (window.ajCart && window.ajCart.fetchCart) {
+        window.ajCart.fetchCart();
+      }
+      
+      // Method 2: Trigger cart update events
+      document.dispatchEvent(new CustomEvent('cart:updated'));
+      
+      // Method 3: Try to trigger theme-specific cart updates
+      if (window.theme && window.theme.updateCart) {
+        window.theme.updateCart();
+      }
+      
+      // Method 4: Force refresh cart display elements
+      setTimeout(() => {
+        // Look for common cart update functions
+        if (window.cartUpdate) window.cartUpdate();
+        if (window.updateCartDrawer) window.updateCartDrawer();
+        if (window.refreshCart) window.refreshCart();
+        
+        // Trigger additional events that themes might listen to
+        document.dispatchEvent(new CustomEvent('cart:refresh'));
+        document.dispatchEvent(new CustomEvent('drawer:refresh'));
+        
+        // Force reload of cart elements if they exist
+        const cartElements = document.querySelectorAll('[data-cart-item], .cart-item, .mini-cart-item');
+        if (cartElements.length > 0) {
+          // Dispatch event specifically for cart items
+          cartElements.forEach(element => {
+            element.dispatchEvent(new CustomEvent('cart:item:update', { bubbles: true }));
+          });
+        }
+      }, 100);
+      
+    } else {
+      // Method 2: Try the clear endpoint with POST
+      tryDiscountClear();
+    }
+  })
+  .catch(error => {
+    console.error('Cart update error:', error);
+    // Fallback to clear endpoint
+    tryDiscountClear();
+  });
+}
+
+function tryDiscountClear() {
+  fetch('/discount/clear', {
+    method: 'POST',
+    headers: {
+      'Accept': 'application/json',
+      'X-Requested-With': 'XMLHttpRequest',
+      'Content-Type': 'application/x-www-form-urlencoded'
+    },
+    body: '',
+    redirect: 'manual'
+  })
+  .then(response => {
+    console.log('Discount clear response:', response.status);
+    
+    // Update cart to check if discount was removed
+    return fetch('/cart.js')
+      .then(cartResponse => cartResponse.json())
+      .then(cart => {
+        const hasDiscount = cart.cart_level_discount_applications && 
+                           cart.cart_level_discount_applications.length > 0;
+        
+        if (!hasDiscount) {
+          showDiscountMessage(discountLocale.successRemoved, 'success');
+          
+          // Hide the applied discount display
+          const container = document.getElementById('applied-discounts');
+          if (container) {
+            container.style.display = 'none';
+            container.innerHTML = '';
+          }
+          
+          // Force multiple cart update methods
+          // Method 1: Update ajCart if available
+          if (window.ajCart && window.ajCart.fetchCart) {
+            window.ajCart.fetchCart();
+          }
+          
+          // Method 2: Trigger cart update events
+          document.dispatchEvent(new CustomEvent('cart:updated'));
+          
+          // Method 3: Try to trigger theme-specific cart updates
+          if (window.theme && window.theme.updateCart) {
+            window.theme.updateCart();
+          }
+          
+          // Method 4: Force refresh cart display elements
+          setTimeout(() => {
+            // Look for common cart update functions
+            if (window.cartUpdate) window.cartUpdate();
+            if (window.updateCartDrawer) window.updateCartDrawer();
+            if (window.refreshCart) window.refreshCart();
+            
+            // Trigger additional events that themes might listen to
+            document.dispatchEvent(new CustomEvent('cart:refresh'));
+            document.dispatchEvent(new CustomEvent('drawer:refresh'));
+            
+            // Force reload of cart elements if they exist
+            const cartElements = document.querySelectorAll('[data-cart-item], .cart-item, .mini-cart-item');
+            if (cartElements.length > 0) {
+              // Dispatch event specifically for cart items
+              cartElements.forEach(element => {
+                element.dispatchEvent(new CustomEvent('cart:item:update', { bubbles: true }));
+              });
+            }
+          }, 100);
+          
+        } else {
+          showDiscountMessage(discountLocale.errorCouldNotRemove, 'error');
+        }
+      });
+  })
+  .catch(error => {
+    console.error('Discount clear error:', error);
+    showDiscountMessage(discountLocale.errorRemove, 'error');
+  });
+}
+
+function showDiscountMessage(text, type) {
+  console.log('Showing message:', text, type);
+  const message = document.getElementById('discount-message');
+  if (message) {
+    message.textContent = text;
+    message.className = 'discount-message ' + type;
+    message.style.display = 'block';
+    
+    setTimeout(() => {
+      message.style.display = 'none';
+    }, 3000);
+  } else {
+    alert(text);
+  }
+}
+
+function showAppliedDiscount(discount) {
+  console.log('Showing applied discount:', discount);
+  const container = document.getElementById('applied-discounts');
+  if (container && discount) {
+    // Format discount value based on type (percentage vs fixed amount)
+    let discountDisplay;
+    if (discount.value_type === 'percentage') {
+      // Show percentage for percentage-based discounts, remove unnecessary decimals
+      const percentage = parseFloat(discount.value);
+      discountDisplay = `${percentage % 1 === 0 ? percentage.toFixed(0) : percentage}%`;
+    } else {
+      // Show money amount for fixed amount discounts
+      discountDisplay = `${formatMoney(discount.total_allocated_amount)}`;
+    }
+    
+    // Clear any previous discount display (only one can be active at a time)
+    container.innerHTML = `
+      <div class="discount-item">
+        <span class="discount-name">${discount.title}</span>
+        {% comment %} <span class="discount-amount">${discountDisplay}</span> {% endcomment %}
+        <span class="discount-remove" onclick="removeDiscount('${discount.title}')">×</span>
+      </div>
+    `;
+    container.style.display = 'block';
+  }
+}
+
+function formatMoney(cents) {
+  // Simple money formatting - adjust currency symbol as needed
+  return (cents / 100).toFixed(0);
+}
+
+// Add click event when page loads
+document.addEventListener('DOMContentLoaded', function() {
+  const button = document.getElementById('discount-apply');
+  if (button) {
+    button.addEventListener('click', applyDiscount);
+  }
+  
+  // Add enter key support
+  const input = document.getElementById('discount-input');
+  if (input) {
+    input.addEventListener('keypress', function(e) {
+      if (e.key === 'Enter') {
+        applyDiscount();
+      }
+    });
+  }
+});
+</script>
+
+<style>
+.cart-discount-block {
+  padding: 15px;
+  border-radius: 4px;
+}
+
+.discount-input-group {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.discount-input {
+  flex: 1;
+  padding: 8px 12px;
+    background:#F6F6F8;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+.discount-apply-btn {
+  padding: 8px 24px;
+  background: #4AB9CB;
+  color: white;
+  border: none;
+  border-radius: 100px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.discount-apply-btn:hover {
+  background: #333;
+}
+
+.discount-apply-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.discount-message {
+  padding: 8px 12px;
+  border-radius: 4px;
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+.discount-message.success {
+  background: #d4edda;
+  color: #155724;
+  border: 1px solid #c3e6cb;
+}
+
+.discount-message.error {
+  background: #f8d7da;
+  color: #721c24;
+  border: 1px solid #f5c6cb;
+}
+
+.applied-discounts {
+  margin-top: 10px;
+}
+
+.discount-item.applied {
+  background: #e8f5e8;
+  border: 1px solid #4caf50;
+}
+
+.active-discounts {
+  margin-top: 15px;
+}
+
+.discount-item {
+    width: fit-content;
+  display: flex;
+  align-items: center;
+  padding: 2px 6px;
+  background: #f8f9fa;
+  border-radius: 4px;
+  margin-bottom: 5px;
+}
+
+.discount-name {
+  font-weight: 500;
+}
+
+.discount-amount {
+  color: #28a745;
+  font-weight: 500;
+}
+
+.discount-remove {
+  background: none;
+  border: none;
+  color: #1E1E1E;
+  cursor: pointer;
+  font-size: 18px;
+  padding: 0;
+  width: 20px;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.discount-remove:hover {
+  color: #121212;
+}
+</style>

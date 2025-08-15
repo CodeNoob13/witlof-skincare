@@ -168,9 +168,12 @@
          <div data-cart-items class="t4s-mini_cart__items t4s_ratioadapt t4s-product">
             {%- if ccount > 0 -%}
 
+
                {%- for item in cart.items -%}
                {%- render 'cart-item-simple', item: item, gift_pr_id: gift_pr_id, min_qty: min_qty, compare_tt_price: compare_tt_price, cart_change_url: cart_change_url, edit_item: edit_item, cur_code_enabled: cur_code_enabled, atc_ajax_enable: atc_ajax_enable, cart_ajax_enable: cart_ajax_enable -%}
                {%- endfor -%}
+
+               {% render 'cart-discount-block' %}
 
             {%- else -%}
 

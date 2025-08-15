@@ -426,11 +426,24 @@
     "mini_cart": {
       "title": "Winkelwagen",
       "close_cart": "Winkelwagen sluiten",
-      "empty": "Uw winkelwagen is leeg.",
+      "empty": "Jouw winkelwagen is leeg.",
       "subtotal": "Subtotaal:",
       "checkout": "Ik ga bestellen",
       "view": "Bekijk winkelwagen",
-      "title_recommendations": "Wat je ook leuk zal vinden"
+      "title_recommendations": "Wat je ook leuk zal vinden",
+      "discount": {
+        "placeholder": "Kortingscode of cadeaubon",
+        "apply": "Toepassen",
+        "loading": "...",
+        "success_applied": "Kortingscode toegepast!",
+        "success_removed": "Korting verwijderd",
+        "error_empty": "Voer een kortingscode in",
+        "error_invalid": "Ongeldige kortingscode",
+        "error_not_found": "Kortingscode niet gevonden",
+        "error_expired": "Kortingscode verlopen of niet geldig",
+        "error_remove": "Fout bij verwijderen korting",
+        "error_could_not_remove": "Kon korting niet verwijderen"
+      }
     },
     "cart_page": {
       "title": "Winkelwagen",

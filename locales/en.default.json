@@ -431,7 +431,20 @@
       "subtotal": "Subtotal:",
       "checkout": "Check Out",
       "view": "View cart",
-      "title_recommendations": "You may also like"
+      "title_recommendations": "You may also like",
+      "discount": {
+        "placeholder": "Enter discount code",
+        "apply": "Apply",
+        "loading": "...",
+        "success_applied": "Discount code applied!",
+        "success_removed": "Discount removed",
+        "error_empty": "Discount code or gift card",
+        "error_invalid": "Invalid discount code",
+        "error_not_found": "Discount code not found",
+        "error_expired": "Discount code expired or not valid",
+        "error_remove": "Error removing discount",
+        "error_could_not_remove": "Could not remove discount"
+      }
     },
     "cart_page": {
       "title": "Shopping cart",
