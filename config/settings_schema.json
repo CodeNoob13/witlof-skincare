@@ -1942,10 +1942,10 @@
         "info": "Cart total required for a free sample product."
       },
       {
-        "type": "image_picker",
-        "id": "shipping_threshold_3_image",
-        "label": "Image for third shipping threshold",
-        "info": "Image shown in the third box of the shipping threshold bar."
+        "type": "product",
+        "id": "shipping_threshold_3_product",
+        "label": "Free product ",
+        "info": "Need to add discount code within backend."
       },
       {
         "type": "checkbox",

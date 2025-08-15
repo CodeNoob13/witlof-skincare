@@ -198,8 +198,8 @@ input[type="checkbox"][data-agree-checkbox]:checked ~ svg {
   border-top: 1px solid rgba(var(--border-color-rgb), 0.6);
 }
 .t4s-mini_cart__img {
-  width: 120px;
-  height: 120px;
+  width: 104px;
+  height: 104px;
   display: block;
   margin-right: 0;
   -ms-flex: 0 0 auto;

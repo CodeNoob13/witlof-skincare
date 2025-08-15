@@ -1,16 +1,22 @@
 <div x-data="ajCart">
-
-
-<div x-show="cartPrice > 0" class="fluct-it__gift-list">
-            <div
-    class="fluct-it__gift-box active"
-    :style="{
-        '--border-width': cartPrice >= {{ settings.free_ship_threshold }} ? '100%' : '50%',
-        '--border-right': cartPrice >= {{ settings.free_ship_threshold }} ? '#4AB9CB' : 'transparent',
-        '--border-radius': cartPrice >= {{ settings.free_ship_threshold }} ? '8px' : '8px 0 0 8px',
-        '--connector-background': cartPrice >= {{ settings.free_ship_threshold }} ? '#4AB9CB' : 'rgba(0,0,0,0.1)'
-    }"
-    >
+    <div x-show="cartPrice > 0" class="fluct-it__gift-list">
+        <div
+            class="fluct-it__gift-box active"
+            :style="{
+                '--border-width': cartPrice >= {{ settings.free_ship_threshold }} ? '100%' : '50%',
+                '--border-right': cartPrice >= {{ settings.free_ship_threshold }} ? '#4AB9CB' : 'transparent',
+                '--border-radius': cartPrice >= {{ settings.free_ship_threshold }} ? '8px' : '8px 0 0 8px',
+                '--connector-background': cartPrice >= {{ settings.free_ship_threshold }} ? '#4AB9CB' : 'rgba(0,0,0,0.1)'
+            }"
+        >
+            <div class="fluct-it__gift-close" :style="cartPrice > {{ settings.free_ship_threshold }} ? 'background: #4AB9CB;' : ''">
+                <template x-if="cartPrice < {{ settings.free_ship_threshold }}">
+                    {% render 'close-icon' %}
+                </template>
+                <template x-if="cartPrice >= {{ settings.free_ship_threshold }}">
+                    {% render 'checkmark-icon' %}
+                </template>
+            </div>
             <picture>
                 {% render 'shipping-threshold-1' %}
             </picture>
@@ -19,13 +25,25 @@
                 <span class="fluct-it__gift-price">€{{ settings.free_ship_threshold }}</span>
             </div>
         </div>
-        <div class="fluct-it__gift-box"
-    :style="{
-        '--border-width': cartPrice >= {{ settings.free_sample_threshold }} ? '100%' : '50%',
-        '--border-right': cartPrice >= {{ settings.free_sample_threshold }} ? '#4AB9CB' : 'transparent',
-        '--border-radius': cartPrice >= {{ settings.free_sample_threshold }} ? '8px' : '8px 0 0 8px',
-        '--connector-background': cartPrice >= {{ settings.free_sample_threshold }} ? '#4AB9CB' : 'rgba(0,0,0,0.1)'
-    }" :class="{'active': cartPrice >= {{ settings.free_sample_threshold }} }">
+
+        <div
+            class="fluct-it__gift-box"
+            :style="{
+                '--border-width': cartPrice >= {{ settings.free_sample_threshold }} ? '100%' : '50%',
+                '--border-right': cartPrice >= {{ settings.free_sample_threshold }} ? '#4AB9CB' : 'transparent',
+                '--border-radius': cartPrice >= {{ settings.free_sample_threshold }} ? '8px' : '8px 0 0 8px',
+                '--connector-background': cartPrice >= {{ settings.free_sample_threshold }} ? '#4AB9CB' : 'rgba(0,0,0,0.1)'
+            }"
+            :class="{'active': cartPrice > {{ settings.free_ship_threshold }} }"
+        >
+            <div class="fluct-it__gift-close" :style="cartPrice > {{ settings.free_sample_threshold }} ? 'background: #4AB9CB;' : ''">
+                <template x-if="cartPrice < {{ settings.free_sample_threshold }}">
+                    {% render 'close-icon' %}
+                </template>
+                <template x-if="cartPrice >= {{ settings.free_sample_threshold }}">
+                    {% render 'checkmark-icon' %}
+                </template>
+            </div>
             <picture>
                 {% render 'shipping-threshold-2' %}
             </picture>
@@ -34,19 +52,33 @@
                 <span class="fluct-it__gift-price">€{{ settings.free_sample_threshold }}</span>
             </div>
         </div>
-        <div class="fluct-it__gift-box"
-    :style="{
-        '--border-width': cartPrice >= {{ settings.free_sample_product_threshold }} ? '100%' : '50%',
-        '--border-right': cartPrice >= {{ settings.free_sample_product_threshold }} ? '#4AB9CB' : 'transparent',
-        '--border-radius': cartPrice >= {{ settings.free_sample_product_threshold }} ? '8px' : '8px 0 0 8px'
 
-    }" :class="{'active': cartPrice >= {{ settings.free_sample_threshold }} }">
+        <div
+            class="fluct-it__gift-box"
+            :style="{
+                '--border-width': cartPrice >= {{ settings.free_sample_product_threshold }} ? '100%' : '50%',
+                '--border-right': cartPrice >= {{ settings.free_sample_product_threshold }} ? '#4AB9CB' : 'transparent',
+                '--border-radius': cartPrice >= {{ settings.free_sample_product_threshold }} ? '8px' : '8px 0 0 8px'
+            }"
+            :class="{'active': cartPrice >= {{ settings.free_sample_threshold }} }"
+        >
+            <div class="fluct-it__gift-close" :style="cartPrice > {{ settings.free_sample_product_threshold }} ? 'background: #4AB9CB;' : ''">
+                <template x-if="cartPrice < {{ settings.free_sample_product_threshold }}">
+                    {% render 'close-icon' %}
+                </template>
+                <template x-if="cartPrice >= {{ settings.free_sample_product_threshold }}">
+                    {% render 'checkmark-icon' %}
+                </template>
+            </div>
             <picture>
-                {%- if settings.shipping_threshold_3_image != blank -%}
-                    <img src="{{ settings.shipping_threshold_3_image | image_url: width: 32 }}" alt="Shipping threshold 3" width="32" height="32" style="max-width:60px;max-height:60px;" loading="lazy">
-                {%- else -%}
-                    {% render 'shipping-threshold-2' %}
-                {%- endif -%}
+                <img
+                    src="{{ settings.shipping_threshold_3_product.images[0] | image_url: width: 32 }}"
+                    alt="Shipping threshold 3"
+                    width="32"
+                    height="32"
+                    style="max-width:60px;max-height:60px;"
+                    loading="lazy"
+                >
             </picture>
             <div class="fluct-it__gift-info">
                 <span class="fluct-it__gift-text">Gratis Balancing Toner</span>
@@ -58,8 +90,6 @@
     <div>
         <p>Hello there</p>
     </div>
-
-
 </div>
     <style>
     .fluct-it__gift-list {
@@ -118,7 +148,18 @@
     z-index:-1;
 }
 
-
+.fluct-it__gift-close {
+    position: absolute;
+    align-items:center;
+    display:flex;
+    justify-content:center;
+    top: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.1);
+    height:28px;
+    width:28px;
+    border-bottom-left-radius: 8px;
+}
 
     .fluct-it__gift-box picture {
         margin-bottom: 12px;
