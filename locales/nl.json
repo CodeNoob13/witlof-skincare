@@ -730,6 +730,15 @@
     }
   },
   "fluctit": {
+    "free_shipping": "gratis verzending",
+    "free_sample": "gratis sample",
+    "free": "gratis",
+    "cart": {
+      "free_shipping": "Gratis verzending",
+      "free_sample": "Gratis sample",
+      "free": "Gratis"
+    },
+    "line_item": {},
     "klarna_info": {
       "title1": "Betaal later",
       "text1": "Shop vandaag nog en geniet gelijk van je nieuwe aanwinst. Ben je direct tevreden, dan betaal je in de app. Niet direct tevreden? Probeer het wat langer. De aankoop betaal je tot en met 30 dagen later. Geen rente. Geen extra kosten. Wel smoooth.",

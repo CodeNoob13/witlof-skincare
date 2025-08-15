@@ -724,6 +724,15 @@
     "no_content": "This section doesn’t currently include any content. Add content to this section using the sidebar."
   },
   "fluctit": {
+    "free_shipping": "Free shipping",
+    "free_sample": "Free sample",
+    "free": "Free",
+    "cart": {
+      "free_shipping": "Free shipping",
+      "free_sample": "Free sample",
+      "free": "Free"
+    },
+    "line_item": {},
     "klarna_info": {
       "title1": "Pay later",
       "text1": "Shop today and immediately enjoy your new purchase. If you're instantly satisfied, you can pay via the app. Not quite sure yet? Try it a bit longer. You can pay up to 30 days later. No interest. No extra costs. Just smooth.",

@@ -21,7 +21,7 @@
                 {% render 'shipping-threshold-1' %}
             </picture>
             <div class="fluct-it__gift-info">
-                <span class="fluct-it__gift-text">Gratis verzending</span>
+                <span class="fluct-it__gift-text">{{ 'fluctit.cart.free_shipping' | t }}</span>
                 <span class="fluct-it__gift-price">€{{ settings.free_ship_threshold }}</span>
             </div>
         </div>
@@ -48,7 +48,7 @@
                 {% render 'shipping-threshold-2' %}
             </picture>
             <div class="fluct-it__gift-info">
-                <span class="fluct-it__gift-text">Gratis sample</span>
+                <span class="fluct-it__gift-text">{{ 'fluctit.cart.free_sample' | t }}</span>
                 <span class="fluct-it__gift-price">€{{ settings.free_sample_threshold }}</span>
             </div>
         </div>
@@ -81,21 +81,33 @@
                 >
             </picture>
             <div class="fluct-it__gift-info">
-                <span class="fluct-it__gift-text">Gratis Balancing Toner</span>
+                <span class="fluct-it__gift-text">{{ 'fluctit.cart.free' | t }} {{ settings.shipping_threshold_3_product.title }}</span>
                 <span class="fluct-it__gift-price">€{{ settings.free_sample_product_threshold }}</span>
             </div>
         </div>
     </div>
 
-    <div>
-        <p>Hello there</p>
+    <div class="fluct-it__gift-message">
+        <template x-if="cartPrice < {{ settings.free_ship_threshold }}">
+            <p >Voeg nog <strong x-text="'€' + ({{ settings.free_ship_threshold }} - cartPrice).toFixed(0)"></strong> toe en ontvang  <b>{{ 'fluctit.free_shipping' | t }}</b></p>
+        </template>
+
+        <template x-if="cartPrice > {{ settings.free_ship_threshold }} && cartPrice < {{ settings.free_sample_threshold }}">
+            <p >Voeg nog <strong x-text="'€' + ({{ settings.free_sample_threshold }} - cartPrice).toFixed(0)"></strong> toe en ontvang <b>{{ 'fluctit.free_sample' | t }}</b></p>
+        </template>
+
+        <template x-if="cartPrice > {{ settings.free_sample_threshold }} && cartPrice < {{ settings.free_sample_product_threshold }}">
+            <p >Voeg nog <strong x-text="'€' + ({{ settings.free_sample_product_threshold }} - cartPrice).toFixed(0)"></strong> toe en ontvang {{ 'fluctit.free' | t }} <b>{{ settings.shipping_threshold_3_product.title }}</b></p>
+        </template>
     </div>
+
 </div>
     <style>
     .fluct-it__gift-list {
         display: flex;
         justify-content: space-between;
         padding: 0 20px;
+        padding-bottom: 12px;
         gap: 18px;
         margin-bottom:6px;
         box-sizing: border-box;
@@ -159,6 +171,11 @@
     height:28px;
     width:28px;
     border-bottom-left-radius: 8px;
+}
+
+.fluct-it__gift-message {
+    text-align: center;
+    padding:0 20px;
 }
 
     .fluct-it__gift-box picture {
