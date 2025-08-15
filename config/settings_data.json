@@ -70,15 +70,10 @@
     "variant_remove": "1",
     "share_source": "1",
     "free_ship_pr": "balancing-toner-150ml",
-    "enable_confetti": false,
-    "des_shipbar": "0",
-    "des_shipbar_per_1": 25,
-    "des_shipbar_cl_1": "#4ab9cb",
-    "des_shipbar_per_2": 50,
-    "des_shipbar_cl_2": "#4ab9cb",
-    "des_shipbar_per_3": 75,
-    "des_shipbar_cl_3": "#4ab9cb",
-    "gift_wrap_pr": "gift-wrap",
+    "free_ship_threshold": 40,
+    "free_sample_threshold": 60,
+    "free_sample_product_threshold": 85,
+    "shipping_threshold_3_product": "gift-wrap",
     "filter_type_search": true,
     "show_search_suggest": true,
     "search_prs_suggest": "",
@@ -671,11 +666,7 @@
             }
           }
         },
-        "block_order": [
-          "top-bar-2",
-          "top-bar-1",
-          "top-bar-0"
-        ],
+        "block_order": ["top-bar-2", "top-bar-1", "top-bar-0"],
         "settings": {
           "show_topbar": true,
           "topbar_transparent": false,
@@ -918,10 +909,7 @@
             }
           }
         },
-        "block_order": [
-          "title_config-0",
-          "title_config-1"
-        ],
+        "block_order": ["title_config-0", "title_config-1"],
         "settings": {
           "design_heading": "1",
           "heading_align": "t4s-text-center",
@@ -1130,10 +1118,7 @@
             }
           }
         },
-        "block_order": [
-          "btn_config-0",
-          "btn_config-1"
-        ],
+        "block_order": ["btn_config-0", "btn_config-1"],
         "settings": {
           "fnt_fm_button": "--font-family-1",
           "btn_fw": 600,
@@ -2303,7 +2288,6 @@
           "enable_note": false,
           "enable_rates": false,
           "enable_discount": false,
-          "enable_gift_wrap": false,
           "ship_df_country": "Netherlands"
         }
       },
@@ -2470,9 +2454,7 @@
             }
           }
         },
-        "block_order": [
-          "ef55a72d-2a3a-4be2-b303-7904b5feef29"
-        ],
+        "block_order": ["ef55a72d-2a3a-4be2-b303-7904b5feef29"],
         "settings": {
           "btn_vi": "hover",
           "btn_owl": "default",
@@ -2530,9 +2512,7 @@
             }
           }
         },
-        "block_order": [
-          "heading-template-0"
-        ],
+        "block_order": ["heading-template-0"],
         "settings": {
           "image": "shopify://shop_images/shopping-cart-head.jpg",
           "parallax": false,
@@ -2558,9 +2538,7 @@
             "settings": {}
           }
         },
-        "block_order": [
-          "main-wishlist-0"
-        ],
+        "block_order": ["main-wishlist-0"],
         "settings": {
           "product_des": "1",
           "show_vendor": false,
@@ -2774,9 +2752,7 @@
             }
           }
         },
-        "block_order": [
-          "06eaa184-e59c-4525-ac5d-eac6fc91f3e8"
-        ],
+        "block_order": ["06eaa184-e59c-4525-ac5d-eac6fc91f3e8"],
         "settings": {}
       },
       "main-qs": {
@@ -2836,11 +2812,7 @@
             }
           }
         },
-        "block_order": [
-          "main-qs-0",
-          "main-qs-1",
-          "main-qs-2"
-        ],
+        "block_order": ["main-qs-0", "main-qs-1", "main-qs-2"],
         "settings": {
           "demo_pr": ""
         }

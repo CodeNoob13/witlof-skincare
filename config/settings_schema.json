@@ -1917,207 +1917,34 @@
       },
       {
         "type": "header",
-        "content": "+ Free shipping minimum amount"
-      },
-      {
-        "type": "paragraph",
-        "content": "Free shipping minimum amount needs to be set up as a product."
+        "content": "+ Shipping Thresholds"
       },
       {
         "type": "number",
         "id": "free_ship_threshold",
         "label": "Free shipping threshold",
-        "info": "Cart total required for free shipping."
+        "info": "Cart total required for free shipping.",
+        "default": 40
       },
       {
         "type": "number",
         "id": "free_sample_threshold",
         "label": "Free sample threshold",
-        "info": "Cart total required for a free sample."
+        "info": "Cart total required for a free sample.",
+        "default": 60
       },
       {
         "type": "number",
         "id": "free_sample_product_threshold",
         "label": "Free sample product threshold",
-        "info": "Cart total required for a free sample product."
+        "info": "Cart total required for a free sample product.",
+        "default": 85
       },
       {
         "type": "product",
         "id": "shipping_threshold_3_product",
-        "label": "Free product ",
-        "info": "Need to add discount code within backend."
-      },
-      {
-        "type": "checkbox",
-        "id": "enable_confetti",
-        "label": "Enable confetti when got free shipping",
-        "default": true
-      },
-      {
-        "type": "checkbox",
-        "id": "enable_shipbar",
-        "label": "Enable free shipping bar",
-        "default": true
-      },
-      {
-        "type": "select",
-        "id": "des_shipbar",
-        "default": "0",
-        "options": [
-          {
-            "value": "0",
-            "label": "#0 - Normal"
-          },
-          {
-            "value": "1",
-            "label": "#1 - Leaf"
-          },
-          {
-            "value": "2",
-            "label": "#2 - Overlap"
-          },
-          {
-            "value": "3",
-            "label": "#3 - Food"
-          },
-          {
-            "value": "4",
-            "label": "#4 - Bars"
-          },
-          {
-            "value": "5",
-            "label": "#5 - Lines"
-          },
-          {
-            "value": "6",
-            "label": "#6 - Wiggle"
-          },
-          {
-            "value": "7",
-            "label": "#7 - Dots"
-          },
-          {
-            "value": "8",
-            "label": "#8 - Circuit"
-          },
-          {
-            "value": "9",
-            "label": "#9 - Aztec"
-          },
-          {
-            "value": "10",
-            "label": "#10 - Bees"
-          },
-          {
-            "value": "11",
-            "label": "#11 - Clouds"
-          },
-          {
-            "value": "12",
-            "label": "#12 - Stripes"
-          },
-          {
-            "value": "13",
-            "label": "#13 - Crosses"
-          },
-          {
-            "value": "14",
-            "label": "#14 - Jupiter"
-          },
-          {
-            "value": "15",
-            "label": "#15 - Piano"
-          },
-          {
-            "value": "16",
-            "label": "#16 - Dominos"
-          },
-          {
-            "value": "17",
-            "label": "#17 - Pie"
-          },
-          {
-            "value": "18",
-            "label": "#18 - Floor"
-          },
-          {
-            "value": "19",
-            "label": "#19 - Bubbles"
-          },
-          {
-            "value": "20",
-            "label": "#20 - TicTac"
-          },
-          {
-            "value": "21",
-            "label": "#21 - ZigZag"
-          }
-        ],
-        "label": "Design free shipping bar"
-      },
-      {
-        "type": "range",
-        "id": "des_shipbar_per_1",
-        "min": 0,
-        "max": 100,
-        "step": 1,
-        "unit": "%",
-        "label": "Free shipping bar less #1",
-        "default": 25
-      },
-      {
-        "type": "color",
-        "id": "des_shipbar_cl_1",
-        "label": "Free shipping color #1",
-        "default": "#EB001B"
-      },
-      {
-        "type": "range",
-        "id": "des_shipbar_per_2",
-        "min": 0,
-        "max": 100,
-        "step": 1,
-        "unit": "%",
-        "label": "Free shipping bar less #2",
-        "default": 50
-      },
-      {
-        "type": "color",
-        "id": "des_shipbar_cl_2",
-        "label": "Free shipping color #2",
-        "default": "#e0b252"
-      },
-      {
-        "type": "range",
-        "id": "des_shipbar_per_3",
-        "min": 0,
-        "max": 100,
-        "step": 1,
-        "unit": "%",
-        "label": "Free shipping bar less #3",
-        "default": 75
-      },
-      {
-        "type": "color",
-        "id": "des_shipbar_cl_3",
-        "label": "Free shipping color #3",
-        "default": "#23b2c7"
-      },
-      {
-        "type": "color",
-        "id": "des_shipbar_cl_4",
-        "label": "Free shipping color #4",
-        "default": "#428445"
-      },
-      {
-        "type": "header",
-        "content": "+ Gift wrap"
-      },
-      {
-        "type": "product",
-        "id": "gift_wrap_pr",
-        "label": "Product Gift wrap",
-        "info": "Gift wrap needs to be set up as a product."
+        "label": "Free product",
+        "info": "Product to give away at the highest threshold."
       },
       {
         "type": "header",

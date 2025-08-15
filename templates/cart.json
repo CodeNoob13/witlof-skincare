@@ -34,9 +34,7 @@
           }
         }
       },
-      "block_order": [
-        "61658221-289a-451c-832e-472e370318ff"
-      ],
+      "block_order": ["61658221-289a-451c-832e-472e370318ff"],
       "settings": {
         "use_specify_image": true,
         "parallax": false,
@@ -65,7 +63,7 @@
           "type": "btn",
           "settings": {
             "title": "Return To Shop",
-            "url": "\/",
+            "url": "/",
             "btn_icon": false,
             "button_style": "default",
             "btn_cl": "primary",
@@ -121,7 +119,6 @@
         "enable_note": true,
         "enable_rates": false,
         "enable_discount": true,
-        "enable_gift_wrap": true,
         "ship_df_country": "nederland"
       }
     },
@@ -250,13 +247,11 @@
       "type": "apps",
       "blocks": {
         "student_beans_verification_cart_iTQb8d": {
-          "type": "shopify:\/\/apps\/beans-id-verification\/blocks\/cart\/5c736972-c385-431c-8cbb-05726b7a1739",
+          "type": "shopify://apps/beans-id-verification/blocks/cart/5c736972-c385-431c-8cbb-05726b7a1739",
           "settings": {}
         }
       },
-      "block_order": [
-        "student_beans_verification_cart_iTQb8d"
-      ],
+      "block_order": ["student_beans_verification_cart_iTQb8d"],
       "settings": {}
     }
   },
