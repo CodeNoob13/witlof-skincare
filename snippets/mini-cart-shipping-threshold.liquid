@@ -87,7 +87,7 @@
         </div>
     </div>
 
-    <div class="fluct-it__gift-message">
+    <div class="fluct-it__gift-message" x-show="cartPrice > 0">
         <template x-if="cartPrice < {{ settings.free_ship_threshold }}">
             <p >Voeg nog <strong x-text="'€' + ({{ settings.free_ship_threshold }} - cartPrice).toFixed(0)"></strong> toe en ontvang  <b>{{ 'fluctit.free_shipping' | t }}</b></p>
         </template>

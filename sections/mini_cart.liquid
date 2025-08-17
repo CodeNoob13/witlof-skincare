@@ -9,17 +9,6 @@
   assign cart_change_url  = routes.cart_change_url
   assign min_qty          = settings.min_qty | plus: 0
   assign compare_tt_price = 0
-  for item in cart.items
-    assign item_variant = item.variant
-    assign v_compare_at_price = item_variant.compare_at_price
-    if v_compare_at_price and v_compare_at_price > 0
-      assign item_compare_total = v_compare_at_price | times: item.quantity
-      assign compare_tt_price = compare_tt_price | plus: item_compare_total
-    else
-      assign item_original_total = item.original_price | times: item.quantity
-      assign compare_tt_price = compare_tt_price | plus: item_original_total
-    endif
-  endfor
   assign shipping_amount  = settings.free_ship_pr.metafields.theme.shipping_money.value | default: settings.free_ship_pr.price | default: -1
   assign total_price    = cart.total_price
 
@@ -93,14 +82,13 @@
 <div data-cart-wrapper id="t4s-mini_cart" data-ccount="{{ ccount }}" class="t4s-drawer t4s-drawer__right t4s-dn" aria-hidden="true">
 {%- endif -%}
 
-  {% render 'mini-cart-header' %}
-  {% render 'mini-cart-shipping-threshold' %}
-
-   <form action="{{ cart_url }}" method="post" novalidate class="t4s-drawer__wrap">
+<form action="{{ cart_url }}" method="post" novalidate class="t4s-drawer__wrap">
       <input type="hidden" data-cart-attr-rm name="attributes[collection_items_per_row]" value="">
       {%- if se_stts.enable_discount %}<input type="hidden" data-cart-discount name="discount" value="">{% endif -%}
       <div class="t4s-drawer__main">
       <div data-t4s-scroll-me class="t4s-drawer__scroll t4s-current-scrollbar">
+         {% render 'mini-cart-header' %}
+         {% render 'mini-cart-shipping-threshold' %}
          <div class="t4s-cookie-message t4s-dn">{{ 'cart.general.cookies_required' | t }}</div>
          {%- if se_style == '1' and se_pos == '1' %}{{- html_btn -}}{% endif -%}
          <div data-cart-items class="t4s-mini_cart__items t4s_ratioadapt t4s-product">
@@ -108,7 +96,7 @@
 
 
                {%- for item in cart.items -%}
-               {%- render 'cart-item-simple', item: item, min_qty: min_qty, compare_tt_price: compare_tt_price, cart_change_url: cart_change_url, edit_item: edit_item, cur_code_enabled: cur_code_enabled, atc_ajax_enable: atc_ajax_enable, cart_ajax_enable: cart_ajax_enable -%}
+               {%- render 'cart-item-simple', item: item, min_qty: min_qty, compare_tt_price: compare_tt_price, cart_change_url: cart_change_url, edit_item: edit_item, cur_code_enabled: cur_code_enabled, atc_ajax_enable: atc_ajax_enable, cart_ajax_enable: cart_ajax_enable, line_index: forloop.index -%}
                {%- endfor -%}
 
                {% render 'cart-discount-block' %}
@@ -149,112 +137,13 @@
 
       </div>
       </div>
-      <div class="t4s-drawer__bottom">
-         <div data-cart-discounts>
-         {%- if cart.cart_level_discount_applications != blank -%}
-            <ul class="t4s-cart_discounts">
-            {%- for discount_application in cart.cart_level_discount_applications -%}<li class="t4s-order_cart_discounts"><svg viewBox="0 0 24 24" width="20"><use href="#icon-cart-tag"/></svg> {{- discount_application.title -}} (-{{ discount_application.total_allocated_amount | money }})</li>{%- endfor -%}
-            </ul>
-         {%- endif -%}
-         </div>
-         {%- for block in section_blocks -%}
-             {%- assign bk_stts = block.settings -%}
-             {%- assign button_style = bk_stts.button_style -%}
-            {%- case block.type -%}
-               {%- when 'price' -%}
-                  <div class="t4s-cart-total t4s-row t4s-gx-5 t4s-gy-0 t4s-align-items-center t4s-justify-content-between" {{ block.shopify_attributes }}>
-                     <div class="t4s-col-auto"><strong>{{ 'cart.mini_cart.subtotal' | t }}</strong></div>
-                     <div data-cart-prices class="t4s-col-auto t4s-text-right">
-                        {%- if compare_tt_price > total_price -%}
-                        <div class="t4s-cart__comparePrice t4s-d-inline-block" data-compare-price="{{ compare_tt_price }}" style="text-decoration: line-through; color: #666; margin-right: 8px;">{{ compare_tt_price | money }}</div>
-                        {%- endif -%}
-                        <div class="t4s-cart__totalPrice" data-total-price="{{ total_price }}">{{ total_price | money_with_currency }}</div>
-                     </div>
-                  </div>
 
-               {%- when 'tax' -%}
-                  {%- capture taxes_shipping_checkout -%}{%- assign page_url = settings.link_ship -%}
-                     {%- if se_stts.show_discount -%}
-                         {%- if cart.taxes_included and page_url != blank -%}
-                           {{ 'cart.general.taxes_included_discounts_and_shipping_policy_html' | t: link: page_url }}
-                         {%- elsif cart.taxes_included -%}
-                           {{ 'cart.general.taxes_included_discounts_but_shipping_at_checkout' | t }}
-                         {%- elsif page_url != blank -%}
-                           {{ 'cart.general.taxes_discounts_and_shipping_policy_at_checkout_html' | t: link: page_url }}
-                         {%- else -%}
-                           {{ 'cart.general.taxes_discounts_and_shipping_at_checkout' | t }}
-                         {%- endif -%}
-                     {%- else -%}
-                         {%- if cart.taxes_included and page_url != blank -%}
-                           {{ 'cart.general.taxes_included_and_shipping_policy_html' | t: link: page_url }}
-                         {%- elsif cart.taxes_included -%}
-                           {{ 'cart.general.taxes_included_but_shipping_at_checkout' | t }}
-                         {%- elsif page_url != blank -%}
-                           {{ 'cart.general.taxes_and_shipping_policy_at_checkout_html' | t: link: page_url }}
-                         {%- else -%}
-                           {{ 'cart.general.taxes_and_shipping_at_checkout' | t }}
-                         {%- endif -%}
-                     {%- endif -%}
-                  {%- endcapture -%}
-                  <p class="t4s-cart__tax" {{ block.shopify_attributes }}>{{ taxes_shipping_checkout }}</p>
-
-               {%- when 'agree' -%}
-                  {%- capture terms_and_conditions -%}{%- assign page_url = settings.link_conditions -%}
-                  {%- if se_stts.enable_calc_ship and shipping_amount > -1 -%}
-                    {% render 'mini-cart-shipping-threshold' %}
-                  {%- endif -%}
-                  {%- endcapture -%}
-                  <div class="t4s-field" id="ShippingProvinceContainer_{{ idShip }}" style="display:none">
-                    <label for="ShippingProvince_{{ idShip }}" id="address_province_label">{{ 'cart.shipping_estimator.province' | t }}</label>
-                    <select id="ShippingProvince_{{ idShip }}" name="province" data-default="{% if customer %}{{ customer.default_address.province }}{% endif %}"></select>
-                  </div>  
-                  <div class="t4s-field">
-                    <label for="ShippingZip_{{ idShip }}">{{ 'cart.shipping_estimator.zip_code' | t }}</label>
-                    <input type="text" data-opend-focus id="ShippingZip_{{ idShip }}" name="zip" value="{% if customer %}{{ customer.default_address.zip }}{% endif %}"/>
-                  </div>
-                  <div class="t4s-field">
-                    <button data-action="estimate-shipping" type="button" class="t4s-get__rates t4s-mini_cart-tool__primary t4s-btn-loading__svg"> 
-                         <span class="t4s-btn-atc_text">{{ 'cart.shipping_estimator.estimate' | t }}</span>
-                         <div class="t4s-loading__spinner t4s-dn">
-                             <svg  width="16" height="16" aria-hidden="true" focusable="false" role="presentation" class="t4s-svg__spinner" viewBox="0 0 66 66" xmlns="http://www.w3.org/2000/svg"><circle class="t4s-path" fill="none" stroke-width="6" cx="33" cy="33" r="30"></circle></svg>
-                         </div>  
-                    </button>
-                  </div>
-                  <div class="t4s-field">
-                    <button type="button" data-cart-tool_close class="t4s-mini_cart-tool__back">{{ 'cart.tool.cancel' | t }}</button>
-                  </div>
-                  <div data-response-rates class="t4s-response__rates"></div>
-                  <template data-lang-rates class="t4s-d-none">
-                   {
-                     "multiple_rates": {{ 'cart.shipping_estimator.multiple_rates' | t | json }},
-                     "one_rate": {{ 'cart.shipping_estimator.one_rate' | t | json }},
-                     "no_rates": {{ 'cart.shipping_estimator.no_rates' | t | json }},
-                     "rate_value": {{ 'cart.shipping_estimator.rate_value' | t | json }},
-                     "errors": {{ 'cart.shipping_estimator.errors' | t | json }}
-                   }
-                  </template> 
-               {%- endcase -%}
-         {%- endfor -%}
-
-         {%- for block in section_blocks -%}
-           {%- if block.type == 'btnc' or block.type == 'btnck' -%}
-             {%- assign bk_stts = block.settings -%}
-             {%- assign button_style = bk_stts.button_style -%}
-             <div class="t4s-cart__footer-btn t4s-mt-20">
-               {%- if block.type == 'btnc' -%}
-                 <a href="{{ routes.cart_url }}" class="t4s-btn t4s-btn-base t4s-btn-style-{{ button_style }} t4s-btn-color-{{ bk_stts.btn_cl }} {% if button_style == 'default' or button_style == 'outline' %}t4s-btn-effect-{{ bk_stts.button_effect }}{% endif %} t4s-justify-content-center t4s-truncate">
-                   {{ 'cart.general.view_cart' | t }}
-                   {%- if bk_stts.btn_icon -%}<svg class="t4s-btn-icon" width="14"><use xlink:href="#t4s-icon-btn"></use></svg>{%- endif -%}
-                 </a>
-               {%- elsif block.type == 'btnck' -%}
-                 <a href="{{ routes.checkout_url }}" class="t4s-btn t4s-btn-base t4s-btn-style-{{ button_style }} t4s-btn-color-{{ bk_stts.btn_cl }} {% if button_style == 'default' or button_style == 'outline' %}t4s-btn-effect-{{ bk_stts.button_effect }}{% endif %} t4s-justify-content-center t4s-truncate">
-                   {{ 'cart.general.checkout' | t }}
-                   {%- if bk_stts.btn_icon -%}<svg class="t4s-btn-icon" width="14"><use xlink:href="#t4s-icon-btn"></use></svg>{%- endif -%}
-                 </a>
-               {%- endif -%}
-             </div>
-           {%- endif -%}
-         {%- endfor -%}
+      {%- render 'cart-footer', 
+          section_blocks: section_blocks, 
+          compare_tt_price: compare_tt_price, 
+          total_price: total_price, 
+          se_stts: se_stts,
+          shipping_amount: shipping_amount -%}
 
    {%- if se_stts.enable_discount -%}
    <div class="t4s-mini_cart-tool__content is--discount t4s-pe-none">
@@ -277,8 +166,6 @@
 {%- if request.design_mode %}</div>{% endif -%}
   </div>
 </form>
-
-<!-- Ensure all opened divs are closed before schema -->
 
 {%- schema -%}
 {

@@ -44,7 +44,7 @@
 
 <script>
 // Define locale strings for JavaScript use
-const discountLocale = {
+window.discountLocale = window.discountLocale || {
   successApplied: {{ 'cart.mini_cart.discount.success_applied' | t | json }},
   successRemoved: {{ 'cart.mini_cart.discount.success_removed' | t | json }},
   errorEmpty: {{ 'cart.mini_cart.discount.error_empty' | t | json }},
@@ -72,7 +72,7 @@ function applyDiscount() {
   console.log('Discount code:', code);
   
   if (!code) {
-    showDiscountMessage(discountLocale.errorEmpty, 'error');
+    {% comment %} showDiscountMessage(discountLocale.errorEmpty, 'error'); {% endcomment %}
     return;
   }
   
@@ -81,67 +81,61 @@ function applyDiscount() {
   button.querySelector('.btn-loading').style.display = 'inline';
   button.disabled = true;
   
-  // Apply discount by submitting to discount endpoint and then refreshing cart
-  fetch(`/discount/${encodeURIComponent(code)}`, {
+  // Apply discount using AJAX to avoid page reload
+  fetch('/discount/' + encodeURIComponent(code), {
     method: 'GET',
-    credentials: 'same-origin'
+    headers: {
+      'Accept': 'application/json',
+    }
   })
   .then(response => {
-    console.log('Discount response:', response);
+    console.log('Discount response status:', response.status);
     
-    // Reset button state first
+    // Reset button state
     button.querySelector('.btn-text').style.display = 'inline';
     button.querySelector('.btn-loading').style.display = 'none';
     button.disabled = false;
     
-    // Check cart to see if discount was applied
-    return fetch('/cart.js', {
-      credentials: 'same-origin'
-    });
-  })
-  .then(response => response.json())
-  .then(cart => {
-    console.log('Cart after discount attempt:', cart);
-    
-    // Check if discount was actually applied
-    const hasDiscount = cart.cart_level_discount_applications && 
-                       cart.cart_level_discount_applications.length > 0;
-    
-    if (hasDiscount) {
-      showDiscountMessage(discountLocale.successApplied, 'success');
-      input.value = '';
-      
-      // Update cart prices in footer
-      if (window.updateCartPrices) {
-        window.updateCartPrices(cart);
-      }
-      
-      // Refresh the cart using Alpine.js store
-      if (window.Alpine && Alpine.store && Alpine.store('ajCart')) {
-        Alpine.store('ajCart').fetchCart();
-      }
-      
-      // Trigger cart update events for Alpine.js components
-      document.dispatchEvent(new CustomEvent('cart:updated', { detail: cart }));
-      document.dispatchEvent(new CustomEvent('cart:refresh'));
-      
-      // Additional Alpine.js specific updates
-      setTimeout(() => {
-        // Force Alpine.js components to re-render
-        document.querySelectorAll('[x-data*="ajCart"]').forEach(el => {
-          if (el._x_dataStack && el._x_dataStack[0] && el._x_dataStack[0].fetchCart) {
-            el._x_dataStack[0].fetchCart();
+    if (response.status === 302 || response.redirected) {
+      // Discount was accepted - now verify by checking cart
+      return fetch('/cart.js')
+        .then(cartResponse => cartResponse.json())
+        .then(cart => {
+          console.log('Cart after discount:', cart);
+          
+          // Check if discount was actually applied to cart
+          const hasDiscount = cart.cart_level_discount_applications && 
+                             cart.cart_level_discount_applications.length > 0;
+          
+          if (hasDiscount) {
+            {% comment %} showDiscountMessage(discountLocale.successApplied, 'success'); {% endcomment %}
+            input.value = '';
+            
+            // Update cart without page reload
+            if (window.ajCart && window.ajCart.fetchCart) {
+              window.ajCart.fetchCart();
+            }
+            
+            // Trigger cart update events
+            document.dispatchEvent(new CustomEvent('cart:updated'));
+            
+            // Show only the current applied discount (Shopify only allows one at a time)
+            showAppliedDiscount(cart.cart_level_discount_applications[0]);
+          } else {
+            {% comment %} showDiscountMessage(discountLocale.errorExpired, 'error'); {% endcomment %}
           }
         });
-      }, 100);
-      
+    } else if (response.status === 404) {
+      {% comment %} showDiscountMessage(discountLocale.errorNotFound, 'error'); {% endcomment %}
+    } else if (response.status === 422) {
+      {% comment %} showDiscountMessage(discountLocale.errorExpired, 'error'); {% endcomment %}
     } else {
-      showDiscountMessage(discountLocale.errorInvalid, 'error');
+      {% comment %} showDiscountMessage(discountLocale.errorInvalid, 'error'); {% endcomment %}
     }
   })
   .catch(error => {
     console.error('Discount error:', error);
-    showDiscountMessage(discountLocale.errorInvalid, 'error');
+    {% comment %} showDiscountMessage(discountLocale.errorInvalid, 'error'); {% endcomment %}
     
     // Reset button state
     button.querySelector('.btn-text').style.display = 'inline';
@@ -178,11 +172,6 @@ function removeDiscount(title) {
                        cart.cart_level_discount_applications.length > 0;
     
     if (!hasDiscount) {
-      
-      // Update cart prices in footer
-      if (window.updateCartPrices) {
-        window.updateCartPrices(cart);
-      }
     
       // Hide the applied discount display
       const container = document.getElementById('applied-discounts');
@@ -260,12 +249,7 @@ function tryDiscountClear() {
                            cart.cart_level_discount_applications.length > 0;
         
         if (!hasDiscount) {
-          showDiscountMessage(discountLocale.successRemoved, 'success');
-          
-          // Update cart prices in footer
-          if (window.updateCartPrices) {
-            window.updateCartPrices(cart);
-          }
+          {% comment %} showDiscountMessage(discountLocale.successRemoved, 'success'); {% endcomment %}
           
           // Hide the applied discount display
           const container = document.getElementById('applied-discounts');
@@ -310,13 +294,13 @@ function tryDiscountClear() {
           }, 100);
           
         } else {
-          showDiscountMessage(discountLocale.errorCouldNotRemove, 'error');
+          {% comment %} showDiscountMessage(discountLocale.errorCouldNotRemove, 'error'); {% endcomment %}
         }
       });
   })
   .catch(error => {
     console.error('Discount clear error:', error);
-    showDiscountMessage(discountLocale.errorRemove, 'error');
+    {% comment %} showDiscountMessage(discountLocale.errorRemove, 'error'); {% endcomment %}
   });
 }
 
