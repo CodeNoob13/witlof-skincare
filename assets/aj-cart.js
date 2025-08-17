@@ -2,7 +2,7 @@ document.addEventListener("alpine:init", () => {
   Alpine.data("ajCart", () => ({
     cartPrice: 0,
     cartDiscount: 0,
-    cartProducts: [],
+    cart: {},
     allProducts: [],
     totalComparePrice: 0,
 
@@ -20,7 +20,7 @@ document.addEventListener("alpine:init", () => {
         this.fetchCart();
       });
     },
-    fetchCart() {
+    async fetchCart() {
       this.fetchAllProducts();
 
       fetch("/cart.js")
@@ -28,38 +28,43 @@ document.addEventListener("alpine:init", () => {
         .then((cart) => {
           this.cartPrice = cart.total_price / 100;
           this.cartDiscount = cart.total_discount / 100;
-          this.cartProducts = cart.items.map((item) => {
-            const product = this.allProducts.find((p) => p.id === item.id);
-            return {
-              ...item,
-              ...product,
-            };
-          });
+          this.cart = cart;
 
-          this.allProducts.forEach((product) => {
-            console.log(product.variants);
-          });
-
-          // Get total compare at price
-
+          this.getCartProducts();
           this.getTotalComparePrice();
-          console.log((this.totalComparePrice / 100).toFixed(2));
         });
+    },
+
+    async getCartProducts() {
+      // Get total compare at price
+      this.cartProducts = this.cart.items.map((item) => {
+        const product = this.allProducts.find((p) => p.id === item.product_id);
+        if (product) {
+          const variant = product.variants.find(
+            (v) => v.id === item.variant_id
+          );
+          return {
+            ...item,
+            compare_at_price: parseFloat(variant.compare_at_price),
+          };
+        }
+      });
+
+      console.log(this.cartProducts);
     },
 
     async getTotalComparePrice() {
       let totalComparePrice = 0;
 
       this.cartProducts.forEach((item) => {
-        if (item.compare_at_price && item.quantity === 1) {
-          totalComparePrice += item.compare_at_price;
-        } else if (item.compare_at_price && item.quantity > 1) {
+        if (item.compare_at_price) {
           totalComparePrice += item.compare_at_price * item.quantity;
         } else {
-          totalComparePrice += item.line_price;
+          totalComparePrice += (item.price / 100) * item.quantity;
         }
       });
-      this.totalComparePrice = totalComparePrice;
+
+      console.log(totalComparePrice);
     },
 
     fetchAllProducts() {

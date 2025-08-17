@@ -27,7 +27,7 @@
   endif
 -%}
 
-<div data-cart-item data-line-index="{{ line_index }}" data-pid="{{ item.product_id }}" class="t4s-mini_cart__item cart_item_{{ item_id }} t4s-pr t4s-oh{% if gift_pr_id == item.product_id %} is--gift{% endif %}">
+<div data-cart-item data-pid="{{ item.product_id }}" data-line-index="{{ line_index }}" class="t4s-mini_cart__item cart_item_{{ item_id }} t4s-pr t4s-oh{% if gift_pr_id == item.product_id %} is--gift{% endif %}">
   <div class="t4s-mini_cart__main" style="display: flex; align-items: flex-start; gap: 16px;">
     <!-- Product Image Box -->
     <div class="t4s-mini_cart__imgbox">
@@ -60,7 +60,8 @@
         {% endif -%}
         
         <!-- Show applied discount codes under variant title -->
-        <div class="cart-discount-display">
+        <div class="cart-discount-display" 
+             data-cart-discounts='{{ cart.cart_level_discount_applications | json | escape }}'>
           {%- if cart.cart_level_discount_applications.size > 0 -%}
             {%- for discount in cart.cart_level_discount_applications -%}
               <div class="t4s-cart_discount_code">
@@ -71,6 +72,7 @@
                   {{ discount.title }}
                   {%- if discount.value_type == 'percentage' -%}
                     {%- assign percentage_value = discount.value | round -%}
+                    ({{ percentage_value }}% off)
                   {%- else -%}
                     ({{ discount.total_allocated_amount | money }} off)
                   {%- endif -%}
@@ -180,3 +182,79 @@
     </div>
   {%- endif -%}
 </div>
+
+<script>
+// Cart item discount updates using vanilla JavaScript
+document.addEventListener('cart:updated', function() {
+  updateCartItemDiscounts();
+});
+
+function updateCartItemDiscounts() {
+  // Fetch fresh cart data
+  fetch('/cart.js')
+    .then(response => response.json())
+    .then(cart => {
+      // Update discount displays
+      updateDiscountDisplays(cart.cart_level_discount_applications || []);
+      // Update price displays
+      updatePriceDisplays(cart.cart_level_discount_applications || []);
+    })
+    .catch(error => console.error('Error updating cart item discounts:', error));
+}
+
+function updateDiscountDisplays(discounts) {
+  const discountContainers = document.querySelectorAll('.cart-discount-display');
+  
+  discountContainers.forEach(container => {
+    container.innerHTML = '';
+    
+    if (discounts.length > 0) {
+      discounts.forEach(discount => {
+        const discountElement = document.createElement('div');
+        discountElement.className = 't4s-cart_discount_code';
+        
+        let discountText = discount.title;
+        if (discount.value_type === 'percentage') {
+          const percentage = Math.round(discount.value);
+          {% comment %} discountText += ` (${percentage}% off)`; {% endcomment %}
+        } else {
+          const amount = (discount.total_allocated_amount / 100).toFixed(2);
+          discountText += ` (€${amount} off)`;
+        }
+        
+        discountElement.innerHTML = `
+          <svg viewBox="0 0 24 24" width="14" style="margin-right: 4px; color: #1E1E1E;">
+            <use href="#icon-cart-tag"/>
+          </svg>
+          <span style="text-transform: uppercase; color: #1E1E1E; font-size: 12px; font-weight: 500;">
+            ${discountText}
+          </span>
+        `;
+        
+        container.appendChild(discountElement);
+      });
+    }
+  });
+}
+
+function updatePriceDisplays(discounts) {
+  const priceContainers = document.querySelectorAll('.t4s-cart_price');
+  const hasCartDiscount = discounts.length > 0;
+  
+  priceContainers.forEach(container => {
+    // Update the data attribute
+    container.dataset.hasCartDiscount = discounts.length;
+    
+    // Only change CSS styling, not the price structure
+    if (hasCartDiscount) {
+      // Add green color to indicate discount applied
+      container.style.color = '#1E1E1E';
+      container.style.fontWeight = '500';
+    } else {
+      // Remove discount styling
+      container.style.color = '';
+      container.style.fontWeight = '';
+    }
+  });
+}
+</script>

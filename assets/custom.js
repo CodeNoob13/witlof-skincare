@@ -1,264 +1,4 @@
 jQuery_T4NT(document).ready(function ($) {
-  // Prevent multiple initializations
-  if (window.cartQuantityFixActive) return;
-  window.cartQuantityFixActive = true;
-
-  // Flag to prevent simultaneous cart updates
-  let isCartUpdating = false;
-
-  // Suppress theme error popups during our cart updates
-  const originalAlert = window.alert;
-  window.alert = function (message) {
-    if (window.t4sCartUpdating) {
-      console.log(
-        "🚫 Suppressed theme error popup during cart update:",
-        message
-      );
-      return;
-    }
-    return originalAlert.call(this, message);
-  };
-
-  // Wait for theme to load, then apply targeted fix
-  setTimeout(function () {
-    // ONLY remove cart-specific handlers, not all theme handlers
-    $(document).off("change", "#t4s-mini_cart [data-action-change]");
-    $(document).off("click", "#t4s-mini_cart [data-quantity-selector]");
-
-    // Our exclusive cart quantity input handler - ONLY for mini cart
-    $(document).on(
-      "change.cartFix",
-      "#t4s-mini_cart [data-cart-item] [data-action-change]",
-      function (e) {
-        // Prevent simultaneous updates
-        if (isCartUpdating) {
-          console.log("⏳ Cart update in progress, ignoring");
-          e.preventDefault();
-          return false;
-        }
-
-        const $input = $(this);
-        const $cartItem = $input.closest("[data-cart-item]");
-        const lineIndex = $cartItem.data("line-index");
-
-        console.log("🔄 MINI CART quantity change detected:", {
-          lineIndex: lineIndex,
-          newValue: $input.val(),
-          element: this,
-          cartItemsCount: $("#t4s-mini_cart [data-cart-item]").length,
-        });
-
-        if (!lineIndex || lineIndex < 1) {
-          console.log(
-            "⚠️ No valid line index, letting theme handle this update"
-          );
-          // Let theme handle it if no line index
-          isCartUpdating = false;
-          return true; // Don't prevent the event, let theme handle it
-        }
-
-        // STOP all event propagation to prevent theme handlers
-        e.preventDefault();
-        e.stopPropagation();
-        e.stopImmediatePropagation();
-
-        const newQuantity = parseInt($input.val()) || 0;
-
-        if (newQuantity < 0) {
-          console.log("⚠️ Invalid quantity:", newQuantity);
-          return false;
-        }
-
-        // Set updating flag and suppress theme error popups
-        isCartUpdating = true;
-        window.t4sCartUpdating = true; // Flag for theme to suppress errors
-
-        // Disable only THIS specific input during update
-        $input.prop("disabled", true);
-
-        // Update cart using proper line index with form data format
-        $.ajax({
-          url: "/cart/change.js",
-          method: "POST",
-          dataType: "json",
-          data: {
-            line: lineIndex,
-            quantity: newQuantity,
-          },
-          beforeSend: function (xhr) {
-            xhr.setRequestHeader("X-Requested-With", "XMLHttpRequest");
-          },
-        })
-          .done(function (cart) {
-            console.log(
-              "✅ Cart updated successfully with line index",
-              lineIndex
-            );
-            // Refresh only the cart content
-            fetch("/cart?section_id=mini_cart")
-              .then((response) => response.text())
-              .then((html) => {
-                const newCartContent = $(html).find("#t4s-mini_cart").html();
-                $("#t4s-mini_cart").html(newCartContent);
-                console.log(
-                  "🔄 Cart content refreshed, items count:",
-                  $("#t4s-mini_cart [data-cart-item]").length
-                );
-              })
-              .catch((error) => {
-                console.log("❌ Cart refresh failed:", error);
-              })
-              .finally(() => {
-                // Always reset the flags
-                isCartUpdating = false;
-                window.t4sCartUpdating = false;
-              });
-          })
-          .fail(function (xhr, status, error) {
-            console.log("❌ Cart update failed:", {
-              status: xhr.status,
-              statusText: xhr.statusText,
-              responseText: xhr.responseText,
-              error: error,
-              lineIndex: lineIndex,
-              quantity: newQuantity,
-            });
-            alert(
-              "Failed to update cart: " +
-                (xhr.responseText || error || "Unknown error")
-            );
-            // Re-enable only this specific input on failure
-            $input.prop("disabled", false);
-            isCartUpdating = false;
-            window.t4sCartUpdating = false;
-          });
-
-        return false; // Explicitly return false to stop any remaining propagation
-      }
-    );
-
-    // Our exclusive quantity selector button handler - ONLY for mini cart
-    $(document).on(
-      "click.cartFix",
-      "#t4s-mini_cart [data-cart-item] [data-quantity-selector]",
-      function (e) {
-        // Prevent simultaneous updates
-        if (isCartUpdating) {
-          console.log("⏳ Cart update in progress, ignoring button click");
-          e.preventDefault();
-          return false;
-        }
-
-        const $button = $(this);
-        const $cartItem = $button.closest("[data-cart-item]");
-        const $input = $cartItem.find("[data-action-change]");
-        const lineIndex = $cartItem.data("line-index");
-
-        console.log("🔘 MINI CART quantity button clicked:", {
-          lineIndex: lineIndex,
-          action: $button.data("quantity-selector"),
-          currentValue: $input.val(),
-          element: this,
-          cartItemsCount: $("#t4s-mini_cart [data-cart-item]").length,
-        });
-
-        if (!lineIndex || lineIndex < 1) {
-          console.log(
-            "⚠️ No valid line index for button, letting theme handle this"
-          );
-          // Let theme handle it if no line index
-          isCartUpdating = false;
-          return true; // Don't prevent the event, let theme handle it
-        }
-
-        // STOP all event propagation to prevent theme handlers
-        e.preventDefault();
-        e.stopPropagation();
-        e.stopImmediatePropagation();
-
-        const currentQty = parseInt($input.val()) || 0;
-        const isIncrease = $button.data("quantity-selector") === "increase";
-        const newQty = isIncrease
-          ? currentQty + 1
-          : Math.max(0, currentQty - 1);
-
-        console.log("📤 Sending cart button update request:", {
-          line: lineIndex,
-          quantity: newQty,
-        });
-
-        // Update input value
-        $input.val(newQty);
-
-        // Set updating flag and suppress theme error popups
-        isCartUpdating = true;
-        window.t4sCartUpdating = true; // Flag for theme to suppress errors
-
-        // Disable only THIS specific button during update
-        $button.prop("disabled", true);
-
-        // Update cart using proper line index with form data format
-        $.ajax({
-          url: "/cart/change.js",
-          method: "POST",
-          dataType: "json",
-          data: {
-            line: lineIndex,
-            quantity: newQty,
-          },
-          beforeSend: function (xhr) {
-            xhr.setRequestHeader("X-Requested-With", "XMLHttpRequest");
-          },
-        })
-          .done(function (cart) {
-            console.log(
-              "✅ Cart updated successfully via button, line index",
-              lineIndex
-            );
-            // Refresh only the cart content
-            fetch("/cart?section_id=mini_cart")
-              .then((response) => response.text())
-              .then((html) => {
-                const newCartContent = $(html).find("#t4s-mini_cart").html();
-                $("#t4s-mini_cart").html(newCartContent);
-                console.log(
-                  "🔄 Cart content refreshed via button, items count:",
-                  $("#t4s-mini_cart [data-cart-item]").length
-                );
-              })
-              .catch((error) => {
-                console.log("❌ Cart refresh failed:", error);
-              })
-              .finally(() => {
-                // Always reset the flags
-                isCartUpdating = false;
-                window.t4sCartUpdating = false;
-              });
-          })
-          .fail(function (xhr, status, error) {
-            console.log("❌ Cart button update failed:", {
-              status: xhr.status,
-              statusText: xhr.statusText,
-              responseText: xhr.responseText,
-              error: error,
-              lineIndex: lineIndex,
-              quantity: newQty,
-            });
-            alert(
-              "Failed to update cart: " +
-                (xhr.responseText || error || "Unknown error")
-            );
-            // Re-enable only this specific button on failure
-            $button.prop("disabled", false);
-            isCartUpdating = false;
-            window.t4sCartUpdating = false;
-          });
-
-        return false; // Explicitly return false to stop any remaining propagation
-      }
-    );
-  }, 1000); // Wait longer for theme to fully load
-
   /**
    *  Variant selection changed
    *  data-variant-toggle="{{ variant.id }}"
@@ -268,4 +8,137 @@ jQuery_T4NT(document).ready(function ($) {
     // $('[data-variant-toggle]').hide(0);
     // $('[data-variant-toggle="'+evt.currentVariant.id+'"]').show(0);
   });
+
+  /**
+   * Fix for cart quantity updates using proper line index
+   * instead of DOM position which changes when items are reordered
+   */
+  function updateCartLineItem(element, lineIndex, quantity) {
+    console.log("Updating cart line:", lineIndex, "with quantity:", quantity);
+
+    var cartItem = element.closest("[data-cart-item]");
+    var cartWrapper = element.closest("[data-cart-wrapper]");
+    var loadingBar = cartItem.find(".t4s-cart-ld__bar");
+    var spinner = loadingBar.find(".t4s-cart-spinner");
+
+    cartWrapper.addClass("is--contentUpdate");
+    cartItem.addClass("is--update");
+    loadingBar.removeAttr("hidden");
+    spinner.removeAttr("hidden");
+
+    $(document).on("cart:updated", function () {
+      cartWrapper.removeClass("is--contentUpdate");
+      $(document).off("cart:updated");
+      cartItem.removeClass("is--update");
+      loadingBar.attr("hidden", "");
+      spinner.attr("hidden", "");
+    });
+
+    var requestConfig = {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        "X-Requested-With": "XMLHttpRequest",
+        Accept: "application/javascript",
+      },
+    };
+
+    var sections = "cart_data,mini_cart";
+    var requestData = {
+      line: lineIndex,
+      quantity: quantity,
+      sections: sections,
+      sections_url: window.location.pathname,
+    };
+
+    requestConfig.body = JSON.stringify(requestData);
+
+    fetch("/cart/change.js", requestConfig)
+      .then((response) => response.json())
+      .then((data) => {
+        if (data.status) {
+          console.error("Cart update error:", data.description);
+          $(document).trigger("cart:updated", ["error"]);
+        } else {
+          console.log("Cart update successful");
+          if (
+            window.T4SThemeSP &&
+            window.T4SThemeSP.Cart &&
+            window.T4SThemeSP.Cart.renderContents
+          ) {
+            window.T4SThemeSP.Cart.renderContents(data.sections);
+          }
+        }
+      })
+      .catch((error) => {
+        console.error("Cart update error:", error);
+        $(document).trigger("cart:updated", ["error"]);
+      });
+  }
+
+  // Override the default cart change handler with line-index-aware version
+  $(document).on(
+    "change",
+    "[data-cart-items] [data-action-change]",
+    function (e) {
+      e.stopImmediatePropagation(); // Prevent default handler
+
+      var input = $(this);
+      var cartItem = input.closest("[data-cart-item]");
+      var lineIndex = cartItem.data("line-index");
+      var quantity = input.val() || 1;
+
+      console.log("Cart quantity changed:", {
+        lineIndex: lineIndex,
+        quantity: quantity,
+        productId: cartItem.data("pid"),
+      });
+
+      if (lineIndex && window.T4SThemeSP && window.T4SThemeSP.ProductAjax) {
+        updateCartLineItem(input, lineIndex, quantity);
+      }
+    }
+  );
+
+  // Also handle quantity selector buttons with line index
+  $(document).on(
+    "click",
+    "[data-cart-items] [data-quantity-selector]",
+    function (e) {
+      e.preventDefault();
+      e.stopImmediatePropagation();
+
+      var button = $(this);
+      var quantityWrapper = button.closest("[data-quantity-wrapper]");
+      var quantityInput = quantityWrapper.find("[data-quantity-value]");
+      var cartItem = button.closest("[data-cart-item]");
+      var lineIndex = cartItem.data("line-index");
+
+      console.log("Quantity selector clicked:", {
+        lineIndex: lineIndex,
+        isIncrease: button.is("[data-increase-qty]"),
+        productId: cartItem.data("pid"),
+      });
+
+      if (!lineIndex) return;
+
+      var currentQty = parseFloat(quantityInput.val()) || 0;
+      var maxQty = parseFloat(quantityInput.attr("max")) || 9999;
+      var minQty = parseFloat(quantityInput.attr("min")) || 1;
+      var step = parseFloat(quantityInput.attr("step")) || 1;
+
+      var newQty;
+      if (button.is("[data-increase-qty]")) {
+        newQty = Math.min(currentQty + step, maxQty);
+      } else {
+        newQty = Math.max(currentQty - step, 0);
+      }
+
+      quantityInput.val(newQty);
+
+      if (window.T4SThemeSP && window.T4SThemeSP.ProductAjax) {
+        updateCartLineItem(quantityInput, lineIndex, newQty);
+      }
+    }
+  );
 });
