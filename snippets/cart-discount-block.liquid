@@ -60,6 +60,7 @@ console.log('Discount script loaded');
 
 // Simple approach without complex event listeners
 function applyDiscount() {
+
   console.log('Apply discount clicked');
   
   const input = document.getElementById('discount-input');
@@ -111,6 +112,10 @@ function applyDiscount() {
       showDiscountMessage(discountLocale.successApplied, 'success');
       input.value = '';
       
+      // Show the applied discount immediately below the input
+      const latestDiscount = cart.cart_level_discount_applications[cart.cart_level_discount_applications.length - 1];
+      showAppliedDiscount(latestDiscount);
+      
       // Update cart prices in footer
       if (window.updateCartPrices) {
         window.updateCartPrices(cart);
@@ -121,7 +126,7 @@ function applyDiscount() {
         window.ajCart.fetchCart();
       } else {
         // Fallback: reload the page to show the updated cart
-        window.location.reload();
+        {% comment %} window.location.reload(); {% endcomment %}
       }
       
       // Trigger cart update events
@@ -347,11 +352,17 @@ function showAppliedDiscount(discount) {
     container.innerHTML = `
       <div class="discount-item">
         <span class="discount-name">${discount.title}</span>
-        {% comment %} <span class="discount-amount">${discountDisplay}</span> {% endcomment %}
         <span class="discount-remove" onclick="removeDiscount('${discount.title}')">×</span>
       </div>
     `;
     container.style.display = 'block';
+    
+    // Add a subtle animation to draw attention
+    container.style.opacity = '0';
+    setTimeout(() => {
+      container.style.transition = 'opacity 0.3s ease-in-out';
+      container.style.opacity = '1';
+    }, 50);
   }
 }
 
@@ -376,7 +387,26 @@ document.addEventListener('DOMContentLoaded', function() {
       }
     });
   }
+  
+  // Check for existing applied discounts and display them
+  checkAndDisplayExistingDiscounts();
 });
+
+// Function to check and display any existing discounts
+function checkAndDisplayExistingDiscounts() {
+  fetch('/cart.js')
+    .then(response => response.json())
+    .then(cart => {
+      if (cart.cart_level_discount_applications && cart.cart_level_discount_applications.length > 0) {
+        // Show the most recent discount
+        const latestDiscount = cart.cart_level_discount_applications[cart.cart_level_discount_applications.length - 1];
+        showAppliedDiscount(latestDiscount);
+      }
+    })
+    .catch(error => {
+      console.log('Could not fetch cart discounts:', error);
+    });
+}
 </script>
 
 <style>

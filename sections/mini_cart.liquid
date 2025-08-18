@@ -138,7 +138,7 @@
 
       </div>
       </div>
-      <div class="t4s-drawer__bottom">
+      {% comment %} <div class="t4s-drawer__bottom">
          <div data-cart-discounts>
          {%- if cart.cart_level_discount_applications != blank -%}
             <ul class="t4s-cart_discounts">
@@ -267,11 +267,15 @@
    </div>
    {%- endif -%}
 
-{%- if request.design_mode %}</div>{% endif -%}
+{%- if request.design_mode %}  
+  <div>
   </div>
+{% endif -%}
+  </div> {% endcomment %}
+  {%-  render 'cart-footer' -%}
 </form>
 
-<!-- Ensure all opened divs are closed before schema -->
+
 
 {%- schema -%}
 {

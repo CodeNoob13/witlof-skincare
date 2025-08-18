@@ -26,10 +26,9 @@ document.addEventListener("alpine:init", () => {
       fetch("/cart.js")
         .then((res) => res.json())
         .then((cart) => {
-          this.cartPrice = cart.total_price / 100;
-          this.cartDiscount = cart.total_discount / 100;
           this.cart = cart;
-
+          this.cartPrice = cart.total_price / 100;
+          console.log(this.cart.item_count);
           this.getCartProducts();
           this.getTotalComparePrice();
         });
@@ -49,8 +48,6 @@ document.addEventListener("alpine:init", () => {
           };
         }
       });
-
-      console.log(this.cartProducts);
     },
 
     async getTotalComparePrice() {
@@ -64,7 +61,9 @@ document.addEventListener("alpine:init", () => {
         }
       });
 
-      console.log(totalComparePrice);
+      this.totalComparePrice = totalComparePrice;
+
+      console.log(this.totalComparePrice);
     },
 
     fetchAllProducts() {
