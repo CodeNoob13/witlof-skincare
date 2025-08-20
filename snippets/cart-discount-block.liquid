@@ -44,7 +44,7 @@
 
 <script>
 // Define locale strings for JavaScript use
-const discountLocale = {
+{% comment %} const discountLocale = {
   successApplied: {{ 'cart.mini_cart.discount.success_applied' | t | json }},
   successRemoved: {{ 'cart.mini_cart.discount.success_removed' | t | json }},
   errorEmpty: {{ 'cart.mini_cart.discount.error_empty' | t | json }},
@@ -53,7 +53,7 @@ const discountLocale = {
   errorExpired: {{ 'cart.mini_cart.discount.error_expired' | t | json }},
   errorRemove: {{ 'cart.mini_cart.discount.error_remove' | t | json }},
   errorCouldNotRemove: {{ 'cart.mini_cart.discount.error_could_not_remove' | t | json }}
-};
+}; {% endcomment %}
 
 // Test function to verify script is loading
 console.log('Discount script loaded');
@@ -67,13 +67,10 @@ function applyDiscount() {
   const button = document.getElementById('discount-apply');
   const message = document.getElementById('discount-message');
   
-  console.log('Elements found:', input, button, message);
   
   const code = input.value.trim();
-  console.log('Discount code:', code);
   
   if (!code) {
-    showDiscountMessage(discountLocale.errorEmpty, 'error');
     return;
   }
   
@@ -109,7 +106,6 @@ function applyDiscount() {
                        cart.cart_level_discount_applications.length > 0;
     
     if (hasDiscount) {
-      showDiscountMessage(discountLocale.successApplied, 'success');
       input.value = '';
       
       // Show the applied discount immediately below the input
@@ -133,12 +129,11 @@ function applyDiscount() {
       document.dispatchEvent(new CustomEvent('cart:updated', { detail: cart }));
       
     } else {
-      showDiscountMessage(discountLocale.errorInvalid, 'error');
+      // Discount not applied - no message shown
     }
   })
   .catch(error => {
     console.error('Discount error:', error);
-    showDiscountMessage(discountLocale.errorInvalid, 'error');
     
     // Reset button state
     button.querySelector('.btn-text').style.display = 'inline';
@@ -257,7 +252,7 @@ function tryDiscountClear() {
                            cart.cart_level_discount_applications.length > 0;
         
         if (!hasDiscount) {
-          showDiscountMessage(discountLocale.successRemoved, 'success');
+          // Discount successfully removed
           
           // Update cart prices in footer
           if (window.updateCartPrices) {
@@ -307,30 +302,13 @@ function tryDiscountClear() {
           }, 100);
           
         } else {
-          showDiscountMessage(discountLocale.errorCouldNotRemove, 'error');
+          // Could not remove discount
         }
       });
   })
   .catch(error => {
     console.error('Discount clear error:', error);
-    showDiscountMessage(discountLocale.errorRemove, 'error');
   });
-}
-
-function showDiscountMessage(text, type) {
-  console.log('Showing message:', text, type);
-  const message = document.getElementById('discount-message');
-  if (message) {
-    message.textContent = text;
-    message.className = 'discount-message ' + type;
-    message.style.display = 'block';
-    
-    setTimeout(() => {
-      message.style.display = 'none';
-    }, 3000);
-  } else {
-    alert(text);
-  }
 }
 
 function showAppliedDiscount(discount) {

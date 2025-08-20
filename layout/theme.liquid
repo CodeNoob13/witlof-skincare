@@ -293,9 +293,12 @@ t4sp-theme t4s-wrapper__{{ settings.general_layout }}{% if settings.animations_r
         }
       </script>
 
-      <script>
-        AOS.init();
-      </script>
+   <script>
+    window.addEventListener('load', () => {
+      AOS.init({ once: true });   
+      AOS.refresh();             
+    });
+  </script>
 
       <script async src="{{ 'swiper-bundle.min.js' | asset_url }}"></script>
       <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>

@@ -1,112 +1,106 @@
 <div
     x-data="ajCart"
   x-show="cart.item_count > 0" 
-  class="cart-summary"
->
-  <div class="cart-summary__row" 
-       x-show="cart.total_compare_price > cart.total_price">
-    <div class="cart-summary__label cart-summary__label--discount">
-      discount
-    </div>
-    <div class="cart-summary__value cart-summary__value--discount"
-         x-text="'€' + ((cart.total_price - cart.totalComparePrice) / 100 * -1).toFixed(2)">
-    </div>
+    class="fluct-it-cart__footer">
+  <div class="" 
+       x-show="cart.totalComparePrice > (cart.total_price / 100).toFixed(2)">
+ 
   </div>
 
-  <div class="cart-summary__row">
-    <div class="cart-summary__label cart-summary__label--total">
-      total
+  <div class="fluct-it-cart__footer-total-container">
+    <div class="fluct-it-cart__footer-total-title">
+      Geschat totaal
     </div>
-    <div class="cart-summary__value cart-summary__value--total"
-         x-text="'€' + totalComparePrice">
-    </div>
-    <div class="cart-summary__value cart-summary__value--total"
-         x-text="'€' + (cart.total_price / 100).toFixed(2)">
-    </div>
-  </div>
 
-  <a href="/checkout" class="cart-summary__checkout-btn">
-    continue
-  </a>
+    <div class="fluct-it-cart__footer-total">
+        <div class="fluct-it-cart__footer-total-compare"
+             x-text="'€' + totalComparePrice.toFixed(2)">
+        </div>
+        <div class="fluct-it-cart__footer-total-price"
+             x-text="'€' + (cart.total_price / 100).toFixed(2)">
+        </div>
+    </div>
+
+</div>
+
+<a href="/checkout" class="fluct-it-cart__footer-btn">
+  Veilig afrekenen
+</a>
+
+<div class="fluct-it-cart__payment-icons">
+  {%- for type in shop.enabled_payment_types -%}
+    {{ type | payment_type_svg_tag: class: 'payment-icon' }}
+  {%- endfor -%}
+</div>
+
 </div>
 
 
 
 <style>
-.cart-summary {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  gap: 0.5rem;
-  width: 100%;
-  padding: 16px;
-}
+    .fluct-it-cart__footer{
+        padding: 12px 20px;
+        width: 100%;
+    }
 
-@media (min-width: 640px) {
-  .cart-summary {
-    padding: 32px;
-  }
-}
+    .fluct-it-cart__payment-icons {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        gap: 8px;
+        margin: 16px 0;
+    }
 
-.cart-summary::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  width: 100%;
-  border-bottom: 1px solid rgba(64,64,64,0.7);
-}
+    .payment-icon {
+        height: 18px;
+        width: auto;
+    }
+    
+    .fluct-it-cart__footer-btn {
+        border-radius:100px;
+        width:100%!important;
+        background: #4AB9CB;
+        color:#fff;
+        padding: 16px 0;
+        display:flex;
+        justify-content: center;
+        text-transform:uppercase;
+        font-weight:600;
+    }
+    .fluct-it-cart__footer-btn:hover {
+        background: #288191;
+        color:#fff;
+    }
 
-.cart-summary__row {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
+    .fluct-it-cart__footer-total-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-size:16px;
+        align-items: center;
+    }
 
-.cart-summary__label {
-  text-transform: uppercase;
-  font-weight: 600;
-}
+    .fluct-it-cart__footer-total-title {
+        font-weight: 600;
+        color:#000
+    }
 
-.cart-summary__label--discount {
-  font-size: 1.25rem;
-  color: #1E1E1E;
-}
+    .fluct-it-cart__footer-total {
+        display: flex;
+        gap: 12px;
+        padding: 12px 0;
+        color: #000;
+    }
 
-.cart-summary__value--discount {
-  font-size: 1.25rem;
-  font-weight: 600;
-  color: rgb(156,156,156);
-}
+    .fluct-it-cart__footer-total-compare {
+        font-size: 16px;
+        text-decoration: line-through;
+        opacity:0.5;
+    }
 
-.cart-summary__label--total {
-  font-size: 1.75rem;
-  color: #1E1E1E;
-}
-
-.cart-summary__value--total {
-  font-size: 1.75rem;
-  font-weight: 600;
-  color: #1E1E1E;
-}
-
-.cart-summary__checkout-btn {
-  margin-top: 1rem;
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  background: #4AB9CB;
-  border-radius: 100px!important;
-  color: #1E1E1E;
-  padding: 12px;
-  border-radius: 4px;
-  text-transform: uppercase;
-  text-decoration: none;
-  font-weight: 600;
-}
-
-.cart-summary__checkout-btn:hover {
-  background: #222;
-}
+    .fluct-it-cart__footer-total-price {
+        font-size: 16px;
+        font-weight: 600;
+    }
 </style>

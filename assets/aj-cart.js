@@ -1,4 +1,4 @@
-document.addEventListener("alpine:init", () => {
+document.addEventListener("alpine:init", async () => {
   Alpine.data("ajCart", () => ({
     cartPrice: 0,
     cartDiscount: 0,
@@ -8,15 +8,14 @@ document.addEventListener("alpine:init", () => {
 
     init() {
       this.fetchCart();
-      document.addEventListener("cart:refresh", () => {});
-      document.addEventListener("cart:updated", () => {
-        this.fetchCart();
-        this.fetchProducts();
-      });
-      document.addEventListener("cart:change", () => {
+      document.addEventListener("cart:refresh", async () => {});
+      document.addEventListener("cart:updated", async () => {
         this.fetchCart();
       });
-      document.addEventListener("cart:requestComplete", () => {
+      document.addEventListener("cart:change", async () => {
+        this.fetchCart();
+      });
+      document.addEventListener("cart:requestComplete", async () => {
         this.fetchCart();
       });
     },
@@ -42,24 +41,34 @@ document.addEventListener("alpine:init", () => {
           const variant = product.variants.find(
             (v) => v.id === item.variant_id
           );
-          return {
-            ...item,
-            compare_at_price: parseFloat(variant.compare_at_price),
-          };
+          if (variant) {
+            return {
+              ...item,
+              compare_at_price: parseFloat(variant.compare_at_price) || 0,
+            };
+          }
         }
+        // Return item with fallback compare_at_price if product/variant not found
+        return {
+          ...item,
+          compare_at_price: 0,
+        };
       });
     },
 
     async getTotalComparePrice() {
       let totalComparePrice = 0;
 
-      this.cartProducts.forEach((item) => {
-        if (item.compare_at_price) {
-          totalComparePrice += item.compare_at_price * item.quantity;
-        } else {
-          totalComparePrice += (item.price / 100) * item.quantity;
-        }
-      });
+      // Filter out any undefined items and calculate total
+      this.cartProducts
+        .filter((item) => item)
+        .forEach((item) => {
+          if (item.compare_at_price && item.compare_at_price > 0) {
+            totalComparePrice += item.compare_at_price * item.quantity;
+          } else {
+            totalComparePrice += (item.price / 100) * item.quantity;
+          }
+        });
 
       this.totalComparePrice = totalComparePrice;
 
