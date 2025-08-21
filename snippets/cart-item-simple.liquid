@@ -1,4 +1,4 @@
-<!-- 
+{% comment %} <!-- 
   SIMPLE CART ITEM TEMPLATE
   Easy to read and customize
   Contains all essential cart functionality
@@ -180,12 +180,13 @@
       </div>
     </div>
   {%- endif -%}
-</div>
+</div> {% endcomment %}
 
 
-<div x-data="ajCart">
-  <span @click="console.log(cart)">click</span>
-  <template x-for="(item, index) in cart.items" :key="item.id">
+<div x-data>
+  <p @click="console.log($store.ajCart.cart)">a</p>
+  <span @click="console.log($store.ajCart.cart)">click</span>
+  <template x-for="(item, index) in $store.ajCart.cart.items" :key="item.id">
     <div class="fluct-it__cart-item">
       <div class="fluct-it__cart-item-content">
         <img :src="item.featured_image.url" :alt="item.featured_image.alt" class="fluct-it__cart-item-image">
@@ -198,8 +199,8 @@
 
       <div class="fluct-it__cart-item-actions">
 
-        <div class="fluct-it__quantity-selectors" @click="changeQuantity(index + 1, item.quantity - 1, item.available)">
-          <div class="fluct-it__quantity-selector">
+        <div class="fluct-it__quantity-selectors">
+          <div class="fluct-it__quantity-selector" @click="$store.ajCart.changeQuantity(index + 1, item.quantity - 1, item.available)">
             <svg focusable="false"  width="10px" class="icon icon--minus" viewBox="0 0 10 2" role="presentation">
               <path d="M10 0v2H0V0z" fill="currentColor"></path>
             </svg>
@@ -207,16 +208,16 @@
 
           <span x-text="item.quantity" class="fluct-it__cart-item-quantity"></span>
 
-          <div class="fluct-it__quantity-selector" @click="changeQuantity(index + 1, item.quantity + 1, item.available)">
+          <div class="fluct-it__quantity-selector" @click="$store.ajCart.changeQuantity(index + 1, item.quantity + 1, item.available)">
             <svg focusable="false" width="10px" class="icon icon--plus" viewBox="0 0 10 10" role="presentation">
               <path d="M6 4h4v2H6v4H4V6H0V4h4V0h2v4z" fill="currentColor" fill-rule="evenodd"></path>
             </svg>
           </div>
         </div>
 
-        <div class="fluct-it__cart-item-prices" >
+        <div class="fluct-it__cart-item-prices">
           <span class="fluct-it__cart-item-price" x-text="(item.final_price / 100).toFixed(2)"></span>
-          <s class="fluct-it__cart-item-compare_at_price" x-show="item.compare_at_price > item.final_price"><span class="fluct-it__cart-item-compare_at_price" x-text="item.compare_at_price "></span></s>
+          <s class="fluct-it__cart-item-compare_at_price" ><span class="fluct-it__cart-item-compare_at_price" x-show="item.compare_at_price > (item.final_price / 100).toFixed(2)" x-text="item.compare_at_price "></span></s>
         </div>
 
         <span class="fluct-it__cart-item-return-policy">{{ 'line_item.return_policy' | t }}</span>
@@ -317,6 +318,7 @@
   font-weight:500;
   display: flex;
   align-items: center;
+
 }
 
 @media screen and (max-width:768px) {

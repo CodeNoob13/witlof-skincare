@@ -1,9 +1,9 @@
 <div
-    x-data="ajCart"
-  x-show="cart.item_count > 0" 
+    x-data="$store.ajCart.cart"
+  x-show="$store.ajCart.cart.item_count > 0" 
     class="fluct-it-cart__footer">
   <div class="" 
-       x-show="cart.totalComparePrice > (cart.total_price / 100).toFixed(2)">
+       x-show="$store.ajCart.cart.totalComparePrice > ($store.ajCart.cart.total_price / 100).toFixed(2)">
  
   </div>
 
@@ -14,10 +14,10 @@
 
     <div class="fluct-it-cart__footer-total">
         <div class="fluct-it-cart__footer-total-compare"
-             x-text="'€' + totalComparePrice.toFixed(2)">
+             x-text="'€' + $store.ajCart.totalComparePrice.toFixed(2)">
         </div>
         <div class="fluct-it-cart__footer-total-price"
-             x-text="'€' + (cart.total_price / 100).toFixed(2)">
+             x-text="'€' + ($store.ajCart.cart.total_price / 100).toFixed(2)">
         </div>
     </div>
 
