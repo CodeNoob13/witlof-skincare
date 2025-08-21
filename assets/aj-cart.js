@@ -1,42 +1,62 @@
-document.addEventListener("alpine:init", async () => {
+document.addEventListener("alpine:init", () => {
   Alpine.data("ajCart", () => ({
-    cartPrice: 0,
     cartDiscount: 0,
     cart: {},
     allProducts: [],
     totalComparePrice: 0,
+    setLoader: false,
 
     init() {
       this.fetchCart();
-      document.addEventListener("cart:refresh", async () => {});
-      document.addEventListener("cart:updated", async () => {
-        this.fetchCart();
-      });
-      document.addEventListener("cart:change", async () => {
-        this.fetchCart();
-      });
-      document.addEventListener("cart:requestComplete", async () => {
-        this.fetchCart();
-      });
     },
-    async fetchCart() {
-      this.fetchAllProducts();
 
-      fetch("/cart.js")
-        .then((res) => res.json())
-        .then((cart) => {
-          this.cart = cart;
-          this.cartPrice = cart.total_price / 100;
-          console.log(this.cart.item_count);
-          this.getCartProducts();
-          this.getTotalComparePrice();
+    async fetchCart() {
+      try {
+        await this.fetchAllProducts();
+        const cartRequest = await fetch("/cart.js");
+        const cart = await cartRequest.json();
+        this.cart = cart;
+
+        await this.getCartProducts();
+        await this.getTotalComparePrice();
+      } catch (error) {
+        console.error("Error fetching cart:", error);
+      }
+    },
+
+    async fetchAllProducts() {
+      try {
+        const response = await fetch("/products.json");
+        const data = await response.json();
+        this.allProducts = data.products;
+        // console.log("All products:", this.allProducts);
+      } catch (error) {
+        console.error("Error fetching products:", error);
+      }
+    },
+
+    async getTotalComparePrice() {
+      let comparePrice = 0;
+
+      // Filter out any undefined items and calculate total
+      this.cart.items
+        .filter((item) => item)
+        .forEach((item) => {
+          if (item.compare_at_price && item.compare_at_price > 0) {
+            comparePrice += item.compare_at_price * item.quantity;
+          } else {
+            comparePrice += (item.price / 100) * item.quantity;
+          }
         });
+
+      this.totalComparePrice = comparePrice;
     },
 
     async getCartProducts() {
       // Get total compare at price
-      this.cartProducts = this.cart.items.map((item) => {
+      this.cart.items = this.cart.items.map((item) => {
         const product = this.allProducts.find((p) => p.id === item.product_id);
+
         if (product) {
           const variant = product.variants.find(
             (v) => v.id === item.variant_id
@@ -44,47 +64,54 @@ document.addEventListener("alpine:init", async () => {
           if (variant) {
             return {
               ...item,
-              compare_at_price: parseFloat(variant.compare_at_price) || 0,
+              compare_at_price: variant.compare_at_price,
+              available: variant.available,
             };
           }
         }
-        // Return item with fallback compare_at_price if product/variant not found
         return {
           ...item,
-          compare_at_price: 0,
         };
       });
     },
 
-    async getTotalComparePrice() {
-      let totalComparePrice = 0;
+    async changeQuantity(line, newQuantity, oldQuantity) {
+      this.setLoader = true;
+      if (!oldQuantity) {
+        return;
+      }
 
-      // Filter out any undefined items and calculate total
-      this.cartProducts
-        .filter((item) => item)
-        .forEach((item) => {
-          if (item.compare_at_price && item.compare_at_price > 0) {
-            totalComparePrice += item.compare_at_price * item.quantity;
-          } else {
-            totalComparePrice += (item.price / 100) * item.quantity;
+      try {
+        const response = await fetch(
+          window.Shopify.routes.root + "cart/change.js",
+          {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
+            },
+            body: JSON.stringify({ line: line, quantity: newQuantity }),
           }
-        });
+        );
 
-      this.totalComparePrice = totalComparePrice;
+        const data = await response.json();
 
-      console.log(this.totalComparePrice);
-    },
+        // optional: log or handle the response
+        console.log("Cart change response:", data);
 
-    fetchAllProducts() {
-      fetch("/products.json")
-        .then((response) => response.json())
-        .then((data) => {
-          this.allProducts = data.products;
-          // console.log("All products:", this.allProducts);
-        })
-        .catch((error) => {
-          console.error("Error fetching products:", error);
-        });
+        // fetch updated cart
+        await this.fetchCart();
+      } catch (error) {
+        console.error("Failed to change quantity from the cart:", error);
+      }
+      this.setLoader = false;
+      await this.fetchCart();
     },
   }));
+});
+
+const AddToCartButton = document.querySelector(".t4s-product-form__submit");
+
+AddToCartButton.addEventListener("click", async () => {
+  console.log("hello");
+  await Alpine.store("ajCart").fetchCart();
 });

@@ -9,7 +9,7 @@
 
   <div class="fluct-it-cart__footer-total-container">
     <div class="fluct-it-cart__footer-total-title">
-      Geschat totaal
+      {{ 'fluctit.cart.cart_footer.estimated_total' | t }}
     </div>
 
     <div class="fluct-it-cart__footer-total">
@@ -24,7 +24,7 @@
 </div>
 
 <a href="/checkout" class="fluct-it-cart__footer-btn">
-  Veilig afrekenen
+  {{ 'fluctit.cart.cart_footer.secure_checkout' | t }}
 </a>
 
 <div class="fluct-it-cart__payment-icons">
@@ -39,8 +39,9 @@
 
 <style>
     .fluct-it-cart__footer{
-        padding: 12px 20px;
+        padding: 8px 20px;
         width: 100%;
+        border-top: 1px solid #eee;
     }
 
     .fluct-it-cart__payment-icons {

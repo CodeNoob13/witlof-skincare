@@ -446,6 +446,10 @@
         "error_could_not_remove": "Could not remove discount"
       }
     },
+    "fluctit_cart": {
+      "estimated_total": "Estimated Total",
+      "secure_checkout": "Secure Checkout"
+    },
     "cart_page": {
       "title": "Shopping cart",
       "label": {
@@ -743,7 +747,11 @@
     "cart": {
       "free_shipping": "Free shipping",
       "free_sample": "Free sample",
-      "free": "Free"
+      "free": "Free",
+      "cart_footer": {
+        "estimated_total": "Estimated Total",
+        "secure_checkout": "Secure Checkout"
+      }
     },
     "line_item": {},
     "klarna_info": {

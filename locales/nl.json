@@ -445,6 +445,10 @@
         "error_could_not_remove": "Kon korting niet verwijderen"
       }
     },
+    "fluctit_cart": {
+      "estimated_total": "Geschat totaal",
+      "secure_checkout": "Veilig afrekenen"
+    },
     "cart_page": {
       "title": "Winkelwagen",
       "label": {
@@ -749,7 +753,11 @@
     "cart": {
       "free_shipping": "Gratis verzending",
       "free_sample": "Gratis sample",
-      "free": "Gratis"
+      "free": "Gratis",
+      "cart_footer": {
+        "estimated_total": "Geschat totaal",
+        "secure_checkout": "Veilig afrekenen"
+      }
     },
     "line_item": {},
     "klarna_info": {

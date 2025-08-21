@@ -182,9 +182,159 @@
   {%- endif -%}
 </div>
 
-<script>
-// Cart item discount updates using vanilla JavaScript
-document.addEventListener('cart:updated', function() {
-  // Cart update functionality can be added here if needed
-});
-</script>
+
+<div x-data="ajCart">
+  <span @click="console.log(cart)">click</span>
+  <template x-for="(item, index) in cart.items" :key="item.id">
+    <div class="fluct-it__cart-item">
+      <div class="fluct-it__cart-item-content">
+        <img :src="item.featured_image.url" :alt="item.featured_image.alt" class="fluct-it__cart-item-image">
+        <div class="fluct-it__cart-item-details">
+          <span class="fluct-it__cart-item-title" x-text="item.product_title"></span>
+          <span class="fluct-it__cart-item-variant_title" x-text="item.variant_title"></span>
+
+        </div>
+      </div>
+
+      <div class="fluct-it__cart-item-actions">
+
+        <div class="fluct-it__quantity-selectors" @click="changeQuantity(index + 1, item.quantity - 1, item.available)">
+          <div class="fluct-it__quantity-selector">
+            <svg focusable="false"  width="10px" class="icon icon--minus" viewBox="0 0 10 2" role="presentation">
+              <path d="M10 0v2H0V0z" fill="currentColor"></path>
+            </svg>
+          </div>
+
+          <span x-text="item.quantity" class="fluct-it__cart-item-quantity"></span>
+
+          <div class="fluct-it__quantity-selector" @click="changeQuantity(index + 1, item.quantity + 1, item.available)">
+            <svg focusable="false" width="10px" class="icon icon--plus" viewBox="0 0 10 10" role="presentation">
+              <path d="M6 4h4v2H6v4H4V6H0V4h4V0h2v4z" fill="currentColor" fill-rule="evenodd"></path>
+            </svg>
+          </div>
+        </div>
+
+        <div class="fluct-it__cart-item-prices" >
+          <span class="fluct-it__cart-item-price" x-text="(item.final_price / 100).toFixed(2)"></span>
+          <s class="fluct-it__cart-item-compare_at_price" x-show="item.compare_at_price > item.final_price"><span class="fluct-it__cart-item-compare_at_price" x-text="item.compare_at_price "></span></s>
+        </div>
+
+        <span class="fluct-it__cart-item-return-policy">{{ 'line_item.return_policy' | t }}</span>
+
+      </div>
+        
+
+    </div>
+  </template>
+</div>
+
+
+<style>
+  .fluct-it__cart-item {
+  width: 100%;
+  padding:20px;
+  display:flex;
+  flex-direction:column;
+  border-bottom: 1px solid rgba(var(--border-color-rgb), 0.6);
+  gap:4px;
+}
+
+.fluct-it__cart-item-content {
+  display:flex;
+  gap:16px;
+  width:100%;
+}
+
+.fluct-it__cart-item-image {
+  height:104px;
+  width:104px;
+}
+
+.fluct-it__cart-item-details {
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  margin-right:auto;
+}
+
+.fluct-it__cart-item-title,
+.fluct-it__cart-item-variant_title {
+  font-size: 14px;
+  color: #878787;
+}
+
+.fluct-it__cart-item-title {
+  font-weight:600;
+  color:#000;
+}
+
+.fluct-it__cart-item-actions {
+  display:flex;
+  justify-content:space-between;
+}
+
+.fluct-it__quantity-selectors {
+  display: flex;
+  justify-content: space-between;
+  width:100px;
+}
+
+
+
+.fluct-it__quantity-selector {
+  cursor:pointer;
+  display: flex;
+  justify-content: center;
+  border-radius: 100px;
+  border: rgba(0, 0, 0, 0.3) 1px solid;
+  width: 28px;
+  height: 28px;
+}
+
+.fluct-it__quantity-selector > svg {
+  color: #000;
+}
+
+.fluct-it__cart-item-prices {
+  display: flex;
+  gap: 6px;
+  align-items:left;
+  width:100px;
+}
+
+.fluct-it__cart-item-price {
+  font-weight:600;
+  color:#000;
+}
+
+.fluct-it__cart-item-compare_at_price {
+  color:#EC0101;
+  text-transform:line-through;
+}
+
+.fluct-it__cart-item-return-policy {
+  font-size:12px;
+  font-weight:500;
+  display: flex;
+  align-items: center;
+}
+
+@media screen and (max-width:768px) {
+  .fluct-it__cart-item-return-policy {
+  max-width: 100px;
+}
+
+.fluct-it__cart-item-prices {
+  flex-direction:column;
+}
+
+.fluct-it__cart-item-actions {
+  align-items: center;
+  
+}
+
+}
+
+
+</style>
+
