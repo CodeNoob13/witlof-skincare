@@ -4,7 +4,7 @@
   border-bottom: none !important;
 }
 </style>
-<div class="t4s-drawer__header">
+<div class="t4s-drawer__header" x-data x-show="$store.ajCart.cart.item_count > 0">
   <span>{{ 'cart.mini_cart.title' | t }}</span>
   <button class="t4s-drawer__close" data-drawer-close aria-label="{{ 'cart.mini_cart.close_cart' | t }}">
     <svg class="t4s-iconsvg-close" role="presentation" viewBox="0 0 16 14">

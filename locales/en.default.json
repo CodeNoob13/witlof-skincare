@@ -751,6 +751,9 @@
       "cart_footer": {
         "estimated_total": "Estimated Total",
         "secure_checkout": "Secure Checkout"
+      },
+      "empty_cart": {
+        "continue_shopping": "Shop now"
       }
     },
     "line_item": {},

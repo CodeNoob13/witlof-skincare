@@ -1,59 +1,51 @@
-<div class="cart-discount-block">
-  <div class="discount-form-container">
-    <div class="discount-input-group">
-      <input 
-        type="text" 
-        name="discount_code" 
-        placeholder="{{ 'cart.mini_cart.discount.placeholder' | t }}"
-        class="discount-input"
-        id="discount-input"
-      >
-      <button type="button" class="discount-apply-btn" id="discount-apply" onclick="applyDiscount()">
-        <span class="btn-text">{{ 'cart.mini_cart.discount.apply' | t }}</span>
-        <span class="btn-loading" style="display: none;">{{ 'cart.mini_cart.discount.loading' | t }}</span>
-      </button>
-    </div>
-    
-    <div class="discount-message" id="discount-message" style="display: none;"></div>
-    
-    <!-- Container for applied discount codes -->
-    <div class="applied-discounts" id="applied-discounts" style="display: none;"></div>
-    
-    {%- if cart.cart_level_discount_applications.size > 0 -%}
-      <div class="active-discounts">
-        {%- for discount in cart.cart_level_discount_applications -%}
-          <div class="discount-item">
-            <span class="discount-name">{{ discount.title }}</span>
-            {% comment %} <span class="discount-amount">
-              {%- if discount.value_type == 'percentage' -%}
-                {%- assign percentage_value = discount.value | round -%}
-                {{ percentage_value }}%
-              {%- else -%}
-                {{ discount.total_allocated_amount | money }}
-              {%- endif -%}
-            </span> {% endcomment %}
-            <span class="discount-remove" onclick="removeDiscount('{{ discount.title }}')">×</span>
-          </div>
-        {%- endfor -%}
-      </div>
-    {%- endif -%}
-  </div>
-</div>
+<div x-data x-show="$store.ajCart.cart.item_count > 0" class="fluctit-online-consult">
 
+  <div class="cart-discount-block">
+    <div class="discount-form-container">
+      <div class="discount-input-group">
+        <input 
+          type="text" 
+          name="discount_code" 
+          placeholder="{{ 'cart.mini_cart.discount.placeholder' | t }}"
+          class="discount-input"
+          id="discount-input"
+        >
+          <button type="button" class="discount-apply-btn" id="discount-apply" onclick="applyDiscount()">
+            <span class="btn-text">{{ 'cart.mini_cart.discount.apply' | t }}</span>
+            <span class="btn-loading" style="display: none;">{{ 'cart.mini_cart.discount.loading' | t }}</span>
+          </button>
+        </div>
+        
+        <div class="discount-message" id="discount-message" style="display: none;"></div>
+        
+        <!-- Container for applied discount codes -->
+        <div class="applied-discounts" id="applied-discounts" style="display: none;"></div>
+        
+        {%- if cart.cart_level_discount_applications.size > 0 -%}
+          <div class="active-discounts">
+            {%- for discount in cart.cart_level_discount_applications -%}
+              <div class="discount-item">
+                <span class="discount-name">{{ discount.title }}</span>
+                {% comment %} <span class="discount-amount">
+                  {%- if discount.value_type == 'percentage' -%}
+                    {%- assign percentage_value = discount.value | round -%}
+                    {{ percentage_value }}%
+                    {%- else -%}
+                      {{ discount.total_allocated_amount | money }}
+                      {%- endif -%}
+                      </span> {% endcomment %}
+                      <span class="discount-remove" onclick="removeDiscount('{{ discount.title }}')">×</span>
+                    </div>
+                  {%- endfor -%}
+                </div>
+              {%- endif -%}
+            </div>
+          </div>
+        </div>
+          
 <!-- Cart footer discount must be modified-->
 
 <script>
-// Define locale strings for JavaScript use
-{% comment %} const discountLocale = {
-  successApplied: {{ 'cart.mini_cart.discount.success_applied' | t | json }},
-  successRemoved: {{ 'cart.mini_cart.discount.success_removed' | t | json }},
-  errorEmpty: {{ 'cart.mini_cart.discount.error_empty' | t | json }},
-  errorInvalid: {{ 'cart.mini_cart.discount.error_invalid' | t | json }},
-  errorNotFound: {{ 'cart.mini_cart.discount.error_not_found' | t | json }},
-  errorExpired: {{ 'cart.mini_cart.discount.error_expired' | t | json }},
-  errorRemove: {{ 'cart.mini_cart.discount.error_remove' | t | json }},
-  errorCouldNotRemove: {{ 'cart.mini_cart.discount.error_could_not_remove' | t | json }}
-}; {% endcomment %}
 
 // Test function to verify script is loading
 console.log('Discount script loaded');

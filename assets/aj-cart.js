@@ -15,6 +15,13 @@ document.addEventListener("alpine:init", () => {
 
         await this.getCartProducts();
         await this.getTotalComparePrice();
+
+        // Dispatch event for other components
+        document.dispatchEvent(
+          new CustomEvent("cart:updated", {
+            detail: { cart: cart },
+          })
+        );
       } catch (error) {
         console.error("Error fetching cart:", error);
       }
@@ -78,7 +85,6 @@ document.addEventListener("alpine:init", () => {
     },
 
     async changeQuantity(line, newQuantity, oldQuantity) {
-      console.log(newQuantity);
       this.setLoader = true;
       if (!oldQuantity) {
         return;
@@ -113,15 +119,30 @@ document.addEventListener("alpine:init", () => {
 });
 
 // Fallback: still listen for the button click but with delay
-const AddToCartButton = document.querySelector(".t4s-product-form__submit");
+const AddToCartButton = document.querySelectorAll(".t4s-product-form__submit");
+const cartAddToCartButton = document.querySelectorAll(
+  ".t4s-pr-addtocart[data-action-atc]"
+);
 
 if (AddToCartButton) {
-  AddToCartButton.addEventListener("click", async (e) => {
+  AddToCartButton.forEach((btn) =>
+    btn.addEventListener("click", async (e) => {
+      console.log("Add to cart button clicked");
+      setTimeout(() => {
+        Alpine.store("ajCart").fetchCart();
+      }, 500);
+    })
+  );
+
+  if (cartAddToCartButton) {
     console.log("Add to cart button clicked");
 
-    // Wait for the form submission to complete
-    setTimeout(() => {
-      Alpine.store("ajCart").fetchCart();
-    }, 500);
-  });
+    cartAddToCartButton.forEach((btn) =>
+      btn.addEventListener("click", async (e) => {
+        setTimeout(() => {
+          Alpine.store("ajCart").fetchCart();
+        }, 1000);
+      })
+    );
+  }
 }

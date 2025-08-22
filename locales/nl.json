@@ -757,6 +757,9 @@
       "cart_footer": {
         "estimated_total": "Geschat totaal",
         "secure_checkout": "Veilig afrekenen"
+      },
+      "empty_cart": {
+        "continue_shopping": "Verder winkelen"
       }
     },
     "line_item": {},
