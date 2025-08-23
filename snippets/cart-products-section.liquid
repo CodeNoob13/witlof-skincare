@@ -1,9 +1,8 @@
-
-<div class="fluct-it_upsell-container"> 
-    <h2>Maak je look compleet</h2>
+<div x-data class="fluct-it_upsell-container" x-show="$store.ajCart.cart.item_count > 0" role="region" aria-label="Recommended products"> 
+    <span class="fluct-it-upsell-title">Complete your look</span>
     
-    <div x-data class="upsell-swiper">
-        <div class="swiper-wrapper" x-init='$nextTick(() => initUpsellSwiper()); console.log($store.ajCart.allProducts)'>
+    <div class="upsell-swiper" aria-live="polite">
+        <div class="swiper-wrapper" x-init='$nextTick(() => initUpsellSwiper());'>
             <template x-for="(item, index) in $store.ajCart.allProducts" :key="item.id">
                 <div class="fluct-it__cart-upsell swiper-slide">
                   <a :href="'/products/' + item.handle">
@@ -12,88 +11,108 @@
                         :alt="item.featured_image ? item.featured_image.alt : item.title" 
                         class="fluct-it__cart-upsell-image"
                     >
-                    </a>
-                        <span class="fluct-it__cart-upsell-title" x-text="item.title"></span>
-                        <div>
-                            <span class="fluct-it__cart-upsell-price" x-text="item.variants[0].price"></span>
-                            <s class="fluct-it__cart-upsell-compare-price"> <span x-show="item.variants[0].compare_at_price"   x-text="item.variants[0].compare_at_price"></span></s>
-                        </div>
-                        <a class="fluct-it_upsell-button">In winkelwagen</a>
-                    </div>
-                </template>
-            </div>
-            <div class="swiper-button-prev">{% render 'cart-arrow' %}</div>
-            <div class="swiper-button-next">{% render 'cart-arrow' %}</div>
+                  </a>
+                  <div class="fluct-it__cart-upsell-info" @click="console.log(item.variants)">
+                      <span class="fluct-it__cart-upsell-title" x-text="item.title" role="heading" aria-level="3"></span>
+                      <div class="fluct-it__cart-upsell-prices" aria-label="Price">
+                          <span class="fluct-it__cart-upsell-price" x-text="item.variants[0].price"></span>
+                          <s class="fluct-it__cart-upsell-compare-price">
+                            <span x-show="item.variants[0].compare_at_price" x-text="item.variants[0].compare_at_price"></span>
+                          </s>
+                      </div>
+                  </div>
+                  <button class="fluct-it_upsell-button" type="button" @click="$store.ajCart.addToCart(item.variants[0].id)">Add to cart</button>
+                </div>
+            </template>
         </div>
+        <div class="swiper-button-prev" aria-label="Previous slide">{% render 'cart-arrow' %}</div>
+        <div class="swiper-button-next" aria-label="Next slide">{% render 'cart-arrow' %}</div>
     </div>
+</div>
 
 <style>
+.fluct-it_upsell-container {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    padding: 20px;
+}
+
+.fluct-it-upsell-title {
+    font-size: 16px;
+    color: #000;
+    font-weight:500;
+    text-transform: uppercase;
+}
+
+.upsell-swiper {
+    position: relative;
+    overflow-x: hidden;
+}
+
+.fluct-it__cart-upsell {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.fluct-it__cart-upsell-image {
+    width: 140px;
+    height: 140px;
+}
+
+.fluct-it__cart-upsell-info {
+    min-height: 80px;
+}
+
+.fluct-it__cart-upsell-title  {
+    font-weight: 400;
+    color: #1E1E1E;
+
+}
+.fluct-it__cart-upsell-price {
+    color: #1E1E1E;
+
+}
 
 
+.fluct-it__cart-upsell-title {
+    font-size: 12px !important;
 
+}
 
-    .fluct-it_upsell-container {
-        display:flex;
-        flex-direction:column;
-        gap:16px;
-        padding:20px;
-    }
-    .upsell-swiper {
-        position: relative;
-    }
+.fluct-it__cart-upsell-prices {
+    display: flex;
+    gap: 6px;
+}
 
-    .fluct-it__cart-upsell {
-        display:flex;
-        flex-direction:column;
-        gap:4px;
-    }
+.fluct-it__cart-upsell-compare-price  {
+    color: #EC0101;
+}
 
-    .fluct-it__cart-upsell-image {
-        width:140px;
-        height:140px;
-    }
+.fluct-it_upsell-button {
+    color: #1E1E1E;
+    width: 100%;
+    padding: 8px 0;
+    border: 2px #1E1E1E solid;
+    border-radius: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    margin-top: auto;
+    background: transparent!important;
+}
 
-    .fluct-it__cart-upsell-title .fluct-it__cart-upsell-price {
-        font-weight:400;
-        color:#000;
-    }
+.fluct-it_upsell-button:hover {
+    color: #4AB9CB;
+    border: 2px #4AB9CB solid;
+    transition: color border ease .2s;
+}
 
-    .fluct-it__cart-upsell-title {
-        font-size:12px!important;
-        min-height:41px;
-    }
-
-    .fluct-it__cart-upsell-compare-price  {
-        color: #EC0101;
-    }
-
-    .upsell-swiper {
-        overflow-x: hidden;
-    }
-
-    .fluct-it_upsell-button {
-        color: #CFCFCF;
-        width:100%;
-        padding: 8px 0;
-        border: 2px #CFCFCF solid;
-        border-radius:100px;
-        display:flex;
-        align-items:center;
-        justify-content:center;
-        cursor:pointer;
-        margin-top:12px;
-    }
-
-    .fluct-it_upsell-button:hover {
-        color: #4AB9CB;
-        border: 2px #4AB9CB solid;
-
-        transition: color border ease .2s;
-    }
-
- .swiper-button-next::after,
+.swiper-button-next::after,
 .swiper-button-prev::after {
-  opacity:0 !important;
+  opacity: 0 !important;
   content: "" !important;
 }
 
@@ -103,11 +122,11 @@
 
 .swiper-button-prev,
 .swiper-button-next {
-    width:32px;
-    height:32px;
-    border-radius:50%;
-    background:#C9EDF3;
-    min-width:32px;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background: #C9EDF3;
+    min-width: 32px;
 }
 
 .swiper-button-prev svg,
@@ -117,36 +136,25 @@
   display: block;
   margin: auto;
 }
-
-
-
 </style>
 
 <script>
+let swiper;
 
-    let swiper;
+function initUpsellSwiper() {
+    if (swiper != null) {
+      swiper.destroy(true, true);
+    }
+    swiper = new Swiper('.upsell-swiper', {
+      slidesPerView: 2.5,
+      spaceBetween: 16,
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+    });
+}
 
-    function initUpsellSwiper() {
-        {% comment %} console.log("Init swiper")
-      if (swiper != null) {
-        swiper.destroy(true, true);
-      } {% endcomment %}
-
-    //  if (window.innerWidth <= 1300) {
-        swiper = new Swiper('.upsell-swiper', {
-          slidesPerView: 2.5,
-          spaceBetween: 16,
-          allowTouchMove: false,
-        navigation: {
-                nextEl: '.swiper-button-next',
-                prevEl: '.swiper-button-prev',
-            },
-        });
-      }
-    // }
-
-    initUpsellSwiper();
-
-    window.addEventListener('resize', initUpsellSwiper);
-
+initUpsellSwiper();
+window.addEventListener('resize', initUpsellSwiper);
 </script>

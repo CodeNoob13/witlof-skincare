@@ -1,19 +1,28 @@
 
 <div class="fluct-it__mini-cart">
-  {% render 'mini-cart-header' %}
-  {% render 'mini-cart-shipping-threshold' %}
+       <div x-show="$store.ajCart.setLoader" class="fluct-it__spinner-container">
+          {% render 'loader' %}
+        </div>
+
 
   <div class="fluct-it__mini-cart-content">
+
+    {% render 'mini-cart-header' %}
+    {% render 'mini-cart-shipping-threshold' %}
 
       <div x-show="$store.ajCart.cart.item_count === 0">
         {%-  render 'cart-empty-button' -%}
       </div>
 
 
-    <div x-show="$store.ajCart.cart.item_count > 0">
+    <div x-show="$store.ajCart.cart.item_count > 0" >
+   
+
       {%- render 'cart-item-simple' -%}
       {% render 'cart-discount-block' %}
+      {% render 'free-sample-gift' %}
       {% render 'cart-products-section' %}
+
     </div>
   </div>
   
@@ -35,6 +44,21 @@
     flex: 1;
     overflow-y: auto;
     padding-bottom:20px; 
+    {% comment %} position:relative; {% endcomment %}
+  }
+
+  .fluct-it__spinner-container {
+    position:absolute;
+    top: 0;
+    bottom: 0;
+    right:0;
+    left:0;
+    background-color: rgba(255, 255, 255, 0.7);
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    z-index:999;
+
   }
 
 

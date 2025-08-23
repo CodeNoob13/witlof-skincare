@@ -22,9 +22,9 @@
 
 </div>
 
-<a href="/checkout" class="fluct-it-cart__footer-btn">
+<button href="/checkout" class="fluct-it-cart__footer-btn" :available="$store.ajCart.setLoader" :class="$store.ajCart.setLoader ? 'fluct-it-cart__disabled' : ''">
   {{ 'fluctit.cart.cart_footer.secure_checkout' | t }}
-</a>
+</button>
 
 <div class="fluct-it-cart__payment-icons">
   {%- for type in shop.enabled_payment_types -%}
@@ -60,6 +60,19 @@
         height: 18px;
         width: auto;
     }
+
+    @media screen and (max-width: 768px) {
+        .payment-icon {
+        height: 12px;
+        width: auto;
+    }
+
+       .fluct-it-cart__footer{
+        padding: 4px 20px;
+    }
+    
+    }
+
     
     .fluct-it-cart__footer-btn {
         border-radius:100px;
@@ -72,6 +85,11 @@
         text-transform:uppercase;
         font-weight:600;
     }
+
+    .fluct-it-cart__disabled {
+        background-color:#C7C7C7;
+    }
+
     .fluct-it-cart__footer-btn:hover {
         background: #288191;
         color:#fff;
@@ -93,7 +111,7 @@
     .fluct-it-cart__footer-total {
         display: flex;
         gap: 12px;
-        padding: 12px 0;
+        padding: 4px 0;
         color: #000;
     }
 

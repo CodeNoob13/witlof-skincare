@@ -3,7 +3,9 @@
   <template x-for="(item, index) in $store.ajCart.cart.items" :key="item.id" >
     <div class="fluct-it__cart-item" :class="index === 0 ? 'fluct-it__border-top' : ''">
       <div class="fluct-it__cart-item-content">
-        <img :src="item.featured_image.url" :alt="item.featured_image.alt" class="fluct-it__cart-item-image">
+        <a :href="'/products/' + item.handle" aria-label="Go to product page">
+          <img :src="item.featured_image.url" :alt="item.featured_image.alt" class="fluct-it__cart-item-image">
+        </a>
         <div class="fluct-it__cart-item-details">
           <span class="fluct-it__cart-item-title" x-text="item.product_title"></span>
           <span class="fluct-it__cart-item-variant_title" x-text="item.variant_title"></span>
@@ -29,6 +31,8 @@
           </div>
         </div>
 
+
+        
         <div class="fluct-it__cart-item-prices">
           <span class="fluct-it__cart-item-price" x-text="(item.final_price / 100).toFixed(2)"></span>
           <template x-if="item.compare_at_price">  
@@ -120,7 +124,7 @@
   display: flex;
   gap: 6px;
   align-items:left;
-  width:100px;
+  width:90px;
 }
 
 .fluct-it__cart-item-price {
@@ -147,7 +151,7 @@
 }
 
 .fluct-it__cart-item-prices {
-  flex-direction:column;
+
 }
 
 .fluct-it__cart-item-actions {

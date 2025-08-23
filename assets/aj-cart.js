@@ -8,6 +8,7 @@ document.addEventListener("alpine:init", () => {
 
     async fetchCart() {
       try {
+        this.setLoader = true;
         await this.fetchAllProducts();
         const cartRequest = await fetch("/cart.js");
         const cart = await cartRequest.json();
@@ -22,6 +23,7 @@ document.addEventListener("alpine:init", () => {
             detail: { cart: cart },
           })
         );
+        this.setLoader = false;
       } catch (error) {
         console.error("Error fetching cart:", error);
       }
@@ -109,6 +111,35 @@ document.addEventListener("alpine:init", () => {
         console.error("Failed to change quantity from the cart:", error);
       }
       this.setLoader = false;
+    },
+
+    async addToCart(productID) {
+      console.log("adding to cart");
+
+      try {
+        const response = await fetch(
+          window.Shopify.routes.root + "cart/add.js",
+          {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
+            },
+            body: JSON.stringify({
+              items: [
+                {
+                  id: productID,
+                  quantity: 1,
+                },
+              ],
+            }),
+          }
+        );
+
+        const data = await response.json();
+        await this.fetchCart();
+      } catch (error) {
+        console.log("Couldn't add item to cart" + error);
+      }
     },
 
     init() {
