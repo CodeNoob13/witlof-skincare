@@ -12,7 +12,7 @@
     </div>
 
     <div class="fluct-it-cart__footer-total">
-        <div class="fluct-it-cart__footer-total-compare"  x-show="$store.ajCart.cart.totalComparePrice > ($store.ajCart.cart.total_price / 100).toFixed(2)"
+        <div class="fluct-it-cart__footer-total-compare"  x-show="$store.ajCart.totalComparePrice"
              x-text="'€' + $store.ajCart.totalComparePrice.toFixed(2)">
         </div>
         <div class="fluct-it-cart__footer-total-price"

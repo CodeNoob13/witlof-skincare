@@ -10,6 +10,7 @@
                         :src="item.images[0].src" 
                         :alt="item.featured_image ? item.featured_image.alt : item.title" 
                         class="fluct-it__cart-upsell-image"
+                        width="auto" height="auto"
                     >
                   </a>
                   <div class="fluct-it__cart-upsell-info" @click="console.log(item.variants)">
@@ -38,7 +39,8 @@
     padding: 20px;
 }
 
-.fluct-it-upsell-title {
+.fluct-it-upsell-title,
+.fluct-it-sample-title {
     font-size: 16px;
     color: #000;
     font-weight:500;
