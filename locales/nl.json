@@ -776,5 +776,9 @@
   },
   "line_item": {
     "return_policy": "60 dagen gratis retourneren"
+  },
+  "free_sample": {
+    "select": "SELECTEER",
+    "remove": "VERWIJDER"
   }
 }

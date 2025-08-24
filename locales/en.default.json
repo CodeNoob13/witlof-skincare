@@ -770,5 +770,9 @@
   },
   "line_item": {
     "return_policy": "60 days free returns"
+  },
+  "free_sample": {
+    "select": "SELECT",
+    "remove": "REMOVE"
   }
 }
