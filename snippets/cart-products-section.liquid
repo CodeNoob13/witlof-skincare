@@ -144,9 +144,11 @@
 let swiper;
 
 function initUpsellSwiper() {
+  if (typeof Swiper !== 'undefined') {
     if (swiper != null) {
       swiper.destroy(true, true);
     }
+
     swiper = new Swiper('.upsell-swiper', {
       slidesPerView: 2.5,
       spaceBetween: 16,
@@ -155,8 +157,8 @@ function initUpsellSwiper() {
         prevEl: '.swiper-button-prev',
       },
     });
+  }
 }
 
 initUpsellSwiper();
-window.addEventListener('resize', initUpsellSwiper);
 </script>

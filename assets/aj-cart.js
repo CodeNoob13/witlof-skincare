@@ -55,7 +55,6 @@ document.addEventListener("alpine:init", () => {
         const response = await fetch("/products.json");
         const data = await response.json();
         this.allProducts = data.products;
-        // console.log("All products:", this.allProducts);
       } catch (error) {
         console.error("Error fetching products:", error);
       }
@@ -108,16 +107,8 @@ document.addEventListener("alpine:init", () => {
     },
 
     async changeQuantity(line, newQuantity, oldQuantity) {
-      console.log(
-        "Changing quantity - Line:",
-        line,
-        "New:",
-        newQuantity,
-        "Old:",
-        oldQuantity
-      );
-
       this.setLoader = true;
+
       // if (!oldQuantity) {
       //   this.setLoader = false;
       //   return;
@@ -145,8 +136,6 @@ document.addEventListener("alpine:init", () => {
     },
 
     async addToCart(productID) {
-      console.log("adding to cart");
-
       try {
         const response = await fetch(
           window.Shopify.routes.root + "cart/add.js",
@@ -171,7 +160,7 @@ document.addEventListener("alpine:init", () => {
 
         this.openCartDrawer();
       } catch (error) {
-        console.log("Couldn't add item to cart" + error);
+        console.error("Couldn't add item to cart" + error);
       }
     },
 
@@ -199,9 +188,9 @@ document.addEventListener("alpine:init", () => {
     // },
 
     async addGiftProduct(productID) {
+      console.log(productID);
       if (this.getGiftSampleCount() === 2) return;
 
-      console.log("Adding gift product:", productID);
       this.setLoader = true;
 
       try {
@@ -233,9 +222,17 @@ document.addEventListener("alpine:init", () => {
         const data = await response.json();
         await this.fetchCart(); // setLoader = false is handled in fetchCart
       } catch (error) {
-        console.log("Couldn't add gift to cart:", error);
+        console.error("Couldn't add gift to cart:", error);
         this.setLoader = false;
       }
+    },
+
+    giftInCart(id) {
+      if (!this.cart.items) return false;
+      return this.cart.items.some(
+        (item) =>
+          item.id == id && item.properties && item.properties._gift === "true"
+      );
     },
 
     async removeItem(id) {
@@ -248,7 +245,9 @@ document.addEventListener("alpine:init", () => {
               "Content-Type": "application/json",
             },
             body: JSON.stringify({
-              [id]: 0,
+              updates: {
+                [id]: 0,
+              },
             }),
           }
         );
@@ -262,15 +261,10 @@ document.addEventListener("alpine:init", () => {
 
     getGiftSampleCount() {
       if (!this.cart.items) return 0;
-      console.log(
-        this.cart.items.filter((item) => item.properties._gift).length
-      );
       return this.cart.items.filter((item) => item.properties._gift).length;
     },
 
     init() {
-      console.log("AJ Cart initialized");
-
       this.fetchCart();
     },
   });
@@ -285,7 +279,6 @@ const cartAddToCartButton = document.querySelectorAll(
 if (AddToCartButton) {
   AddToCartButton.forEach((btn) =>
     btn.addEventListener("click", async (e) => {
-      console.log("Add to cart button clicked");
       setTimeout(() => {
         Alpine.store("ajCart")
           .fetchCart()
@@ -298,8 +291,6 @@ if (AddToCartButton) {
   );
 
   if (cartAddToCartButton) {
-    console.log("Cart add to cart button found");
-
     cartAddToCartButton.forEach((btn) =>
       btn.addEventListener("click", async (e) => {
         setTimeout(() => {

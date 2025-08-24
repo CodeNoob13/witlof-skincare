@@ -8,7 +8,7 @@
             <div class="gift-card-sample">
                 <span class="gift-card-sample-block">
                     <div x-show="($store.ajCart.cart.total_price / 100).toFixed(0) > {{ settings.free_sample_threshold }}">
-                        <img src="{{ product.featured_image | img_url: '90x90' }}" alt="{{ product.title }}">
+                        <img src="{{ product.featured_image | img_url }}" alt="{{ product.title }}">
                     </div>
 
                     <div x-show="($store.ajCart.cart.total_price / 100).toFixed(0) < {{ settings.free_sample_threshold }}">
@@ -18,10 +18,20 @@
                                 </svg>
                             </div>
                             </span>
-                        <p @click="console.log($store.ajCart.getGiftSampleCount())">{{ product.title }}</p>
-                        <a x-show="await $store.ajCart.getGiftSampleCount() < 2" class="gift-card-sample-btn" @click="$store.ajCart.addGiftProduct({{ product.variants[0].id }})">SELECTEER</a>
-                        <a x-show="await $store.ajCart.getGiftSampleCount() >= 2" class="gift-card-sample-btn" @click="$store.ajCart.removeItem({{ product.variants[0].id }})">VERWIJDER</a>
+                        <p @click="console.log({{product.variants[0].id}})">{{ product.title }}</p>
+                        <a
+                        x-show="!$store.ajCart.giftInCart({{ product.variants[0].id }}) && $store.ajCart.getGiftSampleCount() < 2"
+                        class="gift-card-sample-btn"
+                        @click="$store.ajCart.addGiftProduct({{ product.variants[0].id }})"
+                        x-text="'SELECTEER'"
+                        ></a>
 
+                        <a
+                        x-show="$store.ajCart.giftInCart({{ product.variants[0].id }})"
+                        class="gift-card-sample-btn"
+                        @click="$store.ajCart.removeItem({{ product.variants[0].id }})"
+                        x-text="'VERWIJDER'"
+                        ></a>            
                       
                     </div>
                 {% endfor %}
@@ -40,7 +50,7 @@
         display:flex;
         flex-direction: column;
         gap:8px;
-        max-width:100px;
+        min-width:100px;
     }
 
     .fluct-it-sample-title {
@@ -54,20 +64,28 @@
 
     .gift-card-sample-block-container {
         display:flex;
-        gap:8px;
-        overflow:scroll;
+        gap:10px;
+    }
+
+    @media screen and (max-width:768px) {
+       .gift-card-sample-block-container {
+         overflow:scroll;
         scrollbar-width: none;
         overflow-y:hidden;
+        }
     }
 
 
     .gift-card-sample-block {
-        height:90px;
-        width:90px;
         background: #F6F6F8;
         display:flex;
         align-items:center;
         justify-content:center;
+    }
+
+    .gift-card-sample-block img {
+        height:100%;
+        width:auto;
     }
 
     .gift-card-sample p {

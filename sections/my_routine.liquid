@@ -1,4 +1,3 @@
-
 {% schema %}
 {
     "name": "My routine",
@@ -25,10 +24,10 @@
 }
 {% endschema %}
 
-
 {%- assign steps_value = product.metafields.custom.routine_steps.value -%}
 {%- assign step_titles = "stap een, stap twee, stap drie, stap vier, stap vijf" | split: "," -%}
 {%- assign step_position = product.metafields.custom.routine_step.value -%}
+
 {% if steps_value %}
     <div class="fluctit-section-container" x-data="{ selected: $store.swiper.slide }">
         <h2 class="fluctit-section-title" data-aos="fade-up">{{ section.settings.title }}</h2>
@@ -64,87 +63,92 @@
             </template>
         </div>
     </div>
-{% endif %}
-<script>
-    document.addEventListener('alpine:init', () => {
-        Alpine.store('swiper', {
-            step_position: {{ step_position }},
-            step: {{ step_position }},
-            steps: {{ product.metafields.custom.routine_steps.value | json }},
-            slide: {{ step_position }},
-            on: false,
-            stepImage: null,
 
-            getImage(index) {
-                const images = [
-                    {%- for step in product.metafields.custom.routine_steps.value -%}
-                        { step_image: "{{ step.step_image | image_url: width:300 }} " }
-                        {% unless forloop.last %},{% endunless %}
-                    {% endfor %}
-                ];
-                return images[index].step_image;
-            },
+    <script>
+        // Only run Alpine store and Swiper if section is used
+        document.addEventListener('alpine:init', () => {
+            Alpine.store('swiper', {
+                step_position: {{ step_position }},
+                step: {{ step_position }},
+                steps: {{ product.metafields.custom.routine_steps.value | json }},
+                slide: {{ step_position }},
+                on: false,
+                stepImage: null,
 
-            selectStep(index) {
-                this.slide = index;
-            },
+                getImage(index) {
+                    const images = [
+                        {%- for step in product.metafields.custom.routine_steps.value -%}
+                            { step_image: "{{ step.step_image | image_url: width:300 }} " }
+                            {% unless forloop.last %},{% endunless %}
+                        {% endfor %}
+                    ];
+                    return images[index].step_image;
+                },
 
-            richToHtml(data) {
-                const description = data.children.map(block => {
-                    if (block.type === 'paragraph') {
-                        const text = block.children.map(i => i.value).join('');
-                        return `<p>${text}</p>`;
-                    }
-                    if (block.type === 'heading') {
-                        if (block.level === 3) {
-                            const text = block.children.map(i => i.value);
-                            return `<h3>${text}</h3>`;
+                selectStep(index) {
+                    this.slide = index;
+                },
+
+                richToHtml(data) {
+                    const description = data.children.map(block => {
+                        if (block.type === 'paragraph') {
+                            const text = block.children.map(i => i.value).join('');
+                            return `<p>${text}</p>`;
                         }
-                    }
-                    return '';
-                }).join('');
-                return description;
-            }
-        });
-
-
-        document.addEventListener('DOMContentLoaded', function () {
-            let swiper;
-            function initSwiper() {
-                if (swiper != null) {
-                    swiper.destroy(true, true);
-                }
-                if (window.innerWidth <= 1300) {
-                    swiper = new Swiper('.my-swiper', {
-                        initialSlide: Alpine.store('swiper').slide,
-                        slidesPerView: 1.25,
-                        centeredSlidesBounds: true,
-                        watchOverflow: true,
-                        slideToClickedSlide: true,
-                        breakpoints: {
-                            674: {
-                                slidesPerView: 1.45,
-                            },
-                        },
-                        spaceBetween: 8,
-                        pagination: {
-                            el: '.swiper-pagination',
-                            clickable: true,
-                        },
-                        on: {
-                            slideChange() {
-                                Alpine.store('swiper').slide = this.realIndex;
+                        if (block.type === 'heading') {
+                            if (block.level === 3) {
+                                const text = block.children.map(i => i.value);
+                                return `<h3>${text}</h3>`;
                             }
                         }
-                    });
+                        return '';
+                    }).join('');
+                    return description;
                 }
-            }
-            initSwiper();
-            window.addEventListener('resize', initSwiper);
-        });
-    });
-</script>
+            });
 
+            document.addEventListener('DOMContentLoaded', function () {
+                let swiper;
+
+                
+
+                function initSwiper() {
+                    if (swiper != null) {
+                        swiper.destroy(true, true);
+                    }
+
+                    
+                    if (window.innerWidth <= 1300) {
+                        swiper = new Swiper('.my-swiper', {
+                            initialSlide: Alpine.store('swiper').slide,
+                            slidesPerView: 1.25,
+                            centeredSlidesBounds: true,
+                            watchOverflow: true,
+                            slideToClickedSlide: true,
+                            breakpoints: {
+                                674: {
+                                    slidesPerView: 1.45,
+                                },
+                            },
+                            spaceBetween: 8,
+                            pagination: {
+                                el: '.swiper-pagination',
+                                clickable: true,
+                            },
+                            on: {
+                                slideChange() {
+                                    Alpine.store('swiper').slide = this.realIndex;
+                                }
+                            }
+                        });
+                    }
+                }
+                initSwiper();
+                window.addEventListener('resize', initSwiper);
+            });
+        });
+    </script>
+{% endif %}
 
 <style>
     .fluctit-description-box {
