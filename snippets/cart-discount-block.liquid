@@ -196,6 +196,11 @@ function removeDiscount(title) {
         if (window.updateCartDrawer) window.updateCartDrawer();
         if (window.refreshCart) window.refreshCart();
         
+        // Update Alpine.js cart store
+        if (window.Alpine && window.Alpine.store('ajCart')) {
+          window.Alpine.store('ajCart').fetchCart();
+        }
+        
         // Trigger additional events that themes might listen to
         document.dispatchEvent(new CustomEvent('cart:refresh'));
         document.dispatchEvent(new CustomEvent('drawer:refresh'));
@@ -278,6 +283,11 @@ function tryDiscountClear() {
             if (window.cartUpdate) window.cartUpdate();
             if (window.updateCartDrawer) window.updateCartDrawer();
             if (window.refreshCart) window.refreshCart();
+            
+            // Update Alpine.js cart store
+            if (window.Alpine && window.Alpine.store('ajCart')) {
+              window.Alpine.store('ajCart').fetchCart();
+            }
             
             // Trigger additional events that themes might listen to
             document.dispatchEvent(new CustomEvent('cart:refresh'));

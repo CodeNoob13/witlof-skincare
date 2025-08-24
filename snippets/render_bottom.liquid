@@ -357,7 +357,7 @@
      <div data-tab-mb-content id="shopify-mb_nav" class="t4s-mb-tab__content {{ nav_active }}">{% unless is_page_index %}{%- section 'mb_nav' -%}{% endunless %}</div><div data-tab-mb-content id="shopify-mb_cat" class="t4s-mb-tab__content {{ cat_active }}">{% unless is_page_index %}{%- section 'mb_cat' -%}{% endunless %}</div>
    </div>
    <button class="t4s-drawer-menu__close t4s-pe-none t4s-op-0 t4s-pf" data-drawer-close aria-label="{{ 'general.mobile_menu.close' | t }}"><svg class="t4s-iconsvg-close" role="presentation" viewBox="0 0 16 14"><path d="M15 0L1 14m14 0L1 0" stroke="currentColor" fill="none" fill-rule="evenodd"></path></svg></button>
-   {%- if page_type != 'cart' and settings.cart_type != 'disable' %}{% section 'mini_cart' %}</div>{% endif -%}
+   {%- if page_type != 'cart' and settings.cart_type != 'disable' %}{% section 'mini_cart' %}{% endif -%}
 
 {%- else -%}
   <div id="t4s-menu-drawer" class="t4s-drawer t4s-drawer__left{% if settings.header_design != 'sidebar' %} t4s-d-lg-none{% endif %}" aria-hidden="true">
@@ -366,49 +366,6 @@
     <div class="t4s-skeleton-element ske-mrl-20 ske-shine"></div><div class="t4s-skeleton-element ske-mrl-20 ske-shine"></div><div class="t4s-skeleton-element ske-mrl-20 ske-shine"></div><div class="t4s-skeleton-element ske-mrl-20 ske-shine"></div><div class="t4s-skeleton-element ske-mrl-20 ske-shine"></div>
   </div>
   <button class="t4s-drawer-menu__close t4s-pe-none t4s-op-0 t4s-pf" data-drawer-close aria-label="{{ 'general.mobile_menu.close' | t }}"><svg class="t4s-iconsvg-close" role="presentation" viewBox="0 0 16 14"><path d="M15 0L1 14m14 0L1 0" stroke="currentColor" fill="none" fill-rule="evenodd"></path></svg></button>
-{%- endif -%}
-
-{%- if admin_sp == false and page_type != 'cart' and settings.cart_type != 'disable' -%}
-<link href="{{ 'mini-cart.css' | asset_url }}" rel="stylesheet" media="print" onload="this.media='all'">
-<div data-cart-wrapper id="t4s-mini_cart" data-ccount="{{ cart.item_count }}" class="t4s-drawer t4s-drawer__right t4s-dn" aria-hidden="true">
-  {%- if cart.item_count > 0 -%}
-    <div class="t4s-skeleton-element ske-h-50 ske-mt-15 ske-mb-20 ske-mrl-15 ske-shine"></div>
-    <div class="t4s-row t4s-g-0 ske-mrl-15 ske-card ske-mb-20">
-      <div class="t4s-col-auto">
-        <div class="t4s-skeleton-element ske-card-img ske-mb-0"></div>
-      </div>
-      <div class="t4s-col ske-card-info">
-        <div class="t4s-skeleton-element ske-shine ske-h-20 ske-mb-10"></div>
-        <div class="t4s-skeleton-element ske-shine ske-h-15 ske-mb-0 ske-w-50"></div>
-      </div>
-    </div>
-    <div class="t4s-row t4s-g-0 ske-mrl-15 ske-card ske-mb-20">
-      <div class="t4s-col-auto">
-        <div class="t4s-skeleton-element ske-card-img ske-mb-0"></div>
-      </div>
-      <div class="t4s-col ske-card-info">
-        <div class="t4s-skeleton-element ske-shine ske-h-20 ske-mb-10"></div>
-        <div class="t4s-skeleton-element ske-shine ske-h-15 ske-mb-0 ske-w-50"></div>
-      </div>
-    </div>
-    <div class="t4s-row t4s-g-0 ske-mrl-15 ske-card ske-mb-20">
-      <div class="t4s-col-auto">
-        <div class="t4s-skeleton-element ske-card-img ske-mb-0"></div>
-      </div>
-      <div class="t4s-col ske-card-info">
-        <div class="t4s-skeleton-element ske-shine ske-h-20 ske-mb-10"></div>
-        <div class="t4s-skeleton-element ske-shine ske-h-15 ske-mb-0 ske-w-50"></div>
-      </div>
-    </div>
-  {%- else -%}
-    <div class="t4s-skeleton-element ske-h-50 ske-mt-15 ske-mb-20 ske-mrl-15 ske-shine"></div>
-    <div class="ske-mb-20"></div><div class="ske-mb-20"></div><div class="ske-mb-20"></div>
-    <div class="t4s-text-center">
-    <div class="t4s-skeleton-element ske-shine ske-w-50 ske-mb-10 ske-h-20 t4s-d-inline-block"></div>
-    <div class="t4s-skeleton-element ske-shine ske-w-50 ske-mb-0 ske-h-40 t4s-d-inline-block"></div>
-    </div>
-  {%- endif -%}
-</div>
 {%- endif -%}
 
 {%- liquid

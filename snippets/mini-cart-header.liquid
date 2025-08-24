@@ -1,16 +1,33 @@
-<!-- Mini Cart Header Snippet -->
-<style>
-.t4s-drawer__header {
-  border-bottom: none !important;
-}
-</style>
-<div class="t4s-drawer__header" x-data x-show="$store.ajCart.cart.item_count > 0">
+
+
+<div class="fluct-it-drawer__header" x-data x-show="$store.ajCart.cart.item_count > 0">
   <span>{{ 'cart.mini_cart.title' | t }}</span>
-  <button class="t4s-drawer__close" data-drawer-close aria-label="{{ 'cart.mini_cart.close_cart' | t }}">
-    <svg class="t4s-iconsvg-close" role="presentation" viewBox="0 0 16 14">
-      <path d="M15 0L1 14m14 0L1 0" stroke="currentColor" fill="none" fill-rule="evenodd"></path>
-    </svg>
-  </button>
+  <span class="fluct-it-drawer__close" @click="$store.ajCart.closeCartDrawer()" aria-label="{{ 'cart.mini_cart.close_cart' | t }}">
+    {% render 'close-icon'%}
+  </span>
 </div>
 
+<style>
+.fluct-it-drawer__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between; 
+  padding: 12px 20px;
+  position: relative;
+}
 
+.fluct-it-drawer__header span:first-child {
+  font-size: 24px;
+  text-align: center;
+  flex: 1; 
+}
+
+..fluct-it-drawer__close {
+  cursor:pointer;
+}
+
+.fluct-it-drawer__close svg path {
+  fill: #1e1e1e !important;
+   cursor:pointer;
+}
+</style>

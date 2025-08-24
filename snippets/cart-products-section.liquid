@@ -3,7 +3,7 @@
     
     <div class="upsell-swiper" aria-live="polite">
         <div class="swiper-wrapper" x-init='$nextTick(() => initUpsellSwiper());'>
-            <template x-for="(item, index) in $store.ajCart.allProducts" :key="item.id">
+            <template x-for="(item, index) in $store.ajCart.allProducts" :key="item.id" >
                 <div class="fluct-it__cart-upsell swiper-slide">
                   <a :href="'/products/' + item.handle">
                     <img 
@@ -30,6 +30,7 @@
         <div class="swiper-button-next" aria-label="Next slide">{% render 'cart-arrow' %}</div>
     </div>
 </div>
+
 
 <style>
 .fluct-it_upsell-container {

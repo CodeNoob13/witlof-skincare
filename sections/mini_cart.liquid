@@ -1,5 +1,20 @@
+<!-- Cart Overlay and Drawer Container -->
+<div x-data class="fluct-it__cart-overlay" x-cloak x-show="$store.ajCart.openCart" @click="$store.ajCart.closeCartDrawer()" 
+     x-transition:enter="overlay-enter" 
+     x-transition:enter-start="overlay-enter-start" 
+     x-transition:enter-end="overlay-enter-end" 
+     x-transition:leave="overlay-leave" 
+     x-transition:leave-start="overlay-leave-start" 
+     x-transition:leave-end="overlay-leave-end">
+</div>
 
-<div class="fluct-it__mini-cart">
+<div x-data class="fluct-it__mini-cart" x-cloak x-show="$store.ajCart.openCart"
+     x-transition:enter="cart-enter" 
+     x-transition:enter-start="cart-enter-start" 
+     x-transition:enter-end="cart-enter-end" 
+     x-transition:leave="cart-leave" 
+     x-transition:leave-start="cart-leave-start" 
+     x-transition:leave-end="cart-leave-end">
        <div x-show="$store.ajCart.setLoader" class="fluct-it__spinner-container">
           {% render 'loader' %}
         </div>
@@ -28,40 +43,111 @@
   
   {%-  render 'cart-footer' -%}
 </div>
-            
+       
 
            
 <style>
+    body.cart-open {
+    overflow: hidden !important;
+    position: fixed !important;
+    width: 100% !important;
+    height: 100% !important;
+  }
+
+  .fluct-it__cart-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 9998;
+  }
+
   .fluct-it__mini-cart {
-    position: relative;
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 470px;
+    max-width: 100vw;
+    height: 100vh;
+    background-color: white;
+    z-index: 9999;
     display: flex;
     flex-direction: column;
-    height: 100vh; 
-    max-height: 100vh;
+    box-shadow: -2px 0 10px rgba(0, 0, 0, 0.1);
   }
 
   .fluct-it__mini-cart-content {
     flex: 1;
     overflow-y: auto;
-    padding-bottom:20px; 
-    {% comment %} position:relative; {% endcomment %}
+    padding-bottom: 20px;
   }
 
   .fluct-it__spinner-container {
-    position:absolute;
+    position: absolute;
     top: 0;
     bottom: 0;
-    right:0;
-    left:0;
+    right: 0;
+    left: 0;
     background-color: rgba(255, 255, 255, 0.7);
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    z-index:999;
-
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
   }
 
+  /* Overlay Transitions */
+  .overlay-enter {
+    transition: opacity 300ms ease-linear;
+  }
+  .overlay-enter-start {
+    opacity: 0;
+  }
+  .overlay-enter-end {
+    opacity: 1;
+  }
+  .overlay-leave {
+    transition: opacity 300ms ease-linear;
+  }
+  .overlay-leave-start {
+    opacity: 1;
+  }
+  .overlay-leave-end {
+    opacity: 0;
+  }
 
+  /* Cart Drawer Transitions */
+  .cart-enter {
+    transition: all 300ms ease-out;
+  }
+  .cart-enter-start {
+    opacity: 0;
+    transform: translateX(100%);
+  }
+  .cart-enter-end {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  .cart-leave {
+    transition: all 200ms ease-in;
+  }
+  .cart-leave-start {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  .cart-leave-end {
+    opacity: 0;
+    transform: translateX(100%);
+  }
+
+  /* Mobile responsive */
+  @media (max-width: 768px) {
+    .fluct-it__mini-cart {
+      width: 100%;
+      max-width: 100vw;
+    }
+  }
 </style>
 
 

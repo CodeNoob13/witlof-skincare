@@ -243,7 +243,6 @@ t4sp-theme t4s-wrapper__{{ settings.general_layout }}{% if settings.animations_r
         </script>
       {% endif -%}
       <a class="skip-to-content-link visually-hidden" href="#MainContent">{{ 'accessibility.skip_to_text' | t }}</a>
-      <div class="t4s-close-overlay t4s-op-0"></div>
       <!-- Google Tag Manager (noscript) -->
 
       <noscript
@@ -273,6 +272,11 @@ t4sp-theme t4s-wrapper__{{ settings.general_layout }}{% if settings.animations_r
       <ul hidden class="t4s-d-none">
         <li id="a11y-refresh-page-message">{{ 'accessibility.refresh_page' | t }}</li>
       </ul>
+      
+      {%- if request.page_type != 'cart' and settings.cart_type != 'disable' -%}
+          {% section 'mini_cart' %}
+      {%- endif -%}
+      
       {%- render 'render_bottom' -%}
 
       {% include 'smile-initializer' %}
@@ -302,7 +306,7 @@ t4sp-theme t4s-wrapper__{{ settings.general_layout }}{% if settings.animations_r
 
       <script async src="{{ 'swiper-bundle.min.js' | asset_url }}"></script>
       <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-      <script async src="{{ 'aj-cart.js' | asset_url }}"></script>
+      <script src="{{ 'aj-cart.js' | asset_url }}"></script>
 
 
       {%- render 'ecom_footer' -%}

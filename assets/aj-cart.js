@@ -1,29 +1,53 @@
 document.addEventListener("alpine:init", () => {
+  console.log("Alpine.js initializing cart store");
   Alpine.store("ajCart", {
     cartDiscount: 0,
     cart: {},
     allProducts: [],
     totalComparePrice: 0,
     setLoader: false,
+    upsellProducts: [],
+    openCart: false,
+
+    toggleCart() {
+      this.openCart = !this.openCart;
+      this.toggleBodyScroll();
+    },
+
+    openCartDrawer() {
+      this.openCart = true;
+      document.body.classList.add("cart-open");
+    },
+
+    closeCartDrawer() {
+      this.openCart = false;
+      document.body.classList.remove("cart-open");
+    },
+
+    toggleBodyScroll() {
+      if (this.openCart) {
+        document.body.classList.add("cart-open");
+      } else {
+        document.body.classList.remove("cart-open");
+      }
+    },
 
     async fetchCart() {
       try {
+        console.log("Fetching cart data...");
         this.setLoader = true;
         await this.fetchAllProducts();
         const cartRequest = await fetch("/cart.js");
         const cart = await cartRequest.json();
+        console.log("Cart data received:", cart);
         this.cart = cart;
 
         await this.getCartProducts();
         await this.getTotalComparePrice();
+        // await this.getUpsellProducts();
 
-        // Dispatch event for other components
-        document.dispatchEvent(
-          new CustomEvent("cart:updated", {
-            detail: { cart: cart },
-          })
-        );
         this.setLoader = false;
+        console.log("Cart fetch completed");
       } catch (error) {
         console.error("Error fetching cart:", error);
       }
@@ -115,6 +139,7 @@ document.addEventListener("alpine:init", () => {
 
     async addToCart(productID) {
       console.log("adding to cart");
+      this.setLoader = true;
 
       try {
         const response = await fetch(
@@ -137,13 +162,41 @@ document.addEventListener("alpine:init", () => {
 
         const data = await response.json();
         await this.fetchCart();
+        this.setLoader = false;
+        // Open cart after successfully adding item
+        this.openCart = true;
       } catch (error) {
         console.log("Couldn't add item to cart" + error);
+        this.setLoader = false;
       }
     },
 
+    // async getUpsellProducts(item) {
+    //   const categories = {
+    //     "step-1": "balanceren",
+    //     "step-2": "verzorgen",
+    //     "step-3": "serum",
+    //     "step-4": "zonnebescherming",
+    //     "step-5": "Cream",
+    //   };
+
+    //   const matchingProduct = this.allProducts.filter(
+    //     (product) => item.ProductID === product.id
+    //   );
+
+    //   console.log(item);
+    //   console.log(matchingProduct);
+
+    //   this.allProducts.map((product) => {
+    //     if (product.tags.includes("step-2")) {
+    //       console.log("Hello");
+    //     }
+    //   });
+    // },
+
     init() {
       console.log("AJ Cart initialized");
+
       this.fetchCart();
     },
   });
@@ -160,18 +213,28 @@ if (AddToCartButton) {
     btn.addEventListener("click", async (e) => {
       console.log("Add to cart button clicked");
       setTimeout(() => {
-        Alpine.store("ajCart").fetchCart();
+        Alpine.store("ajCart")
+          .fetchCart()
+          .then(() => {
+            // Open cart after fetching updated cart data
+            Alpine.store("ajCart").openCart = true;
+          });
       }, 500);
     })
   );
 
   if (cartAddToCartButton) {
-    console.log("Add to cart button clicked");
+    console.log("Cart add to cart button found");
 
     cartAddToCartButton.forEach((btn) =>
       btn.addEventListener("click", async (e) => {
         setTimeout(() => {
-          Alpine.store("ajCart").fetchCart();
+          Alpine.store("ajCart")
+            .fetchCart()
+            .then(() => {
+              // Open cart after fetching updated cart data
+              Alpine.store("ajCart").openCart = true;
+            });
         }, 1000);
       })
     );
