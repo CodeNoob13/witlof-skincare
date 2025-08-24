@@ -71,8 +71,13 @@
     "share_source": "1",
     "free_ship_threshold": 40,
     "free_sample_threshold": 60,
-    "free_sample_product_threshold": 85,
-    "shipping_threshold_3_product": "balancing-toner-150ml",
+    "free_sample_products": [
+      "balancing-toner-150ml",
+      "balancing-toner-tester",
+      "cleansing-mousse-150ml",
+      "the-best-seller"
+    ],
+    "free_product_gift": "balancing-toner-150ml",
     "filter_type_search": true,
     "show_search_suggest": true,
     "search_prs_suggest": "",
@@ -107,6 +112,9 @@
     "social_soundcloud_link": "",
     "social_tiktok_link": "https://www.tiktok.com/@witlofskincare",
     "favicon": "shopify://shop_images/Monogram-Witlof-1-pdf.jpg",
+    "free_sample_1": "balancing-toner-tester",
+    "free_sample_product_threshold": 85,
+    "shipping_threshold_3_product": "balancing-toner-150ml",
     "free_ship_pr": "balancing-toner-150ml",
     "only_search_prs": false,
     "checkout_logo_image": "shopify://shop_images/logo-retina.png",
@@ -2227,79 +2235,8 @@
       },
       "mini_cart": {
         "type": "mini_cart",
-        "blocks": {
-          "mini_cart-0": {
-            "type": "price",
-            "settings": {}
-          },
-          "mini_cart-1": {
-            "type": "tax",
-            "disabled": true,
-            "settings": {}
-          },
-          "mini_cart-2": {
-            "type": "agree",
-            "disabled": true,
-            "settings": {}
-          },
-          "mini_cart-3": {
-            "type": "btnc",
-            "disabled": true,
-            "settings": {
-              "btn_icon": false,
-              "button_style": "default",
-              "btn_cl": "custom2",
-              "button_effect": "default"
-            }
-          },
-          "mini_cart-4": {
-            "type": "btnck",
-            "settings": {
-              "btn_icon": false,
-              "button_style": "default",
-              "btn_cl": "primary",
-              "button_effect": "default"
-            }
-          },
-          "mini_cart-5": {
-            "type": "img",
-            "settings": {
-              "svg": "",
-              "height": 30
-            }
-          },
-          "mini_cart-6": {
-            "type": "btn",
-            "settings": {
-              "title": "Return To Shop",
-              "url": "",
-              "btn_icon": false,
-              "button_style": "default",
-              "btn_cl": "primary",
-              "button_effect": "fade"
-            }
-          }
-        },
-        "block_order": [
-          "mini_cart-0",
-          "mini_cart-1",
-          "mini_cart-2",
-          "mini_cart-3",
-          "mini_cart-4",
-          "mini_cart-5",
-          "mini_cart-6"
-        ],
         "custom_css": [],
-        "settings": {
-          "style": "1",
-          "pos": "2",
-          "enable_pr": true,
-          "enable_calc_ship": true,
-          "enable_note": false,
-          "enable_rates": false,
-          "enable_discount": false,
-          "ship_df_country": "Netherlands"
-        }
+        "settings": {}
       },
       "main-qv": {
         "type": "main-qv",

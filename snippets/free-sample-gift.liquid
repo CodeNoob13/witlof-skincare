@@ -1,49 +1,95 @@
 <div class="fluct-it-free-gift__sample-container">
-    <span class="fluct-it-sample-title">Kies je 2 gratis samples</span>
+    <div class="fluct-it-sample-title">Kies je 2 gratis samples</div>
     
-    <p>Voeg nog <strong x-text="'€' + ({{ settings.free_sample_threshold }} - ($store.ajCart.cart.total_price / 100)).toFixed(0)"></strong> toe en kom in aanmerking</p>
+    <p x-show="($store.ajCart.cart.total_price / 100).toFixed(0) < {{ settings.free_sample_threshold }}">Voeg nog <strong x-text="'€' + ({{ settings.free_sample_threshold }} - ($store.ajCart.cart.total_price / 100)).toFixed(0)"></strong> toe en kom in aanmerking</p>
 
     <div class="gift-card-sample-block-container">
-        <div class="gift-card-sample">
-        <span class="gift-card-sample-block">
-            <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M29.7768 17.5746H26.6574V14.81C26.6574 11.018 23.5765 7.89862 19.746 7.89862C15.9154 7.89862 12.8346 10.9795 12.8346 14.81V17.5746H9.71525C9.47763 17.5746 9.32031 17.7319 9.32031 17.9695V31.1999C9.32031 31.4374 9.47763 31.5948 9.71525 31.5948H29.7784C30.016 31.5948 30.1734 31.4374 30.1734 31.1999L30.1718 17.9695C30.1718 17.7319 29.9743 17.5746 29.7768 17.5746ZM13.6246 14.7699C13.6246 11.4129 16.3491 8.64836 19.7461 8.64836C23.1433 8.64836 25.8677 11.3728 25.8677 14.7699V17.5344H13.6246V14.7699ZM29.3819 30.8051H10.0702V18.3646H29.3435L29.3819 30.8051Z" fill="#635247"/>
-            <path d="M19.7055 26.6177C19.943 26.6177 20.1004 26.4604 20.1004 26.2228V22.906C20.1004 22.6684 19.943 22.511 19.7055 22.511C19.4679 22.511 19.3105 22.6684 19.3105 22.906V26.2228C19.3105 26.4604 19.508 26.6177 19.7055 26.6177Z" fill="#635247"/>
-            </svg>
-        </span>
-        <p>Gift cart</p>
-    </div>
-    </div>
+        {% for product in settings.free_sample_products %}
+            <div class="gift-card-sample">
+                <span class="gift-card-sample-block">
+                    <div x-show="($store.ajCart.cart.total_price / 100).toFixed(0) > {{ settings.free_sample_threshold }}">
+                        <img src="{{ product.featured_image | img_url: '90x90' }}" alt="{{ product.title }}">
+                    </div>
+
+                    <div x-show="($store.ajCart.cart.total_price / 100).toFixed(0) < {{ settings.free_sample_threshold }}">
+                        <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M29.7768 17.5746H26.6574V14.81C26.6574 11.018 23.5765 7.89862 19.746 7.89862C15.9154 7.89862 12.8346 10.9795 12.8346 14.81V17.5746H9.71525C9.47763 17.5746 9.32031 17.7319 9.32031 17.9695V31.1999C9.32031 31.4374 9.47763 31.5948 9.71525 31.5948H29.7784C30.016 31.5948 30.1734 31.4374 30.1734 31.1999L30.1718 17.9695C30.1718 17.7319 29.9743 17.5746 29.7768 17.5746ZM13.6246 14.7699C13.6246 11.4129 16.3491 8.64836 19.7461 8.64836C23.1433 8.64836 25.8677 11.3728 25.8677 14.7699V17.5344H13.6246V14.7699ZM29.3819 30.8051H10.0702V18.3646H29.3435L29.3819 30.8051Z" fill="#635247"/>
+                                <path d="M19.7055 26.6177C19.943 26.6177 20.1004 26.4604 20.1004 26.2228V22.906C20.1004 22.6684 19.943 22.511 19.7055 22.511C19.4679 22.511 19.3105 22.6684 19.3105 22.906V26.2228C19.3105 26.4604 19.508 26.6177 19.7055 26.6177Z" fill="#635247"/>
+                                </svg>
+                            </div>
+                            </span>
+                        <p @click="console.log($store.ajCart.getGiftSampleCount())">{{ product.title }}</p>
+                        <a x-show="await $store.ajCart.getGiftSampleCount() < 2" class="gift-card-sample-btn" @click="$store.ajCart.addGiftProduct({{ product.variants[0].id }})">SELECTEER</a>
+                        <a x-show="await $store.ajCart.getGiftSampleCount() >= 2" class="gift-card-sample-btn" @click="$store.ajCart.removeItem({{ product.variants[0].id }})">VERWIJDER</a>
+
+                      
+                    </div>
+                {% endfor %}
+                </div>
+
 </div>
 
 <style>
     .fluct-it-free-gift__sample-container {
         background:#BDE0E5;
         width:100%;
-        padding:20px;
-    }
-
-    .gift-card-sample-block-container {
-        display:flex;
-        gap:8px;
+        padding:20px;        
     }
 
     .gift-card-sample {
         display:flex;
         flex-direction: column;
         gap:8px;
+        max-width:100px;
     }
 
+    .fluct-it-sample-title {
+        font-size: 16px;
+        color: #000;
+        font-weight:500;
+        text-transform: uppercase;
+        margin-bottom:8px;
+        
+    }
+
+    .gift-card-sample-block-container {
+        display:flex;
+        gap:8px;
+        overflow:scroll;
+        scrollbar-width: none;
+        overflow-y:hidden;
+    }
+
+
     .gift-card-sample-block {
-        height:100px;
-        width:100px;
+        height:90px;
+        width:90px;
         background: #F6F6F8;
         display:flex;
         align-items:center;
         justify-content:center;
     }
 
-    .gift-card-sample-block p {
+    .gift-card-sample p {
         color:#1E1E1E;
+        font-size:12px;
+        margin:0;
+    }
+
+
+    .gift-card-sample-btn {
+        width:100%;
+        padding: 10px;
+        border: 1px solid #1e1e1e;
+        color: #1e1e1e;
+        cursor:pointer;
+        border-radius:4px;
+        text-align:center;
+    }
+
+    .gift-card-sample-btn:hover {
+        background: #4AB9CB;
+        border: 1px solid #4AB9CB;
+        color:#fff;
     }
 </style>

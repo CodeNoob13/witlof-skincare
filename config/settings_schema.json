@@ -1927,23 +1927,52 @@
         "default": 40
       },
       {
-        "type": "number",
+        "type": "header",
+        "content": "Free Sample Settings"
+      },
+      {
+        "type": "checkbox",
+        "id": "enable_free_samples",
+        "label": "Enable free samples",
+        "default": true
+      },
+      {
+        "type": "text",
+        "id": "free_sample_title",
+        "label": "Free sample section title",
+        "default": "Choose your free sample"
+      },
+      {
+        "type": "range",
         "id": "free_sample_threshold",
-        "label": "Free sample threshold",
-        "info": "Cart total required for a free sample.",
+        "min": 0,
+        "max": 200,
+        "step": 5,
+        "unit": "€",
+        "label": "Free sample threshold amount",
         "default": 60
       },
       {
-        "type": "number",
-        "id": "free_sample_product_threshold",
-        "label": "Free sample product threshold",
-        "info": "Cart total required for a free sample product.",
+        "type": "product_list",
+        "id": "free_sample_products",
+        "label": "Free sample products",
+        "limit": 4,
+        "info": "Select multiple products for free samples"
+      },
+      {
+        "type": "range",
+        "id": "free_product_threshold",
+        "min": 0,
+        "max": 200,
+        "step": 5,
+        "unit": "€",
+        "label": "Free product gift threshold amount",
         "default": 85
       },
       {
         "type": "product",
-        "id": "shipping_threshold_3_product",
-        "label": "Free product",
+        "id": "free_product_gift",
+        "label": "Free product gift",
         "info": "Product to give away at the highest threshold."
       },
       {

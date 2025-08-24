@@ -9,8 +9,8 @@
     
     {% if faq[q] and faq[a] %}
       <div 
-        x-data="{ open: {{ forloop.first | json }}, height: 0 }"
-        x-init="height = $refs.faq.scrollHeight"
+        x-data="{ open: {{ forloop.first | json }}, height: 'auto' }"
+        x-init="$nextTick(() => { height = $refs.faq.scrollHeight + 'px' })"
         class="fluctit-faq-item{% if i == 4 %} last{% endif %}" 
         x-cloak 
         @click="open = !open"
@@ -27,8 +27,8 @@
         </div>
         <div 
           :style="open 
-            ? 'transition: opacity 0.3s ease-in-out, max-height 0.3s ease; opacity:100; max-height: ' + height + 'px' 
-            : 'transition: opacity 0.3s ease-in-out, max-height 0.3s ease; max-height: 0; overflow:hidden; opacity:0;'">
+            ? 'transition: opacity 0.3s ease-in-out, max-height 0.3s ease; opacity: 1; max-height: ' + height 
+            : 'transition: opacity 0.3s ease-in-out, max-height 0.3s ease; max-height: 0; overflow: hidden; opacity: 0;'">
           <div class="fluctit-faq-answer" x-ref="faq">
             {{ faq[a] | metafield_tag }}
           </div>
@@ -36,7 +36,6 @@
       </div>
     {% endif %}
   {% endfor %}
-
 </div>
 
 <style>
@@ -57,7 +56,6 @@
 
 .fluctit-faq-item.last {
     border-bottom: 1px solid rgba(30, 30, 30, 0.1);
-    
 }
 
 .fluctit-faq-title {

@@ -34,20 +34,17 @@ document.addEventListener("alpine:init", () => {
 
     async fetchCart() {
       try {
-        console.log("Fetching cart data...");
         this.setLoader = true;
         await this.fetchAllProducts();
         const cartRequest = await fetch("/cart.js");
         const cart = await cartRequest.json();
-        console.log("Cart data received:", cart);
         this.cart = cart;
-
+        console.log(cart.items);
         await this.getCartProducts();
         await this.getTotalComparePrice();
-        // await this.getUpsellProducts();
+        await this.getGiftSampleCount();
 
         this.setLoader = false;
-        console.log("Cart fetch completed");
       } catch (error) {
         console.error("Error fetching cart:", error);
       }
@@ -111,10 +108,20 @@ document.addEventListener("alpine:init", () => {
     },
 
     async changeQuantity(line, newQuantity, oldQuantity) {
+      console.log(
+        "Changing quantity - Line:",
+        line,
+        "New:",
+        newQuantity,
+        "Old:",
+        oldQuantity
+      );
+
       this.setLoader = true;
-      if (!oldQuantity) {
-        return;
-      }
+      // if (!oldQuantity) {
+      //   this.setLoader = false;
+      //   return;
+      // }
 
       try {
         const response = await fetch(
@@ -133,13 +140,12 @@ document.addEventListener("alpine:init", () => {
         await this.fetchCart();
       } catch (error) {
         console.error("Failed to change quantity from the cart:", error);
+        this.setLoader = false; // Make sure to set loader to false even on error
       }
-      this.setLoader = false;
     },
 
     async addToCart(productID) {
       console.log("adding to cart");
-      this.setLoader = true;
 
       try {
         const response = await fetch(
@@ -162,12 +168,10 @@ document.addEventListener("alpine:init", () => {
 
         const data = await response.json();
         await this.fetchCart();
-        this.setLoader = false;
-        // Open cart after successfully adding item
-        this.openCart = true;
+
+        this.openCartDrawer();
       } catch (error) {
         console.log("Couldn't add item to cart" + error);
-        this.setLoader = false;
       }
     },
 
@@ -194,6 +198,76 @@ document.addEventListener("alpine:init", () => {
     //   });
     // },
 
+    async addGiftProduct(productID) {
+      if (this.getGiftSampleCount() === 2) return;
+
+      console.log("Adding gift product:", productID);
+      this.setLoader = true;
+
+      try {
+        const response = await fetch(
+          window.Shopify.routes.root + "cart/add.js",
+          {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
+            },
+            body: JSON.stringify({
+              items: [
+                {
+                  id: productID,
+                  quantity: 1,
+                  properties: {
+                    _gift: "true",
+                  },
+                },
+              ],
+            }),
+          }
+        );
+
+        if (!response.ok) {
+          throw new Error(`HTTP error! status: ${response.status}`);
+        }
+
+        const data = await response.json();
+        await this.fetchCart(); // setLoader = false is handled in fetchCart
+      } catch (error) {
+        console.log("Couldn't add gift to cart:", error);
+        this.setLoader = false;
+      }
+    },
+
+    async removeItem(id) {
+      try {
+        const response = await fetch(
+          window.Shopify.routes.root + "cart/update.js",
+          {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
+            },
+            body: JSON.stringify({
+              [id]: 0,
+            }),
+          }
+        );
+
+        const data = await response.json();
+        this.fetchCart();
+      } catch (error) {
+        console.error("Can't remove item from cart" + error);
+      }
+    },
+
+    getGiftSampleCount() {
+      if (!this.cart.items) return 0;
+      console.log(
+        this.cart.items.filter((item) => item.properties._gift).length
+      );
+      return this.cart.items.filter((item) => item.properties._gift).length;
+    },
+
     init() {
       console.log("AJ Cart initialized");
 
@@ -219,7 +293,7 @@ if (AddToCartButton) {
             // Open cart after fetching updated cart data
             Alpine.store("ajCart").openCart = true;
           });
-      }, 500);
+      }, 700);
     })
   );
 
@@ -235,7 +309,7 @@ if (AddToCartButton) {
               // Open cart after fetching updated cart data
               Alpine.store("ajCart").openCart = true;
             });
-        }, 1000);
+        }, 700);
       })
     );
   }

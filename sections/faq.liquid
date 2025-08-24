@@ -61,7 +61,7 @@
 }
 {% endschema %}
 
-{% comment %} {% if product.metafields.faq.questions.size > 0 %} {% endcomment %}
+
 {%- assign faq = product.metafields.custom.section_faq.value -%}
 
   <section class="fluct-it-faq-section" >
@@ -84,7 +84,7 @@
             <div class="fluctit-faq-section-item"
             data-aos="fade-up" data-aos-duration="600"
             x-data="{ open: false, height: 0 }"
-            x-init="height = $refs.faq.scrollHeight"
+            x-init="$nextTick(() => { height = $refs.faq.scrollHeight + 'px' })"
             x-cloak 
             @click="open = !open"
             >
