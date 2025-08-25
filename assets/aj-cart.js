@@ -172,27 +172,31 @@ document.addEventListener("alpine:init", () => {
       await this.addToCart(id);
     },
 
-    async getUpsellProducts(item) {
-      const categories = {
-        "step-1": "balanceren",
-        "step-2": "verzorgen",
-        "step-3": "serum",
-        "step-4": "zonnebescherming",
-        "step-5": "Cream",
-      };
+    async fetchCollection(handle) {
+      try {
+        const response = await fetch(`/collections/${handle}/products.json`);
+        const data = await response.json();
+        return data.products;
+      } catch (error) {
+        console.error("Error fetching collection:", error);
+        return [];
+      }
+    },
+
+    // Start of upsell products in cart functionality
+    async getUpsellProducts(id) {
+      const categories = ["step-1", "step-2", "step-3", "step-4", "step-5"];
+
+      await this.fetchAllProducts();
 
       const matchingProduct = this.allProducts.filter(
-        (product) => item.ProductID === product.id
+        (product) => product.id === id
       );
 
-      console.log(item);
-      console.log(matchingProduct);
-
-      this.allProducts.map((product) => {
-        if (product.tags.includes("step-2")) {
-          console.log("Hello");
-        }
-      });
+      if (matchingProduct[0].tags.includes("step-2")) {
+        this.upsellProducts = await this.fetchCollection("step-2");
+        console.log(this.upsellProducts);
+      }
     },
 
     async addGiftProduct(productID) {

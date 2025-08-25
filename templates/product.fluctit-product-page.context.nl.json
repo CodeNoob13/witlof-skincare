@@ -12,5 +12,21 @@
   "context": {
     "market": "nl"
   },
-  "sections": {}
+  "sections": {
+    "witlof_benefits_C6YQRU": {
+      "settings": {},
+      "blocks": {
+        "benefit_NLR4Pw": {
+          "settings": {
+            "benefit_description": "Witlof Skincare is 100% vegan, zonder ingrediënten van dierlijke oorsprong. Lief voor dieren en beter voor de planeet."
+          }
+        },
+        "benefit_XmHTRX": {
+          "settings": {
+            "benefit_description": "Onze producten ruiken heerlijk door de pure kracht van essentiële oliën. Natuurlijk en verfrissend."
+          }
+        }
+      }
+    }
+  }
 }
