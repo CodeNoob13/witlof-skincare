@@ -172,31 +172,30 @@ document.addEventListener("alpine:init", () => {
       await this.addToCart(id);
     },
 
-    // async getUpsellProducts(item) {
-    //   const categories = {
-    //     "step-1": "balanceren",
-    //     "step-2": "verzorgen",
-    //     "step-3": "serum",
-    //     "step-4": "zonnebescherming",
-    //     "step-5": "Cream",
-    //   };
+    async getUpsellProducts(item) {
+      const categories = {
+        "step-1": "balanceren",
+        "step-2": "verzorgen",
+        "step-3": "serum",
+        "step-4": "zonnebescherming",
+        "step-5": "Cream",
+      };
 
-    //   const matchingProduct = this.allProducts.filter(
-    //     (product) => item.ProductID === product.id
-    //   );
+      const matchingProduct = this.allProducts.filter(
+        (product) => item.ProductID === product.id
+      );
 
-    //   console.log(item);
-    //   console.log(matchingProduct);
+      console.log(item);
+      console.log(matchingProduct);
 
-    //   this.allProducts.map((product) => {
-    //     if (product.tags.includes("step-2")) {
-    //       console.log("Hello");
-    //     }
-    //   });
-    // },
+      this.allProducts.map((product) => {
+        if (product.tags.includes("step-2")) {
+          console.log("Hello");
+        }
+      });
+    },
 
     async addGiftProduct(productID) {
-      console.log(productID);
       if (this.getGiftSampleCount() === 2) return;
 
       this.setLoader = true;
@@ -280,8 +279,6 @@ document.addEventListener("alpine:init", () => {
         const gifts = this.cart.items.filter(
           (item) => item.properties && item.properties._gift === "true"
         );
-
-        console.log(gifts);
 
         if (gifts) {
           gifts.forEach((gift) => this.removeItem(gift.id));
