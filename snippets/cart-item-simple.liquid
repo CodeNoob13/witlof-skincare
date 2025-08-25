@@ -1,7 +1,7 @@
 
 <div x-data>
-  <template x-for="(item, index) in $store.ajCart.cart.items" :key="item.id" >
-    <div class="fluct-it__cart-item" :class="index === 0 ? 'fluct-it__border-top' : ''">
+  <template x-for="(item, index) in $store.ajCart.cart.items">
+    <div class="fluct-it__cart-item" :class="index === 0 ? 'fluct-it__border-top' : ''" :key="item.id">
       <div class="fluct-it__cart-item-content">
         <a :href="'/products/' + item.handle" aria-label="Go to product page">
           <img :src="item.featured_image.url" :alt="item.featured_image.alt" class="fluct-it__cart-item-image">

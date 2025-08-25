@@ -779,6 +779,8 @@
   },
   "free_sample": {
     "select": "SELECTEER",
-    "remove": "VERWIJDER"
+    "remove": "VERWIJDER",
+    "add": "Voeg nog",
+    "eligibility": "toe en kom in aanmerking"
   }
 }

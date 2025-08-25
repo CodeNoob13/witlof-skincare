@@ -773,6 +773,9 @@
   },
   "free_sample": {
     "select": "SELECT",
-    "remove": "REMOVE"
+    "remove": "REMOVE",
+    "threshold_message": "Add <strong>€{{ amount }}</strong> more to qualify for free samples",
+    "add": "Add",
+    "eligibility": "more to qualify"
   }
 }

@@ -39,10 +39,11 @@ document.addEventListener("alpine:init", () => {
         const cartRequest = await fetch("/cart.js");
         const cart = await cartRequest.json();
         this.cart = cart;
-        console.log(cart.items);
         await this.getCartProducts();
         await this.getTotalComparePrice();
         await this.getGiftSampleCount();
+        this.removeGifts();
+        console.log(cart.items);
 
         this.setLoader = false;
       } catch (error) {
@@ -109,10 +110,10 @@ document.addEventListener("alpine:init", () => {
     async changeQuantity(line, newQuantity, oldQuantity) {
       this.setLoader = true;
 
-      // if (!oldQuantity) {
-      //   this.setLoader = false;
-      //   return;
-      // }
+      if (!oldQuantity) {
+        this.setLoader = false;
+        return;
+      }
 
       try {
         const response = await fetch(
@@ -162,6 +163,13 @@ document.addEventListener("alpine:init", () => {
       } catch (error) {
         console.error("Couldn't add item to cart" + error);
       }
+    },
+
+    // Start free gift threshold
+    async freeThresholdGift(id) {
+      if (this.cart.total_price < 80) return;
+
+      await this.addToCart(id);
     },
 
     // async getUpsellProducts(item) {
@@ -229,10 +237,13 @@ document.addEventListener("alpine:init", () => {
 
     giftInCart(id) {
       if (!this.cart.items) return false;
-      return this.cart.items.some(
+
+      const item = this.cart.items.some(
         (item) =>
           item.id == id && item.properties && item.properties._gift === "true"
       );
+
+      return item;
     },
 
     async removeItem(id) {
@@ -262,6 +273,20 @@ document.addEventListener("alpine:init", () => {
     getGiftSampleCount() {
       if (!this.cart.items) return 0;
       return this.cart.items.filter((item) => item.properties._gift).length;
+    },
+
+    removeGifts() {
+      if (this.cart.total_price / 100 < 60) {
+        const gifts = this.cart.items.filter(
+          (item) => item.properties && item.properties._gift === "true"
+        );
+
+        console.log(gifts);
+
+        if (gifts) {
+          gifts.forEach((gift) => this.removeItem(gift.id));
+        }
+      }
     },
 
     init() {
