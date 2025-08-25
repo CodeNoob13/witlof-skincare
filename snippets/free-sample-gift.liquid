@@ -1,7 +1,7 @@
 <div class="fluct-it-free-gift__sample-container">
     <div class="fluct-it-sample-title">{{ 'free_sample.choose_samples' | t}}</div>
     
-    <p x-show="($store.ajCart.cart.total_price / 100).toFixed(0) < {{ settings.free_sample_threshold }}">{{ 'free_sample.add' | t }} <strong x-text="'€' + ({{ settings.free_sample_threshold }} - ($store.ajCart.cart.total_price / 100)).toFixed(0)"></strong> {{ 'free_sample.remove' | t }}</p>
+    <p x-show="($store.ajCart.cart.total_price / 100).toFixed(0) < {{ settings.free_sample_threshold }}">{{ 'free_sample.add' | t }} <strong x-text="'€' + ({{ settings.free_sample_threshold }} - ($store.ajCart.cart.total_price / 100)).toFixed(0)"></strong> {{ 'free_sample.eligibility' | t }}</p>
 
     <div class="gift-card-sample-block-container">
         {% for product in settings.free_sample_products %}
@@ -106,6 +106,7 @@
         color:#1E1E1E;
         font-size:12px;
         margin:0;
+        line-height:12px;
     }
 
 
