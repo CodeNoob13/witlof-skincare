@@ -4,7 +4,7 @@
     <div class="fluct-it__cart-item" :class="index === 0 ? 'fluct-it__border-top' : ''" :key="item.id">
       <div class="fluct-it__cart-item-content">
         <a :href="'/products/' + item.handle" aria-label="Go to product page">
-          <img :src="item.featured_image.url" :alt="item.featured_image.alt" class="fluct-it__cart-item-image">
+          <img :src="item.featured_image.url" :alt="item.featured_image.alt" class="fluct-it__cart-item-image" height="auto" width="auto">
         </a>
         <div class="fluct-it__cart-item-details">
           <span class="fluct-it__cart-item-title" x-text="item.product_title"></span>

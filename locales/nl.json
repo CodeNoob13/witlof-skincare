@@ -751,6 +751,7 @@
     "free_sample": "gratis sample",
     "free": "gratis",
     "cart": {
+      "upsell_title": "Wat je ook leuk zal vinden",
       "free_shipping": "Gratis verzending",
       "free_sample": "Gratis sample",
       "free": "Gratis",
@@ -778,6 +779,7 @@
     "return_policy": "60 dagen gratis retourneren"
   },
   "free_sample": {
+    "choose_samples": "Kies je 2 gratis samples",
     "select": "SELECTEER",
     "remove": "VERWIJDER",
     "add": "Voeg nog",

@@ -745,6 +745,7 @@
     "free_sample": "Free sample",
     "free": "Free",
     "cart": {
+      "upsell_title": "What you will also like",
       "free_shipping": "Free shipping",
       "free_sample": "Free sample",
       "free": "Free",
@@ -772,6 +773,7 @@
     "return_policy": "60 days free returns"
   },
   "free_sample": {
+    "choose_samples": "Choose your 2 samples",
     "select": "SELECT",
     "remove": "REMOVE",
     "threshold_message": "Add <strong>€{{ amount }}</strong> more to qualify for free samples",

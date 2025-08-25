@@ -1,5 +1,5 @@
 <div class="fluct-it-free-gift__sample-container">
-    <div class="fluct-it-sample-title">Kies je 2 gratis samples</div>
+    <div class="fluct-it-sample-title">{{ 'free_sample.choose_samples' | t}}</div>
     
     <p x-show="($store.ajCart.cart.total_price / 100).toFixed(0) < {{ settings.free_sample_threshold }}">{{ 'free_sample.add' | t }} <strong x-text="'€' + ({{ settings.free_sample_threshold }} - ($store.ajCart.cart.total_price / 100)).toFixed(0)"></strong> {{ 'free_sample.remove' | t }}</p>
 
@@ -8,7 +8,7 @@
             <div class="gift-card-sample">
                 <span class="gift-card-sample-block">
                     <div x-show="($store.ajCart.cart.total_price / 100).toFixed(0) > {{ settings.free_sample_threshold }}">
-                        <img src="{{ product.featured_image | img_url }}" alt="{{ product.title }}">
+                        <img src="{{ product.featured_image | img_url }}" alt="{{ product.title }}" width="auto" height="auto">
                     </div>
 
                     <div x-show="($store.ajCart.cart.total_price / 100).toFixed(0) < {{ settings.free_sample_threshold }}">
@@ -60,7 +60,7 @@
     .gift-card-sample {
         display:flex;
         flex-direction: column;
-        gap:8px;
+        gap:12px;
         min-width:100px;
         max-width:100px;
         position:relative;
@@ -94,7 +94,7 @@
         display:flex;
         align-items:center;
         justify-content:center;
-        height:95px;
+        height:100px;
     }
 
     .gift-card-sample-block img {
