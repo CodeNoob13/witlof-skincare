@@ -185,17 +185,33 @@ document.addEventListener("alpine:init", () => {
 
     // Start of upsell products in cart functionality
     async getUpsellProducts(id) {
-      const categories = ["step-1", "step-2", "step-3", "step-4", "step-5"];
-
       await this.fetchAllProducts();
 
       const matchingProduct = this.allProducts.filter(
         (product) => product.id === id
       );
 
-      if (matchingProduct[0].tags.includes("step-2")) {
-        this.upsellProducts = await this.fetchCollection("step-2");
-        console.log(this.upsellProducts);
+      if (matchingProduct.length && matchingProduct[0].tags) {
+        let nextStep = 0;
+        if (matchingProduct[0].tags.includes("step-1")) {
+          nextStep = "step-2";
+        }
+        if (matchingProduct[0].tags.includes("step-2")) {
+          nextStep = "step-3";
+        }
+        if (matchingProduct[0].tags.includes("step-3")) {
+          nextStep = "step-4";
+        }
+        if (matchingProduct[0].tags.includes("step-4")) {
+          nextStep = "step-5";
+        }
+        if (nextStep) {
+          this.upsellProducts = await this.fetchCollection(nextStep);
+        } else {
+          this.upsellProducts = await this.fetchCollection("bestsellers");
+        }
+      } else {
+        this.upsellProducts = await this.fetchCollection("bestsellers");
       }
     },
 

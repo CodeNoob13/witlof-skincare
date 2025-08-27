@@ -1,9 +1,9 @@
-<div x-data class="fluct-it_upsell-container" x-show="$store.ajCart.cart.item_count > 0" role="region" aria-label="Recommended products" x-init="$nextTick(() => $store.ajCart.getUpsellProducts({{product.id}}))"> 
+<div x-data class="fluct-it_upsell-container" x-show="$store.ajCart.cart.item_count > 0" role="region" aria-label="Recommended products" x-init="$nextTick(() => $store.ajCart.getUpsellProducts({{ product.id }}))"> 
     <span class="fluct-it-upsell-title">{{  'fluctit.cart.upsell_title' | t}}</span>
     
     <div class="upsell-swiper" aria-live="polite">
         <div class="swiper-wrapper" x-init='$nextTick(() => initUpsellSwiper());'>
-            <template x-for="(item, index) in $store.ajCart.allProducts" :key="item.id">
+            <template x-for="(item, index) in $store.ajCart.upsellProducts" :key="item.id">
                 <div class="fluct-it__cart-upsell swiper-slide">
                   <a :href="'/products/' + item.handle">
                     <img 

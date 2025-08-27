@@ -32,6 +32,16 @@
         "name": "list.collection_reference",
         "category": "REFERENCE"
       }
+    },
+    {
+      "key": "hidden",
+      "namespace": "seo",
+      "name": "SEO Hidden",
+      "description": "Hide page from google",
+      "type": {
+        "name": "number_integer",
+        "category": "NUMBER"
+      }
     }
   ],
   "company": [],
