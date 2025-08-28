@@ -7,7 +7,7 @@ document.addEventListener("alpine:init", () => {
     totalComparePrice: 0,
     setLoader: false,
     upsellProducts: [],
-    openCart: true,
+    openCart: false,
 
     toggleCart() {
       this.openCart = !this.openCart;
