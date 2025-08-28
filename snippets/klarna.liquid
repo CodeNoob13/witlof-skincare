@@ -1,7 +1,7 @@
 <div x-data="{open: false}" style="position:relative; max-width:fit-content;" @click.away="open = false">
     <div class="fluctit-klarna-container">
         <img src="{{ "klarna.svg" | asset_url }}" alt="klarna logo" height="22px" width="50px" />
-        <span>Koop nu betaal later</span>
+        <span>{{  'fluctit.klarna_info.title' | t}}</span>
         <img src="{{ "question-mark.svg" | asset_url }}" alt="klarna logo" height="16px" width="16px" @click="open = !open "/>
     </div>
     <div x-cloak x-show="open" class="fluctit-klarna-modal">

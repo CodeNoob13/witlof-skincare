@@ -7,8 +7,9 @@ document.addEventListener("alpine:init", () => {
     totalComparePrice: 0,
     setLoader: false,
     upsellProducts: [],
-    openCart: true,
+    openCart: false,
     freeProductThreshold: 0,
+    freeSampleThreshold: 0,
     freeProductID: null,
 
     toggleCart() {
@@ -44,6 +45,7 @@ document.addEventListener("alpine:init", () => {
         await this.getCartProducts();
         await this.getTotalComparePrice();
         await this.getGiftSampleCount();
+        await this.getFreeThresholdGiftCount();
         console.log(this.cart.items);
         await this.removeGifts();
         this.setLoader = false;
@@ -131,7 +133,6 @@ document.addEventListener("alpine:init", () => {
         const data = await response.json();
 
         await this.fetchCart();
-
         await this.freeThresholdGift();
       } catch (error) {
         console.error("Failed to change quantity from the cart:", error);
@@ -162,7 +163,6 @@ document.addEventListener("alpine:init", () => {
         const data = await response.json();
         console.log("Added to cart");
         await this.fetchCart();
-
         await this.freeThresholdGift();
 
         this.openCartDrawer();
@@ -173,9 +173,12 @@ document.addEventListener("alpine:init", () => {
 
     // Start free gift threshold
     async freeThresholdGift() {
+      console.log(this.cart.total_price / 100);
+      console.log(this.freeProductThreshold);
       if (this.cart.total_price / 100 < this.freeProductThreshold) return;
 
       if (this.getFreeThresholdGiftCount() >= 1) return;
+
       try {
         const response = await fetch(
           window.Shopify.routes.root + "cart/add.js",
@@ -203,7 +206,7 @@ document.addEventListener("alpine:init", () => {
         }
 
         const data = await response.json();
-        await this.fetchCart(); // setLoader = false is handled in fetchCart
+        await this.fetchCart();
       } catch (error) {
         console.error("Couldn't add gift to cart:", error);
         this.setLoader = false;
@@ -285,7 +288,8 @@ document.addEventListener("alpine:init", () => {
         }
 
         const data = await response.json();
-        await this.fetchCart(); // setLoader = false is handled in fetchCart
+        await this.fetchCart();
+        // await this.freeThresholdGift();
       } catch (error) {
         console.error("Couldn't add gift to cart:", error);
         this.setLoader = false;
@@ -321,8 +325,8 @@ document.addEventListener("alpine:init", () => {
         );
 
         const data = await response.json();
-        this.fetchCart();
 
+        this.fetchCart();
         await this.freeThresholdGift();
       } catch (error) {
         console.error("Can't remove item from cart" + error);
@@ -353,7 +357,7 @@ document.addEventListener("alpine:init", () => {
         }
       }
 
-      if (this.cart.total_price / 100 < 60) {
+      if (this.cart.total_price / 100 < this.freeSampleThreshold) {
         const gifts = this.cart.items.filter(
           (item) => item.properties && item.properties._gift === "true"
         );
