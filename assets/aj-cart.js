@@ -7,7 +7,9 @@ document.addEventListener("alpine:init", () => {
     totalComparePrice: 0,
     setLoader: false,
     upsellProducts: [],
-    openCart: false,
+    openCart: true,
+    freeProductThreshold: 0,
+    freeProductID: null,
 
     toggleCart() {
       this.openCart = !this.openCart;
@@ -42,9 +44,8 @@ document.addEventListener("alpine:init", () => {
         await this.getCartProducts();
         await this.getTotalComparePrice();
         await this.getGiftSampleCount();
-        this.removeGifts();
-        console.log(cart.items);
-
+        console.log(this.cart.items);
+        await this.removeGifts();
         this.setLoader = false;
       } catch (error) {
         console.error("Error fetching cart:", error);
@@ -110,10 +111,10 @@ document.addEventListener("alpine:init", () => {
     async changeQuantity(line, newQuantity, oldQuantity) {
       this.setLoader = true;
 
-      if (!oldQuantity) {
-        this.setLoader = false;
-        return;
-      }
+      // if (!oldQuantity) {
+      //   this.setLoader = false;
+      //   return;
+      // }
 
       try {
         const response = await fetch(
@@ -130,6 +131,8 @@ document.addEventListener("alpine:init", () => {
         const data = await response.json();
 
         await this.fetchCart();
+
+        await this.freeThresholdGift();
       } catch (error) {
         console.error("Failed to change quantity from the cart:", error);
         this.setLoader = false; // Make sure to set loader to false even on error
@@ -157,7 +160,10 @@ document.addEventListener("alpine:init", () => {
         );
 
         const data = await response.json();
+        console.log("Added to cart");
         await this.fetchCart();
+
+        await this.freeThresholdGift();
 
         this.openCartDrawer();
       } catch (error) {
@@ -166,10 +172,42 @@ document.addEventListener("alpine:init", () => {
     },
 
     // Start free gift threshold
-    async freeThresholdGift(id) {
-      if (this.cart.total_price < 80) return;
+    async freeThresholdGift() {
+      if (this.cart.total_price / 100 < this.freeProductThreshold) return;
 
-      await this.addToCart(id);
+      if (this.getFreeThresholdGiftCount() >= 1) return;
+      try {
+        const response = await fetch(
+          window.Shopify.routes.root + "cart/add.js",
+          {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
+            },
+            body: JSON.stringify({
+              items: [
+                {
+                  id: this.freeProductID,
+                  quantity: 1,
+                  properties: {
+                    _freeThresholdGift: "true",
+                  },
+                },
+              ],
+            }),
+          }
+        );
+
+        if (!response.ok) {
+          throw new Error(`HTTP error! status: ${response.status}`);
+        }
+
+        const data = await response.json();
+        await this.fetchCart(); // setLoader = false is handled in fetchCart
+      } catch (error) {
+        console.error("Couldn't add gift to cart:", error);
+        this.setLoader = false;
+      }
     },
 
     async fetchCollection(handle) {
@@ -284,6 +322,8 @@ document.addEventListener("alpine:init", () => {
 
         const data = await response.json();
         this.fetchCart();
+
+        await this.freeThresholdGift();
       } catch (error) {
         console.error("Can't remove item from cart" + error);
       }
@@ -294,7 +334,25 @@ document.addEventListener("alpine:init", () => {
       return this.cart.items.filter((item) => item.properties._gift).length;
     },
 
+    getFreeThresholdGiftCount() {
+      if (!this.cart.items) return 0;
+      return this.cart.items.filter(
+        (item) => item.properties._freeThresholdGift
+      ).length;
+    },
+
     removeGifts() {
+      if (this.cart.total_price / 100 < this.freeProductThreshold) {
+        const thresholdGift = this.cart.items.filter(
+          (item) =>
+            item.properties && item.properties._freeThresholdGift === "true"
+        );
+
+        if (thresholdGift) {
+          thresholdGift.forEach((gift) => this.removeItem(gift.id));
+        }
+      }
+
       if (this.cart.total_price / 100 < 60) {
         const gifts = this.cart.items.filter(
           (item) => item.properties && item.properties._gift === "true"
@@ -328,7 +386,7 @@ if (AddToCartButton) {
             // Open cart after fetching updated cart data
             Alpine.store("ajCart").openCart = true;
           });
-      }, 700);
+      }, 800);
     })
   );
 
@@ -342,7 +400,7 @@ if (AddToCartButton) {
               // Open cart after fetching updated cart data
               Alpine.store("ajCart").openCart = true;
             });
-        }, 700);
+        }, 800);
       })
     );
   }
