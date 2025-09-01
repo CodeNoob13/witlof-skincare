@@ -1,6 +1,6 @@
 <div x-data x-show="$store.ajCart.cart.item_count > 0" class="fluctit-online-consult">
   <div class="cart-discount-block">
-    {% comment %} <div class="discount-form-container">
+    <div class="discount-form-container">
       <div class="discount-input-group">
         <input 
           type="text" 
@@ -9,10 +9,10 @@
           class="discount-input"
           id="discount-input"
         >
- <button type="button" class="discount-apply-btn" id="discount-apply">
-  <span class="btn-text">{{ 'cart.mini_cart.discount.apply' | t }}</span>
-  <span class="btn-loading" style="display: none;">{{ 'cart.mini_cart.discount.loading' | t }}</span>
-</button>
+        <button type="button" class="discount-apply-btn" id="discount-apply">
+          <span class="btn-text">{{ 'cart.mini_cart.discount.apply' | t }}</span>
+          <span class="btn-loading" style="display: none;">{{ 'cart.mini_cart.discount.loading' | t }}</span>
+        </button>
       </div>
       <div class="discount-message" id="discount-message" style="display: none;"></div>
       <div class="applied-discounts" id="applied-discounts" style="display: none;"></div>
@@ -26,47 +26,42 @@
           {%- endfor -%}
         </div>
       {%- endif -%}
-    </div> {% endcomment %}
+    </div>
   </div>
 </div>
 
-
 <script>
-  window.addEventListener("DCART:appApi.initialized", function (e) {
-    DCART.discountbox.placement = {
-      ajaxDicountSelector: {
-        path: ".cart-discount-block",
-        type: 0,
-      },
-      ajaxTotalSelector: {
-        path: ".fluct-it-cart__footer-total-price",
-        type: 0,
-      },
-    }
-  });
-
-  function setupDiscountButton() {
-  
-    const btn = document.querySelector('#discount-apply');
+ function setupDiscountButton() {
+    const btn = document.querySelector('.discount-apply-btn');
     const input = document.querySelector('#discount-input');
-    if (btn && input && window.DCART && DCART.discountbox && typeof DCART.discountbox.applyDiscount === 'function') {
+    const discountValue = document.querySelector('#discount-name');
+    const remove_button = document.querySelector('.discount-remove');
+
+    if (input) {
       btn.addEventListener('click', function() {
-        dcartAPI.discount.apply(input.value);
-      setTimeout(Alpine.store("ajCart").fetchCart(), 1000);
+      dcartAPI.discount.apply(input.value);
+      Alpine.store("ajCart").fetchCart()
       });
-    } else {
-      setupDiscountButton()
     }
+
+    remove_button.addEventListener('click', (e) => {
+      dcartAPI.discount.remove()
+      Alpine.store("ajCart").fetchCart()
+    })
   }
 
-  setTimeout(setupDiscountButton, 200);
+  
 
+
+  window.addEventListener("DCART:appApi.initialized", function (e) {
+    setupDiscountButton()
+  })
 
 </script>
 
-
 <style>
 .cart-discount-block {
+  padding: 15px;
   border-radius: 4px;
 }
 
@@ -76,14 +71,15 @@
   margin-bottom: 10px;
 }
 
-.scDiscount input[type=text]  {
+.discount-input {
+  flex: 1;
   padding: 8px 12px;
   background:#F6F6F8;
   border-radius: 4px;
   font-size: 14px;
 }
 
-.discount-apply-btn, .scDiscount input[type=button], .scDiscount input[type=submit] {
+.discount-apply-btn {
   padding: 8px 24px;
   background: #4AB9CB;
   color: white;
@@ -91,36 +87,10 @@
   border-radius: 100px;
   cursor: pointer;
   font-size: 14px;
-  margin-left:8px;
-}
-
-.sc-tag-container-detailed {
-transition:none;
-}
-
-.scDiscount.scright>div {
-  margin:0;
-  width:100%;
-  padding:8px 20px;
-}
-
-.sc-cube-text {
-  font-size:14px;
 }
 
 .discount-apply-btn:hover {
   background: #333;
-}
-
-.sc-cube-text {
-  margin-right:8px;
-}
-
-#scDiscountApp .truck,
-#scDiscountApp .wheel,
-#scDiscountApp .back,
-#scDiscountApp .front, {
-  display: none !important;
 }
 
 .discount-apply-btn:disabled {
