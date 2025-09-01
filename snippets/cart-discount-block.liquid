@@ -1,5 +1,4 @@
 <div x-data x-show="$store.ajCart.cart.item_count > 0" class="fluctit-online-consult">
-
   <div class="cart-discount-block">
     <div class="discount-form-container">
       <div class="discount-input-group">
@@ -10,384 +9,66 @@
           class="discount-input"
           id="discount-input"
         >
-          <button type="button" class="discount-apply-btn" id="discount-apply" onclick="applyDiscount()">
-            <span class="btn-text">{{ 'cart.mini_cart.discount.apply' | t }}</span>
-            <span class="btn-loading" style="display: none;">{{ 'cart.mini_cart.discount.loading' | t }}</span>
-          </button>
-        </div>
-        
-        <div class="discount-message" id="discount-message" style="display: none;"></div>
-        
-        <!-- Container for applied discount codes -->
-        <div class="applied-discounts" id="applied-discounts" style="display: none;"></div>
-        
-        {%- if cart.cart_level_discount_applications.size > 0 -%}
-          <div class="active-discounts">
-            {%- for discount in cart.cart_level_discount_applications -%}
-              <div class="discount-item">
-                <span class="discount-name">{{ discount.title }}</span>
-                {% comment %} <span class="discount-amount">
-                  {%- if discount.value_type == 'percentage' -%}
-                    {%- assign percentage_value = discount.value | round -%}
-                    {{ percentage_value }}%
-                    {%- else -%}
-                      {{ discount.total_allocated_amount | money }}
-                      {%- endif -%}
-                      </span> {% endcomment %}
-                      <span class="discount-remove" onclick="removeDiscount('{{ discount.title }}')">×</span>
-                    </div>
-                  {%- endfor -%}
-                </div>
-              {%- endif -%}
+ <button type="button" class="discount-apply-btn" id="discount-apply">
+  <span class="btn-text">{{ 'cart.mini_cart.discount.apply' | t }}</span>
+  <span class="btn-loading" style="display: none;">{{ 'cart.mini_cart.discount.loading' | t }}</span>
+</button>
+      </div>
+      <div class="discount-message" id="discount-message" style="display: none;"></div>
+      <div class="applied-discounts" id="applied-discounts" style="display: none;"></div>
+      {%- if cart.cart_level_discount_applications.size > 0 -%}
+        <div class="active-discounts">
+          {%- for discount in cart.cart_level_discount_applications -%}
+            <div class="discount-item">
+              <span class="discount-name">{{ discount.title }}</span>
+              <span class="discount-remove">×</span>
             </div>
-          </div>
+          {%- endfor -%}
         </div>
-          
-<!-- Cart footer discount must be modified-->
+      {%- endif -%}
+    </div>
+  </div>
+</div>
+
 
 <script>
-
-// Test function to verify script is loading
-console.log('Discount script loaded');
-
-// Simple approach without complex event listeners
-function applyDiscount() {
-
-  console.log('Apply discount clicked');
-  
-  const input = document.getElementById('discount-input');
-  const button = document.getElementById('discount-apply');
-  const message = document.getElementById('discount-message');
-  
-  
-  const code = input.value.trim();
-  
-  if (!code) {
-    return;
-  }
-  
-  // Show loading
-  button.querySelector('.btn-text').style.display = 'none';
-  button.querySelector('.btn-loading').style.display = 'inline';
-  button.disabled = true;
-  
-  // Apply discount by submitting to discount endpoint and then refreshing cart
-  fetch(`/discount/${encodeURIComponent(code)}`, {
-    method: 'GET',
-    credentials: 'same-origin'
-  })
-  .then(response => {
-    console.log('Discount response:', response);
-    
-    // Reset button state first
-    button.querySelector('.btn-text').style.display = 'inline';
-    button.querySelector('.btn-loading').style.display = 'none';
-    button.disabled = false;
-    
-    // Check cart to see if discount was applied
-    return fetch('/cart.js', {
-      credentials: 'same-origin'
-    });
-  })
-  .then(response => response.json())
-  .then(cart => {
-    console.log('Cart after discount attempt:', cart);
-    
-    // Check if discount was actually applied
-    const hasDiscount = cart.cart_level_discount_applications && 
-                       cart.cart_level_discount_applications.length > 0;
-    
-    if (hasDiscount) {
-      input.value = '';
-      
-      // Show the applied discount immediately below the input
-      const latestDiscount = cart.cart_level_discount_applications[cart.cart_level_discount_applications.length - 1];
-      showAppliedDiscount(latestDiscount);
-      
-      // Update cart prices in footer
-      if (window.updateCartPrices) {
-        window.updateCartPrices(cart);
-      }
-      
-      // Refresh the entire cart drawer
-      if (window.ajCart && window.ajCart.fetchCart) {
-        window.ajCart.fetchCart();
-      } else {
-        // Fallback: reload the page to show the updated cart
-        {% comment %} window.location.reload(); {% endcomment %}
-      }
-      
-      // Trigger cart update events
-      document.dispatchEvent(new CustomEvent('cart:updated', { detail: cart }));
-      
-    } else {
-      // Discount not applied - no message shown
-    }
-  })
-  .catch(error => {
-    console.error('Discount error:', error);
-    
-    // Reset button state
-    button.querySelector('.btn-text').style.display = 'inline';
-    button.querySelector('.btn-loading').style.display = 'none';
-    button.disabled = false;
-  });
-}
-
-function removeDiscount(title) {
-  console.log('Remove discount clicked');
-  
-  // Prevent default behavior
-  if (event) event.preventDefault();
-  
-  // Method 1: Try to update cart with empty discount code
-  const formData = new FormData();
-  formData.append('discount', '');
-  formData.append('note', '');
-  
-  fetch('/cart/update.js', {
-    method: 'POST',
-    headers: {
-      'Accept': 'application/json',
-      'X-Requested-With': 'XMLHttpRequest'
-    },
-    body: formData
-  })
-  .then(response => response.json())
-  .then(cart => {
-    console.log('Cart updated after discount removal:', cart);
-    
-    // Check if discount was actually removed
-    const hasDiscount = cart.cart_level_discount_applications && 
-                       cart.cart_level_discount_applications.length > 0;
-    
-    if (!hasDiscount) {
-      
-      // Update cart prices in footer
-      if (window.updateCartPrices) {
-        window.updateCartPrices(cart);
-      }
-    
-      // Hide the applied discount display
-      const container = document.getElementById('applied-discounts');
-      if (container) {
-        container.style.display = 'none';
-        container.innerHTML = '';
-      }
-      
-      // Force multiple cart update methods
-      // Method 1: Update ajCart if available
-      if (window.ajCart && window.ajCart.fetchCart) {
-        window.ajCart.fetchCart();
-      }
-      
-      // Method 2: Trigger cart update events
-      document.dispatchEvent(new CustomEvent('cart:updated'));
-      
-      // Method 3: Try to trigger theme-specific cart updates
-      if (window.theme && window.theme.updateCart) {
-        window.theme.updateCart();
-      }
-      
-      // Method 4: Force refresh cart display elements
-      setTimeout(() => {
-        // Look for common cart update functions
-        if (window.cartUpdate) window.cartUpdate();
-        if (window.updateCartDrawer) window.updateCartDrawer();
-        if (window.refreshCart) window.refreshCart();
-        
-        // Update Alpine.js cart store
-        if (window.Alpine && window.Alpine.store('ajCart')) {
-          window.Alpine.store('ajCart').fetchCart();
-        }
-        
-        // Trigger additional events that themes might listen to
-        document.dispatchEvent(new CustomEvent('cart:refresh'));
-        document.dispatchEvent(new CustomEvent('drawer:refresh'));
-        
-        // Force reload of cart elements if they exist
-        const cartElements = document.querySelectorAll('[data-cart-item], .cart-item, .mini-cart-item');
-        if (cartElements.length > 0) {
-          // Dispatch event specifically for cart items
-          cartElements.forEach(element => {
-            element.dispatchEvent(new CustomEvent('cart:item:update', { bubbles: true }));
-          });
-        }
-      }, 100);
-      
-    } else {
-      // Method 2: Try the clear endpoint with POST
-      tryDiscountClear();
-    }
-  })
-  .catch(error => {
-    console.error('Cart update error:', error);
-    // Fallback to clear endpoint
-    tryDiscountClear();
-  });
-}
-
-function tryDiscountClear() {
-  fetch('/discount/clear', {
-    method: 'POST',
-    headers: {
-      'Accept': 'application/json',
-      'X-Requested-With': 'XMLHttpRequest',
-      'Content-Type': 'application/x-www-form-urlencoded'
-    },
-    body: '',
-    redirect: 'manual'
-  })
-  .then(response => {
-    console.log('Discount clear response:', response.status);
-    
-    // Update cart to check if discount was removed
-    return fetch('/cart.js')
-      .then(cartResponse => cartResponse.json())
-      .then(cart => {
-        const hasDiscount = cart.cart_level_discount_applications && 
-                           cart.cart_level_discount_applications.length > 0;
-        
-        if (!hasDiscount) {
-          // Discount successfully removed
-          
-          // Update cart prices in footer
-          if (window.updateCartPrices) {
-            window.updateCartPrices(cart);
-          }
-          
-          // Hide the applied discount display
-          const container = document.getElementById('applied-discounts');
-          if (container) {
-            container.style.display = 'none';
-            container.innerHTML = '';
-          }
-          
-          // Force multiple cart update methods
-          // Method 1: Update ajCart if available
-          if (window.ajCart && window.ajCart.fetchCart) {
-            window.ajCart.fetchCart();
-          }
-          
-          // Method 2: Trigger cart update events
-          document.dispatchEvent(new CustomEvent('cart:updated'));
-          
-          // Method 3: Try to trigger theme-specific cart updates
-          if (window.theme && window.theme.updateCart) {
-            window.theme.updateCart();
-          }
-          
-          // Method 4: Force refresh cart display elements
-          setTimeout(() => {
-            // Look for common cart update functions
-            if (window.cartUpdate) window.cartUpdate();
-            if (window.updateCartDrawer) window.updateCartDrawer();
-            if (window.refreshCart) window.refreshCart();
-            
-            // Update Alpine.js cart store
-            if (window.Alpine && window.Alpine.store('ajCart')) {
-              window.Alpine.store('ajCart').fetchCart();
-            }
-            
-            // Trigger additional events that themes might listen to
-            document.dispatchEvent(new CustomEvent('cart:refresh'));
-            document.dispatchEvent(new CustomEvent('drawer:refresh'));
-            
-            // Force reload of cart elements if they exist
-            const cartElements = document.querySelectorAll('[data-cart-item], .cart-item, .mini-cart-item');
-            if (cartElements.length > 0) {
-              // Dispatch event specifically for cart items
-              cartElements.forEach(element => {
-                element.dispatchEvent(new CustomEvent('cart:item:update', { bubbles: true }));
-              });
-            }
-          }, 100);
-          
-        } else {
-          // Could not remove discount
-        }
+(function () {
+  function setupDiscountButton() {
+    const btn = document.querySelector('#discount-apply');
+    const input = document.querySelector('#discount-input');
+    if (btn && input && window.DCART && DCART.discountbox && typeof DCART.discountbox.applyDiscount === 'function') {
+      btn.addEventListener('click', function() {
+        DCART.discountbox.applyDiscount(input.value);
       });
-  })
-  .catch(error => {
-    console.error('Discount clear error:', error);
-  });
-}
-
-function showAppliedDiscount(discount) {
-  console.log('Showing applied discount:', discount);
-  const container = document.getElementById('applied-discounts');
-  if (container && discount) {
-    // Format discount value based on type (percentage vs fixed amount)
-    let discountDisplay;
-    if (discount.value_type === 'percentage') {
-      // Show percentage for percentage-based discounts, remove unnecessary decimals
-      const percentage = parseFloat(discount.value);
-      discountDisplay = `${percentage % 1 === 0 ? percentage.toFixed(0) : percentage}%`;
     } else {
-      // Show money amount for fixed amount discounts
-      discountDisplay = `${formatMoney(discount.total_allocated_amount)}`;
+      setTimeout(setupDiscountButton, 200);
     }
-    
-    // Clear any previous discount display (only one can be active at a time)
-    container.innerHTML = `
-      <div class="discount-item">
-        <span class="discount-name">${discount.title}</span>
-        <span class="discount-remove" onclick="removeDiscount('${discount.title}')">×</span>
-      </div>
-    `;
-    container.style.display = 'block';
-    
-    // Add a subtle animation to draw attention
-    container.style.opacity = '0';
-    setTimeout(() => {
-      container.style.transition = 'opacity 0.3s ease-in-out';
-      container.style.opacity = '1';
-    }, 50);
   }
-}
+  setupDiscountButton();
 
-function formatMoney(cents) {
-  // Simple money formatting - adjust currency symbol as needed
-  return (cents / 100).toFixed(0);
-}
-
-// Add click event when page loads
-document.addEventListener('DOMContentLoaded', function() {
-  const button = document.getElementById('discount-apply');
-  if (button) {
-    button.addEventListener('click', applyDiscount);
-  }
-  
-  // Add enter key support
-  const input = document.getElementById('discount-input');
-  if (input) {
-    input.addEventListener('keypress', function(e) {
-      if (e.key === 'Enter') {
-        applyDiscount();
-      }
-    });
-  }
-  
-  // Check for existing applied discounts and display them
-  checkAndDisplayExistingDiscounts();
-});
-
-// Function to check and display any existing discounts
-function checkAndDisplayExistingDiscounts() {
-  fetch('/cart.js')
-    .then(response => response.json())
-    .then(cart => {
-      if (cart.cart_level_discount_applications && cart.cart_level_discount_applications.length > 0) {
-        // Show the most recent discount
-        const latestDiscount = cart.cart_level_discount_applications[cart.cart_level_discount_applications.length - 1];
-        showAppliedDiscount(latestDiscount);
-      }
-    })
-    .catch(error => {
-      console.log('Could not fetch cart discounts:', error);
-    });
-}
+  window.addEventListener("DCART:config.initialized", function (e) {
+    DCART.discountbox.placement = {
+      cartDiscountSelector: {
+        path: ".cart-discount-block",
+        type: 0,
+      },
+      ajaxDicountSelector: {
+        path: ".cart-discount-block",
+        type: 0,
+      },
+      cartTotalSelector: {
+        path: ".fluct-it-cart__footer-total-price",
+        type: 0,
+      },
+      ajaxTotalSelector: {
+        path: ".fluct-it-cart__footer-total-price",
+        type: 0,
+      },
+    }
+  });
+})(window);
 </script>
+
 
 <style>
 .cart-discount-block {
@@ -404,7 +85,7 @@ function checkAndDisplayExistingDiscounts() {
 .discount-input {
   flex: 1;
   padding: 8px 12px;
-    background:#F6F6F8;
+  background:#F6F6F8;
   border-radius: 4px;
   font-size: 14px;
 }
@@ -461,7 +142,7 @@ function checkAndDisplayExistingDiscounts() {
 }
 
 .discount-item {
-    width: fit-content;
+  width: fit-content;
   display: flex;
   align-items: center;
   padding: 2px 6px;
