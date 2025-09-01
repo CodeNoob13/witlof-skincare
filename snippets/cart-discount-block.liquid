@@ -1,6 +1,6 @@
 <div x-data x-show="$store.ajCart.cart.item_count > 0" class="fluctit-online-consult">
   <div class="cart-discount-block">
-    <div class="discount-form-container">
+    {% comment %} <div class="discount-form-container">
       <div class="discount-input-group">
         <input 
           type="text" 
@@ -26,38 +26,16 @@
           {%- endfor -%}
         </div>
       {%- endif -%}
-    </div>
+    </div> {% endcomment %}
   </div>
 </div>
 
 
 <script>
-(function () {
-  function setupDiscountButton() {
-    const btn = document.querySelector('#discount-apply');
-    const input = document.querySelector('#discount-input');
-    if (btn && input && window.DCART && DCART.discountbox && typeof DCART.discountbox.applyDiscount === 'function') {
-      btn.addEventListener('click', function() {
-        DCART.discountbox.applyDiscount(input.value);
-      });
-    } else {
-      setTimeout(setupDiscountButton, 200);
-    }
-  }
-  setupDiscountButton();
-
-  window.addEventListener("DCART:config.initialized", function (e) {
+  window.addEventListener("DCART:appApi.initialized", function (e) {
     DCART.discountbox.placement = {
-      cartDiscountSelector: {
-        path: ".cart-discount-block",
-        type: 0,
-      },
       ajaxDicountSelector: {
         path: ".cart-discount-block",
-        type: 0,
-      },
-      cartTotalSelector: {
-        path: ".fluct-it-cart__footer-total-price",
         type: 0,
       },
       ajaxTotalSelector: {
@@ -66,13 +44,29 @@
       },
     }
   });
-})(window);
+
+  function setupDiscountButton() {
+  
+    const btn = document.querySelector('#discount-apply');
+    const input = document.querySelector('#discount-input');
+    if (btn && input && window.DCART && DCART.discountbox && typeof DCART.discountbox.applyDiscount === 'function') {
+      btn.addEventListener('click', function() {
+        dcartAPI.discount.apply(input.value);
+      setTimeout(Alpine.store("ajCart").fetchCart(), 1000);
+      });
+    } else {
+      setupDiscountButton()
+    }
+  }
+
+  setTimeout(setupDiscountButton, 200);
+
+
 </script>
 
 
 <style>
 .cart-discount-block {
-  padding: 15px;
   border-radius: 4px;
 }
 
@@ -82,15 +76,14 @@
   margin-bottom: 10px;
 }
 
-.discount-input {
-  flex: 1;
+.scDiscount input[type=text]  {
   padding: 8px 12px;
   background:#F6F6F8;
   border-radius: 4px;
   font-size: 14px;
 }
 
-.discount-apply-btn {
+.discount-apply-btn, .scDiscount input[type=button], .scDiscount input[type=submit] {
   padding: 8px 24px;
   background: #4AB9CB;
   color: white;
@@ -98,10 +91,36 @@
   border-radius: 100px;
   cursor: pointer;
   font-size: 14px;
+  margin-left:8px;
+}
+
+.sc-tag-container-detailed {
+transition:none;
+}
+
+.scDiscount.scright>div {
+  margin:0;
+  width:100%;
+  padding:8px 20px;
+}
+
+.sc-cube-text {
+  font-size:14px;
 }
 
 .discount-apply-btn:hover {
   background: #333;
+}
+
+.sc-cube-text {
+  margin-right:8px;
+}
+
+#scDiscountApp .truck,
+#scDiscountApp .wheel,
+#scDiscountApp .back,
+#scDiscountApp .front, {
+  display: none !important;
 }
 
 .discount-apply-btn:disabled {

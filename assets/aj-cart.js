@@ -7,7 +7,7 @@ document.addEventListener("alpine:init", () => {
     totalComparePrice: 0,
     setLoader: false,
     upsellProducts: [],
-    openCart: false,
+    openCart: true,
     freeProductThreshold: 0,
     freeSampleThreshold: 0,
     freeProductID: null,
