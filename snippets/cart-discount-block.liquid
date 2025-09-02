@@ -16,46 +16,54 @@
       </div>
       <div class="discount-message" id="discount-message" style="display: none;"></div>
       <div class="applied-discounts" id="applied-discounts" style="display: none;"></div>
-      {%- if cart.cart_level_discount_applications.size > 0 -%}
+       {% comment %} <template x-show="$store.ajCart.cart.cart_level_discount_applications">  {% endcomment %}
+        <template x-for="(item, index) in $store.ajCart.cart.cart_level_discount_applications">
+
         <div class="active-discounts">
-          {%- for discount in cart.cart_level_discount_applications -%}
-            <div class="discount-item">
-              <span class="discount-name">{{ discount.title }}</span>
-              <span class="discount-remove">×</span>
+
+            <div class="discount-item" key="index">
+              <span class="discount-name" x-text="item.title" @click="console.log('hello')"></span>
+              <span
+  class="discount-remove"
+>×</span>
             </div>
-          {%- endfor -%}
+
         </div>
-      {%- endif -%}
+       {% comment %} </template>  {% endcomment %}
+      </template>
     </div>
   </div>
 </div>
 
 <script>
- function setupDiscountButton() {
-    const btn = document.querySelector('.discount-apply-btn');
-    const input = document.querySelector('#discount-input');
-    const discountValue = document.querySelector('#discount-name');
-    const remove_button = document.querySelector('.discount-remove');
+window.addEventListener('DCART:appApi.initialized', function() {
+  const input = document.querySelector('.discount-input');
+  const applyBtn = document.querySelector('.discount-apply-btn');
 
-    if (input) {
-      btn.addEventListener('click', function() {
-      dcartAPI.discount.apply(input.value);
-      Alpine.store("ajCart").fetchCart()
-      });
-    }
-
-    remove_button.addEventListener('click', (e) => {
-      dcartAPI.discount.remove()
-      Alpine.store("ajCart").fetchCart()
-    })
+  // Apply Discount
+  if (input && applyBtn) {
+    applyBtn.addEventListener('click', () => {
+      dcartAPI.discount.apply(input.value.trim())
+        .then(() => Alpine.store("ajCart").fetchCart());
+      input.value = "";
+    });
   }
 
-  
+  // Remove Discount
+  document.body.addEventListener('click', function(e) {
+    const removeBtn = e.target.closest('.discount-remove');
+    if (removeBtn) {
+      console.log('[DCART] Remove clicked');
+      dcartAPI.discount.remove()
+        .then(() => {
+          console.log('[DCART] Removed successfully');
+          Alpine.store("ajCart").fetchCart();
+        })
+        .catch(err => console.error('Error removing discount:', err));
+    }
+  });
 
-
-  window.addEventListener("DCART:appApi.initialized", function (e) {
-    setupDiscountButton()
-  })
+});
 
 </script>
 

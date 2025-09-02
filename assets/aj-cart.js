@@ -7,7 +7,7 @@ document.addEventListener("alpine:init", () => {
     totalComparePrice: 0,
     setLoader: false,
     upsellProducts: [],
-    openCart: true,
+    openCart: false,
     freeProductThreshold: 0,
     freeSampleThreshold: 0,
     freeProductID: null,
@@ -46,7 +46,7 @@ document.addEventListener("alpine:init", () => {
         await this.getTotalComparePrice();
         await this.getGiftSampleCount();
         await this.getFreeThresholdGiftCount();
-        console.log(this.cart.items);
+        console.log(this.cart.cart_level_discount_applications[0]);
         await this.removeGifts();
         this.setLoader = false;
       } catch (error) {
@@ -387,10 +387,9 @@ if (AddToCartButton) {
         Alpine.store("ajCart")
           .fetchCart()
           .then(() => {
-            // Open cart after fetching updated cart data
-            Alpine.store("ajCart").openCart = true;
+            Alpine.store("ajCart").openCartDrawer();
           });
-      }, 800);
+      }, 1000);
     })
   );
 
@@ -401,10 +400,9 @@ if (AddToCartButton) {
           Alpine.store("ajCart")
             .fetchCart()
             .then(() => {
-              // Open cart after fetching updated cart data
-              Alpine.store("ajCart").openCart = true;
+              Alpine.store("ajCart").openCartDrawer();
             });
-        }, 800);
+        }, 1000);
       })
     );
   }

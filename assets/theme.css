@@ -2605,13 +2605,13 @@ body.t4s-prevent-scrolling {
    12A. LOCK SCROLL
    ========================================================================== */
 
-.t4s-lock-scroll {
+/* .t4s-lock-scroll {
   overflow: hidden;
 }
 [data-t4s-scroll-me] {
   overflow: auto;
   -webkit-overflow-scrolling: touch;
-}
+} */
 
 /* ==========================================================================
    12B. HEADER
