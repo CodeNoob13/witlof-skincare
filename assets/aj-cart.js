@@ -11,6 +11,8 @@ document.addEventListener("alpine:init", () => {
     freeProductThreshold: 0,
     freeSampleThreshold: 0,
     freeProductID: null,
+    showFreeSamples: null,
+    singleFreeSampleID: null,
 
     toggleCart() {
       this.openCart = !this.openCart;
@@ -46,8 +48,10 @@ document.addEventListener("alpine:init", () => {
         await this.getTotalComparePrice();
         await this.getGiftSampleCount();
         await this.getFreeThresholdGiftCount();
-        console.log(this.cart.item_count);
         await this.removeGifts();
+
+        console.log(this.cart);
+
         this.setLoader = false;
       } catch (error) {
         console.error("Error fetching cart:", error);
@@ -173,8 +177,6 @@ document.addEventListener("alpine:init", () => {
 
     // Start free gift threshold
     async freeThresholdGift() {
-      console.log(this.cart.total_price / 100);
-      console.log(this.freeProductThreshold);
       if (this.cart.total_price / 100 < this.freeProductThreshold) return;
 
       if (this.getFreeThresholdGiftCount() >= 1) return;
@@ -257,8 +259,17 @@ document.addEventListener("alpine:init", () => {
     },
 
     async addGiftProduct(productID) {
-      if (this.getGiftSampleCount() === 2) return;
+      // this.singleFreeSampleID;
 
+      // let name;
+
+      // if (this.showFreeSamples) {
+      //   name = "_thresholdSample";
+      // } else {
+      //   name = "_thresholdGift";
+      // }
+
+      if (this.getGiftSampleCount() === 2) return;
       this.setLoader = true;
 
       try {
@@ -296,6 +307,12 @@ document.addEventListener("alpine:init", () => {
       }
     },
 
+    getGiftSampleCount(_property) {
+      if (!this.cart.items) return 0;
+      // if(_property === )
+      return this.cart.items.filter((item) => item.properties._gift).length;
+    },
+
     giftInCart(id) {
       if (!this.cart.items) return false;
 
@@ -331,11 +348,6 @@ document.addEventListener("alpine:init", () => {
       } catch (error) {
         console.error("Can't remove item from cart" + error);
       }
-    },
-
-    getGiftSampleCount() {
-      if (!this.cart.items) return 0;
-      return this.cart.items.filter((item) => item.properties._gift).length;
     },
 
     getFreeThresholdGiftCount() {

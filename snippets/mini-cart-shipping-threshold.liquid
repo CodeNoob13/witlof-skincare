@@ -1,4 +1,4 @@
-<div x-data x-init="$store.ajCart.freeProductThreshold = {{ settings.free_sample_product_threshold | plus: 0 }}; $store.ajCart.freeProductID = {{ settings.free_product_gift.variants[0].id }}; $store.ajCart.freeSampleThreshold = {{ settings.free_sample_threshold }}">
+<div x-data x-init="$store.ajCart.freeProductThreshold = {{ settings.free_sample_product_threshold | plus: 0 }}; $store.ajCart.freeProductID = {{ settings.free_product_gift.variants[0].id }}; $store.ajCart.freeSampleThreshold = {{ settings.free_sample_threshold }}; $store.ajCart.showFreeSamples = {{ settings.show_free_samples }}">
     <div x-show="($store.ajCart.cart.total_price / 100).toFixed(2) > 0" class="fluct-it__gift-list">
         <div
             class="fluct-it__gift-box active"

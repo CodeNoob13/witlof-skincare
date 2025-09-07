@@ -3,7 +3,8 @@
   <template x-for="(item, index) in $store.ajCart.cart.items">
     <div class="fluct-it__cart-item" :class="index === 0 ? 'fluct-it__border-top' : ''" :key="item.id">
       <div class="fluct-it__cart-item-content">
-        <a :href="'/products/' + item.handle" aria-label="Go to product page">
+        <a :href="!item.properties?._thresholdSample && !item.properties?._freeThresholdGift && !item.properties?._thresholdGift  ? '/products/' + item.handle : null"
+ aria-label="Go to product page">
           <img :src="item.featured_image.url" :alt="item.featured_image.alt" class="fluct-it__cart-item-image" height="auto" width="auto">
         </a>
         <div class="fluct-it__cart-item-details">
@@ -13,7 +14,9 @@
         </div>
       </div>
 
-      <div class="fluct-it__cart-item-actions" x-show="!item.properties?._gift && !item.properties?._freeThresholdGift">
+   <div class="fluct-it__cart-item-actions" x-show="!item.properties?._thresholdSample && !item.properties?._freeThresholdGift && !item.properties?._thresholdGift">
+
+
 
         <div class="fluct-it__quantity-selectors" >
           <div class="fluct-it__quantity-selector" @click="$store.ajCart.changeQuantity(index + 1, item.quantity - 1, item.available)">
