@@ -46,7 +46,7 @@ document.addEventListener("alpine:init", () => {
         await this.getTotalComparePrice();
         await this.getGiftSampleCount();
         await this.getFreeThresholdGiftCount();
-        console.log(this.cart.cart_level_discount_applications[0]);
+        console.log(this.cart.item_count);
         await this.removeGifts();
         this.setLoader = false;
       } catch (error) {

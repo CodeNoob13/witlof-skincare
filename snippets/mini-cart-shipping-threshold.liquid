@@ -48,7 +48,12 @@
                 {% render 'shipping-threshold-2' %}
             </picture>
             <div class="fluct-it__gift-info">
-                <span class="fluct-it__gift-text">{{ 'fluctit.cart.free_sample' | t }}</span>
+                <span class="fluct-it__gift-text">
+                    {% if settings.free_sample_text != blank %}
+                        {{ settings.free_sample_text }}
+                    {% else %}
+                        {{ 'fluctit.free_sample' | t }}
+                    {% endif %}</span>
                 <span class="fluct-it__gift-price">€{{ settings.free_sample_threshold }}</span>
             </div>
         </div>

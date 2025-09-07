@@ -1953,6 +1953,19 @@
         "default": 60
       },
       {
+        "type": "checkbox",
+        "id": "show_free_samples",
+        "label": "Free samples",
+        "default": false,
+        "info": "Check this to show the free samples"
+      },
+      {
+        "type": "text",
+        "id": "free_sample_text",
+        "label": "Free sample text",
+        "info": "Replaces the free sample text"
+      },
+      {
         "type": "product_list",
         "id": "free_sample_products",
         "label": "Free sample products",
