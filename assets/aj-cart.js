@@ -1,6 +1,8 @@
 document.addEventListener("alpine:init", () => {
   console.log("Alpine.js initializing cart store");
+
   Alpine.store("ajCart", {
+    // ===== STATE PROPERTIES =====
     cartDiscount: 0,
     cart: {},
     allProducts: [],
@@ -14,6 +16,7 @@ document.addEventListener("alpine:init", () => {
     showFreeSamples: null,
     singleFreeSampleID: null,
 
+    // ===== CART DRAWER CONTROLS =====
     toggleCart() {
       this.openCart = !this.openCart;
       this.toggleBodyScroll();
@@ -37,6 +40,7 @@ document.addEventListener("alpine:init", () => {
       }
     },
 
+    // ===== CART DATA FETCHING =====
     async fetchCart() {
       try {
         this.setLoader = true;
@@ -51,6 +55,11 @@ document.addEventListener("alpine:init", () => {
         await this.removeGifts();
 
         console.log(this.cart);
+        console.log(this.freeProductThreshold);
+
+        if (this.singleFreeSampleID) {
+          await this.addGiftProduct(this.singleFreeSampleID);
+        }
 
         this.setLoader = false;
       } catch (error) {
@@ -68,6 +77,18 @@ document.addEventListener("alpine:init", () => {
       }
     },
 
+    async fetchCollection(handle) {
+      try {
+        const response = await fetch(`/collections/${handle}/products.json`);
+        const data = await response.json();
+        return data.products;
+      } catch (error) {
+        console.error("Error fetching collection:", error);
+        return [];
+      }
+    },
+
+    // ===== CART CALCULATIONS =====
     async getTotalComparePrice() {
       if (!this.cart.items) {
         return;
@@ -114,6 +135,7 @@ document.addEventListener("alpine:init", () => {
       });
     },
 
+    // ===== CART ITEM MANAGEMENT =====
     async changeQuantity(line, newQuantity, oldQuantity) {
       this.setLoader = true;
 
@@ -175,7 +197,33 @@ document.addEventListener("alpine:init", () => {
       }
     },
 
-    // Start free gift threshold
+    async removeItem(id) {
+      try {
+        const response = await fetch(
+          window.Shopify.routes.root + "cart/update.js",
+          {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
+            },
+            body: JSON.stringify({
+              updates: {
+                [id]: 0,
+              },
+            }),
+          }
+        );
+
+        const data = await response.json();
+
+        this.fetchCart();
+        await this.freeThresholdGift();
+      } catch (error) {
+        console.error("Can't remove item from cart" + error);
+      }
+    },
+
+    // ===== FREE GIFT & SAMPLE LOGIC =====
     async freeThresholdGift() {
       if (this.cart.total_price / 100 < this.freeProductThreshold) return;
 
@@ -215,18 +263,111 @@ document.addEventListener("alpine:init", () => {
       }
     },
 
-    async fetchCollection(handle) {
-      try {
-        const response = await fetch(`/collections/${handle}/products.json`);
-        const data = await response.json();
-        return data.products;
-      } catch (error) {
-        console.error("Error fetching collection:", error);
-        return [];
+    async addGiftProduct(productID) {
+      let numberOfGifts;
+
+      if (this.showFreeSamples) {
+        numberOfGifts = 2;
+      } else {
+        numberOfGifts = 1;
+      }
+
+      if (this.getGiftSampleCount() === numberOfGifts) return;
+
+      if (
+        numberOfGifts === 1 &&
+        this.cart.total_price / 100 < this.freeSampleThreshold &&
+        this.getGiftSampleCount() === 1
+      ) {
+        removeItem(this.singleFreeSampleID);
+      } else if (this.cart.total_price / 100 > this.freeSampleThreshold) {
+        this.setLoader = true;
+
+        try {
+          const response = await fetch(
+            window.Shopify.routes.root + "cart/add.js",
+            {
+              method: "POST",
+              headers: {
+                "Content-Type": "application/json",
+              },
+              body: JSON.stringify({
+                items: [
+                  {
+                    id: productID,
+                    quantity: 1,
+                    properties: {
+                      _gift: "true",
+                    },
+                  },
+                ],
+              }),
+            }
+          );
+
+          if (!response.ok) {
+            throw new Error(`HTTP error! status: ${response.status}`);
+          }
+
+          const data = await response.json();
+          await this.fetchCart();
+          // await this.freeThresholdGift();
+        } catch (error) {
+          console.error("Couldn't add gift to cart:", error);
+          this.setLoader = false;
+        }
       }
     },
 
-    // Start of upsell products in cart functionality
+    removeGifts() {
+      if (this.cart.total_price / 100 < this.freeProductThreshold) {
+        const thresholdGift = this.cart.items.filter(
+          (item) =>
+            item.properties && item.properties._freeThresholdGift === "true"
+        );
+
+        if (thresholdGift) {
+          thresholdGift.forEach((gift) => this.removeItem(gift.id));
+        }
+      }
+
+      if (this.cart.total_price / 100 < this.freeSampleThreshold) {
+        const gifts = this.cart.items.filter(
+          (item) => item.properties && item.properties._gift === "true"
+        );
+
+        if (gifts) {
+          gifts.forEach((gift) => this.removeItem(gift.id));
+        }
+      }
+    },
+
+    // ===== HELPER FUNCTIONS =====
+    getGiftSampleCount(_property) {
+      if (!this.cart.items) return 0;
+      // if(_property === )
+      return this.cart.items.filter((item) => item.properties._gift).length;
+    },
+
+    giftInCart(id) {
+      if (!this.cart.items) return false;
+
+      const item = this.cart.items.some(
+        (item) =>
+          item.id == id && item.properties && item.properties._gift === "true"
+      );
+
+      return item;
+    },
+
+    getFreeThresholdGiftCount() {
+      if (!this.cart.items) return 0;
+      return this.cart.items.filter(
+        (item) => item.properties._freeThresholdGift
+      ).length;
+    },
+
+    // ===== UPSELL PRODUCT LOGIC =====
     async getUpsellProducts(id) {
       await this.fetchAllProducts();
 
@@ -258,135 +399,14 @@ document.addEventListener("alpine:init", () => {
       }
     },
 
-    async addGiftProduct(productID) {
-      // this.singleFreeSampleID;
-
-      // let name;
-
-      // if (this.showFreeSamples) {
-      //   name = "_thresholdSample";
-      // } else {
-      //   name = "_thresholdGift";
-      // }
-
-      if (this.getGiftSampleCount() === 2) return;
-      this.setLoader = true;
-
-      try {
-        const response = await fetch(
-          window.Shopify.routes.root + "cart/add.js",
-          {
-            method: "POST",
-            headers: {
-              "Content-Type": "application/json",
-            },
-            body: JSON.stringify({
-              items: [
-                {
-                  id: productID,
-                  quantity: 1,
-                  properties: {
-                    _gift: "true",
-                  },
-                },
-              ],
-            }),
-          }
-        );
-
-        if (!response.ok) {
-          throw new Error(`HTTP error! status: ${response.status}`);
-        }
-
-        const data = await response.json();
-        await this.fetchCart();
-        // await this.freeThresholdGift();
-      } catch (error) {
-        console.error("Couldn't add gift to cart:", error);
-        this.setLoader = false;
-      }
-    },
-
-    getGiftSampleCount(_property) {
-      if (!this.cart.items) return 0;
-      // if(_property === )
-      return this.cart.items.filter((item) => item.properties._gift).length;
-    },
-
-    giftInCart(id) {
-      if (!this.cart.items) return false;
-
-      const item = this.cart.items.some(
-        (item) =>
-          item.id == id && item.properties && item.properties._gift === "true"
-      );
-
-      return item;
-    },
-
-    async removeItem(id) {
-      try {
-        const response = await fetch(
-          window.Shopify.routes.root + "cart/update.js",
-          {
-            method: "POST",
-            headers: {
-              "Content-Type": "application/json",
-            },
-            body: JSON.stringify({
-              updates: {
-                [id]: 0,
-              },
-            }),
-          }
-        );
-
-        const data = await response.json();
-
-        this.fetchCart();
-        await this.freeThresholdGift();
-      } catch (error) {
-        console.error("Can't remove item from cart" + error);
-      }
-    },
-
-    getFreeThresholdGiftCount() {
-      if (!this.cart.items) return 0;
-      return this.cart.items.filter(
-        (item) => item.properties._freeThresholdGift
-      ).length;
-    },
-
-    removeGifts() {
-      if (this.cart.total_price / 100 < this.freeProductThreshold) {
-        const thresholdGift = this.cart.items.filter(
-          (item) =>
-            item.properties && item.properties._freeThresholdGift === "true"
-        );
-
-        if (thresholdGift) {
-          thresholdGift.forEach((gift) => this.removeItem(gift.id));
-        }
-      }
-
-      if (this.cart.total_price / 100 < this.freeSampleThreshold) {
-        const gifts = this.cart.items.filter(
-          (item) => item.properties && item.properties._gift === "true"
-        );
-
-        if (gifts) {
-          gifts.forEach((gift) => this.removeItem(gift.id));
-        }
-      }
-    },
-
+    // ===== INITIALIZATION =====
     init() {
       this.fetchCart();
     },
   });
 });
 
-// Fallback: still listen for the button click but with delay
+// ===== ADD TO CART BUTTON LISTENERS =====
 const AddToCartButton = document.querySelectorAll(".t4s-product-form__submit");
 const cartAddToCartButton = document.querySelectorAll(
   ".t4s-pr-addtocart[data-action-atc]"
@@ -400,6 +420,7 @@ if (AddToCartButton) {
           .fetchCart()
           .then(() => {
             Alpine.store("ajCart").openCartDrawer();
+            Alpine.store("ajCart").freeThresholdGift();
           });
       }, 1000);
     })
@@ -413,8 +434,9 @@ if (AddToCartButton) {
             .fetchCart()
             .then(() => {
               Alpine.store("ajCart").openCartDrawer();
+              Alpine.store("ajCart").freeThresholdGift();
             });
-        }, 1000);
+        }, 1200);
       })
     );
   }

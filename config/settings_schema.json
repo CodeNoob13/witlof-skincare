@@ -1899,23 +1899,6 @@
         "content": "+ Mini cart"
       },
       {
-        "type": "select",
-        "id": "cart_type",
-        "label": "Mini cart type",
-        "default": "drawer",
-        "info": "Not working on cart page",
-        "options": [
-          {
-            "value": "disable",
-            "label": "Disable"
-          },
-          {
-            "value": "drawer",
-            "label": "Drawer"
-          }
-        ]
-      },
-      {
         "type": "header",
         "content": "+ Shipping Thresholds"
       },
@@ -1931,18 +1914,6 @@
         "content": "Free Sample Settings"
       },
       {
-        "type": "checkbox",
-        "id": "enable_free_samples",
-        "label": "Enable free samples",
-        "default": true
-      },
-      {
-        "type": "text",
-        "id": "free_sample_title",
-        "label": "Free sample section title",
-        "default": "Choose your free sample"
-      },
-      {
         "type": "range",
         "id": "free_sample_threshold",
         "min": 0,
@@ -1953,17 +1924,23 @@
         "default": 60
       },
       {
+        "type": "text",
+        "id": "free_sample_text",
+        "label": "Free sample text",
+        "info": "Replaces the free sample text"
+      },
+      {
+        "type": "product",
+        "id": "free_bag",
+        "label": "Free bag",
+        "info": "Adds free bag to the threshold."
+      },
+      {
         "type": "checkbox",
         "id": "show_free_samples",
         "label": "Free samples",
         "default": false,
         "info": "Check this to show the free samples"
-      },
-      {
-        "type": "text",
-        "id": "free_sample_text",
-        "label": "Free sample text",
-        "info": "Replaces the free sample text"
       },
       {
         "type": "product_list",
@@ -1987,26 +1964,6 @@
         "id": "free_product_gift",
         "label": "Free product gift",
         "info": "Product to give away at the highest threshold."
-      },
-      {
-        "type": "header",
-        "content": "+ Taxes and shipping info",
-        "info": "Add a link Taxes and shipping info"
-      },
-      {
-        "type": "url",
-        "id": "link_ship",
-        "label": "Taxes and shipping info (optional)"
-      },
-      {
-        "type": "header",
-        "content": "+ Terms and conditions checkbox",
-        "info": "Add a link Terms and conditions"
-      },
-      {
-        "type": "url",
-        "id": "link_conditions",
-        "label": "Terms and conditions link (optional)"
       }
     ]
   },
