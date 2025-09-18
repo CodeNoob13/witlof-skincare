@@ -90,7 +90,7 @@
             </picture>
             <div class="fluct-it__gift-info">
                 <span class="fluct-it__gift-text">{{ 'fluctit.cart.free' | t }} {{ settings.free_product_gift.title }}</span>
-                <span class="fluct-it__gift-price">€{{ settings.free_sample_product_threshold }}</span>
+                <span class="fluct-it__gift-price">€{{ settings.free_product_threshold }}</span>
             </div>
         </div>
     </div>
@@ -104,8 +104,8 @@
             <p >Voeg nog <strong x-text="'€' + ({{ settings.free_sample_threshold }} - ($store.ajCart.cart.total_price / 100).toFixed(2)).toFixed(0)"></strong> toe en ontvang <b>{{ 'fluctit.free_sample' | t }}</b></p>
         </template>
 
-        <template x-if="($store.ajCart.cart.total_price / 100).toFixed(2) > {{ settings.free_sample_threshold }} && ($store.ajCart.cart.total_price / 100).toFixed(2) < {{ settings.free_sample_product_threshold }}">
-            <p >Voeg nog <strong x-text="'€' + ({{ settings.free_sample_product_threshold }} - ($store.ajCart.cart.total_price / 100).toFixed(2)).toFixed(0)"></strong> toe en ontvang {{ 'fluctit.free' | t }} <b>{{ settings.free_product_threshold.title }}</b></p>
+        <template x-if="($store.ajCart.cart.total_price / 100).toFixed(2) > {{ settings.free_sample_threshold }} && ($store.ajCart.cart.total_price / 100).toFixed(2) < {{ settings.free_product_threshold }}">
+            <p >Voeg nog <strong x-text="'€' + ({{ settings.free_product_threshold }} - ($store.ajCart.cart.total_price / 100).toFixed(2)).toFixed(0)"></strong> toe en ontvang {{ 'fluctit.free' | t }} <b>{{ settings.free_product_threshold.title }}</b></p>
         </template>
     </div>
 
