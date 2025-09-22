@@ -36,8 +36,8 @@
     {
       "key": "hidden",
       "namespace": "seo",
-      "name": "SEO Hidden",
-      "description": "Hide page from google",
+      "name": "Noindex",
+      "description": "Hides page from google",
       "type": {
         "name": "number_integer",
         "category": "NUMBER"
@@ -260,6 +260,16 @@
       "type": {
         "name": "list.metaobject_reference",
         "category": "REFERENCE"
+      }
+    },
+    {
+      "key": "product_hidden",
+      "namespace": "seo",
+      "name": "Noindex",
+      "description": "Hide from google",
+      "type": {
+        "name": "number_integer",
+        "category": "NUMBER"
       }
     }
   ],

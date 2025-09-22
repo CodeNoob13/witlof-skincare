@@ -1,0 +1,754 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "breadcrumb": {
+      "type": "brc-nav-product",
+      "settings": {
+        "back_next_pr": true,
+        "cl_bg": "#f6f6f6",
+        "cl_link": "#222222"
+      }
+    },
+    "custom_html_8XzFiw": {
+      "type": "custom-html",
+      "disabled": true,
+      "settings": {
+        "code": "<div class=\"t4s-text-center\" style=\"padding: 15px 0;background-color: #ED7377;color: #fff;\">1+1 GRATIS op de Nourishing Day Cream SPF30. Voeg 2 producten aan je mandje toe. Gebruik code 'SNOW' bij de checkout. Krijg er een gratis! </div>",
+        "layout": "t4s-container-fluid",
+        "cl_bg": "#ed7377",
+        "cl_bg_gradient": "",
+        "mg": ",,50px,",
+        "pd": "",
+        "mg_tb": "",
+        "pd_tb": "",
+        "mg_mb": ",,30px,",
+        "pd_mb": "",
+        "use_cus_css": false,
+        "code_cus_css": ""
+      }
+    },
+    "countdown_zd6dLT": {
+      "type": "countdown",
+      "disabled": true,
+      "settings": {
+        "design_heading": "1",
+        "heading_align": "t4s-text-center",
+        "top_heading": "Actie loopt nog...",
+        "icon_heading": "",
+        "top_subheading": "",
+        "tophead_mb": 30,
+        "date": "2025/02/15",
+        "cdt_des": "1",
+        "cdt_size": "medium",
+        "box_bdr": 0,
+        "bd_width": 0,
+        "space_item": 10,
+        "number_cl": "#333333",
+        "text_cl": "#333333",
+        "border_cl": "#ed7377",
+        "bg_cl": "#c5e6f0",
+        "content_align": "t4s-text-center",
+        "layout": "t4s-se-container",
+        "cl_bg": "",
+        "cl_bg_gradient": "",
+        "mg": ",,50px,",
+        "pd": "",
+        "mg_tb": "",
+        "pd_tb": "",
+        "mg_mb": ",,30px,",
+        "pd_mb": "",
+        "use_cus_css": false,
+        "code_cus_css": ""
+      }
+    },
+    "main": {
+      "type": "main-product",
+      "blocks": {
+        "text_83788q": {
+          "type": "text",
+          "disabled": true,
+          "settings": {
+            "text": "<h5>1+1 GRATIS op de Nourishing Day Cream SPF30. Voeg 2 producten aan je mandje toe. Gebruik code 'SNOW' bij de checkout. Krijg er een gratis! </h5><p></p>"
+          }
+        },
+        "title": {
+          "type": "title",
+          "settings": {
+            "txt_tr_pr": "none",
+            "fnt_df_pr": "1",
+            "size_pr": 28,
+            "fw_pr": 600,
+            "lh_pr": 0,
+            "ls_pr": 0,
+            "pr_title_color": "#222222"
+          }
+        },
+        "text_xP4kDy": {
+          "type": "text",
+          "settings": {
+            "text": ""
+          }
+        },
+        "price_review": {
+          "type": "price_review",
+          "settings": {
+            "price": "0",
+            "type_sale": "1",
+            "tax_ship": false,
+            "rating": false,
+            "review_liquid": "",
+            "size_price_pr": 22,
+            "fw_price_pr": 400,
+            "price_color": "#696969",
+            "price_sale_color": "#ed7377"
+          }
+        },
+        "klarna_ppaDFY": {
+          "type": "klarna",
+          "settings": {}
+        },
+        "usp_list_qEdrm7": {
+          "type": "usp_list",
+          "settings": {}
+        },
+        "form": {
+          "type": "form",
+          "settings": {
+            "selector_mode": "circle",
+            "color_mode": "color is-sw-cl__round",
+            "enable_fit_ratio_img": false,
+            "color_size": "medium",
+            "show_qty": false,
+            "enable_wishlist": false,
+            "enable_compare": false,
+            "btn_atc_full": false,
+            "pr_btn_round": 40,
+            "ani": "none",
+            "time": 6,
+            "btn_txt": "3",
+            "btn_icon": false,
+            "button_style": "default",
+            "button_color": "primary",
+            "button_effect": "sweep-to-top",
+            "wishlist_color": "#222222",
+            "wishlist_color_hover": "#56cfe1",
+            "wishlist_color_active": "#e81e1e",
+            "compare_color": "#222222",
+            "compare_color_hover": "#56cfe1",
+            "compare_color_active": "#222222",
+            "show_dynamic_checkout": false,
+            "btn_txt2": "3",
+            "button_color_payment": "dark",
+            "show_gift_card_recipient": true,
+            "product_list": [],
+            "show_product_current": true,
+            "qty_val": "0",
+            "advance_label": "Choose style",
+            "advance_pr_list": []
+          }
+        },
+        "23551ebc-3be1-40d6-81b2-30f03478cccb": {
+          "type": "img",
+          "settings": {
+            "al": "start",
+            "mess": "",
+            "size": 13,
+            "source": "1",
+            "wimg": 70,
+            "svg": "american_express,apple_pay,google_pay,klarna-pay-later,maestro,master,paypal,shopify_pay,ideal,visa",
+            "height": 26
+          }
+        },
+        "usp_icons_gAL8k3": {
+          "type": "usp_icons",
+          "settings": {
+            "usp_caption1": "Voor 22 uur besteld, zelfde (werk)dag verzonden!",
+            "svg_icon1": "<svg width=\"24\" height=\"17\" viewbox=\"0 0 21 14\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n<path d=\"M0.75 0V1.25H12.625V10.625H8.7775C8.49875 9.55062 7.5325 8.75 6.375 8.75C5.2175 8.75 4.25125 9.55062 3.9725 10.625H3.25V7.5H2V11.875H3.9725C4.25125 12.9494 5.2175 13.75 6.375 13.75C7.5325 13.75 8.49875 12.9494 8.7775 11.875H13.9725C14.2513 12.9494 15.2175 13.75 16.375 13.75C17.5325 13.75 18.4988 12.9494 18.7775 11.875H20.75V6.7775L20.7106 6.67938L19.4606 2.92938L19.325 2.5H13.875V0H0.75ZM1.375 2.5V3.75H7V2.5H1.375ZM13.875 3.75H18.4256L19.5 6.95312V10.625H18.7775C18.4988 9.55062 17.5325 8.75 16.375 8.75C15.2175 8.75 14.2513 9.55062 13.9725 10.625H13.875V3.75ZM2 5V6.25H5.75V5H2ZM6.375 10C7.07312 10 7.625 10.5519 7.625 11.25C7.625 11.9481 7.07312 12.5 6.375 12.5C5.67688 12.5 5.125 11.9481 5.125 11.25C5.125 10.5519 5.67688 10 6.375 10ZM16.375 10C17.0731 10 17.625 10.5519 17.625 11.25C17.625 11.9481 17.0731 12.5 16.375 12.5C15.6769 12.5 15.125 11.9481 15.125 11.25C15.125 10.5519 15.6769 10 16.375 10Z\" fill=\"#3C3C3C\"></path>\n</svg>",
+            "usp_caption2": "30 dagen niet-goed-geld-terug garantie",
+            "svg_icon2": "<svg width=\"22\" height=\"24\" viewbox=\"0 0 19 20\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n<path d=\"M8.99024 2.41992C7.40799 2.41992 5.86127 2.88911 4.54568 3.76816C3.23008 4.64722 2.2047 5.89664 1.5992 7.35845C0.993701 8.82026 0.835274 10.4288 1.14396 11.9806C1.45264 13.5325 2.21456 14.958 3.33338 16.0768C4.4522 17.1956 5.87767 17.9575 7.42951 18.2662C8.98136 18.5749 10.5899 18.4165 12.0517 17.811C13.5135 17.2055 14.7629 16.1801 15.642 14.8645C16.521 13.5489 16.9902 12.0022 16.9902 10.4199C16.9902 8.29819 16.1474 6.26336 14.6471 4.76307C13.1468 3.26278 11.112 2.41992 8.99024 2.41992ZM12.7002 14.9999C11.9885 15.4433 11.184 15.7162 10.3494 15.7973C9.51477 15.8783 8.67273 15.7654 7.88902 15.4672C7.1053 15.169 6.40113 14.6936 5.83149 14.0783C5.26185 13.463 4.84218 12.7243 4.60524 11.9199H2.91024C2.77763 11.9199 2.65045 11.8672 2.55668 11.7735C2.46292 11.6797 2.41024 11.5525 2.41024 11.4199C2.41024 11.2873 2.46292 11.1601 2.55668 11.0664C2.65045 10.9726 2.77763 10.9199 2.91024 10.9199H4.41024C4.41024 10.7449 4.38524 10.5649 4.38524 10.3849V9.91992H2.88524C2.75263 9.91992 2.62545 9.86724 2.53168 9.77347C2.43792 9.67971 2.38524 9.55253 2.38524 9.41992C2.38524 9.28731 2.43792 9.16014 2.53168 9.06637C2.62545 8.9726 2.75263 8.91992 2.88524 8.91992H4.58524C4.81159 8.10788 5.22391 7.3597 5.78952 6.73463C6.35514 6.10956 7.05852 5.62476 7.84397 5.31863C8.62942 5.01251 9.47535 4.89346 10.3148 4.97092C11.1542 5.04839 11.9641 5.32023 12.6802 5.76492C12.8127 5.85609 12.9049 5.99479 12.9377 6.1522C12.9705 6.3096 12.9414 6.4736 12.8564 6.61009C12.7714 6.74658 12.6371 6.84507 12.4814 6.88508C12.3256 6.92509 12.1605 6.90354 12.0202 6.82492C11.4942 6.49882 10.9023 6.29361 10.2873 6.22409C9.67235 6.15457 9.04959 6.22248 8.46405 6.42293C7.8785 6.62337 7.34477 6.95135 6.90139 7.38316C6.45802 7.81498 6.11607 8.33987 5.90024 8.91992H10.5802C10.7128 8.91992 10.84 8.9726 10.9338 9.06637C11.0276 9.16014 11.0802 9.28731 11.0802 9.41992C11.0802 9.55253 11.0276 9.67971 10.9338 9.77347C10.84 9.86724 10.7128 9.91992 10.5802 9.91992H5.65524C5.61188 10.2518 5.61188 10.588 5.65524 10.9199H10.5652C10.6978 10.9199 10.825 10.9726 10.9188 11.0664C11.0126 11.1601 11.0652 11.2873 11.0652 11.4199C11.0652 11.5525 11.0126 11.6797 10.9188 11.7735C10.825 11.8672 10.6978 11.9199 10.5652 11.9199H5.92524C6.15123 12.4904 6.50006 13.0042 6.94697 13.4247C7.39388 13.8453 7.9279 14.1622 8.5111 14.3531C9.0943 14.544 9.71238 14.6042 10.3215 14.5293C10.9305 14.4544 11.5156 14.2464 12.0352 13.9199C12.1048 13.8763 12.1824 13.8467 12.2634 13.833C12.3444 13.8193 12.4273 13.8217 12.5074 13.84C12.5875 13.8584 12.6632 13.8923 12.7301 13.9399C12.7971 13.9875 12.8541 14.0478 12.8977 14.1174C12.9414 14.187 12.9709 14.2645 12.9846 14.3456C12.9983 14.4266 12.996 14.5095 12.9776 14.5896C12.9593 14.6697 12.9253 14.7454 12.8777 14.8123C12.8302 14.8793 12.7698 14.9363 12.7002 14.9799V14.9999Z\" fill=\"black\"></path>\n</svg>",
+            "usp_caption3": "Gratis verzending bij orders vanaf €25",
+            "svg_icon3": "<svg width=\"24\" height=\"24\" viewbox=\"0 0 20 20\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n<path d=\"M2.93256 15.0803L9.37613 18.7321C9.60542 18.8632 9.83042 18.9286 10.0515 18.9286C10.2726 18.9286 10.5004 18.8632 10.7351 18.7321L17.1708 15.0803C17.5472 14.8621 17.8326 14.615 18.0261 14.3393C18.2201 14.0639 18.3168 13.6339 18.3168 13.05V6.56534C18.3168 6.13963 18.2365 5.78748 18.0754 5.50927C17.9143 5.2307 17.6618 4.9907 17.3183 4.78855L11.5208 1.49713C11.0301 1.2132 10.5415 1.07141 10.0558 1.07141C9.57006 1.07141 9.07863 1.2132 8.58185 1.49713L2.79328 4.78855C2.44399 4.9907 2.18863 5.2307 2.02756 5.50927C1.86685 5.78748 1.78613 6.13963 1.78613 6.56534V13.05C1.78613 13.6339 1.88435 14.0639 2.08078 14.3393C2.2772 14.615 2.56113 14.8621 2.93256 15.0803ZM3.66935 13.9996C3.42899 13.8632 3.26256 13.72 3.1697 13.5696C3.07685 13.4196 3.03042 13.2328 3.03042 13.0089V6.82713L9.40899 10.4707V17.2664L3.66935 13.9996ZM16.4418 13.9996L10.6943 17.2664V10.4707L17.0718 6.82713V13.0089C17.0718 13.2328 17.0254 13.4196 16.9326 13.5696C16.8397 13.7196 16.6765 13.8632 16.4418 13.9996ZM10.0554 9.32463L3.7347 5.74641L6.2647 4.29748L12.5854 7.89177L10.0554 9.32463ZM13.9033 7.14677L7.55828 3.56034L9.13042 2.66784C9.75256 2.3132 10.3697 2.3132 10.9808 2.66784L16.3765 5.74641L13.9033 7.14677Z\" fill=\"#3C3C3C\"></path>\n</svg>"
+          }
+        },
+        "custom_title_TPdbnf": {
+          "type": "custom_title",
+          "settings": {
+            "title": "Dagelijks gebruikt door 10.000+ Witlovers"
+          }
+        },
+        "84169d4f-f4df-445d-b1a4-09aeb72f80bc": {
+          "type": "shopify://apps/videowise-video-commerce/blocks/videowise-page-widgets/b48d6c0c-3e3f-4791-a9ab-a5ab7ec82f4d",
+          "settings": {
+            "videowise_embed": "<div class=\"reeview-app-widget\" id=\"reeview-app-widget_656e3740e3b1220029ab5616\"></div>"
+          }
+        },
+        "faq_xbFTdU": {
+          "type": "FAQ",
+          "settings": {}
+        }
+      },
+      "block_order": [
+        "text_83788q",
+        "title",
+        "text_xP4kDy",
+        "price_review",
+        "klarna_ppaDFY",
+        "usp_list_qEdrm7",
+        "form",
+        "23551ebc-3be1-40d6-81b2-30f03478cccb",
+        "usp_icons_gAL8k3",
+        "custom_title_TPdbnf",
+        "84169d4f-f4df-445d-b1a4-09aeb72f80bc",
+        "faq_xbFTdU"
+      ],
+      "settings": {
+        "pr_layout": "default",
+        "enable_sticky_info": true,
+        "media_layout": "thumbnails_left",
+        "media_size": "medium",
+        "thumb_lr_size": "medium",
+        "image_ratio": "ratio1_1",
+        "image_size": "cover",
+        "image_position": "8",
+        "main_click": "zoom",
+        "zoom_tp": "external",
+        "enable_zoom_icon": true,
+        "enable_zoom_click_mb": true,
+        "enable_video_looping": false,
+        "enable_video_muting": true,
+        "enable_video_autoplaying": true,
+        "eff": "fade",
+        "nav_btn": true,
+        "btn_vi": "always",
+        "btn_owl": "outline",
+        "btn_shape": "round",
+        "btn_cl": "dark",
+        "btn_size": "small",
+        "btn_hidden_mobile": false,
+        "nav_dot": false,
+        "dot_owl": "default",
+        "dots_cl": "dark",
+        "dots_round": true,
+        "dots_space": 10,
+        "dots_hidden_mobile": false,
+        "tabs_design": "tab",
+        "tabs_design_mb": "accordion",
+        "tabs_position": "external",
+        "enable_first_tab": false,
+        "tabs_layout_fix": "full",
+        "bg": "#f6f6f8",
+        "bg_mb": "#ffffff",
+        "product_list": [],
+        "sticky_mode": "2",
+        "sticky_show": "2",
+        "sticky_layout_mb": "minimal",
+        "enable_select": true,
+        "ani": "none",
+        "time": 6
+      }
+    },
+    "my_routine_hUrTAk": {
+      "type": "my_routine",
+      "name": "My routine",
+      "settings": {
+        "title": "Welke stap is dit in mijn routine?"
+      }
+    },
+    "online_consult_zrACqH": {
+      "type": "online_consult",
+      "blocks": {
+        "block_GgV7yC": {
+          "type": "block",
+          "settings": {
+            "background_image": "shopify://shop_images/Picture_isthisrightforme_jpg.jpg",
+            "subtitle": "Wat past het best",
+            "title": "Doe de online huid test",
+            "button_text": "Doe de test",
+            "button_url": "#"
+          }
+        },
+        "block_8p7rYj": {
+          "type": "block",
+          "settings": {
+            "background_image": "shopify://shop_images/Picture_isthisrightforme.jpg-1.jpg",
+            "subtitle": "Bij mijn huid",
+            "title": "Of boek een online huid consult",
+            "button_text": "Boek een consult",
+            "button_url": "#"
+          }
+        }
+      },
+      "block_order": [
+        "block_GgV7yC",
+        "block_8p7rYj"
+      ],
+      "name": "Online consult",
+      "settings": {}
+    },
+    "witlof_benefits_C6YQRU": {
+      "type": "witlof-benefits",
+      "blocks": {
+        "benefit_wtUM6W": {
+          "type": "benefit",
+          "settings": {
+            "benefit_title": "is 100% natuurlijk",
+            "benefit_description": "Witlof Skincare gebruikt alleen 100% natuurlijke ingrediënten, zonder synthetische toevoegingen. Zacht voor je huid én goed voor de planeet."
+          }
+        },
+        "benefit_NLR4Pw": {
+          "type": "benefit",
+          "settings": {
+            "benefit_title": "is 100% vegan",
+            "benefit_description": "Witlof Skincare gebruikt alleen 100% natuurlijke ingrediënten, zonder synthetische toevoegingen. Zacht voor je huid én goed voor de planeet."
+          }
+        },
+        "benefit_f49fXj": {
+          "type": "benefit",
+          "settings": {
+            "benefit_title": "bevat geen microplastics",
+            "benefit_description": "Vrij van microplastics. Witlof Skincare kiest voor schone formules die je huid én het milieu niet belasten."
+          }
+        },
+        "benefit_twNJFX": {
+          "type": "benefit",
+          "settings": {
+            "benefit_title": "zit boordevol effectieve ingrediënten",
+            "benefit_description": "Elk product zit vol actieve, bewezen werkzame ingrediënten uit de natuur die je huid zichtbaar verbeteren en gezond houden."
+          }
+        },
+        "benefit_XmHTRX": {
+          "type": "benefit",
+          "settings": {
+            "benefit_title": "ruikt heerlijk",
+            "benefit_description": "Elk product zit vol actieve, bewezen werkzame ingrediënten uit de natuur die je huid zichtbaar verbeteren en gezond houden."
+          }
+        },
+        "benefit_Vpx8yd": {
+          "type": "benefit",
+          "settings": {
+            "benefit_title": "Balanceert, voedt en laat je huid natuurlijk stralen!",
+            "benefit_description": "Onze formules herstellen de balans, voeden intens en geven je huid een natuurlijke glow, elke dag opnieuw."
+          }
+        }
+      },
+      "block_order": [
+        "benefit_wtUM6W",
+        "benefit_NLR4Pw",
+        "benefit_f49fXj",
+        "benefit_twNJFX",
+        "benefit_XmHTRX",
+        "benefit_Vpx8yd"
+      ],
+      "name": "Witlof Benefits",
+      "settings": {
+        "benefits_title": "<h3>Witlof Skincare...</h3>",
+        "benefits_image": "shopify://shop_images/woman_witlof.jpg",
+        "show_video": false,
+        "video_file": "shopify://files/videos/RFC001_VID_FOUNDER_B11_Caroline_DROGE HUID_H2_9x16.mp4"
+      }
+    },
+    "faq_KBkwtX": {
+      "type": "faq",
+      "blocks": {
+        "faq_nBdanU": {
+          "type": "faq",
+          "settings": {
+            "question": "Wat is jullie retourbeleid?",
+            "answer": "Je kunt je bestelling binnen 30 dagen retourneren."
+          }
+        },
+        "faq_Y66YVU": {
+          "type": "faq",
+          "settings": {
+            "question": "Wat is jullie retourbeleid?",
+            "answer": "Je kunt je bestelling binnen 30 dagen retourneren."
+          }
+        },
+        "faq_aBbWDw": {
+          "type": "faq",
+          "settings": {
+            "question": "Wat is jullie retourbeleid?",
+            "answer": "Je kunt je bestelling binnen 30 dagen retourneren."
+          }
+        },
+        "faq_rQx7jw": {
+          "type": "faq",
+          "settings": {
+            "question": "Wat is jullie retourbeleid?",
+            "answer": "Je kunt je bestelling binnen 30 dagen retourneren."
+          }
+        }
+      },
+      "block_order": [
+        "faq_nBdanU",
+        "faq_Y66YVU",
+        "faq_aBbWDw",
+        "faq_rQx7jw"
+      ],
+      "name": "FAQ - Two Column",
+      "settings": {
+        "heading": "FAQ",
+        "subheading": "Veelgestelde vragen"
+      }
+    },
+    "logo_list_MjJM4b": {
+      "type": "logo_list",
+      "blocks": {
+        "logo_item_wCWrBk": {
+          "type": "logo_item",
+          "settings": {
+            "url": ""
+          }
+        },
+        "logo_item_86QXPW": {
+          "type": "logo_item",
+          "settings": {
+            "url": ""
+          }
+        },
+        "logo_item_AG69rL": {
+          "type": "logo_item",
+          "settings": {
+            "url": ""
+          }
+        },
+        "logo_item_tGDFWa": {
+          "type": "logo_item",
+          "settings": {
+            "url": ""
+          }
+        },
+        "logo_item_CdPGmR": {
+          "type": "logo_item",
+          "settings": {
+            "url": ""
+          }
+        },
+        "logo_item_Fmh9tk": {
+          "type": "logo_item",
+          "settings": {
+            "url": ""
+          }
+        },
+        "logo_item_7zWL9b": {
+          "type": "logo_item",
+          "settings": {
+            "url": ""
+          }
+        }
+      },
+      "block_order": [
+        "logo_item_wCWrBk",
+        "logo_item_86QXPW",
+        "logo_item_AG69rL",
+        "logo_item_tGDFWa",
+        "logo_item_CdPGmR",
+        "logo_item_Fmh9tk",
+        "logo_item_7zWL9b"
+      ],
+      "disabled": true,
+      "settings": {
+        "design_heading": "1",
+        "heading_align": "t4s-text-center",
+        "top_heading": "",
+        "icon_heading": "las la-gem",
+        "top_subheading": "",
+        "tophead_mb": 30,
+        "img_effect": "none",
+        "b_effect": "none",
+        "open_link": "_blank",
+        "layout_des": "2",
+        "click_image": "data-goto",
+        "nav_thumbs": true,
+        "col_dk": "6",
+        "col_tb": "2",
+        "col_mb": "2",
+        "space_item": "30",
+        "space_item_mb": "30",
+        "loop": true,
+        "au_time": 0,
+        "au_hover": true,
+        "nav_btn": false,
+        "btn_vi": "hover",
+        "btn_owl": "default",
+        "btn_shape": "none",
+        "btn_cl": "dark",
+        "btn_size": "small",
+        "btn_hidden_mobile": true,
+        "nav_dot": false,
+        "dot_owl": "default",
+        "dots_cl": "dark",
+        "dots_round": true,
+        "dots_space": 10,
+        "dots_hidden_mobile": false,
+        "layout": "t4s-container-wrap",
+        "cl_bg": "",
+        "cl_bg_gradient": "",
+        "mg": ",,50px,",
+        "pd": "",
+        "mg_tb": "",
+        "pd_tb": "",
+        "mg_mb": ",,30px,",
+        "pd_mb": "",
+        "use_cus_css": false,
+        "code_cus_css": ""
+      }
+    },
+    "sidebar": {
+      "type": "sidebar-product",
+      "blocks": {
+        "f01b181b-62ee-4735-8e25-32cb71ccfaba": {
+          "type": "category",
+          "settings": {
+            "title_category": "Product Categories",
+            "cat_source": "1",
+            "cat_link_list": "",
+            "count": true
+          }
+        },
+        "f65f464b-9487-43be-9c91-8688a098bb6f": {
+          "type": "collection",
+          "settings": {
+            "title_fea_pr": "Sale Products",
+            "collection": "frontpage",
+            "limit_pr": 5,
+            "image_ratio": "t4s_ratioadapt",
+            "image_size": "t4s_cover",
+            "image_position": "t4s_position_8"
+          }
+        },
+        "83340bb8-58d2-4148-89e2-a4c7a01cf792": {
+          "type": "instagram",
+          "settings": {
+            "title_ins": "Instagram",
+            "mode": "2",
+            "acc": "",
+            "limit": 12,
+            "open_link": "_blank",
+            "round": 0,
+            "col_dk": "3",
+            "space_item": "6"
+          }
+        },
+        "9ce9ded8-1cef-4e32-b98b-47364ffa328c": {
+          "type": "shipping",
+          "settings": {
+            "title": "Shipping & Delivery",
+            "shipping_1": "las la-truck,FREE SHIPPING,Free shipping for all US order",
+            "shipping_2": "las la-headset,SUPPORT 24/7,We support 24 hours a day",
+            "shipping_3": "las la-exchange-alt,30 DAYS RETURN,You have 30 days to return",
+            "shipping_4": "",
+            "shipping_5": "",
+            "shipping_6": ""
+          }
+        },
+        "4a9c6ae8-f3b4-4192-a6d1-82d01670bce6": {
+          "type": "image",
+          "settings": {
+            "b_link": "",
+            "open_link": "_self",
+            "img_effect": "none",
+            "date": "2022/12/26",
+            "content_align": "center",
+            "cdt_des": "2",
+            "countdown_pos": "2",
+            "cdt_size": "medium",
+            "box_bdr": 0,
+            "bd_width": 0,
+            "space_item": 10,
+            "number_cl": "#ffffff",
+            "text_cl": "#ffffff",
+            "border_cl": "#000000",
+            "bg_cl": "#000000"
+          }
+        }
+      },
+      "block_order": [
+        "f01b181b-62ee-4735-8e25-32cb71ccfaba",
+        "f65f464b-9487-43be-9c91-8688a098bb6f",
+        "83340bb8-58d2-4148-89e2-a4c7a01cf792",
+        "9ce9ded8-1cef-4e32-b98b-47364ffa328c",
+        "4a9c6ae8-f3b4-4192-a6d1-82d01670bce6"
+      ],
+      "disabled": true,
+      "settings": {
+        "enable_drawer": true,
+        "space": 50,
+        "size": "medium",
+        "br_style": "none",
+        "brcolor": "#222222",
+        "sidebar_bdr": 5,
+        "sidebar_pd": 10
+      }
+    },
+    "product-recommendations": {
+      "type": "product-recommendations",
+      "settings": {
+        "show": true,
+        "design_heading": "1",
+        "heading_align": "t4s-text-center",
+        "top_heading": "Dit vind je misschien ook interessant",
+        "icon_heading": "las la-gem",
+        "top_subheading": "",
+        "tophead_mb": 30,
+        "product_des": "1",
+        "show_vendor": false,
+        "use_cdt": false,
+        "limit": 12,
+        "display_type": "3",
+        "image_ratio": "rationt",
+        "image_size": "nt_cover",
+        "image_position": "8",
+        "content_align": "default",
+        "col_dk": "4",
+        "col_tb": "2",
+        "col_mb": "2",
+        "space_h_item": "30",
+        "space_v_item": "30",
+        "space_h_item_mb": "10",
+        "space_v_item_mb": "10",
+        "layout_des": "2",
+        "loop": true,
+        "au_time": 0,
+        "au_hover": true,
+        "nav_btn": true,
+        "btn_vi": "1",
+        "btn_owl": "outline",
+        "btn_shape": "round",
+        "btn_cl": "dark",
+        "btn_size": "small",
+        "btn_hidden_mobile": true,
+        "nav_dot": false,
+        "dot_owl": "1",
+        "dots_cl": "dark",
+        "dots_round": true,
+        "dots_space": 10,
+        "dots_hidden_mobile": false,
+        "layout": "t4s-container-wrap",
+        "cl_bg": "",
+        "cl_bg_gradient": "",
+        "mg": "75px,,50px,",
+        "pd": "",
+        "mg_tb": "",
+        "pd_tb": "",
+        "mg_mb": ",,30px,",
+        "pd_mb": ""
+      }
+    },
+    "recently-viewed-products": {
+      "type": "recently_viewed",
+      "disabled": true,
+      "settings": {
+        "show": true,
+        "design_heading": "1",
+        "heading_align": "t4s-text-center",
+        "top_heading": "Laatst bekeken producten",
+        "icon_heading": "las la-gem",
+        "top_subheading": "",
+        "tophead_mb": 30,
+        "product_des": "1",
+        "show_vendor": false,
+        "use_cdt": false,
+        "limit": 14,
+        "sortby": "6",
+        "unavailable_prs": "hide",
+        "image_ratio": "rationt",
+        "image_size": "cover",
+        "image_position": "8",
+        "content_align": "default",
+        "col_dk": "4",
+        "col_tb": "2",
+        "col_mb": "2",
+        "space_h_item": "30",
+        "space_v_item": "30",
+        "space_h_item_mb": "10",
+        "space_v_item_mb": "10",
+        "layout_des": "2",
+        "loop": true,
+        "au_time": 0,
+        "au_hover": true,
+        "nav_btn": true,
+        "btn_vi": "always",
+        "btn_owl": "outline",
+        "btn_shape": "round",
+        "btn_cl": "dark",
+        "btn_size": "small",
+        "btn_hidden_mobile": true,
+        "nav_dot": false,
+        "dot_owl": "default",
+        "dots_cl": "dark",
+        "dots_round": true,
+        "dots_space": 10,
+        "dots_hidden_mobile": false,
+        "layout": "t4s-container-wrap",
+        "cl_bg": "",
+        "cl_bg_gradient": "",
+        "mg": "75px,,50px,",
+        "pd": "",
+        "mg_tb": "",
+        "pd_tb": "",
+        "mg_mb": ",,30px,",
+        "pd_mb": ""
+      }
+    },
+    "custom_liquid_N3Kcem": {
+      "type": "custom-liquid",
+      "disabled": true,
+      "settings": {
+        "custom_liquid": "<script>\n  window.addEventListener('load', function() {\n  var _learnq = window._learnq || [];\n  function addedToCart() {\n   fetch(`${window.location.origin}/cart.js`)\n   .then(res => res.clone().json().then(data => {\n    var cart = {\n      total_price: data.total_price/100,\n      $value: data.total_price/100,\n      total_discount: data.total_discount,\n      original_total_price: data.original_total_price/100,\n      items: data.items\n    }\n    if (item !== 'undefined') {\n      cart = Object.assign(cart, item)\n    }\n    if (klAjax) {\n       _learnq.push(['track', 'Added to Cart', cart]);\n       klAjax = false;\n      }\n   }))\n  };\n  (function (ns, fetch) {\n    ns.fetch = function() {\n      const response = fetch.apply(this, arguments);\n      response.then(res => {\n        if (`${window.location.origin}/cart/add.js`\n          .includes(res.url) && res.url !== '') {\n              addedToCart()\n        }\n      });\n      return response\n     }\n  }(window, window.fetch));\n  var klAjax = true;\n  var atcButtons = document.querySelectorAll(\"form[action*='/cart/add'] button[type='submit']\");\n  for (var i = 0; i < atcButtons.length; i++) { \n    atcButtons[i].addEventListener(\"click\", function() {\n      if (klAjax) {\n        _learnq.push(['track', 'Added to Cart', item]);\n        klAjax = false;\n      }\n    })\n  }\n  });\n</script>",
+        "layout": "t4s-container-wrap",
+        "cl_bg": "",
+        "cl_bg_gradient": "",
+        "mg": ",,50px,",
+        "pd": "",
+        "mg_tb": "",
+        "pd_tb": "",
+        "mg_mb": ",,30px,",
+        "pd_mb": ""
+      }
+    },
+    "17415982396ef299c2": {
+      "type": "apps",
+      "blocks": {
+        "judge_me_reviews_review_widget_8VnwmY": {
+          "type": "shopify://apps/judge-me-reviews/blocks/review_widget/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
+          "disabled": true,
+          "settings": {
+            "review_data": "sample_data",
+            "max_width": 1200
+          }
+        }
+      },
+      "block_order": [
+        "judge_me_reviews_review_widget_8VnwmY"
+      ],
+      "settings": {
+        "include_margins": true
+      }
+    }
+  },
+  "order": [
+    "breadcrumb",
+    "custom_html_8XzFiw",
+    "countdown_zd6dLT",
+    "main",
+    "my_routine_hUrTAk",
+    "online_consult_zrACqH",
+    "witlof_benefits_C6YQRU",
+    "faq_KBkwtX",
+    "logo_list_MjJM4b",
+    "sidebar",
+    "product-recommendations",
+    "recently-viewed-products",
+    "custom_liquid_N3Kcem",
+    "17415982396ef299c2"
+  ]
+}

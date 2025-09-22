@@ -55,7 +55,7 @@
                     {% if settings.free_sample_text != blank %}
                         {{ settings.free_sample_text }}
                     {% else %}
-                        {{ 'fluctit.free_sample' | t }}
+                       {{ 'fluctit.cart.free' | t }} {{ settings.free_bag.title }} 
                     {% endif %}</span>
                 <span class="fluct-it__gift-price">€{{ settings.free_sample_threshold }}</span>
             </div>

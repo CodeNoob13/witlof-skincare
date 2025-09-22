@@ -71,9 +71,9 @@
     "share_source": "1",
     "cart_ajax_enable": true,
     "free_ship_threshold": 40,
-    "free_sample_threshold": 75,
+    "free_sample_threshold": 50,
     "free_sample_text": "",
-    "free_bag": "balancing-toner-tester",
+    "free_bag": "organic-cotton-toilet-bag-copy",
     "show_free_samples": false,
     "free_sample_products": [
       "balancing-toner-150ml",
@@ -82,7 +82,7 @@
       "the-best-seller"
     ],
     "free_product_threshold": 100,
-    "free_product_gift": "nourishing-facial-cream-50ml-1",
+    "free_product_gift": "nourishing-facial-cream-50ml-free-product",
     "filter_type_search": true,
     "show_search_suggest": true,
     "search_prs_suggest": "",
