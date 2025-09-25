@@ -750,11 +750,14 @@
     "free_shipping": "gratis verzending",
     "free_sample": "gratis sample",
     "free": "gratis",
+    "add": "Voeg nog",
+    "receive": "toe en ontvang",
     "cart": {
       "upsell_title": "Wat je ook leuk zal vinden",
       "free_shipping": "Gratis verzending",
       "free_sample": "Gratis sample",
       "free": "Gratis",
+      "add_to_cart_text": "Voeg toe",
       "cart_footer": {
         "estimated_total": "Geschat totaal",
         "secure_checkout": "Veilig afrekenen"
@@ -763,7 +766,16 @@
         "continue_shopping": "Verder winkelen"
       }
     },
-    "line_item": {},
+    "line_item": {
+      "return_policy": "60 dagen gratis retourneren"
+    },
+    "free_sample": {
+      "choose_samples": "Kies je 2 gratis samples",
+      "select": "SELECTEER",
+      "remove": "VERWIJDER",
+      "add": "Voeg nog",
+      "eligibility": "toe en kom in aanmerking"
+    },
     "klarna_info": {
       "title": "Koop nu betaal later",
       "title1": "Betaal later",
@@ -775,15 +787,5 @@
       "title4": "De betaling",
       "text4": "Je betaalt gemakkelijk in de app met iDEAL, of, zodra je bankrekening veilig gekoppeld is aan de app, met één klik."
     }
-  },
-  "line_item": {
-    "return_policy": "60 dagen gratis retourneren"
-  },
-  "free_sample": {
-    "choose_samples": "Kies je 2 gratis samples",
-    "select": "SELECTEER",
-    "remove": "VERWIJDER",
-    "add": "Voeg nog",
-    "eligibility": "toe en kom in aanmerking"
   }
 }
