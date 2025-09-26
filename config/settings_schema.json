@@ -1957,7 +1957,7 @@
         "step": 5,
         "unit": "€",
         "label": "Free product gift threshold amount",
-        "default": 85
+        "default": 100
       },
       {
         "type": "product",

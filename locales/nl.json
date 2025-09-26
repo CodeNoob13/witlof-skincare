@@ -29,7 +29,7 @@
       "pswp_pinterest": "Pin it",
       "pswp_prev": "Vorige (pijltje links)",
       "pswp_next": "Volgende (pijltje rechts)",
-      "copy_text": "Kopi\u00ebren naar klembord",
+      "copy_text": "Kopiëren naar klembord",
       "copied": "Gekopieerd"
     },
     "newsletter_popup": {
@@ -54,8 +54,8 @@
     },
     "mobile_menu": {
       "menu": "Menu",
-      "close": "Sluit menu, categorie\u00ebn",
-      "categories": "Categorie\u00ebn",
+      "close": "Sluit menu, categorieën",
+      "categories": "Categorieën",
       "wishlist": "Verlanglijst",
       "compare": "Vergelijk",
       "search": "Zoeken",
@@ -164,9 +164,9 @@
         "other": "{{ count }} <span>reacties</span>"
       },
       "comments_title_html": {
-        "zero": "0 gedachte over \u201c<span>{{ title }}</span>\u201d",
-        "one": "1 gedachte over \u201c<span>{{ title }}</span>\u201d",
-        "other": "{{ count }} gedachten over \u201c<span>{{ title }}</span>\u201d"
+        "zero": "0 gedachte over “<span>{{ title }}</span>”",
+        "one": "1 gedachte over “<span>{{ title }}</span>”",
+        "other": "{{ count }} gedachten over “<span>{{ title }}</span>”"
       }
     }
   },
@@ -197,9 +197,9 @@
   },
   "products": {
     "aria_label": {
-      "select_option": "Selecteer opties voor \u201c{{ product_title }}\u201d",
-      "add_to_cart": "Voeg \u201c{{ product_title }}\u201d toe aan uw winkelwagen",
-      "read_more": "Lees meer over \u201c{{ product_title }}\u201d"
+      "select_option": "Selecteer opties voor “{{ product_title }}”",
+      "add_to_cart": "Voeg “{{ product_title }}” toe aan uw winkelwagen",
+      "read_more": "Lees meer over “{{ product_title }}”"
     },
     "breadcrumb": {
       "home": "Home",
@@ -241,7 +241,7 @@
       "in_stock_status": "Op voorraad",
       "pre_oder_status": "Pre-order",
       "sold_out_status": "Uitverkocht",
-      "product_category": "Categorie\u00ebn:",
+      "product_category": "Categorieën:",
       "product_tag": "Tags:",
       "product_size_guide": "Maattabel",
       "delivery_return": "Levering & Retour",
@@ -342,7 +342,7 @@
       "placeholder": "Zoeken",
       "placeholder_products": "Zoeken naar producten",
       "submit": "zoeken",
-      "all_categories": "Alle categorie\u00ebn",
+      "all_categories": "Alle categorieën",
       "no_results": "Geen resultaten gevonden",
       "no_product_results": "Geen producten gevonden die overeenkomen met uw selectie.",
       "sort_by_label": "Sorteren op:",
@@ -350,7 +350,7 @@
       "filter_button": "Filteren",
       "pages_type": ""
     },
-    "search_for": "Zoeken naar \u201c{{ terms }}\u201d",
+    "search_for": "Zoeken naar “{{ terms }}”",
     "pagination": {
       "view_all": "Alles bekijken",
       "load_more": "Meer laden",
@@ -358,14 +358,14 @@
       "bar_with_count_html": "U heeft <span data-current-bar>{{ current_count }}</span> van {{ total_count }} producten bekeken"
     },
     "results_with_term": {
-      "zero": "Zoekresultaat voor: \u201c{{ terms }}\u201d",
-      "one": "Zoekresultaat voor: \u201c{{ terms }}\u201d",
-      "other": "Zoekresultaten voor: \u201c{{ terms }}\u201d"
+      "zero": "Zoekresultaat voor: “{{ terms }}”",
+      "one": "Zoekresultaat voor: “{{ terms }}”",
+      "other": "Zoekresultaten voor: “{{ terms }}”"
     },
     "results_with_count_and_term": {
-      "zero": "Zoekresultaat voor: \u201c{{ terms }}\u201d",
-      "one": "{{ count }} Zoekresultaat voor: \u201c{{ terms }}\u201d",
-      "other": "{{ count }} Zoekresultaten voor: \u201c{{ terms }}\u201d"
+      "zero": "Zoekresultaat voor: “{{ terms }}”",
+      "one": "{{ count }} Zoekresultaat voor: “{{ terms }}”",
+      "other": "{{ count }} Zoekresultaten voor: “{{ terms }}”"
     }
   },
   "cart": {
@@ -413,7 +413,7 @@
       "zip_code": "Postcode",
       "estimate": "Schatting",
       "multiple_rates": "We hebben [number_of_rates] verzendtarieven gevonden die beschikbaar zijn voor [address], te beginnen bij [rate].",
-      "one_rate": "We hebben \u00e9\u00e9n verzendtarief gevonden dat beschikbaar is voor [address].",
+      "one_rate": "We hebben één verzendtarief gevonden dat beschikbaar is voor [address].",
       "no_rates": "Droevig, we verzenden niet naar deze bestemming.",
       "rate_value": "[rate_title] bij [rate]",
       "errors": "Er zijn enkele fouten:"
@@ -421,7 +421,9 @@
     "shipping_threshold": {
       "text_1_html": "Gratis verzending voor alle bestellingen van meer dan <span class=\"t4s-cr\">{{ money }}</span>",
       "text_2_html": "Bijna daar, voeg nog <span class=\"t4s-cr\">{{ money }}</span> toe om <span class=\"t4s-ch\">GRATIS VERZENDING</span> te krijgen!",
-      "text_3": "[Gefeliciteerd!] Je hebt gratis verzending!"
+      "text_3": "[Gefeliciteerd!] Je hebt gratis verzending!",
+      "text_3_html": "",
+      "text_done": ""
     },
     "mini_cart": {
       "title": "Winkelwagen",
@@ -709,7 +711,7 @@
       "remaining_html": "{{ balance }} over",
       "add_to_apple_wallet": "Toevoegen aan Apple Wallet",
       "qr_image_alt": "QR-code - scan om cadeaubon in te wisselen",
-      "copy_code": "Code kopi\u00ebren",
+      "copy_code": "Code kopiëren",
       "copy_code_success": "Code succesvol gekopieerd"
     }
   },
@@ -748,7 +750,14 @@
   },
   "fluctit": {
     "free_shipping": "gratis verzending",
-    "free_sample": "gratis sample",
+    "free_sample": {
+      "choose_samples": "Kies je 2 gratis samples",
+      "select": "SELECTEER",
+      "remove": "VERWIJDER",
+      "add": "Voeg nog",
+      "eligibility": "toe en kom in aanmerking",
+      "threshold_message": ""
+    },
     "free": "gratis",
     "add": "Voeg nog",
     "receive": "toe en ontvang",
@@ -767,14 +776,7 @@
       }
     },
     "line_item": {
-      "return_policy": "60 dagen gratis retourneren"
-    },
-    "free_sample": {
-      "choose_samples": "Kies je 2 gratis samples",
-      "select": "SELECTEER",
-      "remove": "VERWIJDER",
-      "add": "Voeg nog",
-      "eligibility": "toe en kom in aanmerking"
+      "return_policy": "✔ 30 dagen niet-goed-geld-terug.  ✔ Voor 22 uur besteld, zelfde dag verzonden."
     },
     "klarna_info": {
       "title": "Koop nu betaal later",

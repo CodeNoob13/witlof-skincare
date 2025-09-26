@@ -1,4 +1,4 @@
-<div x-data x-init="$store.ajCart.freeProductThreshold = {{ settings.free_sample_product_threshold | plus: 0 }}; $store.ajCart.freeProductID = {{ settings.free_product_gift.variants[0].id }}; $store.ajCart.freeSampleThreshold = {{ settings.free_sample_threshold }}; $store.ajCart.showFreeSamples = {{ settings.show_free_samples }};$store.ajCart.singleFreeSampleID = {{ settings.free_bag.variants[0].id | default: 'null' }};">
+<div x-data x-init="$store.ajCart.freeProductThreshold = {{ settings.free_product_threshold | plus: 0 }}; $store.ajCart.freeProductID = {{ settings.free_product_gift.variants[0].id }}; $store.ajCart.freeSampleThreshold = {{ settings.free_sample_threshold }}; $store.ajCart.showFreeSamples = {{ settings.show_free_samples }};$store.ajCart.singleFreeSampleID = {{ settings.free_bag.variants[0].id | default: 'null' }};">
     <div x-show="($store.ajCart.cart.total_price / 100).toFixed(2) > 0" class="fluct-it__gift-list">
         <div
             class="fluct-it__gift-box active"
@@ -64,20 +64,21 @@
         <div
             class="fluct-it__gift-box"
             :style="{
-                '--border-width': ($store.ajCart.cart.total_price / 100).toFixed(2) >= {{ settings.free_sample_product_threshold }} ? '100%' : '50%',
-                '--border-right': ($store.ajCart.cart.total_price / 100).toFixed(2) >= {{ settings.free_sample_product_threshold }} ? '#4AB9CB' : 'transparent',
-                '--border-radius': ($store.ajCart.cart.total_price / 100).toFixed(2) >= {{ settings.free_sample_product_threshold }} ? '8px' : '8px 0 0 8px'
+                '--border-width': ($store.ajCart.cart.total_price / 100).toFixed(2) >= {{ settings.free_product_threshold }} ? '100%' : '50%',
+                '--border-right': ($store.ajCart.cart.total_price / 100).toFixed(2) >= {{ settings.free_product_threshold }} ? '#4AB9CB' : 'transparent',
+                '--border-radius': ($store.ajCart.cart.total_price / 100).toFixed(2) >= {{ settings.free_product_threshold }} ? '8px' : '8px 0 0 8px'
             }"
             :class="{'active': ($store.ajCart.cart.total_price / 100).toFixed(2) >= {{ settings.free_sample_threshold }} }"
         >
-            <div  class="fluct-it__gift-close" :style="($store.ajCart.cart.total_price / 100).toFixed(2) > {{ settings.free_sample_product_threshold }} ? 'background: #4AB9CB;' : ''">
-                <template x-if="($store.ajCart.cart.total_price / 100).toFixed(2) < {{ settings.free_sample_product_threshold }}">
+            <div  class="fluct-it__gift-close" :style="($store.ajCart.cart.total_price / 100).toFixed(2) > {{ settings.free_product_threshold }} ? 'background: #4AB9CB;' : ''">
+                <template x-if="($store.ajCart.cart.total_price / 100).toFixed(2) < {{ settings.free_product_threshold }}">
                     {% render 'close-icon' %}
                 </template>
-                <template x-if="($store.ajCart.cart.total_price / 100).toFixed(2) >= {{ settings.free_sample_product_threshold }}">
+                <template x-if="($store.ajCart.cart.total_price / 100).toFixed(2) >= {{ settings.free_product_threshold }}">
                     {% render 'checkmark-icon' %}
                 </template>
             </div>
+            
             <picture>
                 <img
                     src="{{ settings.free_product_gift.images[0] | image_url: width: 32 }}"
@@ -101,7 +102,8 @@
         </template>
 
         <template x-if="($store.ajCart.cart.total_price / 100).toFixed(2) > {{ settings.free_ship_threshold }} && ($store.ajCart.cart.total_price / 100).toFixed(2) < {{ settings.free_sample_threshold }}">
-            <p >{{ 'fluctit.add' | t }} <strong x-text="'€' + ({{ settings.free_sample_threshold }} - ($store.ajCart.cart.total_price / 100).toFixed(2)).toFixed(0)"></strong> {{ 'fluctit.receive' | t}} <b>{{ 'fluctit.free_sample' | t }}</b></p>
+            <p >{{ 'fluctit.add' | t }} <strong x-text="'€' + ({{ settings.free_sample_threshold }} - ($store.ajCart.cart.total_price / 100)).toFixed(0)"></strong>
+ {{ 'fluctit.receive' | t}} <b>{{ settings.free_bag.title }}</b></p>
         </template>
 
         <template x-if="($store.ajCart.cart.total_price / 100).toFixed(2) > {{ settings.free_sample_threshold }} && ($store.ajCart.cart.total_price / 100).toFixed(2) < {{ settings.free_product_threshold }}">
@@ -110,7 +112,7 @@
 
     </div>
 
-<!--  Free product needs to be added with application -->
+
 
 </div>
     <style>
