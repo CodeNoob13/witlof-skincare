@@ -34,9 +34,9 @@
 
         
         <div class="fluct-it__cart-item-prices">
-          <span class="fluct-it__cart-item-price" x-text="(item.final_price / 100).toFixed(2)"></span>
+          <span class="fluct-it__cart-item-price" x-text="'€' + (item.final_price / 100).toFixed(2)"></span>
           <template x-if="item.compare_at_price">  
-            <s class="fluct-it__cart-item-compare_at_price"><span class="fluct-it__cart-item-compare_at_price" x-text="item.compare_at_price"></span></s>
+            <s class="fluct-it__cart-item-compare_at_price"><span class="fluct-it__cart-item-compare_at_price" x-text="'€' + item.compare_at_price"></span></s>
           </template>
           </div>
 
@@ -95,7 +95,7 @@
 
 .fluct-it__cart-item-actions {
   display:flex;
-  justify-content:space-between;
+  gap:16px;
 }
 
 .fluct-it__quantity-selectors {
@@ -122,9 +122,11 @@
 
 .fluct-it__cart-item-prices {
   display: flex;
-  gap: 6px;
+  flex-direction:column;
+  {% comment %} gap: 4px; {% endcomment %}
   align-items:left;
-  width:90px;
+  {% comment %} width:90px; {% endcomment %}
+  
 }
 
 .fluct-it__cart-item-price {
@@ -142,7 +144,7 @@
   font-weight:500;
   display: flex;
   align-items: center;
-
+  max-width:250px;
 }
 
 @media screen and (max-width:768px) {
