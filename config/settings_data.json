@@ -70,8 +70,8 @@
     "variant_remove": "1",
     "share_source": "1",
     "cart_ajax_enable": true,
-    "free_ship_threshold": 40,
-    "free_sample_threshold": 50,
+    "free_ship_threshold": 45,
+    "free_sample_threshold": 60,
     "free_sample_text": "",
     "free_bag": "organic-cotton-toilet-bag-free-gift",
     "show_free_samples": false,
@@ -496,6 +496,7 @@
         "blocks": {
           "announcement_P3aB3k": {
             "type": "announcement",
+            "disabled": true,
             "settings": {
               "link": "shopify://collections/frontpage",
               "content": "<p>✨SUMMER SALE!<strong> 30% KORTING </strong>OP ALLE PRODUCTEN! 🌞 En GRATIS SPF Day Cream t.w.v. €32.95 bij elke SET! </p>",
@@ -534,7 +535,7 @@
             "disabled": true,
             "settings": {
               "link": "",
-              "content": "<p><strong>Gratis </strong>verzenden vanaf €55 in NL & BE. Voor <strong>22 uur</strong> besteld, dezelfde werkdag verzonden.</p>",
+              "content": "<p><strong>Gratis </strong>verzenden vanaf €45 in NL & BE. Voor <strong>22 uur</strong> besteld, dezelfde werkdag verzonden.</p>",
               "adding_border": false,
               "countdown": "",
               "txt_day": "days",
@@ -591,10 +592,9 @@
           },
           "announcement-bar-2": {
             "type": "announcement",
-            "disabled": true,
             "settings": {
               "link": "",
-              "content": "<p>Einde<strong> zomersale</strong>, tot <strong>30% korting</strong> op alle producten. <strong>[icon_arrow]</strong> <strong>[countdown] </strong></p>",
+              "content": "<p><strong>ELLE SHOPPING DAYS! </strong></p><p><strong>20% KORTING </strong>met code ELLEXWITLOF</p>",
               "adding_border": false,
               "countdown": "2023/09/13 23:59:30",
               "txt_day": "days",
@@ -614,7 +614,7 @@
           "announcement-bar-2"
         ],
         "settings": {
-          "show_announcement": false,
+          "show_announcement": true,
           "design": "slider",
           "effect": "1",
           "au_time": 5,
@@ -623,8 +623,8 @@
           "direction": "rtl",
           "height": 47,
           "fontsize": 14,
-          "cl": "#ffffff",
-          "bg": "#5f8ac7",
+          "cl": "#222222",
+          "bg": "#f7eb52",
           "bg_op": 89,
           "close": "0",
           "cl_btn": "#ffffff",
@@ -652,7 +652,7 @@
           "top-bar-1": {
             "type": "text",
             "settings": {
-              "text": "<p><strong>✔️Gratis </strong>verzenden vanaf €25 in NL & BE ;;; <strong>✔️</strong>Voor <strong>22 uur</strong> besteld, zelfde werkdag verzonden ;;;<strong>✔️+10.000</strong> tevreden klanten </p>",
+              "text": "<p><strong>✔️Gratis </strong>verzenden vanaf €45 in NL & BE ;;; <strong>✔️</strong>Voor <strong>22 uur</strong> besteld, zelfde werkdag verzonden ;;;<strong>✔️+10.000</strong> tevreden klanten </p>",
               "adding_border": false,
               "countdown": "",
               "txt_day": "",
@@ -1534,6 +1534,128 @@
       "mb_nav": {
         "type": "mb_nav",
         "blocks": {
+          "catpr_AnUkjz": {
+            "type": "catpr",
+            "settings": {
+              "title": "<b><span style=\"color: #383838;\">ELLE SHOPPING DAYS!</span></b>",
+              "url": "https://witlofskincare.nl/collections/all?view=ecom-witlof-skincare-x-elle",
+              "lb": "20% KORTING",
+              "lb_cl": "#f7eb52",
+              "icons_op": "2",
+              "icon": "",
+              "cat1": "",
+              "url1": "",
+              "cat2": "",
+              "url2": "",
+              "cat3": "",
+              "url3": "",
+              "cat4": "",
+              "url4": "",
+              "cat5": "",
+              "url5": "",
+              "cat6": "",
+              "url6": "",
+              "cat7": "",
+              "url7": "",
+              "cat8": "",
+              "url8": "",
+              "cat9": "",
+              "url9": "",
+              "cat10": "",
+              "url10": "",
+              "cat11": "",
+              "url11": "",
+              "cat12": "",
+              "url12": "",
+              "cat13": "",
+              "url13": "",
+              "cat14": "",
+              "url14": "",
+              "cat15": "",
+              "url15": "",
+              "cat16": "",
+              "url16": "",
+              "cat17": "",
+              "url17": "",
+              "cat18": "",
+              "url18": "",
+              "cat19": "",
+              "url19": "",
+              "cat20": "",
+              "url20": "",
+              "cat21": "",
+              "url21": "",
+              "cat22": "",
+              "url22": "",
+              "cat23": "",
+              "url23": "",
+              "cat24": "",
+              "url24": "",
+              "cat25": "",
+              "url25": ""
+            }
+          },
+          "catpr_Lwhaz4": {
+            "type": "catpr",
+            "settings": {
+              "title": "ALLE PRODUCTEN",
+              "url": "shopify://collections/frontpage",
+              "lb": "",
+              "lb_cl": "",
+              "icons_op": "2",
+              "icon": "",
+              "cat1": "",
+              "url1": "",
+              "cat2": "",
+              "url2": "",
+              "cat3": "",
+              "url3": "",
+              "cat4": "",
+              "url4": "",
+              "cat5": "",
+              "url5": "",
+              "cat6": "",
+              "url6": "",
+              "cat7": "",
+              "url7": "",
+              "cat8": "",
+              "url8": "",
+              "cat9": "",
+              "url9": "",
+              "cat10": "",
+              "url10": "",
+              "cat11": "",
+              "url11": "",
+              "cat12": "",
+              "url12": "",
+              "cat13": "",
+              "url13": "",
+              "cat14": "",
+              "url14": "",
+              "cat15": "",
+              "url15": "",
+              "cat16": "",
+              "url16": "",
+              "cat17": "",
+              "url17": "",
+              "cat18": "",
+              "url18": "",
+              "cat19": "",
+              "url19": "",
+              "cat20": "",
+              "url20": "",
+              "cat21": "",
+              "url21": "",
+              "cat22": "",
+              "url22": "",
+              "cat23": "",
+              "url23": "",
+              "cat24": "",
+              "url24": "",
+              "cat25": "",
+              "url25": ""
+            }
+          },
           "menu_XdCXRy": {
             "type": "menu",
             "disabled": true,
@@ -1747,81 +1869,6 @@
               "url25": ""
             }
           },
-          "catpr_AnUkjz": {
-            "type": "catpr",
-            "disabled": true,
-            "settings": {
-              "title": "<b><span style=\"color: #2B818F;\">VAKANTIEGELD SALE</span> </b>",
-              "url": "https://witlofskincare.nl/collections/all?view=ecom-25-korting",
-              "lb": "25% KORTING",
-              "lb_cl": "#2b818f",
-              "icons_op": "2",
-              "icon": "",
-              "cat1": "",
-              "url1": "",
-              "cat2": "",
-              "url2": "",
-              "cat3": "",
-              "url3": "",
-              "cat4": "",
-              "url4": "",
-              "cat5": "",
-              "url5": "",
-              "cat6": "",
-              "url6": "",
-              "cat7": "",
-              "url7": "",
-              "cat8": "",
-              "url8": "",
-              "cat9": "",
-              "url9": "",
-              "cat10": "",
-              "url10": "",
-              "cat11": "",
-              "url11": "",
-              "cat12": "",
-              "url12": "",
-              "cat13": "",
-              "url13": "",
-              "cat14": "",
-              "url14": "",
-              "cat15": "",
-              "url15": "",
-              "cat16": "",
-              "url16": "",
-              "cat17": "",
-              "url17": "",
-              "cat18": "",
-              "url18": "",
-              "cat19": "",
-              "url19": "",
-              "cat20": "",
-              "url20": "",
-              "cat21": "",
-              "url21": "",
-              "cat22": "",
-              "url22": "",
-              "cat23": "",
-              "url23": "",
-              "cat24": "",
-              "url24": "",
-              "cat25": "",
-              "url25": ""
-            }
-          },
-          "c2ebecad-0bdd-4c7a-806b-755955862f41": {
-            "type": "menu",
-            "settings": {
-              "title": "<b><span style=\"color: #ED7377;\">SUMMER SALE!</span></b>",
-              "url": "https://witlofskincare.nl/collections/all",
-              "open_link": "_self",
-              "menu": "product-type",
-              "lb": "30% korting",
-              "lb_cl": "#ed7377",
-              "icons_op": "2",
-              "icon": ""
-            }
-          },
           "menu_kw6Ygx": {
             "type": "menu",
             "disabled": true,
@@ -1836,14 +1883,41 @@
               "icon": ""
             }
           },
-          "menu_fHFLVe": {
+          "789d1e04-4c2c-4dda-b425-0b1dc3300eb4": {
             "type": "menu",
             "settings": {
-              "title": "<b><span style=\"color: #5f8ac7;\">Shop Voordeelsets</span> </b>",
+              "title": "Shop per huidtype",
+              "url": "",
+              "open_link": "_self",
+              "menu": "skin-type",
+              "lb": "",
+              "lb_cl": "",
+              "icons_op": "2",
+              "icon": ""
+            }
+          },
+          "menu_cmiMmy": {
+            "type": "menu",
+            "settings": {
+              "title": "Shop per huidaandoening",
+              "url": "",
+              "open_link": "_self",
+              "menu": "skin-concern",
+              "lb": "",
+              "lb_cl": "",
+              "icons_op": "2",
+              "icon": ""
+            }
+          },
+          "menu_fHFLVe": {
+            "type": "menu",
+            "disabled": true,
+            "settings": {
+              "title": "Shop Voordeelsets",
               "url": "https://witlofskincare.nl/en/collections/value-sets",
               "open_link": "_self",
               "menu": "",
-              "lb": "+ GRATIS SPF",
+              "lb": "",
               "lb_cl": "#5f8ac7",
               "icons_op": "2",
               "icon": ""
@@ -1852,7 +1926,7 @@
           "catpr_jyb7gP": {
             "type": "catpr",
             "settings": {
-              "title": "Dutch Beauty Award",
+              "title": "Dutch Beauty Award producten",
               "url": "https://witlofskincare.nl/collections/all?view=ecom-dutch-beauty-award",
               "lb": "",
               "lb_cl": "#e41e37",
@@ -1910,32 +1984,6 @@
               "url25": ""
             }
           },
-          "789d1e04-4c2c-4dda-b425-0b1dc3300eb4": {
-            "type": "menu",
-            "settings": {
-              "title": "Shop per huidtype",
-              "url": "",
-              "open_link": "_self",
-              "menu": "skin-type",
-              "lb": "",
-              "lb_cl": "",
-              "icons_op": "2",
-              "icon": ""
-            }
-          },
-          "menu_cmiMmy": {
-            "type": "menu",
-            "settings": {
-              "title": "Shop per huidaandoening",
-              "url": "",
-              "open_link": "_self",
-              "menu": "skin-concern",
-              "lb": "",
-              "lb_cl": "",
-              "icons_op": "2",
-              "icon": ""
-            }
-          },
           "menu_DGWpAR": {
             "type": "menu",
             "disabled": true,
@@ -1966,6 +2014,7 @@
           },
           "menu_ah66Bc": {
             "type": "menu",
+            "disabled": true,
             "settings": {
               "title": "ARCHIVE SALE",
               "url": "shopify://collections/archive-sale",
@@ -2125,18 +2174,18 @@
           }
         },
         "block_order": [
+          "catpr_AnUkjz",
+          "catpr_Lwhaz4",
           "menu_XdCXRy",
           "5efaec12-d185-4718-b159-37d79cc7fdf4",
           "catpr_8iMEX9",
           "catpr_hqnXpx",
           "catpr_Lgykd8",
-          "catpr_AnUkjz",
-          "c2ebecad-0bdd-4c7a-806b-755955862f41",
           "menu_kw6Ygx",
-          "menu_fHFLVe",
-          "catpr_jyb7gP",
           "789d1e04-4c2c-4dda-b425-0b1dc3300eb4",
           "menu_cmiMmy",
+          "menu_fHFLVe",
+          "catpr_jyb7gP",
           "menu_DGWpAR",
           "ef710ec3-5c73-4e9a-badd-f1d526aedf99",
           "menu_ah66Bc",
@@ -2869,6 +2918,19 @@
       "header-categories-menu": {
         "type": "header-categories-menu",
         "blocks": {
+          "base_hKypLz": {
+            "type": "base",
+            "settings": {
+              "title": "<b><span style=\"color: #383838;\">ELLE SHOPPING DAYS!</span></b>",
+              "url": "https://witlofskincare.nl/collections/all?view=ecom-witlof-skincare-x-elle",
+              "open_link": "_self",
+              "icon": "",
+              "cus_cl": false,
+              "cl": "#383838",
+              "lb": "-20%",
+              "lb_cl": "#f7eb52"
+            }
+          },
           "c393f823-40c8-44f7-a359-bd28f021144a": {
             "type": "drop",
             "settings": {
@@ -2990,6 +3052,7 @@
           },
           "base_BjH7Dq": {
             "type": "base",
+            "disabled": true,
             "settings": {
               "title": "ARCHIVE SALE",
               "url": "shopify://collections/archive-sale",
@@ -3016,6 +3079,7 @@
           },
           "base_VBG3WB": {
             "type": "base",
+            "disabled": true,
             "settings": {
               "title": "<b><span style=\"color: #ed7377;\">ZONPRODUCTEN</span> </b>",
               "url": "shopify://collections/zonnebescherming",
@@ -3029,6 +3093,7 @@
           },
           "base_ABfxbA": {
             "type": "base",
+            "disabled": true,
             "settings": {
               "title": "<b><span style=\"color: #5f8ac7;\">VOORDEELSETS</span> </b>",
               "url": "shopify://collections/value-sets",
@@ -3038,20 +3103,6 @@
               "cl": "#222222",
               "lb": "",
               "lb_cl": "#c5e6f0"
-            }
-          },
-          "base_hKypLz": {
-            "type": "base",
-            "disabled": true,
-            "settings": {
-              "title": "<b><span style=\"color: #2B818F;\">VAKANTIEGELD SALE!</span></b>",
-              "url": "https://witlofskincare.nl/collections/all?view=ecom-25-korting",
-              "open_link": "_self",
-              "icon": "",
-              "cus_cl": false,
-              "cl": "#2b818f",
-              "lb": "-25%!",
-              "lb_cl": "#2b818f"
             }
           },
           "24385b43-e59d-4dcc-9a67-efc172696b12": {
@@ -3126,6 +3177,7 @@
           }
         },
         "block_order": [
+          "base_hKypLz",
           "c393f823-40c8-44f7-a359-bd28f021144a",
           "c0c56c51-6af7-4b70-8f40-a8876ad9aa0e",
           "76e52326-e21f-4c00-9ee7-5f0b4dec0a70",
@@ -3138,7 +3190,6 @@
           "base_B69PYa",
           "base_VBG3WB",
           "base_ABfxbA",
-          "base_hKypLz",
           "24385b43-e59d-4dcc-9a67-efc172696b12",
           "73e34ab8-b0cc-406f-8f0f-5c6ea54503f2",
           "45b949d7-78eb-4a90-87c7-cdd9157d8427",
@@ -3283,7 +3334,7 @@
             "type": "lv0_mega",
             "settings": {
               "title": "mega",
-              "url": "shopify://collections",
+              "url": "shopify://collections/frontpage",
               "open_link": "_self",
               "icon": "",
               "cus_cl": false,

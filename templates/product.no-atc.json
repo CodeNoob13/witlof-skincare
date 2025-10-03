@@ -121,6 +121,7 @@
         },
         "form": {
           "type": "form",
+          "disabled": true,
           "settings": {
             "selector_mode": "circle",
             "color_mode": "color is-sw-cl__round",

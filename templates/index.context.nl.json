@@ -16,23 +16,11 @@
     "1646028739ae283905": {
       "settings": {},
       "blocks": {
-        "image_parent_zVdxYw": {
-          "disabled": false,
-          "settings": {}
-        },
-        "custom_text_AjMftb": {
-          "disabled": false,
-          "settings": {}
-        },
-        "a0353df7-5a4a-4331-b4a9-09ec0b341b4e": {
-          "disabled": false,
-          "settings": {}
-        },
-        "f9ccd33c-b45a-4243-86f6-69c3eb73cc3b": {
+        "custom_text_eDXYdw": {
           "disabled": true,
           "settings": {}
         },
-        "custom_text_eDXYdw": {
+        "f9ccd33c-b45a-4243-86f6-69c3eb73cc3b": {
           "disabled": true,
           "settings": {}
         },
@@ -47,8 +35,107 @@
         "custom_button_rT3cEc": {
           "disabled": true,
           "settings": {}
+        },
+        "image_parent_zVdxYw": {
+          "disabled": false,
+          "settings": {}
+        },
+        "custom_text_AjMftb": {
+          "disabled": false,
+          "settings": {}
+        },
+        "a0353df7-5a4a-4331-b4a9-09ec0b341b4e": {
+          "disabled": false,
+          "settings": {}
+        },
+        "image_parent_x9HMnj": {
+          "disabled": true,
+          "settings": {}
+        },
+        "custom_text_ejq7QA": {
+          "disabled": true,
+          "settings": {}
+        },
+        "custom_text_HAyDhk": {
+          "disabled": true,
+          "settings": {}
+        },
+        "custom_button_gLjDnG": {
+          "disabled": true,
+          "settings": {}
+        },
+        "image_parent_JGiF9P": {
+          "disabled": false,
+          "settings": {}
+        },
+        "8d564252-9285-4052-aad9-23345d9120b7": {
+          "disabled": false,
+          "settings": {
+            "text_fs": 50,
+            "text_lh": 39,
+            "text_fw": 700,
+            "text_mgb": 16
+          }
+        },
+        "custom_text_4PKnkH": {
+          "disabled": false,
+          "settings": {
+            "text_cl": "#c5e6f0",
+            "text_ls": 0
+          }
+        },
+        "custom_button_FP66hq": {
+          "disabled": false,
+          "settings": {
+            "button_text": "ONTDEK NU"
+          }
         }
-      }
+      },
+      "block_order": [
+        "164602873867eb3815-0",
+        "image_parent_x9HMnj",
+        "custom_text_eDXYdw",
+        "custom_text_ejq7QA",
+        "custom_text_HAyDhk",
+        "custom_button_gLjDnG",
+        "image_parent_39FYeC",
+        "custom_text_ACxWyd",
+        "custom_text_UtKeCY",
+        "36300f87-bb05-45e8-8c45-a63e4098c000",
+        "f9ccd33c-b45a-4243-86f6-69c3eb73cc3b",
+        "custom_text_HRWAfJ",
+        "custom_text_7yhV46",
+        "custom_button_rT3cEc",
+        "image_parent_hJiydJ",
+        "countdown_8dHmid",
+        "custom_text_k48Gp9",
+        "custom_text_h47FeQ",
+        "custom_text_9fPAGD",
+        "efa3ea83-c43c-48b4-85ed-90ed7642e2f7",
+        "image_parent_FUg9je",
+        "custom_text_K8h3Hb",
+        "custom_text_kkfyT4",
+        "custom_text_bA8PTN",
+        "image_parent_pRrbx3",
+        "custom_text_WkegGN",
+        "custom_text_cKKgrR",
+        "custom_button_cYLEYf",
+        "image_parent_JGiF9P",
+        "8d564252-9285-4052-aad9-23345d9120b7",
+        "custom_text_4PKnkH",
+        "custom_button_FP66hq",
+        "image_parent_zVdxYw",
+        "custom_text_4kbwXP",
+        "custom_text_AjMftb",
+        "a0353df7-5a4a-4331-b4a9-09ec0b341b4e",
+        "custom_text_g6zCzX",
+        "image_parent_M4ydgX",
+        "custom_text_rqABrX",
+        "custom_text_CKaqyE",
+        "custom_text_rFb7qt",
+        "32759fc3-ba70-4f9c-acd2-0388ed373d27",
+        "custom_button_dbtxUc"
+      ]
     }
   }
 }

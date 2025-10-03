@@ -516,6 +516,31 @@
       "conditions": "U moet akkoord gaan met de algemene voorwaarden om u aan te melden.",
       "link_conditions_html": "Ik ga akkoord met de <a href=\"{{ link }}\" class=\"t4s-text__link\">algemene voorwaarden</a>.",
       "link_conditions_emty": "Ik ga akkoord met de algemene voorwaarden."
+    },
+    "ecom-witlof-skincare-x-elle-collection": {
+      "headingtext_vj7itcw21v_html": "<h3 class=\"ecom__heading ecom-db\" spellcheck=\"false\" style=\"font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; outline-offset: 0.3rem; outline: none !important; box-shadow: none !important;\"><div style=\"font-size: 30px;\"><br></div><div style=\"font-size: 30px;\">20% KORTING MET CODE ELLEXWITLOF</div></h3>",
+      "textcontent_056atcdk55js_html": "<div>Tijdens de<b> ELLE Shopping</b> <b>Days </b>ontvang je 20% korting op alle producten van Witlof Skincare. Het thema dit jaar is <em data-start=\"316\" data-end=\"331\">smart shoppen</em>: alleen kopen wat écht bij je past en waar je lang plezier van hebt. Precies zoals wij naar huidverzorging kijken. Met onze <b><u>huidtest</u></b>&nbsp; of een<u> <a href=\"https://calendly.com/witlofskincareconsultations/witlof-skincare-persoonlijk-huidconsult?month=2023-06\" style=\"\"><b>persoonlijk huidconsult</b></a></u> &nbsp;weet je zeker welke producten het beste aansluiten bij jouw huid. Zo shop je bewust, slim én met liefde voor je huid. ✨</div><div> \n</div><div>\n</div><div>\n</div>",
+      "textcontent_31viy818w6p_html": "<div><span style=\"font-family: inherit; font-style: inherit; font-weight: inherit; letter-spacing: 0px;\">Witlof Skincare is..</span></div><div><ul><li>100% natuurlijk, vegan en microplastic-vrij</li><li>boordevol effectieve ingredienten zit</li><li>heerlijk ruikt</li><li>je huidt balanceert, voedt en laat stralen!</li></ul></div><div><div style=\"font-size: 14px;\"><div style=\"font-size: 14px;\"><div style=\"font-size: 14px;\"><div style=\"font-size: 14px;\"><span style=\"font-family: inherit; font-style: inherit; font-weight: inherit; letter-spacing: 0px;\">Laat de herfst maar komen, jouw huid kan er tegenaan!</span></div></div></div></div></div><div> \n</div><div>\n</div><div>\n</div>",
+      "textcontent_g64oue861q_html": "<div><i style=\"font-size: 14px; letter-spacing: 0px;\">* Voeg je code toe bij de checkout. Actie eindigt op 12 oktober.&nbsp; 20% korting is geldig op alle producten en sets zolang de voorraad strekt en niet geldig in combinatie met andere kortingen.</i></div><div><div style=\"font-size: 14px;\"><div style=\"font-size: 14px;\"><br></div></div></div><div> \n</div><div>\n</div><div>\n</div>",
+      "headingtext_s7usi937v0i_html": "MUST HAVES VOOR DEZE WINTER",
+      "badge_tags_jv7xrs7u6m_html": "-30%",
+      "product_option_swatch_jv7xrs7u6m_html": "Color",
+      "view_more_text_jv7xrs7u6m_html": "View More",
+      "add_to_cart_jv7xrs7u6m_html": "Add To Cart",
+      "product_unavailable_jv7xrs7u6m_html": "Unavailable",
+      "product_soldout_jv7xrs7u6m_html": "Sold Out",
+      "added_cart_text_jv7xrs7u6m_html": "Added to cart",
+      "added_cart_message_jv7xrs7u6m_html": "Added to cart",
+      "pre_order_jv7xrs7u6m_html": "Pre order",
+      "sold_out_text_jv7xrs7u6m_html": "Sold Out",
+      "quick_shop_text_jv7xrs7u6m_html": "Quick Shop",
+      "no_product_item_jv7xrs7u6m_html": "There are no product yet!",
+      "text_week_jv7xrs7u6m_html": "[%-W] week%!W",
+      "text_day_jv7xrs7u6m_html": "[%-d] day%!D",
+      "text_hour_jv7xrs7u6m_html": "[%-H] hr%!H",
+      "text_minute_jv7xrs7u6m_html": "[%-M] min%!M",
+      "text_second_jv7xrs7u6m_html": "[%-S] sec%!S",
+      "20_jv7xrs7u6m_html": "-20%"
     }
   },
   "customer": {
@@ -762,7 +787,7 @@
     "add": "Voeg nog",
     "receive": "toe en ontvang",
     "cart": {
-      "upsell_title": "Wat je ook leuk zal vinden",
+      "upsell_title": "Maak je routine compleet",
       "free_shipping": "Gratis verzending",
       "free_sample": "Gratis sample",
       "free": "Gratis",

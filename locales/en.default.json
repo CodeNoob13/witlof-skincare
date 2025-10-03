@@ -422,7 +422,8 @@
       "text_1_html": "Spend {{ money }} more to get free shipping!",
       "text_2_html": "Spend {{ money }} more to get a free sample!",
       "text_3_html": "Spend {{ money }} more to get a free sample product!",
-      "text_done": "Congratulations! You have unlocked all rewards."
+      "text_done": "Congratulations! You have unlocked all rewards.",
+      "text_3": "[Congratulations!] You have free shipping!"
     },
     "mini_cart": {
       "title": "Shopping cart",
@@ -515,6 +516,9 @@
       "conditions": "You must agree with the terms and conditions to sign up.",
       "link_conditions_html": "I agree with the <a href=\"{{ link }}\" class=\"t4s-text__link\">terms and conditions</a>.",
       "link_conditions_emty": "I agree with the terms and conditions."
+    },
+    "ecom-witlof-skincare-x-elle-collection": {
+      "headingtext_vj7itcw21v_html": "<h3 class=\"ecom__heading ecom-db\" spellcheck=\"false\" style=\"font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; outline-offset: 0.3rem; outline: none !important; box-shadow: none !important;\"><div style=\"font-size: 30px;\">20% OFF with code ELLEXWITLOF</div></h3>"
     }
   },
   "customer": {
@@ -742,27 +746,6 @@
   },
   "fluctit": {
     "free_shipping": "Free shipping",
-    "free_sample": "Free",
-    "free": "Free",
-    "add": "Add another",
-    "receive": "and receive",
-    "cart": {
-      "upsell_title": "What you will also like",
-      "free_shipping": "Free shipping",
-      "free_sample": "Free sample",
-      "free": "Free",
-      "add_to_cart_text": "Add to cart",
-      "cart_footer": {
-        "estimated_total": "Estimated Total",
-        "secure_checkout": "Secure Checkout"
-      },
-      "empty_cart": {
-        "continue_shopping": "Shop now"
-      }
-    },
-    "line_item": {
-      "return_policy": "60 days free returns"
-    },
     "free_sample": {
       "choose_samples": "Choose your 2 samples",
       "select": "SELECT",
@@ -770,6 +753,26 @@
       "threshold_message": "Add <strong>€{{ amount }}</strong> more to qualify for free samples",
       "add": "Add",
       "eligibility": "more to qualify"
+    },
+    "free": "Free",
+    "add": "Add another",
+    "receive": "and receive a",
+    "cart": {
+      "upsell_title": "Complete your routine",
+      "free_shipping": "Free shipping",
+      "free_sample": "Free sample",
+      "add_to_cart_text": "Add to cart",
+      "cart_footer": {
+        "estimated_total": "Estimated Total",
+        "secure_checkout": "Secure Checkout"
+      },
+      "empty_cart": {
+        "continue_shopping": "Shop now"
+      },
+      "free": "Free"
+    },
+    "line_item": {
+      "return_policy": "✔30-day money-back guarantee.                           ✔Ordered before 10 PM, shipped the same day."
     },
     "klarna_info": {
       "title": "Buy now pay later",

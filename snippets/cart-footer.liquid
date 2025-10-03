@@ -22,9 +22,9 @@
 
 </div>
 
-<button href="/checkout" class="fluct-it-cart__footer-btn" :available="$store.ajCart.setLoader" :class="$store.ajCart.setLoader ? 'fluct-it-cart__disabled' : ''">
+<a href="/checkout" class="fluct-it-cart__footer-btn" :available="$store.ajCart.setLoader" :class="$store.ajCart.setLoader ? 'fluct-it-cart__disabled' : ''">
   {{ 'fluctit.cart.cart_footer.secure_checkout' | t }}
-</button>
+</a>
 
 <div class="fluct-it-cart__payment-icons">
   {%- for type in shop.enabled_payment_types -%}
@@ -45,6 +45,7 @@
         bottom:0;
         background:#fff;
         margin-top:auto;
+        z-index:100;
     }
 
     .fluct-it-cart__payment-icons {

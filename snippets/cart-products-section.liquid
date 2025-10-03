@@ -16,9 +16,9 @@
                   <div class="fluct-it__cart-upsell-info" @click="console.log(item.variants)">
                       <span class="fluct-it__cart-upsell-title" x-text="item.title" role="heading" aria-level="3"></span>
                       <div class="fluct-it__cart-upsell-prices" aria-label="Price">
-                          <span class="fluct-it__cart-upsell-price" x-text="item.variants[0].price"></span>
+                          <span class="fluct-it__cart-upsell-price" x-text="'€' + item.variants[0].price"></span>
                           <s class="fluct-it__cart-upsell-compare-price">
-                            <span x-show="item.variants[0].compare_at_price" x-text="item.variants[0].compare_at_price"></span>
+                            <span x-show="item.variants[0].compare_at_price" x-text="'€' + item.variants[0].compare_at_price"></span>
                           </s>
                       </div>
                   </div>
@@ -38,6 +38,12 @@
     flex-direction: column;
     gap: 16px;
     padding: 20px;
+}
+
+@media screen and (max-width: 768px){
+.fluct-it_upsell-container {
+    margin-bottom: 70px;
+}
 }
 
 .fluct-it-upsell-title {
