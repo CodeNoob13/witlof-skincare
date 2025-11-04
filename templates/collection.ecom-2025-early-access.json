@@ -8,9 +8,14 @@
  * ------------------------------------------------------------
  */
 {
-  "markets": {
-    "nl": {
-      "parent": "@default"
+  "layout": "theme",
+  "sections": {
+    "ecom-2025-early-access-collection": {
+      "type": "ecom-2025-early-access-collection",
+      "settings": {}
     }
-  }
+  },
+  "order": [
+    "ecom-2025-early-access-collection"
+  ]
 }

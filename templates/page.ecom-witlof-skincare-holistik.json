@@ -10,12 +10,12 @@
 {
   "layout": "theme",
   "sections": {
-    "ecom-25-korting-collection": {
-      "type": "ecom-25-korting-collection",
+    "ecom-witlof-skincare-holistik-page": {
+      "type": "ecom-witlof-skincare-holistik-page",
       "settings": {}
     }
   },
   "order": [
-    "ecom-25-korting-collection"
+    "ecom-witlof-skincare-holistik-page"
   ]
 }

@@ -1,8 +1,8 @@
 {%  if settings.show_free_samples  %}
 <div class="fluct-it-free-gift__sample-container">
-    <div class="fluct-it-sample-title">{{ 'free_sample.choose_samples' | t}}</div>
+    <div class="fluct-it-sample-title">{{ 'fluctit.free_sample.choose_samples' | t}}</div>
     
-    <p x-show="($store.ajCart.cart.total_price / 100).toFixed(0) < {{ settings.free_sample_threshold }}">{{ 'free_sample.add' | t }} <strong x-text="'€' + ({{ settings.free_sample_threshold }} - ($store.ajCart.cart.total_price / 100)).toFixed(0)"></strong> {{ 'free_sample.eligibility' | t }}</p>
+    <p x-show="($store.ajCart.cart.total_price / 100).toFixed(0) < {{ settings.free_sample_threshold }}">{{ 'fluctit.free_sample.add' | t }} <strong x-text="'€' + ({{ settings.free_sample_threshold }} - ($store.ajCart.cart.total_price / 100)).toFixed(0)"></strong> {{ 'fluctit.free_sample.eligibility' | t }}</p>
 
     <div class="gift-card-sample-block-container">
         {% for product in settings.free_sample_products %}
@@ -24,16 +24,16 @@
 
                        <div x-show="($store.ajCart.cart.total_price / 100).toFixed(0) >= {{ settings.free_sample_threshold }}">
                            <a
-                            x-show="!$store.ajCart.giftInCart({{ product.variants[0].id }}) && $store.ajCart.getGiftSampleCount() < 2"
+                            x-show="!$store.ajCart.giftInCart({{ product.variants[0].id }}) && $store.ajCart.getGiftSampleCount() < 1"
                             class="gift-card-sample-btn"
                             @click="$store.ajCart.addGiftProduct({{ product.variants[0].id }})"
-                        >{{ 'free_sample.select' | t }}</a>
+                        >{{ 'fluctit.free_sample.select' | t }}</a>
                         
                         <a
                             x-show="$store.ajCart.giftInCart({{ product.variants[0].id }})"
                             class="gift-card-sample-btn"
                             @click="$store.ajCart.removeItem({{ product.variants[0].id }})"
-                        >{{ 'free_sample.remove' | t }}</a>   
+                        >{{ 'fluctit.free_sample.remove' | t }}</a>   
                         
                             <template x-if="$store.ajCart.giftInCart({{ product.variants[0].id }})">
                         <div class="fluct-it__gift-close" :style="($store.ajCart.cart.total_price / 100).toFixed(2) > {{ settings.free_ship_threshold }} ? 'background: #4AB9CB;' : ''">

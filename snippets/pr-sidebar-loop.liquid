@@ -4,6 +4,7 @@
   assign image = product.featured_media | default: placeholder_img
 -%}
 
+{%- unless product.tags contains 'exclude_all' -%}
 <div class="t4s_complimentary__product t4s-row t4s-space-item-inner t4s-widget__pr">
   <div class="t4s-col-item t4s-col t4s-widget_img_pr">
     {%- if image != blank -%}
@@ -81,3 +82,4 @@
     </div>
   {%- endif %}
 </div>
+{%- endunless -%}

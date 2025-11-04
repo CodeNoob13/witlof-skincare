@@ -1,4 +1,6 @@
-{%- liquid
+{%- unless product.tags contains 'exclude_all' -%}
+
+  {%- liquid
   assign pr_url = product.url
   assign pid = product.id
   assign isDefault = product.has_only_default_variant
@@ -251,3 +253,5 @@
     </div>
   </div>
 </div>
+
+{%- endunless -%}

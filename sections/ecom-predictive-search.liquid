@@ -217,17 +217,19 @@
           <h2 class="ecom-predictive-search__heading">Products</h2>
           <ul class="ecom-predictive-search__results-list">
             {%- for product in predictive_search.resources.products -%}
-              <li class="ecom-predictive-search__list-item">
-                <a href="{{ product.url }}" class="ecom-predictive-search__item ecom-predictive-search__product" tabindex="-1">
-                  {%- if product.featured_media != blank -%}
-                    <img class="ecom-predictive-search__image" src="{{ product.featured_media | image_url: width: 150 }}" alt="{{ product.featured_media.alt }}" width="50" height="50">
-                  {%- endif -%}
-                  <div class="ecom-predictive-search__item-content">
-                    <p class="ecom-predictive-search__item-title">{{ product.title }}</p>
-                    <div class="ecom-predictive-search__item-price">{{ product.price | money_with_currency}}</div>
-                  </div>
-                </a>
-              </li>
+              {%- unless product.tags contains 'exclude_all' -%}
+                <li class="ecom-predictive-search__list-item">
+                  <a href="{{ product.url }}" class="ecom-predictive-search__item ecom-predictive-search__product" tabindex="-1">
+                    {%- if product.featured_media != blank -%}
+                      <img class="ecom-predictive-search__image" src="{{ product.featured_media | image_url: width: 150 }}" alt="{{ product.featured_media.alt }}" width="50" height="50">
+                    {%- endif -%}
+                    <div class="ecom-predictive-search__item-content">
+                      <p class="ecom-predictive-search__item-title">{{ product.title }}</p>
+                      <div class="ecom-predictive-search__item-price">{{ product.price | money_with_currency}}</div>
+                    </div>
+                  </a>
+                </li>
+              {%- endunless -%}
             {%- endfor -%}
           </ul>
         </div>

@@ -1,4 +1,4 @@
-{% assign EComBuilderMode = true %}<!--EComposer-custom-liquid-filters-9cbt5j3ren-->
+{% assign EComBuilderMode = true %}<!--EComposer-custom-liquid-filters-ijmf2ehg9of-->
                         {% if template contains '.' %}
                             <input type="hidden" name="view" value="{{template | split: '.' | last }}" />
                         {% endif %}
@@ -25,22 +25,89 @@
                             </span>
                         {% endcapture %}
                         
+                                {% if EComBuilderMode %}
+                                    <div class="ecom-collection__filters-applied-block">
+                                        <div class="ecom-collection__filters-applied-heading">
+                                            Applied filters
+                                        </div>
+                                        <div class="ecom-collection-filters--active_values">
+                                            <ul class="ecom-collection-filters--active_values-list" role="list">
+                                                
+                                                {% for filter in results.filters %}
+                                                    {% if filter.type == 'list' %}
+                                                        {% for value in filter.values  %}
+                                                            <li class="ecom-collection__filters-group-list-item ecom-al_center">
+                                                                <a href="{{value.url_to_remove}}" title="{{value.label}}">{{ value.label | escape }} {{close_icon}}</a>
+                                                            </li>
+                                                        {% endfor %}
+                                                        {% break %}
+                                                    {% endif %}
+                                                {% endfor %}
+                                            </ul>
+                                        </div>
+                                    </div>
+                                {% endif %}
+
+                                {%- for filter in results.filters -%}
+                                    {%- if  filter.active_values.size > 0 or filter.min_value.value != nil or filter.max_value.value != nil -%}
+                                        {%- assign has_filter = true -%}
+                                        {%- break -%}
+                                    {%- endif -%}
+                                {%- endfor -%}
+                                {%- if has_filter -%}
+                                <div class="ecom-collection__filters-applied-block">
+                                    <div class="ecom-collection__filters-applied-heading">
+                                        Applied filters
+                                    </div>
+                                    <div class="ecom-collection-filters--active_values">
+                                        <ul class="ecom-collection-filters--active_values-list" role="list">
+
+                                            
+                                            {%- for filter in results.filters -%}
+                                                {%- if filter.active_values.size > 0 -%}
+                                                    {% for value in filter.active_values  %}
+                                                        <li class="ecom-collection__filters-group-list-item ecom-al_center">
+                                                            <a class="ecom-collection__filters-group-list-item-clear" href="{{value.url_to_remove}}" title="{{value.label}}">{{ value.label | escape }} {{close_icon}}</a>
+                                                        </li>
+                                                    {% endfor %}
+                                                {% endif %}
+
+                                                {% if filter.type == "price_range" %}
+                                                {%- if filter.min_value.value != nil or filter.max_value.value != nil -%}
+                                                    <li class="ecom-collection__filters-group-list-item ecom-al_center">
+                                                        <a class="ecom-collection__filters-group-list-item-clear" href="{{filter.url_to_remove}}">
+                                                            {%- if filter.min_value.value -%}{{ filter.min_value.value | money }}{%- else -%}{{ 0 | money }}{%- endif -%}-{%- if filter.max_value.value -%}{{ filter.max_value.value | money }}{%- else -%}{{ filter.range_max | money }}{%- endif -%}
+                                                            {{close_icon}}
+                                                        </a>
+                                                    </li>
+
+                                                {%- endif -%}
+                                            {% endif %}
+                                            {% endfor %}
+                                            <li class="ecom-collection__filters-group-list-item ecom-al_center">
+                                                <a href="{% if results.url %}{{results.url}}{% else %}/search?q={{results.terms}}&sort_by={{results.sort_by}}{% endif %}" title="Clear all" class="ecom-collection__filters-group-list-item-clear">Clear all{{close_icon}}</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                {%- endif -%}
+                        
                         <div class="ecom-container-filter-list--wrapper " >
                             <div class="ecom-container-filter-list-wrapper">
                                 
                                 <div class="ecom-container-filter-list" >
                                     <div class="ecom-shopify_menu" data-show-all="false">
                     <div
-                                 open 
+                                
                                 class=" ecom-collection__filters-group-dropdown ecom-collection__filters-group ecom-collection__filters-group-lists" data-attrs-max="5">
                         <summary class="ecom-collection__filters-group-summary">
                             <div class="ecom-collection__filters-group-header">
-                                <span class="ecom-collection__filters-group-summary--title">Collections</span>
+                                <span class="ecom-collection__filters-group-summary--title">Menu</span>
                                 
                             </div>
                         </summary>
                         <div class="ecom-collection__filters-group--display">
-                            {%- capture link_handle -%}menu-shoes{%- endcapture -%}
+                            {%- capture link_handle -%}support{%- endcapture -%}
                             {%- unless link_handle == empty -%}
                                 {%- assign menu = linklists[link_handle] -%}
                                 <ul class="ecom-shopify__menu-list">
@@ -55,10 +122,10 @@
                                                     {%- if link.levels > 0 -%}
                                                         <div class="ecom-menu_icon">
                                                             <div class="ecom-items--icon ecom-menu_icon--normal">
-                                                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" fill="currentColor"><path d="M432 256C432 269.3 421.3 280 408 280h-160v160c0 13.25-10.75 24.01-24 24.01S200 453.3 200 440v-160h-160c-13.25 0-24-10.74-24-23.99C16 242.8 26.75 232 40 232h160v-160c0-13.25 10.75-23.99 24-23.99S248 58.75 248 72v160h160C421.3 232 432 242.8 432 256z"></path></svg>
+                                                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512" fill="currentColor"><!--! Font Awesome Pro 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --><path d="M192 384c-8.188 0-16.38-3.125-22.62-9.375l-160-160c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0L192 306.8l137.4-137.4c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25l-160 160C208.4 380.9 200.2 384 192 384z"></path></svg>
                                                             </div>
                                                             <div class="ecom-items--icon ecom-menu_icon--active">
-                                                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" fill="currentColor"><path d="M432 256C432 269.3 421.3 280 408 280H40c-13.25 0-24-10.74-24-23.99C16 242.8 26.75 232 40 232h368C421.3 232 432 242.8 432 256z"></path></svg>
+                                                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512" fill="currentColor"><!--! Font Awesome Pro 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --><path d="M352 352c-8.188 0-16.38-3.125-22.62-9.375L192 205.3l-137.4 137.4c-12.5 12.5-32.75 12.5-45.25 0s-12.5-32.75 0-45.25l160-160c12.5-12.5 32.75-12.5 45.25 0l160 160c12.5 12.5 12.5 32.75 0 45.25C368.4 348.9 360.2 352 352 352z"></path></svg>
                                                             </div>
                                                         </div>
                                                     {%- endif -%}
@@ -75,10 +142,10 @@
                                                                     {%- if child.levels > 0 -%}
                                                                         <div class="ecom-menu_icon">
                                                                             <div class="ecom-items--icon ecom-menu_icon--normal">
-                                                                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" fill="currentColor"><path d="M432 256C432 269.3 421.3 280 408 280h-160v160c0 13.25-10.75 24.01-24 24.01S200 453.3 200 440v-160h-160c-13.25 0-24-10.74-24-23.99C16 242.8 26.75 232 40 232h160v-160c0-13.25 10.75-23.99 24-23.99S248 58.75 248 72v160h160C421.3 232 432 242.8 432 256z"></path></svg>
+                                                                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512" fill="currentColor"><!--! Font Awesome Pro 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --><path d="M192 384c-8.188 0-16.38-3.125-22.62-9.375l-160-160c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0L192 306.8l137.4-137.4c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25l-160 160C208.4 380.9 200.2 384 192 384z"></path></svg>
                                                                             </div>
                                                                             <div class="ecom-items--icon ecom-menu_icon--active">
-                                                                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" fill="currentColor"><path d="M432 256C432 269.3 421.3 280 408 280H40c-13.25 0-24-10.74-24-23.99C16 242.8 26.75 232 40 232h368C421.3 232 432 242.8 432 256z"></path></svg>
+                                                                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512" fill="currentColor"><!--! Font Awesome Pro 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --><path d="M352 352c-8.188 0-16.38-3.125-22.62-9.375L192 205.3l-137.4 137.4c-12.5 12.5-32.75 12.5-45.25 0s-12.5-32.75 0-45.25l160-160c12.5-12.5 32.75-12.5 45.25 0l160 160c12.5 12.5 12.5 32.75 0 45.25C368.4 348.9 360.2 352 352 352z"></path></svg>
                                                                             </div>
                                                                         </div>
                                                                     {%- endif -%}
@@ -118,7 +185,7 @@
                                         {%- if size > 0 -%}
                                         <div
                                         data-name="{{filter.param_name}}"
-                                         open 
+                                        
                                         class="ecom-js-filter ecom-collection__filters-group-dropdown ecom-collection__filters-group ecom-collection__filters-group-lists ecom-d-none" data-index="{{ forloop.index }}" data-attrs-max="5">
 
                                             <summary class="ecom-collection__filters-group-summary">
@@ -129,32 +196,16 @@
                                             </summary>
                                             <div class="ecom-collection__filters-group--display ">
                                                 
-                                                    <div class="ecom-collection__filters-group--header">
-                                                        <span class="ecom-collection__filters-group--selected no-js-hidden">
-                                                            {% assign count = filter.active_values.size %}
-                                                            {% if count == 1%}
-                                                                {{ count}} selected
-                                                            {% else %}
-                                                                {{ count}} selected
-                                                            {% endif %}
-                                                        </span>
-                                                        <a href="{{ filter.url_to_remove }}" class="ecom-collection__filters-group-reset-filter" >Reset</a>
-                                                    </div>
 
                                                 {% assign check_is_filter_color = false %}
                                                 
-                                                        {% assign current_option_name = filter.param_name  | split: '.' | last | handleize %}
-                                                        {% if  color_option_name  ==  current_option_name %}
-                                                            {% assign check_is_filter_color = true %}
-                                                        {% endif %}
-                                                    
                                                 <ul
                                                     class="ecom-collection__filters-group-list  ecom-scroll_bar{% if check_is_filter_color %} ecom-collection__filters-enable-colors{% endif %}" data-param-name="{{filter.param_name}}" role="list" data-index="{{ forloop.index }}"
                                                 >
                                                 {%- for value in filter.values -%}
-                                                    {%- if true == false or value.count > 0 and true == true -%}
-                                                    <li class="ecom-collection__filters-group-list-item  ecom-filter-hide-checkbox" >
-                                                        
+                                                    {%- if false == false or value.count > 0 and false == true -%}
+                                                    <li class="ecom-collection__filters-group-list-item " >
+
                                                         <label for="ecom-filter-{{ filter.label | escape  | strip }}-{{ forloop.index }}" class="ecom-collection__filters-group-checkbox{% if value.count == 0 and value.active == false %} ecom-collection__filters-group-checkbox--disabled{% endif %}">
 
                                                             <input type="checkbox"
@@ -223,7 +274,7 @@
                                             %}
 
                                             <div
-                                             open 
+                                            
                                             class="ecom-collection__filters-group ecom-collection__filters-group-dropdown ecom-collection__filters-group-price-range" data-index="{{ forloop.index }}">
                                                 <summary class="ecom-collection__filters-group-summary">
                                                     <div class="ecom-collection__filters-group-header">
@@ -234,15 +285,11 @@
                                                 </summary>
                                                 <div class="ecom-collection__filters-group--display ">
                                                     {%- comment -%}
-                                                    <div class="ecom-collection__filters-group--header">
-                                                            {%- assign max_price_amount = filter.range_max | money -%}
-                                                            <span class="ecom-collection__filters-group--selected">Max price {{max_price_amount}}</span>
-                                                            <a href="{{ filter.url_to_remove }}" class="ecom-collection__filters-group-reset-filter" >Reset</a>
-                                                        </div>
+                                                    
                                                     {%- endcomment -%}
                                                     {%- if false-%}
                                                         {%- assign max_price_for_step = filter.range_max -%}
-                                                        {% assign price_step = 0 | times: 100 %}
+                                                        {% assign price_step = 100 | times: 100 %}
                                                         {%- assign checked = "" -%}
                                                         {%- assign filter_max_value = filter.max_value.value -%}
                                                         {% assign loop_time = max_price_for_step | divided_by: price_step %}
@@ -295,7 +342,7 @@
                                                         {%- endif -%}
                                                     {%- elsif false -%}
                                                         {%- assign max_price_for_step = filter.range_max -%}
-                                                        {% assign segment_step = 0 | floor
+                                                        {% assign segment_step = 3 | floor
                                                         %}
                                                         {%- assign price_step = max_price_for_step |times: 1.00 | divided_by: segment_step -%}
                                                         {%- assign checked = "" -%}
@@ -397,4 +444,4 @@
                                 </div>
                             </div>
                         </div>
-                        <!--/EComposer-custom-liquid-filters-9cbt5j3ren-->
+                        <!--/EComposer-custom-liquid-filters-ijmf2ehg9of-->

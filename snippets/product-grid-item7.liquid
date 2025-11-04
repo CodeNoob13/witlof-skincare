@@ -1,3 +1,4 @@
+{%- unless product.tags contains 'exclude_all' -%}
 {%- liquid
   assign pr_url = product.url
   assign pid = product.id
@@ -240,3 +241,5 @@
     </div>
   </div>
 </div>
+
+{% endunless %}

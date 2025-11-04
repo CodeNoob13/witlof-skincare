@@ -306,7 +306,7 @@
         "benefit_NLR4Pw": {
           "type": "benefit",
           "settings": {
-            "benefit_title": "is 100% vegan",
+            "benefit_title": "is vegan",
             "benefit_description": "Witlof Skincare gebruikt alleen 100% natuurlijke ingrediënten, zonder synthetische toevoegingen. Zacht voor je huid én goed voor de planeet."
           }
         },
@@ -334,7 +334,7 @@
         "benefit_Vpx8yd": {
           "type": "benefit",
           "settings": {
-            "benefit_title": "Balanceert, voedt en laat je huid natuurlijk stralen!",
+            "benefit_title": "balanceert, voedt en laat je huid natuurlijk stralen!",
             "benefit_description": "Onze formules herstellen de balans, voeden intens en geven je huid een natuurlijke glow, elke dag opnieuw."
           }
         }
@@ -722,6 +722,8 @@
           "type": "shopify://apps/judge-me-reviews/blocks/review_widget/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
           "settings": {
             "review_data": "sample_data",
+            "show_shop_reviews": false,
+            "empty_state": "empty_widget",
             "max_width": 1200
           }
         }

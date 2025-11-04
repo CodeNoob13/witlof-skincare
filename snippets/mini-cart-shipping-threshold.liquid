@@ -1,4 +1,19 @@
-<div x-data x-init="$store.ajCart.freeProductThreshold = {{ settings.free_product_threshold | plus: 0 }}; $store.ajCart.freeProductID = {{ settings.free_product_gift.variants[0].id }}; $store.ajCart.freeSampleThreshold = {{ settings.free_sample_threshold }}; $store.ajCart.showFreeSamples = {{ settings.show_free_samples }};$store.ajCart.singleFreeSampleID = {{ settings.free_bag.variants[0].id | default: 'null' }};">
+{%- comment -%}
+    Safely resolve settings that may be unset to avoid Liquid errors when
+    indexing into nil. We compute JS-ready values here and use them below.
+{%- endcomment -%}
+{%- if settings.free_product_gift and settings.free_product_gift.variants and settings.free_product_gift.variants.size > 0 -%}
+    {%- assign free_product_gift_variant_id = settings.free_product_gift.variants[0].id -%}
+{%- else -%}
+    {%- assign free_product_gift_variant_id = 'null' -%}
+{%- endif -%}
+{%- if settings.free_bag and settings.free_bag.variants and settings.free_bag.variants.size > 0 -%}
+    {%- assign free_bag_variant_id = settings.free_bag.variants[0].id -%}
+{%- else -%}
+    {%- assign free_bag_variant_id = 'null' -%}
+{%- endif -%}
+
+<div x-data x-init="$store.ajCart.freeProductThreshold = {{ settings.free_product_threshold | plus: 0 }}; $store.ajCart.freeProductID = {{ free_product_gift_variant_id }}; $store.ajCart.freeSampleThreshold = {{ settings.free_sample_threshold | plus: 0 }}; $store.ajCart.showFreeSamples = {{ settings.show_free_samples | json }}; $store.ajCart.singleFreeSampleID = {{ free_bag_variant_id }};">
     <div x-show="($store.ajCart.cart.total_price / 100).toFixed(2) > 0" class="fluct-it__gift-list">
         <div
             class="fluct-it__gift-box active"
@@ -45,8 +60,8 @@
                 </template>
             </div>
             <picture>
-                {% if settings.free_bag %}
-                    <img src="{{ settings.free_bag.images[0] | image_url: width: 200, height: 200 }}" alt="{{ settings.free_bag.images[0].alt }}" width="auto" height="auto">
+                {% if settings.free_bag and settings.free_bag.images and settings.free_bag.images.size > 0 %}
+                    <img src="{{ settings.free_bag.images[0] | image_url: width: 200, height: 200 }}" alt="{{ settings.free_bag.images[0].alt | escape }}" width="auto" height="auto">
                 {% endif %}
                 {% render 'shipping-threshold-2' %}
             </picture>
@@ -55,7 +70,7 @@
                     {% if settings.free_sample_text != blank %}
                         {{ settings.free_sample_text }}
                     {% else %}
-                       {{ 'fluctit.cart.free' | t }} {{ settings.free_bag.title }} 
+                       {{ 'fluctit.cart.free' | t }} product<!-- {{ settings.free_bag.title }} -->
                     {% endif %}</span>
                 <span class="fluct-it__gift-price">€{{ settings.free_sample_threshold }}</span>
             </div>
@@ -80,17 +95,19 @@
             </div>
             
             <picture>
-                <img
-                    src="{{ settings.free_product_gift.images[0] | image_url: width: 32 }}"
-                    alt="Shipping threshold 3"
-                    width="32"
-                    height="32"
-                    style="max-width:60px;max-height:60px;"
-                    loading="lazy"
-                >
+                {% if settings.free_product_gift and settings.free_product_gift.images and settings.free_product_gift.images.size > 0 %}
+                    <img
+                        src="{{ settings.free_product_gift.images[0] | image_url: width: 32 }}"
+                        alt="{{ settings.free_product_gift.images[0].alt | escape | default: 'Shipping threshold' }}"
+                        width="32"
+                        height="32"
+                        style="max-width:60px;max-height:60px;"
+                        loading="lazy"
+                    >
+                {% endif %}
             </picture>
             <div class="fluct-it__gift-info">
-                <span class="fluct-it__gift-text">{{ 'fluctit.cart.free' | t }} {{ settings.free_product_gift.title }}</span>
+                <span class="fluct-it__gift-text"><!--{{ 'fluctit.cart.free' | t }}--> {{ settings.free_product_gift.title }}</span>
                 <span class="fluct-it__gift-price">€{{ settings.free_product_threshold }}</span>
             </div>
         </div>

@@ -73,8 +73,8 @@
     "free_ship_threshold": 45,
     "free_sample_threshold": 60,
     "free_sample_text": "",
-    "free_bag": "organic-cotton-toilet-bag-free-gift",
-    "show_free_samples": false,
+    "free_bag": "",
+    "show_free_samples": true,
     "free_sample_products": [
       "balancing-toner-150ml",
       "balancing-toner-tester",
@@ -82,7 +82,7 @@
       "the-best-seller"
     ],
     "free_product_threshold": 100,
-    "free_product_gift": "nourishing-facial-cream-50ml-free-product",
+    "free_product_gift": "nourishing-day-cream-spf30-50ml",
     "filter_type_search": true,
     "show_search_suggest": true,
     "search_prs_suggest": "",
@@ -229,7 +229,7 @@
               "padding_inner": "",
               "content_align_tb": "t4s-text-md-start",
               "padding_inner_tb": "",
-              "col_heading_mobile": "Get in touch",
+              "col_heading_mobile": "Neem contact op",
               "content_align_mb": "t4s-text-start",
               "padding_inner_mb": ""
             }
@@ -247,7 +247,7 @@
           "footer-2": {
             "type": "html",
             "settings": {
-              "html_content": "<p style=\"display:flex;\"><path fill=\"currentColor\" d=\"M 16.001 1.072 c 5.291 0 9.596 4.305 9.596 9.597 c 0 1.683 -0.446 3.341 -1.29 4.799 l -8.307 14.394 l -8.308 -14.395 c -0.843 -1.456 -1.289 -3.115 -1.289 -4.798 c 0 -5.292 4.305 -9.597 9.597 -9.597 Z M 16.001 14.4 c 2.058 0 3.731 -1.674 3.731 -3.731 s -1.674 -3.731 -3.731 -3.731 c -2.058 0 -3.732 1.674 -3.732 3.731 s 1.674 3.731 3.732 3.731 Z M 16.001 0.006 c -5.889 0 -10.663 4.775 -10.663 10.663 c 0 1.945 0.523 3.762 1.432 5.332 l 9.23 15.994 l 9.23 -15.994 c 0.909 -1.57 1.432 -3.387 1.432 -5.332 c 0 -5.888 -4.774 -10.663 -10.662 -10.663 v 0 Z M 16.001 13.334 c -1.472 0 -2.666 -1.193 -2.666 -2.665 c 0 -1.471 1.194 -2.665 2.666 -2.665 s 2.665 1.194 2.665 2.665 c 0 1.472 -1.193 2.665 -2.665 2.665 v 0 Z\"></path><span></span></p> <p style=\"display:flex;\"><svg style=\"width: 24px;height: 24px;vertical-align: middle;margin-right: 5px;\" viewbox=\"0 0 32 32\" width=\"32\" height=\"32\"><path fill=\"currentColor\" d=\"M 28.244 7.47 h -25.572 v 17.06 h 26.656 v -17.06 h -1.084 Z M 27.177 8.536 l -10.298 10.298 c -0.47 0.47 -1.289 0.47 -1.759 0 l -10.3 -10.298 h 22.356 Z M 3.738 8.961 l 6.923 6.922 l -6.923 6.923 v -13.846 Z M 4.589 23.464 l 6.827 -6.826 l 2.951 2.95 c 0.436 0.436 1.016 0.677 1.633 0.677 s 1.197 -0.241 1.633 -0.677 l 2.951 -2.951 l 6.826 6.826 h -22.822 Z M 28.262 22.807 l -6.923 -6.924 l 6.923 -6.924 v 13.848 Z\"></path></svg><span>hello@witlofskincare.com</span></p> \n<p style=\"display:flex;\"><svg style=\"width: 24px;height: 24px;vertical-align: middle;margin-right: 5px;\" viewbox=\"0 0 32 32\" width=\"32\" height=\"32\"><path fill=\"currentColor\" d=\"M 23.407 30.394 c -2.431 0 -8.341 -3.109 -13.303 -9.783 c -4.641 -6.242 -6.898 -10.751 -6.898 -13.785 c 0 -2.389 1.65 -3.529 2.536 -4.142 l 0.219 -0.153 c 0.979 -0.7 2.502 -0.927 3.086 -0.927 c 1.024 0 1.455 0.599 1.716 1.121 c 0.222 0.442 2.061 4.39 2.247 4.881 c 0.286 0.755 0.192 1.855 -0.692 2.488 l -0.155 0.108 c -0.439 0.304 -1.255 0.869 -1.368 1.557 c -0.055 0.334 0.057 0.684 0.342 1.068 c 1.423 1.918 5.968 7.55 6.787 8.314 c 0.642 0.6 1.455 0.685 2.009 0.218 c 0.573 -0.483 0.828 -0.768 0.83 -0.772 l 0.059 -0.057 c 0.048 -0.041 0.496 -0.396 1.228 -0.396 c 0.528 0 1.065 0.182 1.596 0.541 c 1.378 0.931 4.487 3.011 4.487 3.011 l 0.05 0.038 c 0.398 0.341 0.973 1.323 0.302 2.601 c -0.695 1.327 -2.85 4.066 -5.079 4.066 Z M 9.046 2.672 c -0.505 0 -1.746 0.213 -2.466 0.728 l -0.232 0.162 c -0.827 0.572 -2.076 1.435 -2.076 3.265 c 0 2.797 2.188 7.098 6.687 13.149 c 4.914 6.609 10.532 9.353 12.447 9.353 c 1.629 0 3.497 -2.276 4.135 -3.494 c 0.392 -0.748 0.071 -1.17 -0.04 -1.284 c -0.36 -0.241 -3.164 -2.117 -4.453 -2.988 c -0.351 -0.238 -0.688 -0.358 -0.999 -0.358 c -0.283 0 -0.469 0.1 -0.532 0.14 c -0.104 0.111 -0.39 0.405 -0.899 0.833 c -0.951 0.801 -2.398 0.704 -3.424 -0.254 c -0.923 -0.862 -5.585 -6.666 -6.916 -8.459 c -0.46 -0.62 -0.641 -1.252 -0.538 -1.877 c 0.187 -1.133 1.245 -1.866 1.813 -2.26 l 0.142 -0.099 c 0.508 -0.363 0.4 -1.02 0.316 -1.242 c -0.157 -0.414 -1.973 -4.322 -2.203 -4.781 c -0.188 -0.376 -0.336 -0.533 -0.764 -0.533 Z\"></path></svg><span> NL: +31 620035339<br></span></p>",
+              "html_content": "<p style=\"display:flex;\"><path fill=\"currentColor\" d=\"M 16.001 1.072 c 5.291 0 9.596 4.305 9.596 9.597 c 0 1.683 -0.446 3.341 -1.29 4.799 l -8.307 14.394 l -8.308 -14.395 c -0.843 -1.456 -1.289 -3.115 -1.289 -4.798 c 0 -5.292 4.305 -9.597 9.597 -9.597 Z M 16.001 14.4 c 2.058 0 3.731 -1.674 3.731 -3.731 s -1.674 -3.731 -3.731 -3.731 c -2.058 0 -3.732 1.674 -3.732 3.731 s 1.674 3.731 3.732 3.731 Z M 16.001 0.006 c -5.889 0 -10.663 4.775 -10.663 10.663 c 0 1.945 0.523 3.762 1.432 5.332 l 9.23 15.994 l 9.23 -15.994 c 0.909 -1.57 1.432 -3.387 1.432 -5.332 c 0 -5.888 -4.774 -10.663 -10.662 -10.663 v 0 Z M 16.001 13.334 c -1.472 0 -2.666 -1.193 -2.666 -2.665 c 0 -1.471 1.194 -2.665 2.666 -2.665 s 2.665 1.194 2.665 2.665 c 0 1.472 -1.193 2.665 -2.665 2.665 v 0 Z\"></path><span></span></p> <p style=\"display:flex;\"><svg style=\"width: 24px;height: 24px;vertical-align: middle;margin-right: 5px;\" viewbox=\"0 0 32 32\" width=\"32\" height=\"32\"><path fill=\"currentColor\" d=\"M 28.244 7.47 h -25.572 v 17.06 h 26.656 v -17.06 h -1.084 Z M 27.177 8.536 l -10.298 10.298 c -0.47 0.47 -1.289 0.47 -1.759 0 l -10.3 -10.298 h 22.356 Z M 3.738 8.961 l 6.923 6.922 l -6.923 6.923 v -13.846 Z M 4.589 23.464 l 6.827 -6.826 l 2.951 2.95 c 0.436 0.436 1.016 0.677 1.633 0.677 s 1.197 -0.241 1.633 -0.677 l 2.951 -2.951 l 6.826 6.826 h -22.822 Z M 28.262 22.807 l -6.923 -6.924 l 6.923 -6.924 v 13.848 Z\"></path></svg><span>hello@witlofskincare.com</span></p> \n<p style=\"display:flex;\"><svg style=\"width: 24px;height: 24px;vertical-align: middle;margin-right: 5px;\" viewbox=\"0 0 32 32\" width=\"32\" height=\"32\"><path fill=\"currentColor\" d=\"M 23.407 30.394 c -2.431 0 -8.341 -3.109 -13.303 -9.783 c -4.641 -6.242 -6.898 -10.751 -6.898 -13.785 c 0 -2.389 1.65 -3.529 2.536 -4.142 l 0.219 -0.153 c 0.979 -0.7 2.502 -0.927 3.086 -0.927 c 1.024 0 1.455 0.599 1.716 1.121 c 0.222 0.442 2.061 4.39 2.247 4.881 c 0.286 0.755 0.192 1.855 -0.692 2.488 l -0.155 0.108 c -0.439 0.304 -1.255 0.869 -1.368 1.557 c -0.055 0.334 0.057 0.684 0.342 1.068 c 1.423 1.918 5.968 7.55 6.787 8.314 c 0.642 0.6 1.455 0.685 2.009 0.218 c 0.573 -0.483 0.828 -0.768 0.83 -0.772 l 0.059 -0.057 c 0.048 -0.041 0.496 -0.396 1.228 -0.396 c 0.528 0 1.065 0.182 1.596 0.541 c 1.378 0.931 4.487 3.011 4.487 3.011 l 0.05 0.038 c 0.398 0.341 0.973 1.323 0.302 2.601 c -0.695 1.327 -2.85 4.066 -5.079 4.066 Z M 9.046 2.672 c -0.505 0 -1.746 0.213 -2.466 0.728 l -0.232 0.162 c -0.827 0.572 -2.076 1.435 -2.076 3.265 c 0 2.797 2.188 7.098 6.687 13.149 c 4.914 6.609 10.532 9.353 12.447 9.353 c 1.629 0 3.497 -2.276 4.135 -3.494 c 0.392 -0.748 0.071 -1.17 -0.04 -1.284 c -0.36 -0.241 -3.164 -2.117 -4.453 -2.988 c -0.351 -0.238 -0.688 -0.358 -0.999 -0.358 c -0.283 0 -0.469 0.1 -0.532 0.14 c -0.104 0.111 -0.39 0.405 -0.899 0.833 c -0.951 0.801 -2.398 0.704 -3.424 -0.254 c -0.923 -0.862 -5.585 -6.666 -6.916 -8.459 c -0.46 -0.62 -0.641 -1.252 -0.538 -1.877 c 0.187 -1.133 1.245 -1.866 1.813 -2.26 l 0.142 -0.099 c 0.508 -0.363 0.4 -1.02 0.316 -1.242 c -0.157 -0.414 -1.973 -4.322 -2.203 -4.781 c -0.188 -0.376 -0.336 -0.533 -0.764 -0.533 Z\"></path></svg><span> NL: +31648462612 <br></span></p>",
               "hidden_mobile": false
             }
           },
@@ -329,7 +329,7 @@
           "footer-8": {
             "type": "bl_col",
             "settings": {
-              "col_heading": "Menu",
+              "col_heading": "Info",
               "menu": "footermenu-2",
               "menu_style": "1",
               "col_border": "none",
@@ -532,7 +532,6 @@
           },
           "announcement-bar-0": {
             "type": "announcement",
-            "disabled": true,
             "settings": {
               "link": "",
               "content": "<p><strong>Gratis </strong>verzenden vanaf €45 in NL & BE. Voor <strong>22 uur</strong> besteld, dezelfde werkdag verzonden.</p>",
@@ -592,6 +591,7 @@
           },
           "announcement-bar-2": {
             "type": "announcement",
+            "disabled": true,
             "settings": {
               "link": "",
               "content": "<p><strong>ELLE SHOPPING DAYS! </strong></p><p><strong>20% KORTING </strong>met code ELLEXWITLOF</p>",
@@ -624,7 +624,7 @@
           "height": 47,
           "fontsize": 14,
           "cl": "#222222",
-          "bg": "#f7eb52",
+          "bg": "#5c8cd9",
           "bg_op": 89,
           "close": "0",
           "cl_btn": "#ffffff",
@@ -1536,6 +1536,7 @@
         "blocks": {
           "catpr_AnUkjz": {
             "type": "catpr",
+            "disabled": true,
             "settings": {
               "title": "<b><span style=\"color: #383838;\">ELLE SHOPPING DAYS!</span></b>",
               "url": "https://witlofskincare.nl/collections/all?view=ecom-witlof-skincare-x-elle",
@@ -1597,11 +1598,138 @@
           },
           "catpr_Lwhaz4": {
             "type": "catpr",
+            "disabled": true,
             "settings": {
               "title": "ALLE PRODUCTEN",
-              "url": "shopify://collections/frontpage",
+              "url": "shopify://collections",
               "lb": "",
               "lb_cl": "",
+              "icons_op": "2",
+              "icon": "",
+              "cat1": "",
+              "url1": "",
+              "cat2": "",
+              "url2": "",
+              "cat3": "",
+              "url3": "",
+              "cat4": "",
+              "url4": "",
+              "cat5": "",
+              "url5": "",
+              "cat6": "",
+              "url6": "",
+              "cat7": "",
+              "url7": "",
+              "cat8": "",
+              "url8": "",
+              "cat9": "",
+              "url9": "",
+              "cat10": "",
+              "url10": "",
+              "cat11": "",
+              "url11": "",
+              "cat12": "",
+              "url12": "",
+              "cat13": "",
+              "url13": "",
+              "cat14": "",
+              "url14": "",
+              "cat15": "",
+              "url15": "",
+              "cat16": "",
+              "url16": "",
+              "cat17": "",
+              "url17": "",
+              "cat18": "",
+              "url18": "",
+              "cat19": "",
+              "url19": "",
+              "cat20": "",
+              "url20": "",
+              "cat21": "",
+              "url21": "",
+              "cat22": "",
+              "url22": "",
+              "cat23": "",
+              "url23": "",
+              "cat24": "",
+              "url24": "",
+              "cat25": "",
+              "url25": ""
+            }
+          },
+          "menu_KqXjqj": {
+            "type": "menu",
+            "settings": {
+              "title": "Shop per product type",
+              "url": "",
+              "open_link": "_self",
+              "menu": "product-type",
+              "lb": "",
+              "lb_cl": "",
+              "icons_op": "2",
+              "icon": ""
+            }
+          },
+          "5efaec12-d185-4718-b159-37d79cc7fdf4": {
+            "type": "menu",
+            "settings": {
+              "title": "Shop per routine stap",
+              "url": "",
+              "open_link": "_self",
+              "menu": "steps",
+              "lb": "",
+              "lb_cl": "",
+              "icons_op": "2",
+              "icon": ""
+            }
+          },
+          "789d1e04-4c2c-4dda-b425-0b1dc3300eb4": {
+            "type": "menu",
+            "settings": {
+              "title": "Shop per huidtype",
+              "url": "",
+              "open_link": "_self",
+              "menu": "skin-type",
+              "lb": "",
+              "lb_cl": "",
+              "icons_op": "2",
+              "icon": ""
+            }
+          },
+          "menu_cmiMmy": {
+            "type": "menu",
+            "settings": {
+              "title": "Shop per huidaandoening",
+              "url": "",
+              "open_link": "_self",
+              "menu": "skin-concern",
+              "lb": "",
+              "lb_cl": "",
+              "icons_op": "2",
+              "icon": ""
+            }
+          },
+          "menu_X6cLVm": {
+            "type": "menu",
+            "settings": {
+              "title": "Shop per actief ingrediënt",
+              "url": "",
+              "open_link": "_self",
+              "menu": "ingredi-nten",
+              "lb": "",
+              "lb_cl": "",
+              "icons_op": "2",
+              "icon": ""
+            }
+          },
+          "catpr_jyb7gP": {
+            "type": "catpr",
+            "settings": {
+              "title": "Dutch Beauty Award producten",
+              "url": "https://witlofskincare.nl/collections/all?view=ecom-dutch-beauty-award",
+              "lb": "",
+              "lb_cl": "#e41e37",
               "icons_op": "2",
               "icon": "",
               "cat1": "",
@@ -1670,19 +1798,6 @@
               "icon": ""
             }
           },
-          "5efaec12-d185-4718-b159-37d79cc7fdf4": {
-            "type": "menu",
-            "settings": {
-              "title": "Shop per routine stap",
-              "url": "",
-              "open_link": "_self",
-              "menu": "steps",
-              "lb": "",
-              "lb_cl": "",
-              "icons_op": "2",
-              "icon": ""
-            }
-          },
           "catpr_8iMEX9": {
             "type": "catpr",
             "disabled": true,
@@ -1693,68 +1808,6 @@
               "lb_cl": "#ed7377",
               "icons_op": "2",
               "icon": "las la-sun",
-              "cat1": "",
-              "url1": "",
-              "cat2": "",
-              "url2": "",
-              "cat3": "",
-              "url3": "",
-              "cat4": "",
-              "url4": "",
-              "cat5": "",
-              "url5": "",
-              "cat6": "",
-              "url6": "",
-              "cat7": "",
-              "url7": "",
-              "cat8": "",
-              "url8": "",
-              "cat9": "",
-              "url9": "",
-              "cat10": "",
-              "url10": "",
-              "cat11": "",
-              "url11": "",
-              "cat12": "",
-              "url12": "",
-              "cat13": "",
-              "url13": "",
-              "cat14": "",
-              "url14": "",
-              "cat15": "",
-              "url15": "",
-              "cat16": "",
-              "url16": "",
-              "cat17": "",
-              "url17": "",
-              "cat18": "",
-              "url18": "",
-              "cat19": "",
-              "url19": "",
-              "cat20": "",
-              "url20": "",
-              "cat21": "",
-              "url21": "",
-              "cat22": "",
-              "url22": "",
-              "cat23": "",
-              "url23": "",
-              "cat24": "",
-              "url24": "",
-              "cat25": "",
-              "url25": ""
-            }
-          },
-          "catpr_hqnXpx": {
-            "type": "catpr",
-            "disabled": true,
-            "settings": {
-              "title": "<b><span style=\"color: #ED7377;\">MOEDERDAG - shop de mooiste cadeaus</span></b>",
-              "url": "",
-              "lb": "tot 30% korting",
-              "lb_cl": "#ed7377",
-              "icons_op": "2",
-              "icon": "",
               "cat1": "",
               "url1": "",
               "cat2": "",
@@ -1883,32 +1936,6 @@
               "icon": ""
             }
           },
-          "789d1e04-4c2c-4dda-b425-0b1dc3300eb4": {
-            "type": "menu",
-            "settings": {
-              "title": "Shop per huidtype",
-              "url": "",
-              "open_link": "_self",
-              "menu": "skin-type",
-              "lb": "",
-              "lb_cl": "",
-              "icons_op": "2",
-              "icon": ""
-            }
-          },
-          "menu_cmiMmy": {
-            "type": "menu",
-            "settings": {
-              "title": "Shop per huidaandoening",
-              "url": "",
-              "open_link": "_self",
-              "menu": "skin-concern",
-              "lb": "",
-              "lb_cl": "",
-              "icons_op": "2",
-              "icon": ""
-            }
-          },
           "menu_fHFLVe": {
             "type": "menu",
             "disabled": true,
@@ -1921,67 +1948,6 @@
               "lb_cl": "#5f8ac7",
               "icons_op": "2",
               "icon": ""
-            }
-          },
-          "catpr_jyb7gP": {
-            "type": "catpr",
-            "settings": {
-              "title": "Dutch Beauty Award producten",
-              "url": "https://witlofskincare.nl/collections/all?view=ecom-dutch-beauty-award",
-              "lb": "",
-              "lb_cl": "#e41e37",
-              "icons_op": "2",
-              "icon": "",
-              "cat1": "",
-              "url1": "",
-              "cat2": "",
-              "url2": "",
-              "cat3": "",
-              "url3": "",
-              "cat4": "",
-              "url4": "",
-              "cat5": "",
-              "url5": "",
-              "cat6": "",
-              "url6": "",
-              "cat7": "",
-              "url7": "",
-              "cat8": "",
-              "url8": "",
-              "cat9": "",
-              "url9": "",
-              "cat10": "",
-              "url10": "",
-              "cat11": "",
-              "url11": "",
-              "cat12": "",
-              "url12": "",
-              "cat13": "",
-              "url13": "",
-              "cat14": "",
-              "url14": "",
-              "cat15": "",
-              "url15": "",
-              "cat16": "",
-              "url16": "",
-              "cat17": "",
-              "url17": "",
-              "cat18": "",
-              "url18": "",
-              "cat19": "",
-              "url19": "",
-              "cat20": "",
-              "url20": "",
-              "cat21": "",
-              "url21": "",
-              "cat22": "",
-              "url22": "",
-              "cat23": "",
-              "url23": "",
-              "cat24": "",
-              "url24": "",
-              "cat25": "",
-              "url25": ""
             }
           },
           "menu_DGWpAR": {
@@ -1998,23 +1964,8 @@
               "icon": "las la-tree"
             }
           },
-          "ef710ec3-5c73-4e9a-badd-f1d526aedf99": {
-            "type": "menu",
-            "disabled": true,
-            "settings": {
-              "title": "Sets",
-              "url": "",
-              "open_link": "_self",
-              "menu": "sets",
-              "lb": "",
-              "lb_cl": "",
-              "icons_op": "2",
-              "icon": ""
-            }
-          },
           "menu_ah66Bc": {
             "type": "menu",
-            "disabled": true,
             "settings": {
               "title": "ARCHIVE SALE",
               "url": "shopify://collections/archive-sale",
@@ -2068,7 +2019,7 @@
           "mb_nav-0": {
             "type": "menu",
             "settings": {
-              "title": "Ons Verhaal",
+              "title": "Onze missie",
               "url": "shopify://pages/our-story",
               "open_link": "_self",
               "menu": "",
@@ -2083,6 +2034,19 @@
             "settings": {
               "title": "Duurzaamheid",
               "url": "shopify://pages/sustainability",
+              "open_link": "_self",
+              "menu": "",
+              "lb": "",
+              "lb_cl": "",
+              "icons_op": "2",
+              "icon": ""
+            }
+          },
+          "mb_nav-3": {
+            "type": "menu",
+            "settings": {
+              "title": "Blogs",
+              "url": "shopify://blogs/news",
               "open_link": "_self",
               "menu": "",
               "lb": "",
@@ -2113,19 +2077,6 @@
               "icon": ""
             }
           },
-          "mb_nav-3": {
-            "type": "menu",
-            "settings": {
-              "title": "Blogs",
-              "url": "shopify://blogs/news",
-              "open_link": "_self",
-              "menu": "",
-              "lb": "",
-              "lb_cl": "",
-              "icons_op": "2",
-              "icon": ""
-            }
-          },
           "menu_ENQUez": {
             "type": "menu",
             "settings": {
@@ -2141,6 +2092,7 @@
           },
           "mb_nav-4": {
             "type": "wis",
+            "disabled": true,
             "settings": {}
           },
           "mb_nav-5": {
@@ -2176,28 +2128,28 @@
         "block_order": [
           "catpr_AnUkjz",
           "catpr_Lwhaz4",
-          "menu_XdCXRy",
+          "menu_KqXjqj",
           "5efaec12-d185-4718-b159-37d79cc7fdf4",
-          "catpr_8iMEX9",
-          "catpr_hqnXpx",
-          "catpr_Lgykd8",
-          "menu_kw6Ygx",
           "789d1e04-4c2c-4dda-b425-0b1dc3300eb4",
           "menu_cmiMmy",
-          "menu_fHFLVe",
+          "menu_X6cLVm",
           "catpr_jyb7gP",
+          "menu_XdCXRy",
+          "catpr_8iMEX9",
+          "catpr_Lgykd8",
+          "menu_kw6Ygx",
+          "menu_fHFLVe",
           "menu_DGWpAR",
-          "ef710ec3-5c73-4e9a-badd-f1d526aedf99",
           "menu_ah66Bc",
           "58800ed8-befe-449a-b8f8-ea86620bef6f",
           "mb_nav-2",
           "menu_b66dtG",
           "mb_nav-0",
           "mb_nav-1",
+          "mb_nav-3",
           "mb_nav-8",
           "mb_nav-9",
           "25fa7ecf-2db0-4747-b093-a1299099917e",
-          "mb_nav-3",
           "menu_ENQUez",
           "mb_nav-4",
           "mb_nav-5",
@@ -2239,6 +2191,7 @@
           },
           "02afbc74-7e86-47eb-a54c-4b782b9be1ec": {
             "type": "cat",
+            "disabled": true,
             "settings": {
               "cat": "",
               "title": "Huid Type",
@@ -2920,6 +2873,7 @@
         "blocks": {
           "base_hKypLz": {
             "type": "base",
+            "disabled": true,
             "settings": {
               "title": "<b><span style=\"color: #383838;\">ELLE SHOPPING DAYS!</span></b>",
               "url": "https://witlofskincare.nl/collections/all?view=ecom-witlof-skincare-x-elle",
@@ -2934,7 +2888,7 @@
           "c393f823-40c8-44f7-a359-bd28f021144a": {
             "type": "drop",
             "settings": {
-              "title": "OVER ONS",
+              "title": "ONZE MISSIE",
               "url": "https://witlofskincare.nl/pages/our-story",
               "open_link": "_self",
               "menu": "about",
@@ -3052,7 +3006,6 @@
           },
           "base_BjH7Dq": {
             "type": "base",
-            "disabled": true,
             "settings": {
               "title": "ARCHIVE SALE",
               "url": "shopify://collections/archive-sale",
@@ -3429,11 +3382,23 @@
               "sp_bettewn_item": 20
             }
           },
+          "link_EydTfJ": {
+            "type": "link",
+            "settings": {
+              "tt_hd": "Actieve ingrediënten",
+              "url": "shopify://collections/active-ingredients",
+              "open_link": "_self",
+              "menu": "ingredi-nten",
+              "col": "2",
+              "item_fsize": 13,
+              "sp_bettewn_item": 20
+            }
+          },
           "7340c675-7434-4651-b2c6-d9fa432e937f": {
             "type": "link",
             "settings": {
               "tt_hd": "SETS & MORE",
-              "url": "shopify://collections",
+              "url": "shopify://collections/sets-more",
               "open_link": "_blank",
               "menu": "sets",
               "col": "2",
@@ -3454,6 +3419,7 @@
           "e9f41589-8d46-4f65-a3f0-2e2456af8815",
           "619d4be1-3d76-42f9-877f-a96eb91fcdce",
           "9928d005-30ab-48b6-9788-72f963033a69",
+          "link_EydTfJ",
           "7340c675-7434-4651-b2c6-d9fa432e937f"
         ],
         "custom_css": [],
@@ -3525,11 +3491,6 @@
           "background_color": "#F6F6F7",
           "text_color": "#202223"
         }
-      },
-      "11651401770006824842": {
-        "type": "shopify://apps/ymq-product-options-variants/blocks/app-embed/86b91121-1f62-4e27-9812-b70a823eb918",
-        "disabled": false,
-        "settings": {}
       },
       "855628211100114053": {
         "type": "shopify://apps/klaviyo-email-marketing-sms/blocks/klaviyo-onsite-embed/2632fe16-c075-4321-a88b-50b567f42507",

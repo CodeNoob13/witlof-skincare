@@ -10,12 +10,12 @@
 {
   "layout": "theme",
   "sections": {
-    "ecom-witlof-skincare-x-elle-collection": {
-      "type": "ecom-witlof-skincare-x-elle-collection",
+    "ecom-npl-brievenbuspakketje-page": {
+      "type": "ecom-npl-brievenbuspakketje-page",
       "settings": {}
     }
   },
   "order": [
-    "ecom-witlof-skincare-x-elle-collection"
+    "ecom-npl-brievenbuspakketje-page"
   ]
 }

@@ -267,7 +267,7 @@ document.addEventListener("alpine:init", () => {
       let numberOfGifts;
 
       if (this.showFreeSamples) {
-        numberOfGifts = 2;
+        numberOfGifts = 1;
       } else {
         numberOfGifts = 1;
       }
